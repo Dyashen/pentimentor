@@ -1,0 +1,116 @@
+<!--https://www.userzoom.com/ux-blog/five-ways-to-make-usable-websites-for-people-with-dyslexia/-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="..\static\css\style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script type="text/javascript" src={{ url_for('static', filename='Onload.js' )}}></script>
+  <title>Tekstvereenvoudiging: prototype</title>
+</head>
+
+<body>
+  <h1>Pentimentor</h1>
+  <div class="container">
+
+
+    <div class="container-index">
+      <h2>Uitleg prototype</h2>
+      <p>Volgens </p>
+    </div>
+
+
+    <div class="container-index">
+      <h2>PDF uploaden</h2>
+      
+      <fieldset>
+        <form>
+          <label for="option1"><input type="radio" id="option1" name="radioOptions" value="option1" checked>Lectoren</label><br>
+          <label for="option2"><input type="radio" id="option2" name="radioOptions" value="option2">Scholieren</label>
+        </form>
+
+        <form action="/for-scholars" method="post" enctype="multipart/form-data" class="form-scholar">
+          <label for="pdf">Voeg een PDF toe:</label>
+          <input type="file" id="pdf" name="pdf"><br><br>
+          <label for="advanced">Geavanceerde upload<input type="checkbox" name="advanced" id="advanced"></label>
+          <input type="submit" value="View PDF">
+        </form>
+
+        <form action="/for-scholars" method="post" class="form-scholar">
+          <label for="">Voer tekst in:</label>
+          <input type="checkbox" name="toggleFullTextScholars" id="toggleFullTextScholars">
+          <input type="submit" value="View PDF">
+        </form>
+
+        <form action="/for-teachers" method="post" enctype="multipart/form-data" class="form-lector" style="display: none;">
+          <label for="pdf">Voeg een PDF toe:</label>
+          <input type="file" id="pdf" name="pdf"><br><br>
+          <label for="advanced">Geavanceerde upload<input type="checkbox" name="advanced" id="advanced"></label>
+          <input type="submit" value="View PDF">
+        </form>
+
+        <form action="/for-teachers" method="post" class="form-lector" style="display: none;">
+          <label for="">Voer tekst in:</label>
+          <input type="checkbox" name="toggleFullTextTeachers" id="toggleFullTextTeachers">
+          <input type="submit" value="View PDF">
+        </form>
+
+      </fieldset>
+
+    </div>
+
+    <div class="container-index">
+      <h2>Instellingen</h2>
+      <fieldset>
+      <button onclick="window.location.href='/change-settings'">Site personaliseren</button>
+    </fieldset>
+    </div>
+
+  </div>
+</body>
+
+<script type="text/javascript" src={{ url_for('static', filename='ToggleTextareas.js' )}}></script>
+
+<script>
+  var radios = document.getElementsByName('radioOptions');
+  for(var i = 0; i < radios.length; i++) {
+      radios[i].addEventListener('change', function() {
+          if (this.value == 'option1') {
+              var forms = document.getElementsByClassName('form-lector');
+              for(var j = 0; j < forms.length; j++) {
+                  forms[j].style.display = 'block';
+              }
+          }
+          else {
+              var forms = document.getElementsByClassName('form-lector');
+              for(var j = 0; j < forms.length; j++) {
+                  forms[j].style.display = 'none';
+              }
+          }
+      });
+  }
+</script>
+
+<script>
+  var radios = document.getElementsByName('radioOptions');
+  for(var i = 0; i < radios.length; i++) {
+      radios[i].addEventListener('change', function() {
+          if (this.value == 'option2') {
+              var forms = document.getElementsByClassName('form-scholar');
+              for(var j = 0; j < forms.length; j++) {
+                  forms[j].style.display = 'block';
+              }
+          }
+          else {
+              var forms = document.getElementsByClassName('form-scholar');
+              for(var j = 0; j < forms.length; j++) {
+                  forms[j].style.display = 'none';
+              }
+          }
+      });
+  }
+</script>
+
+</html>

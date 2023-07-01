@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="..\static\css\style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script type="text/javascript" src={{ url_for('static', filename='Onload.js' )}}></script>
+
+  <title>Tekstvereenvoudiging</title>
+</head>
+
+<body>
+  <fieldset id="colors">
+    <div><label>Naamwoorden</label><input type="color" id="colorForNouns" name="favcolor" value="#ff0000"></div>
+    <div><label>Werkwoorden</label><input type="color" id="colorForVerbs" name="favcolor" value="#ff0000"></div>
+    <div><label>Adjectieven</label><input type="color" id="colorForAdjs" name="favcolor" value="#ff0000"></div>
+  </fieldset>
+
+  <div class="container">
+    <div class="left-container">
+      <div class="page">
+        {% for paragraph in pdf %} 
+        <p>
+          {% for sentence in paragraph %}
+          <span class="sentence">
+            {% for word in sentence %}
+            {% if sentence[word] != 'space' %}
+            <span class={{sentence[word]}}>{{word}}</span>
+            {% endif %}
+            {% endfor %}
+          </span>
+          {% endfor %}
+        </p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!---->
+    <div class="right-container">
+      <form action="/generate-simplification" method="post">
+      <div class="extra-info">
+          <!--<p>Herkende talen:</p>
+          <ul>{% for l in lang %}
+            <li>{{ l }}</li>
+            {% endfor %}
+          </ul>-->
+          <textarea name="titleOfPaper" id="titleOfPaper" cols="30" rows="1" placeholder="Geef de titel hier in:"
+            required></textarea>
+          <textarea name="subjectOfPaper" id="subjectOfPaper" cols="30" rows="1"
+            placeholder="Geef het onderwerp van de paper hier in:" required></textarea>
+        </div>
+
+        <!--Statistieken voor de leerkracht
+        <h2>Statistieken voor de leerkracht</h2>
+        {% for s in statistics %}<span class="word">{{s}}</span>{% endfor %}-->
+
+        <!--Tools voor de leerkracht-->
+        <h2>Tools voor de leerkracht</h2>
+        <fieldset>
+          <div class="settings-for-teachers">
+            <input type="checkbox" id="verb-show"><label for="">Werkwoorden tonen</label>
+          </div>
+          <div class="settings-for-teachers">
+            <input type="checkbox" id="noun-show"><label for="">Zelfstandige naamwoorden tonen</label>
+          </div>
+          <div class="settings-for-teachers">
+            <input type="checkbox" id="adj-show"><label for="">Adjectieven tonen</label>
+          </div>
+
+          <div class="settings-for-teachers">
+            <input type="radio" name="actions" id="checkboxDeleteSents"><label for="checkboxDeleteSents">Zin verwijderen</label>
+          </div>
+          <div class="settings-for-teachers">
+            <input name="actions" type="radio" id="checkboxAddWordToGlossary"><label for="checkboxAddWordToGlossary">Woord toevoegen aan woordenlijst</label>
+          </div>
+
+          <div class="settings-for-teachers">
+            <label for="titleFont">Lettertype voor titel</label>
+          <select name="titleFont" id="titleFont">
+            <option selected value="Arial">Arial</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Montserrat-Regular">Montserrat</option>
+            <option value="Verdana">Verdana</option>
+          </select>
+          
+        </div>
+
+        <div class="settings-for-teachers">
+          <select name="regularFont" id="regularFont">
+            <option selected value="Arial">Arial</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Montserrat-Regular">Montserrat</option>
+            <option value="Verdana">Verdana</option>
+          </select>
+          <label for="regularFont">Standaardlettertype</label>
+        </div>
+
+        <div class="settings-for-teachers">
+          <select name="typeSpacing" id="typeSpacing">
+            <option value="singlespacing">Enkelvoudige</option>
+            <option selected value="onehalfspacing">Anderhalve</option>
+            <option value="doublespacing">Dubbele</option>
+          </select>
+          <label for="typeSpacing">Regeleinde</label>
+        </div>
+
+          <div class="settings-for-teachers">
+            <input required type="number" placeholder="woord-spatiëring" name="word_spacing" id="word_spacing" max="3" value="0.5" step="0.1">
+            <label for="woord-spatiëring">Woord-spatiëring (in cm)</label>
+          </div>
+          <div class="settings-for-teachers">
+            <input required type="number" name="margin" id="margin" min="1" max="15" step="0.1" value="3">
+            <label for="margin">Marge (in cm) van document</label>
+          </div>
+
+        </fieldset>
+
+        <input type="checkbox" id="personalizedSummary" name="personalizedSummary" value="personalizedSummary"><label
+          for="personalizedSummary">Samenvatting op maat</label>
+          
+
+        <!--Lexicale vereenvoudiging-->
+        <fieldset class="personalized">
+          <div class="settings-for-teachers"><input type="checkbox" id="vocabulary" name="simplified vocabulary" value="simplified vocabulary"><label for="vocabulary">Moeilijke woordenschat vervangen</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="vocabulary" name="interpreted numbers in fulltext" value="interpreted numbers"><label for="vocabulary">Cijferwaarden interpreteren</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="syntax" name="no appositions" value="syntax"><label for="syntax">Tangconstructies aanpassen</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="pronouns" name="no pronouns" value="pronouns"><label for="pronouns">Verwijswoorden aanpassen</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="prepositions" name="no prepositions" value="prepositions"><label for="prepositions">Voorzetseluitdrukkingen vervangen</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="compound_verbs" name="no compound verbs" value="compound_verbs"><label for="compound_verbs">Samengestelde werkwoorden vervangen</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="citation" name="keep citations" value="citation"><label for="citation">Bronvermelding behouden</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="summation" name="summation" value="summation"><label for="summation">Schrijven als opsomming</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="table" name="table" value="table"><label for="table">Schrijven als tabel van twee kolommen</label></div>
+          <div class="settings-for-teachers"><input type="checkbox" id="table" name="glossary" value="glossary"><label for="table">Woordenlijst automatisch maken</label></div>
+          <div hidden class="settings-for-teachers"><input type="number" id="length_paragraph" name="max length" min="10" max="250"><label for="summary_length">Lengte per paragraaf</label></div>
+        </fieldset>
+
+        <h2>Gebruikte API-sleutels</h2>
+        <div class="used-api-keys">
+          <p id="huggingface"></p>
+          <p id="gpt3"></p>
+        </div>
+
+        <!--Glossary-->
+        <h2>Woordenlijst</h2>
+        <fieldset hidden><textarea name="glossaryList" id="glossaryList" cols="30" rows="10"></textarea></fieldset>
+        <button type="button" value="vereenvoudigen" id="simplify-with-presets-button" onmousedown="simplifyWithPresets()">Gekozen teksten vereenvoudigen</button>
+        </form>
+      <button value="Tekst toevoegen aan lijst voor vereenvoudiging" onmousedown="addTextWithParagraph()">Tekst toevoegen met gepersonaliseerde keuzes</button>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src={{ url_for('static', filename='TogglePosTags.js' )}}></script>
+<script type="text/javascript" src={{ url_for('static', filename='TeacherScripts.js' )}}></script>
+
+</html>
