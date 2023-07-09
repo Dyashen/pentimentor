@@ -1,60 +1,3 @@
-/* --- */
-const checkbox = document.querySelector("#personalizedSummary");
-const fieldsets = document.querySelectorAll(".personalized");
-checkbox.addEventListener("change", () => {
-  fieldsets.forEach((fieldset) => {
-    if (checkbox && checkbox.checked) {
-      fieldset.style.display = "block";
-    } else {
-      fieldset.style.display = "none";
-    }
-  });
-});
-
-/* Add word to glossary */
-var checkboxAddWordToGlossary = document.getElementById(
-  "checkboxAddWordToGlossary"
-);
-checkboxAddWordToGlossary.addEventListener("change", function () {
-  if (checkboxAddWordToGlossary && checkboxAddWordToGlossary.checked) {
-    const words = document.querySelectorAll(
-      "span.verb, span.noun, span.aux, span.verb, span.adj"
-    );
-    words.forEach((w) => {
-      w.addEventListener("click", async (event) => {
-        if (checkboxAddWordToGlossary.checked) {
-          var pTag = event.target;
-          sentence_of_origin = w.closest("span.sentence");
-          var context = "";
-          for (const child of sentence_of_origin.children) {
-            context = context + " " + child.textContent;
-          }
-          console.log(context);
-          var textarea = document.getElementById("glossaryList");
-          pTag.style.backgroundColor = "black";
-          pTag.style.color = "white";
-          pTag.style.fontWeight = "bold";
-          textarea.value += pTag.innerHTML + ":" + context + "\n";
-          console.log(textarea.value);
-        }
-      });
-    });
-  }
-});
-
-/* Deleting sentences */
-const checkboxDeleteSents = document.getElementById("checkboxDeleteSents");
-checkboxDeleteSents.addEventListener("change", function () {
-  if (checkboxDeleteSents && checkboxDeleteSents.checked) {
-    const sentences = document.querySelectorAll(".sentence");
-    sentences.forEach((span) => {
-      span.addEventListener("click", async (event) => {
-        if (checkboxDeleteSents.checked) span.remove();
-      });
-    });
-  }
-});
-
 /* Tekst toevoegen */
 function addTextToTextArea() {
   const fullTextBox = document.querySelector(".left-container").innerHTML;
@@ -158,47 +101,49 @@ async function simplifyWithPresets() {
   form.submit();
 }
 
+/* */
 window.onload = async function () {
-  /* --- */
   localStorage.clear();
-  var url = `http://localhost:5000/get-settings-user`;
-  const response = await fetch(url, { method: "POST" });
-  var result = await response.json();
-  document.body.style.fontSize = result.fontSize + "px";
-  document.body.style.fontFamily = result.fontSettings;
-  document.body.style.backgroundColor = result.favcolor;
-  document.body.style.lineHeight = result.lineHeight + "cm";
-  document.body.style.wordSpacing = result.wordSpacing + "cm";
-  document.body.style.textAlign = result.textAlign;
-
-  /* --- */
   var url = "http://localhost:5000/get-session-keys";
   const session_keys_response = await fetch(url, { method: "POST" });
   result = await session_keys_response.json();
 
-  let missing_keys = [];
+  var button = document.getElementById("myButton");
 
-  if (result.hf_api_key === undefined) {
-    missing_keys.push("HuggingFace");
-    document.getElementById("huggingface").innerHTML =
-      "Geen HuggingFace sleutel werd opgegeven. ";
-    document.getElementById("huggingface").style.color = "red";
+  if ("gpt3" in result) {
+    button.classList.add("green-button");
+    button.textContent = "GPT-3 ingesteld!";
   } else {
-    document.getElementById("huggingface").innerHTML =
-      "HuggingFace API-sleutel:\t" + result.hf_api_key;
+    button.classList.add("red-button");
+    button.textContent = "GPT-3 niet ingesteld!";
   }
 
-  if (result.gpt3 === undefined) {
-    missing_keys.push("GPT-3");
-    document.getElementById("gpt3").innerHTML =
-      "Geen GPT-3 sleutel werd opgegeven.";
-    document.getElementById("gpt3").style.color = "red";
+  if (!("personalized_settings" in result)) {
+    alert(
+      "U heeft geen instellingen aangepast. Ga eerst naar 'instellingen' en pas daar uw weergave aan."
+    );
+    return;
   } else {
-    document.getElementById("gpt3").innerHTML =
-      "GPT-3 API-sleutel: " + result.gpt3;
+    document.body.style.fontSize = result.personalized_settings.fontSize + "px";
+    document.body.style.fontFamily = result.personalized_settings.fontSettings;
+    document.body.style.backgroundColor = result.personalized_settings.favcolor;
+    document.body.style.lineHeight =
+      result.personalized_settings.lineHeight + "cm";
+    document.body.style.wordSpacing =
+      result.personalized_settings.wordSpacing + "cm";
+    document.body.style.letterSpacing =
+      result.personalized_settings.characterSpacing + "cm";
+    document.body.style.textAlign = result.personalized_settings.textAlign;
+  }
+
+  let missing_keys = [];
+  if (!("gpt3" in result)) {
+    missing_keys.push("GPT-3");
+    document.querySelector(".fixed-bottom").style.display = "none";
   }
 
   if (missing_keys.length > 0) {
     alert("Sleutel(s) voor " + missing_keys.join(" & ") + " ontbreken.");
+    return;
   }
 };

@@ -39,17 +39,14 @@ class Creator():
             for word in list.keys(): 
                 f.write(f"| {word} | {list[word]['type']} | {list[word]['definition']} |\n")
 
-    """"""
-    def generate_summary(self, full_text):
+    def generate_simplification(self, full_text):
         with open(markdown_file,'a', encoding="utf-8", errors="surrogateescape") as f:
             title = 'Hoofdstuk'
             f.write('\n\n')
             f.write(f'## {title}')
             f.write('\n\n')
-            for text in full_text:
-                f.write(text)
-                f.write('\n\n')
-
+            f.write(full_text)
+            f.write('\n\n')
 
     def generate_summary_w_summation(self, full_text):
         with open(markdown_file,'a', encoding="utf-8", errors="surrogateescape") as f:
@@ -60,14 +57,6 @@ class Creator():
                 f.write('\n\n')
                 f.write(f'* {sentence}')
                 f.write('\n\n')
-
-    def generate_summary_w_table(self, full_text):
-        with open(markdown_file,'a', encoding="utf-8", errors="surrogateescape") as f:
-            title = 'Hoofdstuk'
-            f.write('\n\n')
-            f.write(f'## {title}')
-            f.write('\n\n')
-            f.write(f'{full_text}')
 
     def create_pdf(self):
         pypandoc.convert_file(source_file=markdown_file, to='docx', outputfile=docx_file,   extra_args=["-M2GB", "+RTS", "-K64m", "-RTS"])

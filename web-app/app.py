@@ -5,7 +5,7 @@ from pdf2image import convert_from_bytes
 from io import BytesIO
 from pdfminer.high_level import extract_pages
 from datetime import timedelta
-from ATS import HuggingFaceModels, GPT
+from ATS import GPT
 from Writer import Creator
 import Analysis as an
 
@@ -78,29 +78,10 @@ def generate_simplification():
         fonts = (settings['titleFont'], settings['regularFont'])
         margin = settings['margin']
         word_spacing = settings['word_spacing']
-        title = settings['titleOfPaper']
-        wordlist = settings['glossaryList']
-        wordlist = wordlist.strip(' ').split('\n')
 
         api_key = session[GPT_API_KEY_SESSION_NAME]
         gpt = GPT(api_key)
             
-        glossary = {}
-        if len(wordlist) > 0:
-            for word in wordlist:
-                if word != '':
-                    try:
-                        word_text = str(word).split(':')[0]
-                        word_sentence = str(word).split(':')[1]
-                        pos, lemma = an.get_spacy_pos_tag_lemma(word_text, word_sentence)
-                        api_key = session[GPT_API_KEY_SESSION_NAME]
-                        gpt = GPT(api_key)
-                        word_definition, word_text, prompt = gpt.look_up_word_gpt(word=word_text, context=word_text)
-                        glossary[word_text] = {'type':str(pos), 'definition': str(word_definition).replace('\n',' ').strip(' ')}
-
-                    except Exception as e:
-                        glossary[word_text] = {'type':str(pos), 'definition':'Definitie kon niet gevonden worden.'}    
-
         full_text = eval(settings['text'])
 
         doc_creator = Creator()
@@ -108,22 +89,26 @@ def generate_simplification():
         if 'glossaryList' in settings and not settings['glossaryList'] == '':
             doc_creator.generate_glossary(list=settings['glossaryList'])
 
-        new_full_text = []
         for key, value in full_text.items():
             new_sentence = []
             for word in key.split(" "):
                 if word != '':
                     new_sentence.append(word)
 
-            sent = " ".join(new_sentence)
-            new_sent, prompt = gpt.personalised_simplify(sent, str(value).split(','))
-            
-            if 'summation' in str(value).split(','):
-                doc_creator.generate_summary_w_summation(new_sent)
-            elif 'table' in str(value).split(',') or 'glossary' in str(value).split(','):
-                doc_creator.generate_summary_w_table(new_sent)
-            else:
-                doc_creator.generate_summary(new_sent)
+            sent            = " ".join(new_sentence)
+            aantalDelingen  = (len(sent)  // 1000) + 1
+            perHoeveel      = (len(sent)) // aantalDelingen
+            sent = [sent[i:i+perHoeveel] for i in range(0, len(sent), perHoeveel)]
+
+            for s in sent:
+                new_sent, prompt = gpt.personalised_simplify(s, str(value).split(','))
+
+                if 'summation' in str(value).split(','):
+                    doc_creator.generate_summary_w_summation(new_sent)
+                elif 'table' in str(value).split(',') or 'glossary' in str(value).split(','):
+                    doc_creator.generate_simplification(new_sent)
+                else:
+                    doc_creator.generate_simplification(new_sent)
             
         doc_creator.create_pdf()
         return send_file(path_or_file=ZIP_FILE_LOCATION, as_attachment=True)
@@ -131,67 +116,22 @@ def generate_simplification():
     except Exception as e:
         return jsonify(error_msg = str(e))
 
-# TEXT FUNCTIONS
-@app.route('/simplify', methods=['POST'])
-def scientific_simplify():
-    try:
-        full_text = request.json['text']
-
-        try:
-            api_key = session[GPT_API_KEY_SESSION_NAME]
-        except:
-            api_key = None
-
-        gpt = GPT(api_key)
-        text = gpt.simplify(full_text_dict=full_text)
-        return jsonify(result=text)
-    except Exception as e:
-        return jsonify(result=str(e))
-
-""""""
-@app.route('/get-pos-tag', methods=['GET','POST'])
-def get_pos_tag():
-    try:
-        word = request.args.get('word')
-        sentence = request.args.get('context')
-        pos_tag, lemma = an.get_spacy_pos_tag_lemma(word=word,sentence=sentence)
-        return jsonify(pos=str(pos_tag).lower())
-    except Exception as e:
-        return jsonify(pos=str(e))
-
-""""""
-@app.route('/personalized-simplify', methods=['POST'])
+@app.route('/simplify-scholar', methods=['POST'])
 def personalized_simplify():
-    try:
-        api_key = session[GPT_API_KEY_SESSION_NAME]
-    except:
-        api_key = None
-    gpt = GPT(api_key)
-    text = request.json['text']
-    choices = request.json['choices']
-    result, prompt = gpt.personalised_simplify(sentence=text, personalisation=choices)
-    return jsonify(prompt=prompt, result=result)
-
-@app.route('/personalized-simplify-custom-prompt', methods=['POST'])
-def personalized_simplify_w_prompt():
-    try:
-        api_key = session[GPT_API_KEY_SESSION_NAME]
-    except:
-        api_key = None
-
-    gpt = GPT(api_key)
-    text = request.json['text']
     prompt = request.json['prompt']
-    result, prompt = gpt.personalised_simplify_w_prompt(sentences=text, personalisation=prompt)
+    try:
+        api_key = session[GPT_API_KEY_SESSION_NAME]
+    except:
+        api_key = None
+    gpt = GPT(api_key)
+    
+    result, prompt = gpt.personalised_simplify_w_prompt(prompt=prompt)
     return jsonify(prompt=prompt, result=result)
 
-
-"""@returns prompt and word explanation from gpt-result"""
 @app.route('/look-up-word',methods=['POST'])
 def look_up_word():
     word = request.json['word']
     sentence = request.json['sentence']
-
     pos, lemma = an.get_spacy_pos_tag_lemma(word, sentence)
 
     try:
@@ -207,13 +147,6 @@ def look_up_word():
 @app.route('/change-settings', methods=['GET', 'POST'])
 def return_personal_settings_page():
     return render_template('settings.html')
-
-@app.route('/get-settings-user',methods=['POST'])
-def return_personal_settings_dict():
-    if PER_SET_SESSION_NAME in session:
-        return jsonify(session[PER_SET_SESSION_NAME])
-    else:
-        return jsonify(result='session does not exist')
 
 @app.route('/change-settings-user', methods=['POST'])
 def change_personal_settings():
@@ -235,15 +168,6 @@ def set_gpt_api_key():
     except Exception as e:
         return jsonify(result=str(e))
     
-@app.route('/set-hf-api-key', methods=['GET'])
-def set_hf_api_key():
-    try:
-        api_key = request.args.get('key')
-        session[HF_API_KEY_SESSION_NAME] = api_key
-        return jsonify(result=api_key)
-    except Exception as e:
-        return jsonify(result=str(e))
-
 @app.route('/get-session-keys', methods=['POST'])
 def get_session_keys():
     try:
@@ -251,8 +175,6 @@ def get_session_keys():
     except Exception as e:
         return jsonify(result=str(e))
         
-
-# Flask-app runtime-related
 app.permanent_session_lifetime = timedelta(minutes=30)
 if __name__ == "__main__":
     app.run()
