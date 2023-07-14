@@ -57,7 +57,9 @@ def home():
 @app.route('/for-scholars', methods=['GET','POST'])
 def teaching_tool():
     try:
+        print('ok')
         dict_text, langs, title, subject = setup_scholars_teachers(request)
+        print('ok')
         return render_template('for-scholars.html', pdf=dict_text, lang=langs, title=title, subject=subject)
     except Exception as e:
         return render_template('error.html',error=str(e))

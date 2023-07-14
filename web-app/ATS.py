@@ -43,7 +43,7 @@ class GPT():
                     model=COMPLETIONS_MODEL,
                     prompt=prompt,
                     temperature=0,
-                    max_tokens=50,
+                    max_tokens=80,
                     top_p=0.9,
                     stream=False
                     )["choices"][0]["text"].strip(" \n")   

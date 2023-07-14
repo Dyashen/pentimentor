@@ -1,4 +1,4 @@
-const colors = ["lightred", "lightblue", "lightgreen", "lightyellow"];
+const colors = ["#F0F8FF","#FAEBD7","#F5F5DC","#FFE4C4","#E6E6FA","#FFF0F5","#FFFACD","#F0FFF0","#FAFAD2","#D3D3D3"];
 
 /* --- Scholar --- */
 document.addEventListener("DOMContentLoaded", () => {
@@ -147,7 +147,7 @@ async function personalizedSimplification() {
     `;
   } else {
     prompt = `
-    Vereenvoudig de zinnen met de volgende kenmerken: ${checkedValues.join(', ')}
+    Vereenvoudig de zinnen in het Nederlands met de volgende kenmerken: ${checkedValues.join(', ')}
     ///
     ${selectedText}
     `;
@@ -177,14 +177,14 @@ async function askGPT() {
     return;
   }
 
-  var promptText = prompt("Geef hier een specifieke vraag in:") + "///\n" + selectedText;
+  let promptText = prompt("What's your name");
 
   var parentElement = addColors();
 
   const response = await fetch(`http://localhost:5000/simplify-scholar`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt: promptText + selectedText }),
+    body: JSON.stringify({ prompt: promptText + "///\n" + selectedText }),
   });
 
   result = await response.json();
