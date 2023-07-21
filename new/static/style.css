@@ -1,0 +1,21 @@
+body{
+    width: 100%;
+    margin:auto;
+}
+
+.article-left, .article-right{
+    width: 40%;
+    margin: 2cm;
+}
+
+.article-left{
+    background-color:antiquewhite
+}
+
+.article-right{
+    background-color:aliceblue;
+}
+
+p{
+    margin: 2cm;
+}
