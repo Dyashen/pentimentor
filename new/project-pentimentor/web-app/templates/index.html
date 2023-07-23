@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <ul>
+        {% for file in files %}
+            {% if file.endswith('.pdf') %}
+                <li><a href="/read-article?article={{ file }}"><img src="{{ url_for('static', filename='uploads/' + file) }}" alt="{{ file }}"></a></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="pdf" name="pdf">
+            <input type="submit" value="Upload artikel">
+        </form>
+    </fieldset>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.wrapper{
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.article-left, .article-right{
+    width:  40%;
+    margin: auto;
+    padding:2%;
+}
+
+.article-left{
+    background-color: antiquewhite;
+    float:left;
+}
+
+.article-right{
+    background-color:aliceblue;
+    overflow:hidden;
+}
+
+h1{
+    text-align: center;
+}
