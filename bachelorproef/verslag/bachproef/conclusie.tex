@@ -1,0 +1,29 @@
+%%=============================================================================
+%% Conclusie
+%%=============================================================================
+
+\chapter{Conclusie}%
+\label{ch:conclusie}
+
+Deze scriptie tracht een antwoord te bieden op de volgende onderzoeksvraag:
+
+\begin{itemize}
+	\item Hoe kan een wetenschappelijk artikel automatisch vereenvoudigd worden, gericht op de unieke noden van scholieren met dyslexie in de derde graad middelbaar onderwijs?
+\end{itemize}
+
+% ontbrekende mts en ontbrekende
+Allereerst geeft de requirementsanalyse nieuwe inzichten in de huidige toepassingen voor ATS. Zo beschikken online tools over onvoldoende gepersonaliseerde ATS-functionaliteiten, zoals blijkt in sectie \ref{sec:requirementsanalyse}. Software die SS toepassen, beschikken over onvoldoende gepersonaliseerde opmaakopties om de leeservaring van scholieren met dyslexie tijdens het begrijpend lezen van een wetenschappelijk artikel te bevorderen. Toepassingen die wetenschappelijke artikelen kunnen inlezen, beschikken over onvoldoende LS en SS-technieken om gepersonaliseerde ATS mogelijk te maken. Daartegenover kunnen eindgebruikers geen wetenschappelijke artikelen opladen in de toepassingen die wel gepersonaliseerde ATS kunnen uitvoeren. Recente technologieën bieden reeds mogelijkheden tot tekstvereenvoudiging aan, maar zijn voorlopig enkel in CLI of met scripts ter beschikking. Voor het gebruik van taalmodellen of API's is uitgebreide informaticakennis nodig, waarover de meeste scholieren en leraren niet beschikken. Anderzijds zijn de huidige online tools te beperkt en eerder gericht op samenvatten; wat niet noodzakelijk bijdraagt tot een eenvoudigere tekst. Dit benadrukt de nood aan een eenduidige toepassing voor scholieren en leerkrachten om wetenschappelijke teksten te laten vereenvoudigen.
+
+\medspace
+
+% welk taalmodel gebruiken?
+De vergelijkende studie wijst uit dat de geteste taalmodellen in staat zijn om LS mogelijk te maken. SS is enkel beschikbaar bij de geteste prompts van het GPT-3 model. Dit taalmodel kan doelgroepen in grote lijn inschatten en ook SA-technieken toepassen. Andere geteste HF-taalmodellen genereren minder coherente tekst en smelten zinnen regelmatig samen. dan het GPT-3 model en vereisen een extra vertaalfase. Een vertaalfase is niet nodig bij het aanspreken van de GPT-3 API. Het prototype moet gebruik maken van specifieke prompts en de technieken aangegeven door \textcite{McFarland2023, White2023}.
+
+\medspace
+
+% hoe een prototype opzetten?
+Uit de ontwikkeling van het prototype voor gepersonaliseerde ATS blijkt dat de gebruikte \textit{open-source} AI en NLP-technologieën capabel zijn om tekstvereenvoudigingssoftware ermee te ontwikkelen. Zo kunnen ontwikkelaars gebruikmaken van PDFMiner om tekstinhoud uit wetenschappelijke artikelen te extraheren, van OpenAI's GPT-3 model via de API om gepersonaliseerde ATS mogelijk te maken en ten slotte van Pandoc om dynamische en gepersonaliseerde pdf-documenten automatisch te genereren. Docx-documenten zijn echter niet personaliseerbaar met het huidige prototype. In het prototype kunnen eenduidige handelingen, gebouwd in JavaScript en HTML\&CSS, complexe commandlinehandelingen vervangen. Ontwikkelaars kunnen met eenvoudige en open-source tools een webpagina opbouwen die voldoet aan de noden beschreven in \textcite{Rello2012a}. Hoewel het prototype niet voldoet aan alle vooraf opgestelde functionaliteiten, toch kunnen ontwikkelaars met de gebruikte softwarepakketten een prototype of volledig afgewerkte toepassing ontwikkelen die aan alle criteria kan voldoen. 
+
+\medspace
+
+Ontwikkelaars hebben toegang tot HF-taalmodellen voor LS-taken. Deze taalmodellen zijn echter ontoereikend voor gepersonaliseerde ATS, want ze ontbreken SS-technieken om de tekst op een syntactisch niveau te vereenvoudigen. Daarnaast beschikken de HF-taalmodellen over een ingebakken doelgroep, afhankelijk van de data waarop deze taalmodellen zijn getraind. GPT-3 is een geschikter model voor het vereenvoudigen van wetenschappelijke artikelen op maat van scholieren met dyslexie in de derde graad van het middelbaar onderwijs. Zo presteert GPT-3 goed op gepersonaliseerde LS en SS-technieken, maar het is belangrijk om op te merken dat geen enkel taalmodel de doelgroep altijd nauwkeurig kan inschatten. Extra trainingsdata, zoals aangeraden door \textcite{Gooding2022} in de vorm van leerstof op leesniveau van de doelgroep kan het model helpen bij de doelgroepsinschatting. Het gebruik van Engelstalige prompts met expliciete vermelding van de gewenste uitvoertaal, resulteert in coherentere teksten dan bij een Nederlandstalige prompt.

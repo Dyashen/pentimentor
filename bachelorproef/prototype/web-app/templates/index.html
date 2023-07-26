@@ -1,0 +1,76 @@
+<!--https://www.userzoom.com/ux-blog/five-ways-to-make-usable-websites-for-people-with-dyslexia/-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="..\static\css\style.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <script type="text/javascript" src={{ url_for('static', filename='Onload.js' )}}></script>
+  <title>Tekstvereenvoudiging: prototype</title>
+</head>
+
+<body>
+  <h1>Prototype voor tekstvereenvoudiging</h1>
+  <div class="container">
+
+    <div class="container-index">
+      <h2>Voor leerlingen</h2>
+      <fieldset>
+        <form action="/for-scholars" method="post" enctype="multipart/form-data">
+          <label for="pdf">Voeg een PDF toe:</label>
+          <input type="file" id="pdf" name="pdf"><br><br>
+          <label for="advanced">Geavanceerde upload<input type="checkbox" name="advanced" id="advanced"></label>
+          <input type="submit" value="View PDF">
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <form action="/for-scholars" method="post">
+          <label for="">Voer tekst in:</label>
+          <input type="checkbox" name="toggleFullTextScholars" id="toggleFullTextScholars">
+          <input type="submit" value="View PDF">
+        </form>
+      </fieldset>
+    </div>
+
+    <div class="container-index">
+      <h2>Voor lectoren</h2>
+      <fieldset>
+        <form action="/for-teachers" method="post" enctype="multipart/form-data">
+          <label for="pdf">Voeg een PDF toe:</label>
+          <input type="file" id="pdf" name="pdf"><br><br>
+          <label for="advanced">Geavanceerde upload<input type="checkbox" name="advanced" id="advanced"></label>
+          <input type="submit" value="View PDF">
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <form action="/for-teachers" method="post">
+          <label for="">Voer tekst in:</label>
+          <input type="checkbox" name="toggleFullTextTeachers" id="toggleFullTextTeachers">
+          <input type="submit" value="View PDF">
+        </form>
+      </fieldset>
+    </div>
+
+    <div class="container-index">
+      <h2>Instellingen</h2>
+      <fieldset>
+      <button onclick="window.location.href='/change-settings'">Site personaliseren</button>
+    </fieldset>
+    </div>
+
+    <div class="container-index">
+      <h2>Uitleg prototype</h2>
+      <p><b>Voor scholieren</b> biedt een online webpagina aan waarop een scholier zinnen of paragrafen kan vereenvoudigen naar keuze. <br><b>Voor lectoren</b> biedt u de mogelijkheid aan om een nieuw PDF-bestand aan te maken vanuit het oorspronkelijke PDF-bestand.</p>
+      <p>Bij <b>instellingen</b> kan u de weergegeven tekst binnen de online tool aanpassen volgens uw wens, alsook de API-sleutels instellen die gedurende de sessie worden bijgehouden. De volgende weergaveopties kan u aanpassen: lettertype en -grootte, regelafstand, woord-spatiëring en achtergrondkleur. </p>
+      <p><b>Geavanceerde upload</b> verwijst naar een methode waarbij de PDF-bestanden worden 'ingescand' en de tekst wordt herkend vanuit een afbeelding. Deze methode verloopt langer, maar kan resulteren tot meer tekst die u kan meenemen naar de vereenvoudigde versie of kan gebruiken in de tool. Als dit niet aangevinkt staat, dan wordt de tekst uit een PDF ge-extraheerd.</p>
+      <p>Met <b>tekst invoeren</b> kan u plaintekst ingeven en deze optie vereist geen PDF-bestand. </p>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src={{ url_for('static', filename='ToggleTextareas.js' )}}></script>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MTS Simulator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 60%;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 20px;
+        column-count: 2;
+        column-gap: 40px;
+        transition: all 1s ease-in-out;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .abstract {
+        max-width: 60%;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: justify;
+        margin-bottom: 40px;
+        transition: all 1s ease-in-out;
+      }
+
+      #output ul,
+      #output li {
+        transition: all 1s ease-in-out;
+      }
+
+      .dyslexic-text,
+      .dyslexic-text-abstract {
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        line-height: 1;
+        transition: all 1s ease-in-out;
+      }
+
+      .fixed-right-bar {
+        position: fixed;
+        right: 0;
+        top: 20%;
+        width: 400px;
+        height: 200px;
+        border: 1px solid #ccc;
+        background-color: white;
+      }
+
+      .fixed-right-bar label {
+        display: block;
+      }
+
+      .woordenlijst {
+        display: none;
+        max-width: 60%;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 20px;
+        transition: all 1s ease-in-out;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bachelorproef</h1>
+
+    <div class="woordenlijst">
+      <table>
+        <tr>
+          <th>Woord</th>
+          <th>Type</th>
+          <th>Definitie</th>
+        </tr>
+        <tr>
+          <td><span class='artificiele'>Artificiële</span></td>
+          <td>Adjectief</td>
+          <td>Machinaal, niet door de mens gemaakt.</td>
+        </tr>
+        <tr>
+          <td><span class='requirementsanalyse'>Requirementsanalyse</span></td>
+          <td>Zelfstandig naamwoord</td>
+          <td>Een aftoetsing van richtlijnen op een bepaalde proef. In dit geval een aftoetsing van technieken.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="abstract">
+      <h2>Abstract</h2>
+      <p class="dyslexic-text-abstract">
+        Ingewikkelde woordenschat en zinsbouw hinderen scholieren met dyslexie
+        in het derde graad middelbaar onderwijs bij het lezen van
+        wetenschappelijke artikelen. Gepersonaliseerde automated text
+        simplification (ATS) helpt deze scholieren bij hun leesbegrip. Daarnaast
+        kan <span class="artificiele">artificiële</span> intelligentie (AI) dit proces automatiseren om de
+        werkdruk bij leraren en scholieren te verminderen. Dit onderzoek
+        achterhaalt met welke technologische en logopedische aspecten
+        AI-ontwikkelaars rekening moeten houden bij de ontwikkeling van een
+        AI-toepassing voor geautomatiseerde en gepersonaliseerde
+        tekstvereenvoudiging. Hiervoor is de volgende onderzoeksvraag opgesteld:
+        "<span class="moeilijkezin"
+          >Hoe kan een wetenschappelijk artikel automatisch worden
+          vereenvoudigd, gericht op de unieke noden van scholieren met dyslexie
+          in de derde graad middelbaar onderwijs?</span
+        >". Een <span class='requirementsanalyse'>requirementsanalyse</span> achterhaalt de benodigde functionaliteiten
+        om gepersonaliseerde en geautomatiseerde tekstvereenvoudiging mogelijk
+        te maken. Vervolgens wijst de vergelijkende studie uit welk taalmodel
+        het meest inzetbaar is om de taak van gepersonaliseerde en
+        geautomatiseerde tekstvereenvoudiging mogelijk te maken. De
+        <span class='requirementsanalyse'>requirementsanalyse</span> wijst uit dat toepassingen om wetenschappelijke
+        artikelen te vereenvoudigen, zich richten op een centrale doelgroep en
+        geen rekening houden met de unieke noden van een scholier met dyslexie
+        in de derde graad middelbaar onderwijs. Toepassingen voor
+        gepersonaliseerde ATS zijn mogelijk, maar ontwikkelaars moeten meer
+        inzetten op de unieke noden van deze scholieren.
+      </p>
+      <ul id="output"></ul>
+    </div>
+
+    <div class="container">
+      <div class="fixed-right-bar">
+        <label
+          ><input
+            type="checkbox"
+            name="opmaakopties"
+            onclick="opmaakAanpassing()"
+          />Opmaak aanpassen</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="lexsimpl"
+            onclick="lexicalSimplification()"
+          />Lexical Simplification</label
+        >
+        <label
+          ><input type="checkbox" name="synsimpl" onclick="syntacticSimplification()"/>Syntactic
+          Simplification</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="forsimpl"
+            onclick="structureleAanpassing()"
+          />Formaatwijziging</label
+        >
+      </div>
+
+      <div class="content">
+        <h2>Inleiding</h2>
+        <p class="dyslexic-text">
+          Het Vlaams middelbaar onderwijs staat op barsten. Werkdruk en stress
+          overspoelen leraren en scholieren. Bovendien is de derde graad van het
+          middelbaar onderwijs een belangrijke mijlpaal voor de verdere loopbaan
+          van scholieren, al hebben zij volgens het onderzoek dan moeite om grip
+          te krijgen op de vakliteratuur bij STEM-vakken. De STEM-agenda van de
+          Vlaamse overheid moet het STEM-onderwijs tegen 2030 aantrekkelijker te
+          maken, door de ondersteuning voor zowel leerkrachten als scholieren te
+          verbeteren. Toch neemt deze agenda de aanpak van steeds complexere
+          wetenschappelijke taal, zoals beschreven in dit onderzoek, niet op.
+          Wetenschappelijke artikelen vereenvoudigen, op maat van de noden van
+          een scholier met dyslexie in het middelbaar onderwijs, is tijds- en
+          energie-intensief voor leerkrachten en scholieren. Automatische en
+          adaptieve tekstvereenvoudiging biedt hier een baanbrekende oplossing
+          om de werkdruk in het middelbaar onderwijs te verminderen. Het doel
+          van dit onderzoek is om te achterhalen met welke technologische en
+          logopedische aspecten AI-ontwikkelaars rekening moeten houden bij de
+          ontwikkeling van een adaptieve AI-toepassing voor geautomatiseerde
+          tekstvereenvoudiging. De volgende onderzoeksvraag is opgesteld: "Hoe
+          kan een wetenschappelijk artikel automatisch vereenvoudigd worden,
+          gericht op de verschillende behoeften van scholieren met dyslexie in
+          de derde graad middelbaar onderwijs?".
+        </p>
+        <p class="dyslexic-text">
+          Een antwoord op volgende deelvragen kan de onderzoeksvraag
+          vereenvoudigen. Eerst geeft de literatuurstudie een antwoord op de
+          eerste vier deelvragen. Daarna vormt het veldonderzoek een antwoord op
+          de vijfde deelvraag. Ten slotte beantwoordt de vergelijkende studie de
+          zesde en laatste deelvraag. De resultaten van dit onderzoek zetten
+          AI-ontwikkelaars aan om een toepassing te maken om scholieren met
+          dyslexie te kunnen ondersteunen in de derde graad middelbaar
+          onderwijs.
+        </p>
+
+        <h2>State-of-the-art</h2>
+        <p class="dyslexic-text">
+          De voorbije tien jaar is artificiële intelligentie (AI) sterk verder
+          ontwikkeld. Het onderzoek benadrukt dat de toename in kennis voor
+          nieuwe toepassingen zorgde. Tekstvereenvoudiging vloeide hier uit
+          voort. Momenteel bestaan er al robuuste toepassingen die teksten
+          kunnen vereenvoudigen, zoals Resoomer, Paraphraser en Prepostseo.
+          Binnen het kader van tekstvereenvoudiging is er bestaande documentatie
+          beschikbaar waar onderzoekers het voordeel van toegankelijkheid
+          aanhalen, maar volgens hem ontbreken deze toepassingen de extra noden
+          die scholieren met dyslexie in de derde graad middelbaar onderwijs
+          vereisen. Het onderzoek haalt aan dat het algemene doel van
+          tekstvereenvoudiging is om ingewikkelde bronnen toegankelijker te
+          maken. Het zorgt voor verkorte teksten zonder de kernboodschap te
+          verliezen. Hij haalt verder aan dat tekstvereenvoudiging op één van
+          drie manieren gebeurt. Er is conceptuele vereenvoudiging waarbij
+          documenten naar een compacter formaat worden getransformeerd.
+          Daarnaast is er uitgebreide modificatie die kernwoorden aanduidt door
+          gebruik van redundantie. Als laatste is er samenvatting die documenten
+          verandert in kortere teksten met alleen de topische zinnen. Met deze
+          concepten zijn ontwikkelaars volgens Siddharthan2014} in staat om
+          ingewikkelde woorden te vervangen door eenvoudigere synoniemen of
+          zinnen te verkorten zodat ze sneller leesbaar zijn.
+          Tekstvereenvoudiging behoort tot de zijtak van \textit{Natural
+          Language Processing} (NLP) in AI. NLP omvat methodes om menselijke
+          teksten om te zetten in tekst voor machines. Documenten vereenvoudigen
+          met NLP kan volgens Chowdhary2020} op twee manieren: extraherend of
+          abstraherend. Bij extraherende vereenvoudiging worden zinnen gelezen
+          zoals ze zijn neergeschreven. Vervolgens bewaart een document de
+          belangrijkste taalelementen om de tekst te kunnen hervormen. Deze vorm
+          van tekstvereenvoudiging komt volgens \autocite{Sciforce2020} het
+          meeste voor. Daarnaast is er abstraherende vereenvoudiging waarbij de
+          kernboodschap wordt bewaard. Met de kernboodschap wordt er een nieuwe
+          zin opgebouwd. Volgens het onderzoek heeft deze vorm potentieel, maar
+          het zit nog in de kinderschoenen. Het experiment van Franse
+          wetenschappers illustreert dat manuele tekstvereenvoudiging
+          schoolteksten toegankelijker \newline maakt voor kinderen met
+          dyslexie. Dit deden ze door simpelere synoniemen en zinsstructuren te
+          gebruiken. Tien kinderen werden opgenomen in het experiment, variërend
+          van 8 tot 12 jaar oud. Verwijswoorden werden vermeden en woorden kort
+          gehouden. De resultaten waren veelbelovend. Het leestempo lag hoger en
+          de kinderen maakten minder leesfouten. Ook bleek er geen verlies van
+          begrip in de tekst bij geteste kinderen. Resultaten van de studie
+          werden gebundeld voor de mogelijke ontwikkeling van een AI-tool.
+        </p>
+
+        <h2>Methodologie</h2>
+        <p class="dyslexic-text">
+          The dyslexia simulator was implemented using HTML, CSS, and
+          JavaScript. The JavaScript code applies the dyslexic modifications to
+          the text, simulating the experience of a dyslexic person. The
+          modifications include letter and word spacing adjustments, as well as
+          random character flipping.
+        </p>
+
+        <h2>Resultaten</h2>
+        <p class="dyslexic-text">
+          The dyslexia simulator effectively replicates the visual experience of
+          dyslexic individuals. The modified text demonstrates the challenges
+          faced by dyslexic readers, highlighting the importance of
+          accessibility and inclusive design in digital content.
+        </p>
+
+        <h2>Conclusie</h2>
+        <p class="dyslexic-text">
+          The dyslexia simulator serves as a useful tool for raising awareness
+          about dyslexia and promoting empathy towards individuals with
+          dyslexia. By experiencing the simulated view, developers and designers
+          can gain insights into the readability and accessibility issues faced
+          by dyslexic readers. Future enhancements could include additional
+          dyslexic modifications and customizable options to tailor the
+          simulation to specific dyslexic profiles.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  /*---------------------------------------*/
+  function opmaakAanpassing() {
+    var checkBox = document.getElementsByName("opmaakopties")[0];
+    const container = document.querySelector(".container");
+    const abstract = document.querySelector(".abstract");
+
+    if (checkBox.checked == true) {
+      document.body.style.backgroundColor = "aliceblue";
+      container.style.columnCount = "1";
+      container.style.maxWidth = "100%";
+      abstract.style.maxWidth = "100%";
+
+      elements = document.querySelectorAll(
+        ".dyslexic-text, .dyslexic-text-abstract, #output"
+      );
+      elements.forEach((element) => {
+        element.style.letterSpacing = "2px";
+        element.style.wordSpacing = "4px";
+        element.style.lineHeight = "2";
+        element.style.textAlign = "left";
+      });
+    } else {
+      document.body.style.backgroundColor = "white";
+      container.style.columnCount = "2";
+      container.style.maxWidth = "60%";
+      abstract.style.maxWidth = "60%";
+
+      elements = document.querySelectorAll(
+        ".dyslexic-text, .dyslexic-text-abstract, #output"
+      );
+      elements.forEach((element) => {
+        element.style.letterSpacing = "1px";
+        element.style.wordSpacing = "1px";
+        element.style.lineHeight = "1";
+        element.style.textAlign = "justify";
+      });
+    }
+  }
+
+  /*---------------------------------------*/
+  function lexicalSimplification() {
+    var checkBox = document.getElementsByName("lexsimpl")[0];
+    if (checkBox.checked == true) {
+      const table = document.querySelector(".woordenlijst");
+      table.style.display = "block";
+      table.style.transition = 'all 1s ease-in-out';
+
+      const requirementsanalyse = document.querySelectorAll('.requirementsanalyse');
+      requirementsanalyse.forEach((tag, index) => {
+        tag.style.fontWeight = 'bold';
+        tag.style.backgroundColor = 'rgb(255, 145, 145)';
+        tag.style.transition = 'all 1s ease-in-out';
+      });
+
+      const artificiele = document.querySelectorAll('.artificiele');
+      artificiele.forEach((tag, index)=>{
+        tag.style.fontWeight = 'bold';
+        tag.style.backgroundColor = 'rgb(161, 251, 221)';
+        tag.style.transition = 'all 1s ease-in-out';
+      })
+    } else {
+      const table = document.querySelector(".woordenlijst");
+      table.style.display = "none";
+      table.style.transition = 'all 1s ease-in-out';
+
+      const requirementsanalyse = document.querySelectorAll('.requirementsanalyse');
+      requirementsanalyse.forEach((tag, index) => {
+        tag.style.fontWeight = 'normal';
+        tag.style.backgroundColor = 'white';
+        tag.style.transition = 'all 1s ease-in-out';
+      });
+
+      const artificiele = document.querySelectorAll('.artificiele');
+      artificiele.forEach((tag, index)=>{
+        tag.style.fontWeight = 'normal';
+        tag.style.backgroundColor = 'white';
+        tag.style.transition = 'all 1s ease-in-out';
+      })
+    }
+  }
+
+
+  /* --------------------------------------- */
+  function syntacticSimplification(){
+    var checkBox = document.getElementsByName("synsimpl")[0];
+    if (checkBox.checked == true) {
+      const moeilijkezinnen = document.querySelectorAll('.moeilijkezin');
+      moeilijkezinnen.forEach((tag, index)=>{
+        tag.style.backgroundColor = 'rgb(255, 200, 200)';
+        tag.style.transition = 'all 1s ease-in-out';
+        tag.innerHTML = 'Hoe kunnen systemen wetenschappelijk artikelen vereenvoudigen? Het systeem vereenvoudigd op de unieke noden van scholieren met dyslexie in de derde graad middelbaar onderwijs.';
+      })
+    } else {
+      const moeilijkezinnen = document.querySelectorAll('.moeilijkezin');
+      moeilijkezinnen.forEach((tag, index)=>{
+        tag.style.backgroundColor = 'white';
+        tag.style.transition = 'all 1s ease-in-out';
+        tag.innerHTML = 'Hoe kan een wetenschappelijk artikel automatisch worden vereenvoudigd, gericht op de unieke noden van scholieren met dyslexie in de derde graad middelbaar onderwijs?';
+      })
+    }
+  }
+
+  /*---------------------------------------*/
+  function structureleAanpassing() {
+    var checkBox = document.getElementsByName("forsimpl")[0];
+    if (checkBox.checked == true) {
+      const items = [
+        "Ingewikkelde woordenschat en zinsbouw hinderen scholieren met dyslexie in het derde graad middelbaar onderwijs bij het lezen van wetenschappelijke artikelen.",
+        "Gepersonaliseerde automated text simplification (ATS) helpt deze scholieren bij hun leesbegrip.",
+        "<span class='artificiele'>Artificiële</span> intelligentie (AI) kan dit proces automatiseren om de werkdruk bij leraren en scholieren te verminderen.",
+        "Dit onderzoek achterhaalt met welke technologische en logopedische aspecten AI-ontwikkelaars rekening moeten houden bij de ontwikkeling van een AI-toepassing voor geautomatiseerde en gepersonaliseerde tekstvereenvoudiging.",
+        'Hiervoor is de volgende onderzoeksvraag opgesteld: "Hoe kan een wetenschappelijk artikel automatisch worden vereenvoudigd, gericht op de unieke noden van scholieren met dyslexie in de derde graad middelbaar onderwijs?".',
+        "Een <span class='requirementsanalyse'>requirementsanalyse</span> achterhaalt de benodigde functionaliteiten om gepersonaliseerde en geautomatiseerde tekstvereenvoudiging mogelijk te maken.",
+        "De vergelijkende studie wijst uit welk taalmodel het meest inzetbaar is om de taak van gepersonaliseerde en geautomatiseerde tekstvereenvoudiging mogelijk te maken.",
+        "De <span class='requirementsanalyse'>requirementsanalyse</span> wijst uit dat toepassingen om wetenschappelijke artikelen te vereenvoudigen zich richten op een centrale doelgroep en geen rekening houden met de unieke noden van een scholier met dyslexie in de derde graad middelbaar onderwijs.",
+        "Toepassingen voor gepersonaliseerde ATS zijn mogelijk, maar ontwikkelaars moeten meer inzetten op de unieke noden van deze scholieren.",
+      ];
+      const ul = document.createElement("ul");
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        li.innerHTML = item;
+        ul.appendChild(li);
+      });
+      const pTag = document.querySelector(".dyslexic-text-abstract");
+      pTag.innerHTML = "";
+      document.getElementById("output").appendChild(ul);
+    } else {
+      const ul = document.getElementById("output");
+      while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+      }
+      const pTag = document.querySelector(".dyslexic-text-abstract");
+      pTag.innerHTML =
+        "Ingewikkelde woordenschat en zinsbouw hinderen scholieren met dyslexie in het derde graad middelbaar onderwijs bij het lezen van wetenschappelijke artikelen. Gepersonaliseerde automated text simplification (ATS) helpt deze scholieren bij hun leesbegrip. Daarnaast kan artificiële intelligentie (AI) dit proces automatiseren om de werkdruk bij leraren en scholieren te verminderen. Dit onderzoek achterhaalt met welke technologische en logopedische aspecten AI-ontwikkelaars rekening moeten houden bij de ontwikkeling van een AI-toepassing voor geautomatiseerde en gepersonaliseerde tekstvereenvoudiging. Hiervoor is de volgende onderzoeksvraag opgesteld: <span class='moeilijkezin'>Hoe kan een wetenschappelijk artikel automatisch worden vereenvoudigd, gericht op de unieke noden van scholieren met dyslexie in de derde graad middelbaar onderwijs?</span>. Een <span class='requirementsanalyse'>requirementsanalyse</span> achterhaalt de benodigde functionaliteiten om gepersonaliseerde en geautomatiseerde tekstvereenvoudiging mogelijk te maken. Vervolgens wijst de vergelijkende studie uit welk taalmodel het meest inzetbaar is om de taak van gepersonaliseerde en geautomatiseerde tekstvereenvoudiging mogelijk te maken. De <span class='requirementsanalyse'>requirementsanalyse</span> wijst uit dat toepassingen om wetenschappelijke artikelen te vereenvoudigen, zich richten op een centrale doelgroep en geen rekening houden met de unieke noden van een scholier met dyslexie in de derde graad middelbaar onderwijs. Toepassingen voor gepersonaliseerde ATS zijn mogelijk, maar ontwikkelaars moeten meer inzetten op de unieke noden van deze scholieren.";
+    }
+  }
+</script>

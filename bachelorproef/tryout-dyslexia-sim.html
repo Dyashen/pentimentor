@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dyslexia Simulator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 60%;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 20px;
+        column-count: 2;
+        column-gap: 40px;
+        transition: all 1s ease-in-out;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .abstract {
+        max-width: 60%;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: justify;
+        margin-bottom: 40px;
+        transition: all 1s ease-in-out;
+      }
+
+      #output ul,
+      #output li {
+        transition: all 1s ease-in-out;
+      }
+
+      .dyslexic-text,
+      .dyslexic-text-abstract {
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        line-height: 1;
+        transition: all 1s ease-in-out;
+      }
+
+      .fixed-right-bar {
+        position: fixed;
+        right: 0;
+        top: 20%;
+        width: 400px;
+        height: 200px;
+        border: 1px solid #ccc;
+        background-color: white;
+      }
+
+      .fixed-right-bar label {
+        display: block;
+      }
+
+      .woordenlijst {
+        display: none;
+        max-width: 60%;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 20px;
+        transition: all 1s ease-in-out;
+        border: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bachelorproef</h1>
+
+      <div class="abstract">
+        <h2>Abstract</h2>
+        <p class="dyslexic-text">
+          Ingewikkelde woordenschat en zinsbouw hinderen scholieren met dyslexie
+          in het derde graad middelbaar onderwijs bij het lezen van
+          wetenschappelijke artikelen. Gepersonaliseerde automated text
+          simplification (ATS) helpt deze scholieren bij hun leesbegrip. Daarnaast
+          kan artificiële intelligentie (AI) dit proces automatiseren om de
+          werkdruk bij leraren en scholieren te verminderen. Dit onderzoek
+          achterhaalt met welke technologische en logopedische aspecten
+          AI-ontwikkelaars rekening moeten houden bij de ontwikkeling van een
+          AI-toepassing voor geautomatiseerde en gepersonaliseerde
+          tekstvereenvoudiging. Hiervoor is de volgende onderzoeksvraag opgesteld:
+          ”Hoe kan een wetenschappelijk artikel automatisch worden vereenvoudigd,
+          gericht op de unieke noden van scholieren met dyslexie in de derde graad
+          middelbaar onderwijs?”. Een requirementsanalyse achterhaalt de benodigde
+          functionaliteiten om gepersonaliseerde en geautomatiseerde
+          tekstvereenvoudiging mogelijk te maken. Vervolgens wijst de
+          vergelijkende studie uit welk taalmodel het meest inzetbaar is om de
+          taak van gepersonaliseerde en geautomatiseerde tekstvereenvoudiging
+          mogelijk te maken. De requirementsanalyse wijst uit dat toepassingen om
+          wetenschappelijke artikelen te vereenvoudigen, zich richten op een
+          centrale doelgroep en geen rekening houden met de unieke noden van een
+          scholier met dyslexie in de derde graad middelbaar onderwijs.
+          Toepassingen voor gepersonaliseerde ATS zijn mogelijk, maar
+          ontwikkelaars moeten meer inzetten op de unieke noden van deze
+          scholieren.
+        </p>
+      </div>
+    <div class="container">
+      <div class="content">
+        <h2>Introduction</h2>
+        <p class="dyslexic-text">
+          Het Vlaams middelbaar onderwijs staat op barsten. Werkdruk en stress
+          overspoelen leraren en scholieren. Bovendien is de derde graad van het
+          middelbaar onderwijs een belangrijke mijlpaal voor de verdere loopbaan
+          van scholieren, al hebben zij volgens \textcite{Dapaah2022} dan moeite
+          om grip te krijgen op de vakliteratuur bij STEM-vakken. De STEM-agenda
+          van de Vlaamse overheid moet het STEM-onderwijs tegen 2030
+          aantrekkelijker te maken, door de ondersteuning voor zowel
+          leerkrachten als scholieren te verbeteren. Toch neemt deze agenda de
+          aanpak van steeds complexere wetenschappelijke taal, zoals beschreven
+          in dit onderzoek, niet op. Wetenschappelijke artikelen vereenvoudigen,
+          op maat van de noden van een scholier met dyslexie in het middelbaar
+          onderwijs, is tijds- en energie-intensief voor leerkrachten en
+          scholieren. Automatische en adaptieve tekstvereenvoudiging biedt hier
+          een baanbrekende oplossing om de werkdruk in het middelbaar onderwijs
+          te verminderen. Het doel van dit onderzoek is om te achterhalen met
+          welke technologische en logopedische aspecten AI-ontwikkelaars
+          rekening moeten houden bij de ontwikkeling van een adaptieve
+          AI-toepassing voor geautomatiseerde tekstvereenvoudiging. De volgende
+          onderzoeksvraag is opgesteld: "Hoe kan een wetenschappelijk artikel
+          automatisch vereenvoudigd worden, gericht op de verschillende
+          behoeften van scholieren met dyslexie in de derde graad middelbaar
+          onderwijs?".
+        </p>
+        <p class="dyslexic-text">
+          Een antwoord op volgende deelvragen kan de onderzoeksvraag
+          vereenvoudigen. Eerst geeft de literatuurstudie een antwoord op de
+          eerste vier deelvragen. Daarna vormt het veldonderzoek een antwoord op
+          de vijfde deelvraag. Ten slotte beantwoordt de vergelijkende studie de
+          zesde en laatste deelvraag. De resultaten van dit onderzoek zetten
+          AI-ontwikkelaars aan om een toepassing te maken om scholieren met
+          dyslexie te kunnen ondersteunen in de derde graad middelbaar
+          onderwijs.
+        </p>
+
+        <h2>State-of-the-art</h2>
+        <p class="dyslexic-text">
+          De voorbije tien jaar is artificiële intelligentie (AI) sterk verder
+          ontwikkeld. \textcite{Vasista2022} benadrukt dat de toename in kennis
+          voor nieuwe toepassingen zorgde. Tekstvereenvoudiging vloeide hier uit
+          voort. Momenteel bestaan er al robuuste toepassingen die teksten
+          kunnen vereenvoudigen, zoals
+          Resoomer\footnote{https://resoomer.com/nl/},
+          Paraphraser\footnote{https://www.paraphraser.io/nl/tekst-samenvatting}
+          en
+          Prepostseo\footnote{https://www.prepostseo.com/tool/nl/text-summarizer}.
+          Binnen het kader van tekstvereenvoudiging is er bestaande documentatie
+          beschikbaar waar onderzoekers het voordeel van toegankelijkheid
+          aanhalen, maar volgens \textcite{Gooding2022} ontbreken deze
+          toepassingen de extra noden die scholieren met dyslexie in de derde
+          graad middelbaar onderwijs vereisen. \textcite{Shardlow2014} haalt aan
+          dat het algemene doel van tekstvereenvoudiging is om ingewikkelde
+          bronnen toegankelijker te maken. Het zorgt voor verkorte teksten
+          zonder de kernboodschap te verliezen. \textcite{Siddharthan2014} haalt
+          verder aan dat tekstvereenvoudiging op één van drie manieren gebeurt.
+          Er is conceptuele vereenvoudiging waarbij documenten naar een
+          compacter formaat worden getransformeerd. Daarnaast is er uitgebreide
+          modificatie die kernwoorden aanduidt door gebruik van redundantie. Als
+          laatste is er samenvatting die documenten verandert in kortere teksten
+          met alleen de topische zinnen. Met deze concepten zijn ontwikkelaars
+          volgens \textcite{Siddharthan2014} in staat om ingewikkelde woorden te
+          vervangen door eenvoudigere synoniemen of zinnen te verkorten zodat ze
+          sneller leesbaar zijn. Tekstvereenvoudiging behoort tot de zijtak van
+          \textit{Natural Language Processing} (NLP) in AI. NLP omvat methodes
+          om menselijke teksten om te zetten in tekst voor machines. Documenten
+          vereenvoudigen met NLP kan volgens \textcite{Chowdhary2020} op twee
+          manieren: extraherend of abstraherend. Bij extraherende
+          vereenvoudiging worden zinnen gelezen zoals ze zijn neergeschreven.
+          Vervolgens bewaart een document de belangrijkste taalelementen om de
+          tekst te kunnen hervormen. Deze vorm van tekstvereenvoudiging komt
+          volgens \autocite{Sciforce2020} het meeste voor. Daarnaast is er
+          abstraherende vereenvoudiging waarbij de kernboodschap wordt bewaard.
+          Met de kernboodschap wordt er een nieuwe zin opgebouwd. Volgens het
+          onderzoek van \textcite{Chowdhary2020} heeft deze vorm potentieel,
+          maar het zit nog in de kinderschoenen. Het experiment van Franse
+          wetenschappers \newline \textcite{Gala2016} illustreert dat manuele
+          tekstvereenvoudiging schoolteksten toegankelijker \newline maakt voor
+          kinderen met dyslexie. Dit deden ze door simpelere synoniemen en
+          zinsstructuren te gebruiken. Tien kinderen werden opgenomen in het
+          experiment, variërend van 8 tot 12 jaar oud. Verwijswoorden werden
+          vermeden en woorden kort gehouden. De resultaten waren veelbelovend.
+          Het leestempo lag hoger en de kinderen maakten minder leesfouten. Ook
+          bleek er geen verlies van begrip in de tekst bij geteste kinderen.
+          Resultaten van de studie werden gebundeld voor de mogelijke
+          ontwikkeling van een AI-tool.
+        </p>
+
+        <h2>Methods</h2>
+        <p class="dyslexic-text">
+          The dyslexia simulator was implemented using HTML, CSS, and
+          JavaScript. The JavaScript code applies the dyslexic modifications to
+          the text, simulating the experience of a dyslexic person. The
+          modifications include letter and word spacing adjustments, as well as
+          random character flipping.
+        </p>
+
+        <h2>Results</h2>
+        <p class="dyslexic-text">
+          The dyslexia simulator effectively replicates the visual experience of
+          dyslexic individuals. The modified text demonstrates the challenges
+          faced by dyslexic readers, highlighting the importance of
+          accessibility and inclusive design in digital content.
+        </p>
+
+        <h2>Discussion</h2>
+        <p class="dyslexic-text">
+          The dyslexia simulator serves as a useful tool for raising awareness
+          about dyslexia and promoting empathy towards individuals with
+          dyslexia. By experiencing the simulated view, developers and designers
+          can gain insights into the readability and accessibility issues faced
+          by dyslexic readers. Future enhancements could include additional
+          dyslexic modifications and customizable options to tailor the
+          simulation to specific dyslexic profiles.
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    "use strict";
+
+    function getTextNodesIn(el) {
+      var textNodes = [];
+      var node = el.firstChild;
+      while (node) {
+        if (node.nodeType === 3) {
+          textNodes.push(node);
+        } else if (
+          node.nodeType === 1 &&
+          node.nodeName !== "SCRIPT" &&
+          node.nodeName !== "IFRAME"
+        ) {
+          textNodes.push.apply(textNodes, getTextNodesIn(node));
+        }
+        node = node.nextSibling;
+      }
+      return textNodes;
+    }
+
+    var textNodes = getTextNodesIn(document.body);
+
+    function isLetter(char) {
+      return /^[\d]$/.test(char);
+    }
+
+    var wordsInTextNodes = [];
+    for (var i = 0; i < textNodes.length; i++) {
+      var node = textNodes[i];
+      var words = [];
+      var re = /\w+/g;
+      var match;
+      while ((match = re.exec(node.nodeValue)) != null) {
+        var word = match[0];
+        var position = match.index;
+        words.push({ length: word.length, position: position });
+      }
+      wordsInTextNodes[i] = words;
+    }
+
+    function messUpWords() {
+      for (var i = 0; i < textNodes.length; i++) {
+        var node = textNodes[i];
+        for (var j = 0; j < wordsInTextNodes[i].length; j++) {
+          // Only change a tenth of the words each round.
+          if (Math.random() > 1 / 10) {
+            continue;
+          }
+          var wordMeta = wordsInTextNodes[i][j];
+          var word = node.nodeValue.slice(
+            wordMeta.position,
+            wordMeta.position + wordMeta.length
+          );
+          var before = node.nodeValue.slice(0, wordMeta.position);
+          var after = node.nodeValue.slice(wordMeta.position + wordMeta.length);
+          node.nodeValue = before + messUpWord(word) + after;
+        }
+      }
+    }
+
+    function messUpWord(word) {
+      
+      if (word.length < 5) {
+        return word;
+      }
+      return (
+        word[0] + messUpMessyPart(word.slice(1, -1)) + word[word.length - 1]
+      );
+    }
+
+    function messUpMessyPart(messyPart) {
+      if (messyPart.length < 2) {
+        return messyPart;
+      }
+      var a, b;
+      while (!(a < b)) {
+        a = getRandomInt(0, messyPart.length - 1);
+        b = getRandomInt(0, messyPart.length - 1);
+      }
+      return (
+        messyPart.slice(0, a) +
+        messyPart[b] +
+        messyPart.slice(a + 1, b) +
+        messyPart[a] +
+        messyPart.slice(b + 1)
+      );
+    }
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    setInterval(messUpWords, 50);
+  </script>
+</html>

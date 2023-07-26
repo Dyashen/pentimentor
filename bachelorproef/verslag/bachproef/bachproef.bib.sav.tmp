@@ -1,0 +1,766 @@
+% Encoding: UTF-8
+
+@Online{Martens2021,
+  author       = {Martens, Marijn and De Wolf, Ralf and Evens, Tom},
+  date         = {2021},
+  title        = {Algoritmes en AI in de onderwijscontext: Een studie naar de perceptie, mening en houding van leerlingen en ouders in Vlaanderen},
+  url          = {https://data-en-maatschappij.ai/publicaties/survey-onderwijs-2021},
+  organization = {{Kenniscentrum Data en Maatschappij}},
+  urldate      = {2022-03-30},
+}
+
+@Report{Crevits2022,
+  author      = {Crevits, Hilde},
+  date        = {2022-03-13},
+  institution = {Vlaamse Overheid Departement Economie, Wetenschap en Innovatie},
+  title       = {Kwart van bedrijven gebruikt artificiële intelligentie: Vlaanderen bij beste leerlingen van de klas},
+  type        = {Persbericht},
+  file        = {:persbericht_-_kwart_van_bedrijven_gebruikt_artificiele_intelligentie_-_vlaanderen_bij_beste_leerlingen_van_de_klas.pdf:PDF},
+}
+
+@InProceedings{Gala2016,
+  author    = {Gala, N{\'u}ria and Ziegler, Johannes},
+  booktitle = {Proceedings of the Workshop on Computational Linguistics for Linguistic Complexity ({CL}4{LC})},
+  date      = {2016},
+  title     = {Reducing lexical complexity as a tool to increase text accessibility for children with dyslexia},
+  pages     = {59--66},
+  publisher = {The COLING 2016 Organizing Committee},
+  abstract  = {Lexical complexity plays a central role in readability, particularly for dyslexic children and poor readers because of their slow and laborious decoding and word recognition skills. Although some features to aid readability may be common to most languages (e.g., the majority of {`}easy{'} words are of low frequency), we believe that lexical complexity is mainly language-specific. In this paper, we define lexical complexity for French and we present a pilot study on the effects of text simplification in dyslexic children. The participants were asked to read out loud original and manually simplified versions of a standardized French text corpus and to answer comprehension questions after reading each text. The analysis of the results shows that the simplifications performed were beneficial in terms of reading speed and they reduced the number of reading errors (mainly lexical ones) without a loss in comprehension. Although the number of participants in this study was rather small (N=10), the results are promising and contribute to the development of applications in computational linguistics.},
+  address   = {Osaka, Japan},
+  file      = {:Reducing lexical complexity as a tool to increase text accessibility.pdf:PDF},
+  month     = dec,
+  year      = {2016},
+}
+
+@InProceedings{Bingel2018,
+  author    = {Bingel, Joachim and Paetzold, Gustavo and S{\o}gaard, Anders},
+  booktitle = {Proceedings of the 27th International Conference on Computational Linguistics},
+  date      = {2018},
+  title     = {{L}exi: A tool for adaptive, personalized text simplification},
+  pages     = {245--258},
+  publisher = {Association for Computational Linguistics},
+  abstract  = {Most previous research in text simplification has aimed to develop generic solutions, assuming very homogeneous target audiences with consistent intra-group simplification needs. We argue that this assumption does not hold, and that instead we need to develop simplification systems that adapt to the individual needs of specific users. As a first step towards personalized simplification, we propose a framework for adaptive lexical simplification and introduce Lexi, a free open-source and easily extensible tool for adaptive, personalized text simplification. Lexi is easily installed as a browser extension, enabling easy access to the service for its users.},
+  address   = {Santa Fe, New Mexico, USA},
+  file      = {:Lexi - A tool for adaptive, personalized text simplification.pdf:PDF},
+  month     = aug,
+  year      = {2018},
+}
+
+@Report{Muyters2019,
+  author      = {Muyters, Philippe},
+  date        = {2019-03-22},
+  institution = {Vlaamse Regering},
+  title       = {Vlaams Beleidsplan Artificiële Intelligentie},
+  file        = {:Vlaams Beleidsplan.pdf:PDF},
+}
+
+@Online{Martens2021a,
+  author       = {Martens, Marijn and De Wolf, Ralf and Evens, Tom},
+  date         = {2021-06-28},
+  title        = {School innovation forum 2021},
+  url          = {https://data-en-maatschappij.ai/nieuws/school-innovation-forum-2021},
+  organization = {{Kenniscentrum Data en Maatschappij}},
+  urldate      = {2022-04-01},
+}
+
+@Online{Swayamdipta2019,
+  author   = {Swabha Swayamdipta},
+  date     = {2019-01-22},
+  title    = {Learning Challenges in Natural Language Processing},
+  url      = {https://www.microsoft.com/en-us/research/video/learning-challenges-in-natural-language-processing/},
+  language = {Engels},
+  urldate  = {2022-04-01},
+  abstract = {As the availability of data for language learning grows, the role of linguistic structure is under scrutiny. At the same time, it is imperative to closely inspect patterns in data which might present loopholes for models to obtain high performance on benchmarks. In a two-part talk, I will address each of these challenges.
+First, I will introduce the paradigm of scaffolded learning. Scaffolds enable us to leverage inductive biases from one structural source for prediction of a different, but related structure, using only as much supervision as is necessary. We show that the resulting representations achieve improved performance across a range of tasks, indicating that linguistic structure remains beneficial even with powerful deep learning architectures.
+In the second part of the talk, I will showcase some of the properties exhibited by NLP models in large data regimes. Even as these models report excellent performance, sometimes claimed to beat humans, a closer look reveals that predictions are not a result of complex reasoning, and the task is not being completed in a generalizable way. Instead, this success can be largely attributed to exploitation of some artifacts of annotation in the datasets. I will discuss some questions our finding raises, as well as directions for future work.},
+}
+
+@Online{Roldos2020,
+  author       = {Inés Roldós},
+  date         = {2020-12-22},
+  title        = {Major Challenges of Natural Language Processing (NLP)},
+  url          = {https://monkeylearn.com/blog/natural-language-processing-challenges/},
+  organization = {MonkeyLearn},
+  urldate      = {2022-04-01},
+}
+
+@Article{Siddharthan2014,
+  author  = {Siddharthan, Advaith},
+  title   = {A survey of research on text simplification},
+  pages   = {259-298},
+  volume  = {165},
+  journal = {ITL - International Journal of Applied Linguistics},
+  month   = {12},
+  year    = {2014},
+}
+
+@Book{Chowdhary2020,
+  author    = {K.R. Chowdhary},
+  date      = {2020},
+  title     = {Fundamentals of Artificial Intelligence},
+  publisher = {Springer, New Delhi},
+}
+
+@Online{Sciforce2020,
+  author   = {{Sciforce}},
+  date     = {2020-02-04},
+  title    = {Biggest Open Problems in Natural Language Processing},
+  url      = {https://medium.com/sciforce/biggest-open-problems-in-natural-language-processing-7eb101ccfc9},
+  language = {Engels},
+  urldate  = {2022-04-01},
+  abstract = {The NLP domain reports great advances to the extent that a number of problems, such as part-of-speech tagging, are considered to be fully solved. At the same time, such tasks as text summarization or machine dialog systems are notoriously hard to crack and remain open for the past decades.},
+}
+
+@Article{PlavenSigray2017,
+  author       = {Plavén-Sigray, Pontus and Matheson, Granville James and Schiffler, Björn Christian and Thompson, William Hedley},
+  title        = {Research: The readability of scientific texts is decreasing over time},
+  editor       = {King, Stuart},
+  issn         = {2050-084X},
+  pages        = {e27725},
+  volume       = {6},
+  abstract     = {Clarity and accuracy of reporting are fundamental to the scientific process. Readability formulas can estimate how difficult a text is to read. Here, in a corpus consisting of 709,577 abstracts published between 1881 and 2015 from 123 scientific journals, we show that the readability of science is steadily decreasing. Our analyses show that this trend is indicative of a growing use of general scientific jargon. These results are concerning for scientists and for the wider public, as they impact both the reproducibility and accessibility of research findings.},
+  article_type = {journal},
+  citation     = {eLife 2017;6:e27725},
+  journal      = {eLife},
+  keywords     = {metascience, readability, data analysis, jargon, scientific communication},
+  pub_date     = {2017-09-05},
+  publisher    = {eLife Sciences Publications, Ltd},
+  year         = {2017},
+}
+
+@Article{Barnett2020,
+  author       = {Barnett, Adrian and Doubleday, Zoe},
+  title        = {Meta-Research: The growth of acronyms in the scientific literature},
+  editor       = {Rodgers, Peter},
+  issn         = {2050-084X},
+  pages        = {e60080},
+  volume       = {9},
+  abstract     = {Some acronyms are useful and are widely understood, but many of the acronyms used in scientific papers hinder understanding and contribute to the increasing fragmentation of science. Here we report the results of an analysis of more than 24 million article titles and 18 million article abstracts published between 1950 and 2019. There was at least one acronym in 19\% of the titles and 73\% of the abstracts. Acronym use has also increased over time, but the re-use of acronyms has declined. We found that from more than one million unique acronyms in our data, just over 2,000 (0.2\%) were used regularly, and most acronyms (79\%) appeared fewer than 10 times. Acronyms are not the biggest current problem in science communication, but reducing their use is a simple change that would help readers and potentially increase the value of science.},
+  article_type = {journal},
+  citation     = {eLife 2020;9:e60080},
+  journal      = {eLife},
+  keywords     = {meta-research, scientific writing, acronyms, communication, knowledge, scientific publishing},
+  pub_date     = {2020-07-23},
+  publisher    = {eLife Sciences Publications, Ltd},
+  year         = {2020},
+}
+
+@Online{Gupta2021,
+  author = {Jyoti Gupta},
+  date   = {2021-01-23},
+  title  = {NLP Trends and Use Cases in 2021},
+  url    = {https://www.whatech.com/og/artificial-intelligence/blog/688309-nlp-trends-and-use-cases-in-2021},
+}
+
+@Article{Donato2022,
+  author   = {Donato, Antonella and Muscolo, Maria and Arias Romero, Mateo and Caprì, Tindara and Calarese, Tiziana and Olmedo Moreno, Eva María},
+  title    = {Students with dyslexia between school and university: Post-diploma choices and the reasons that determine them. An Italian study},
+  number   = {1},
+  pages    = {110-127},
+  volume   = {28},
+  abstract = {Although the number of students with dyslexia enrolled in Italian universities is constantly growing, their presence remains relatively limited. The aim of this study was therefore to investigate the choices made by students with dyslexia in relation to university studies, and the underlying reasons for their choices. This study also compares these choices for students with and without dyslexia. In all, 440 high school students and their families agreed to take part in this project. Socio-demographic data was collected for the 47 students with dyslexia and 47 class-matched students without dyslexia, along with information on their current schools and their future educational plans. A specially developed questionnaire was used for the students, in combination with structured interviews with their families. The results show significant differences between these groups regarding both choices for university studies and the underlying motivations for these choices. Furthermore, certain psychological and emotional factors are implicated here in the decisions of the students with dyslexia regarding both university studies and their underlying reasons. Future research is needed to further investigate these factors in the educational choices of students with dyslexia.},
+  journal  = {Dyslexia},
+  keywords = {choices, dyslexia, reasons, students, university},
+  year     = {2022},
+}
+
+@Article{VasquezRodriguez2021,
+  author     = {Laura V{\'{a}}squez{-}Rodr{\'{\i}}guez and Matthew Shardlow and Piotr Przybyla and Sophia Ananiadou},
+  title      = {Investigating Text Simplification Evaluation},
+  eprint     = {2107.13662},
+  eprinttype = {arXiv},
+  volume     = {abs/2107.13662},
+  bibsource  = {dblp computer science bibliography, https://dblp.org},
+  biburl     = {https://dblp.org/rec/journals/corr/abs-2107-13662.bib},
+  journal    = {CoRR},
+  timestamp  = {Tue, 03 Aug 2021 14:53:34 +0200},
+  year       = {2021},
+}
+
+@InProceedings{Rello2012,
+  author    = {Rello, Luz and Kanvinde, Gaurang and Baeza-Yates, Ricardo},
+  booktitle = {Proceedings of the International Cross-Disciplinary Conference on Web Accessibility},
+  title     = {Layout Guidelines for Web Text and a Web Service to Improve Accessibility for Dyslexics},
+  isbn      = {9781450310192},
+  location  = {Lyon, France},
+  publisher = {Association for Computing Machinery},
+  series    = {W4A '12},
+  abstract  = {In this paper, we offer set of guidelines and a web service that presents Web texts in a more more accessible way to people with dyslexia. The layout guidelines for developing this service are based on a user study with a group of twenty two dyslexic users. The data collected from our study combines qualitative data from interviews and questionnaires and quantitative data from tests carried out using eye tracking. We analyze and compare both kinds of data and present a set of layout guidelines for making the text Web more readable for dyslexic users. To the best of our knowledge, our methodology for defining dyslexic-friendly guidelines and our web service are novel.},
+  address   = {New York, NY, USA},
+  articleno = {36},
+  keywords  = {browsing web service, web accessibility, dyslexia, readability, accessibility guidelines, usability tests},
+  numpages  = {9},
+  year      = {2012},
+}
+
+@Online{Readable2021,
+  author = {Readable},
+  date   = {2021},
+  title  = {Flesch Reading Ease and the Flesch Kincaid Grade Level},
+  url    = {https://readable.com/readability/flesch-reading-ease-flesch-kincaid-grade-level/},
+}
+
+@inproceedings{Gooding2022,
+    title = "On the Ethical Considerations of Text Simplification",
+    author = "Gooding, Sian",
+    booktitle = "Ninth Workshop on Speech and Language Processing for Assistive Technologies (SLPAT-2022)",
+    month = "05",
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.slpat-1.7",
+    doi = "10.18653/v1/2022.slpat-1.7",
+    pages = "50--57",
+    abstract = "This paper outlines the ethical implications of text simplification within the framework of assistive systems. We argue that a distinction should be made between the technologies that perform text simplification and the realisation of these in assistive technologies. When using the latter as a motivation for research, it is important that the subsequent ethical implications be carefully considered. We provide guidelines for the framing of text simplification independently of assistive systems, as well as suggesting directions for future research and discussion based on the concerns raised.",
+}
+
+@Online{Miszczak2022,
+  author = {Patryk Miszczak},
+  date   = {2022-09-20},
+  title  = {Natural Language Processing Statistics (2022)},
+  url    = {https://businessolution.org/natural-language-processing-statistics/},
+}
+
+@article{Khyani2021,
+    author = {Khyani, Divya and B S, Siddhartha},
+    year = {2021},
+    month = {01},
+    pages = {350-357},
+    title = {An Interpretation of Lemmatization and Stemming in Natural Language Processing},
+    volume = {22},
+    journal = {Shanghai Ligong Daxue Xuebao/Journal of University of Shanghai for Science and Technology}
+}
+
+@Online{Droogenbroeck2022,
+  author = {Kelly Van Droogenbroeck},
+  date   = {2022-11-23},
+  title  = {Scholen krijgen meer steun om leerlingen met beperking op te vangen},
+  url    = {https://www.demorgen.be/snelnieuws/scholen-krijgen-meer-steun-om-leerlingen-met-beperking-op-te-vangen~bb2469df/},
+}
+
+@InProceedings{Garbacea2021,
+  author    = {Garbacea, Cristina and Guo, Mengtian and Carton, Samuel and Mei, Qiaozhu},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  title     = {Explainable Prediction of Text Complexity: The Missing Preliminaries for Text Simplification},
+  doi       = {10.18653/v1/2021.acl-long.88},
+  pages     = {1086--1097},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2021.acl-long.88},
+  abstract  = {Text simplification reduces the language complexity of professional content for accessibility purposes. End-to-end neural network models have been widely adopted to directly generate the simplified version of input text, usually functioning as a blackbox. We show that text simplification can be decomposed into a compact pipeline of tasks to ensure the transparency and explainability of the process. The first two steps in this pipeline are often neglected: 1) to predict whether a given piece of text needs to be simplified, and 2) if yes, to identify complex parts of the text. The two tasks can be solved separately using either lexical or deep learning methods, or solved jointly. Simply applying explainable complexity prediction as a preliminary step, the out-of-sample text simplification performance of the state-of-the-art, black-box simplification models can be improved by a large margin.},
+  address   = {Online},
+  year      = {2021},
+}
+
+@Article{Bulte2018,
+  author       = {Bulté, Bram and Sevens, Leen and Vandeghinste, Vincent},
+  title        = {Automating lexical simplification in Dutch},
+  pages        = {24–48},
+  url          = {https://clinjournal.org/clinj/article/view/78},
+  volume       = {8},
+  abstractnote = {&amp;lt;p&amp;gt;We discuss the design, development and evaluation of an automated lexical simplification tool for Dutch. A basic pipeline approach is used to perform both text adaptation and annotation. First, sentences are preprocessed and word sense disambiguation is performed. Then, the difficulty of each token is estimated by looking at their average age of acquisition and frequency in a corpus of simplified Dutch. We use Cornetto to find synonyms of words that have been identified as difficult and the SONAR500 corpus to perform reverse lemmatisation. Finally, we rely on a largescale language model to verify whether the selected replacement word fits the local context. In addition, the text is augmented with information from Wikipedia (word definitions and links). We tune and evaluate the system with sentences taken from the Flemish newspaper De Standaard. The results show that the system’s adaptation component has low coverage, since it only correctly simplifies around one in five ‘difficult’ words, but reasonable accuracy, with no grammatical errors being introduced in the text. The Wikipedia annotations have a broader coverage, but their potential for simplification needs to be further developed and more thoroughly evaluated.&amp;lt;/p&amp;gt;},
+  journal      = {Computational Linguistics in the Netherlands Journal},
+  year         = {2018},
+}
+
+@Online{Verhoeven2023,
+  author = {Wim Verhoeven},
+  date   = {2023-02-08},
+  editor = {Trends},
+  title  = {Applaus voor de studenten die ChatGPT gebruiken},
+  url    = {https://trends.knack.be/economie/bedrijven/applaus-voor-de-studenten-die-chatgpt-gebruiken/article-opinion-1934277.html?cookie_check=1676034368},
+}
+
+@Online{Malik2022,
+  author = {Rijul Sing Malik},
+  date   = {2022-07-04},
+  editor = {Towards AI},
+  title  = {Top 5 NLP Libraries To Use in Your Projects},
+  url    = {https://towardsai.net/p/l/top-5-nlp-libraries-to-use-in-your-projects},
+}
+
+@Article{Shardlow2014,
+  author    = {Matthew Shardlow},
+  title     = {A Survey of Automated Text Simplification},
+  doi       = {10.14569/SpecialIssue.2014.040109},
+  number    = {1},
+  url       = {http://dx.doi.org/10.14569/SpecialIssue.2014.040109},
+  volume    = {4},
+  journal   = {International Journal of Advanced Computer Science and Applications(IJACSA), Special Issue on Natural Language Processing 2014},
+  publisher = {The Science and Information Organization},
+  year      = {2014},
+}
+
+@Article{Thangarajah2019,
+  author = {Thangarajah, Vinothraj},
+  title  = {Python current trend applications-an overview},
+  month  = {10},
+  year   = {2019},
+}
+
+@InProceedings{Iavarone2021,
+  author    = {Iavarone, Benedetta and Brunato, Dominique and Dell{'}Orletta, Felice},
+  booktitle = {Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics},
+  title     = {Sentence Complexity in Context},
+  doi       = {10.18653/v1/2021.cmcl-1.23},
+  pages     = {186--199},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2021.cmcl-1.23},
+  abstract  = {We study the influence of context on how humans evaluate the complexity of a sentence in English. We collect a new dataset of sentences, where each sentence is rated for perceived complexity within different contextual windows. We carry out an in-depth analysis to detect which linguistic features correlate more with complexity judgments and with the degree of agreement among annotators. We train several regression models, using either explicit linguistic features or contextualized word embeddings, to predict the mean complexity values assigned to sentences in the different contextual windows, as well as their standard deviation. Results show that models leveraging explicit features capturing morphosyntactic and syntactic phenomena perform always better, especially when they have access to features extracted from all contextual sentences.},
+  address   = {Online},
+  month     = jun,
+  year      = {2021},
+}
+
+@Book{Sohom2019,
+  author    = {Sohom, Ghosh; Dwight, Gunning},
+  date      = {2019},
+  title     = {Natural Language Processing Fundamentals},
+  isbn      = {9781789954043},
+  language  = {English},
+  publisher = {Packt Publishing},
+  url       = {https://medium.com/analytics-vidhya/natural-language-processing-basic-concepts-a3c7f50bf5d3},
+  abstract  = {Use Python and NLTK (Natural Language Toolkit) to build out your own text classifiers and solve common NLP problems. Key Features Assimilate key NLP concepts and terminologies Explore popular NLP tools and techniques Gain practical experience using NLP in application code Book Description If NLP hasn't been your forte, Natural Language Processing Fundamentals will make sure you set off to a steady start. This comprehensive guide will show you how to effectively use Python libraries and NLP concepts to solve various problems. You'll be introduced to natural language processing and its applications through examples and exercises. This will be followed by an introduction to the initial stages of solving a problem, which includes problem definition, getting text data, and preparing it for modeling. With exposure to concepts like advanced natural language processing algorithms and visualization techniques, you'll learn how to create applications that can extract information from unstructured data and present it as impactful visuals. Although you will continue to learn NLP-based techniques, the focus will gradually shift to developing useful applications. In these sections, you'll understand how to apply NLP techniques to answer questions as can be used in chatbots. By the end of this book, you'll be able to accomplish a varied range of assignments ranging from identifying the most suitable type of NLP task for solving a problem to using a tool like spacy or gensim for performing sentiment analysis. The book will easily equip you with the knowledge you need to build applications that interpret human language. What you will learn Obtain, verify, and clean data before transforming it into a correct format for use Perform data analysis and machine learning tasks using Python Understand the basics of computational linguistics Build models for general natural language processing tasks Evaluate the performance of a model with the right metrics Visualize, quantify, and perform exploratory analysis from any text data Who this book is for Natural Language Processing Fundamentals is designed for novice and mid-level data scientists and machine learning developers who want to gather and analyze text data to build an NLP-powered product. It'll help you to have prior experience of coding in Python using data types, writing functions, and importing libraries. Some experience with linguistics and probability is useful but not necessary.},
+}
+
+@Conference{DeBelder2010,
+  author    = {De Belder, Jan; Moens, Marie-Francine},
+  date      = {2010},
+  title     = {Text simplification for children},
+  language  = {eng},
+  publisher = {ACM; New York},
+  abstract  = {The goal in this paper is to automatically transform text into a simpler text, so that it is easier to understand by children. We perform syntactic simplification, i.e. the splitting of sentences, and lexical simplification, i.e. replacing difficult words with easier synonyms. We test the performance of this approach for each component separately on a per sentence basis, and globally with the automatic construction of simplified news articles and encyclopedia articles. By including information from a language model in the lexical simplification step, we obtain better results over a baseline method. The syntactic simplification shows that some phenomena are hard to recognize by a parser, and that errors are often introduced. Although the reading difficulty goes down, it still doesn’t reach the required level needed for young children.},
+  journal   = {Prroceedings of the SIGIR workshop on accessible search systems},
+  keywords  = {Text simplification},
+  year      = {2010},
+}
+
+@Article{Siddharthan2006,
+  author    = {Advaith Siddharthan},
+  title     = {Syntactic Simplification and Text Cohesion},
+  number    = {1},
+  pages     = {77--109},
+  url       = {http://oro.open.ac.uk/58888/},
+  volume    = {4},
+  abstract  = {Syntactic simplification is the process of reducing the grammatical complexity of a text, while retaining its information content and meaning. The aim of syntactic simplification is to make text easier to comprehend for human readers, or process by programs. In this paper, we formalise the interactions that take place between syntax and discourse during the simplification process. This is important because the usefulness of syntactic simplification in making a text accessible to a wider audience can be undermined if the rewritten text lacks cohesion. We describe how various generation issues like sentence ordering, cue-word selection, referring-expression generation, determiner choice and pronominal use can be resolved so as to preserve conjunctive and anaphoric cohesive relations during syntactic simplification and present the results of an evaluation of our syntactic simplification system.},
+  journal   = {Research on Language and Computation},
+  keywords  = {anaphoric structure; cue-word selection; determiner choice; discourse structure; sentence ordering; syntactic simplification; text cohesion},
+  month     = {June},
+  publisher = {Springer Netherlands},
+  year      = {2006},
+}
+
+@Online{Dapaah2022,
+  author = {Dapaah, Josephine and Maenhout, Klaas},
+  date   = {2022-07-08},
+  editor = {De Standaard},
+  title  = {Iedereen heeft boter op zijn hoofd},
+  url    = {https://www.standaard.be/cnt/dmf20220607_97763592},
+}
+
+@Article{Wafaa2021,
+title = {Automatic text summarization: A comprehensive survey},
+journal = {Expert Systems with Applications},
+volume = {165},
+pages = {113679},
+year = {2021},
+issn = {0957-4174},
+doi = {https://doi.org/10.1016/j.eswa.2020.113679},
+url = {https://www.sciencedirect.com/science/article/pii/S0957417420305030},
+author = {Wafaa S. El-Kassas and Cherif R. Salama and Ahmed A. Rafea and Hoda K. Mohamed},
+keywords = {Automatic text summarization, Text summarization approaches, Text summarization techniques, Text summarization evaluation},
+abstract = {Automatic Text Summarization (ATS) is becoming much more important because of the huge amount of textual content that grows exponentially on the Internet and the various archives of news articles, scientific papers, legal documents, etc. Manual text summarization consumes a lot of time, effort, cost, and even becomes impractical with the gigantic amount of textual content. Researchers have been trying to improve ATS techniques since the 1950s. ATS approaches are either extractive, abstractive, or hybrid. The extractive approach selects the most important sentences in the input document(s) then concatenates them to form the summary. The abstractive approach represents the input document(s) in an intermediate representation then generates the summary with sentences that are different than the original sentences. The hybrid approach combines both the extractive and abstractive approaches. Despite all the proposed methods, the generated summaries are still far away from the human-generated summaries. Most researches focus on the extractive approach. It is required to focus more on the abstractive and hybrid approaches. This research provides a comprehensive survey for the researchers by presenting the different aspects of ATS: approaches, methods, building blocks, techniques, datasets, evaluation methods, and future research directions.}
+}
+
+@Article{Niemeijer2010,
+title = "Ethical and practical concerns of surveillance technologies in residential care for people with dementia or intellectual disabilities: an overview of the literature",
+author = "A.R. Niemeijer and B.J.M. Frederiks and II Riphagen and J. Legemaate and J.A. Eefsting and C.M.P.M. Hertogh",
+year = "2010",
+doi = "10.1017/S1041610210000037",
+language = "Undefined/Unknown",
+volume = "22",
+pages = "1129--1142",
+journal = "Psychogeriatrics",
+issn = "1041-6102",
+publisher = "Cambridge University Press",
+number = "7",
+}
+
+@article{Punardeep2020,
+  author    = {Punardeep Sikka and
+               Vijay Mago},
+  title     = {A Survey on Text Simplification},
+  journal   = {CoRR},
+  volume    = {abs/2008.08612},
+  year      = {2020},
+  url       = {https://arxiv.org/abs/2008.08612},
+  eprinttype = {arXiv},
+  eprint    = {2008.08612},
+  timestamp = {Fri, 28 Aug 2020 09:01:07 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2008-08612.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Xu2015,
+  title={Problems in current text simplification research: New data can help},
+  author={Xu, Wei and Callison-Burch, Chris and Napoles, Courtney},
+  journal={Transactions of the Association for Computational Linguistics},
+  volume={3},
+  pages={283--297},
+  year={2015},
+  publisher={MIT Press}
+}
+
+@InProceedings{Canning2000,
+author="Canning, Yvonne
+and Tait, John
+and Archibald, Jackie
+and Crawley, Ros",
+editor="Sojka, Petr
+and Kope{\v{c}}ek, Ivan
+and Pala, Karel",
+title="Cohesive Generation of Syntactically Simplified Newspaper Text",
+booktitle="Text, Speech and Dialogue",
+year="2000",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="145--150",
+abstract="This paper describes SYSTAR (SYntactic Simplification of Text for Aphasic Readers), the PSet module which splits compound sentences, activises seven agentive passive clause types, and resolves and replaces eight frequently occurring anaphoric pronouns. We describe our techniques and strategies, report on the results obtained after evaluation of a corpus of 100 newspaper articles downloaded from the website of a daily provincial, and briefly report on experimental studies with aphasic participants.",
+isbn="978-3-540-45323-9"
+}
+
+@inproceedings{Coster2011,
+    title = "Learning to Simplify Sentences Using {W}ikipedia",
+    author = "Coster, Will  and
+      Kauchak, David",
+    booktitle = "Proceedings of the Workshop on Monolingual Text-To-Text Generation",
+    month = jun,
+    year = "2011",
+    address = "Portland, Oregon",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/W11-1601",
+    pages = "1--9",
+}
+
+
+@inproceedings{Kandula2010,
+  title={A semantic and syntactic text simplification tool for health content},
+  author={Kandula, Sasikiran and Curtis, Dorothy and Zeng-Treitler, Qing},
+  booktitle={AMIA annual symposium proceedings},
+  volume={2010},
+  pages={366},
+  year={2010},
+  organization={American Medical Informatics Association}
+}
+
+@misc{Vandeghinste2019,
+abstract = {This paper presents the Wablieft corpus, a two million words corpus of a Belgian easy-to-read newspaper, written in Dutch. The corpus was automatically annotated with CLARIN tools and is made available in several formats for download and online querying, through the CLARIN infrastructure. Annotations consist of part-of-speech tagging, chunking, dependency parsing, named entity recognition, morphological analysis and universal dependencies. By making this corpus available we want to stimulate research into text readability and automated text simplification.},
+author = {Vandeghinste, Vincent and Bulté, Bram and Augustinus, Liesbeth},
+journal = {Proceedings of CLARIN Annual Conference 2019},
+publisher = {CLARIN},
+title = {Wablieft: An Easy-to-Read Newspaper Corpus for Dutch},
+year = {2019},
+}
+
+@inproceedings{Poel2008,
+title = "A Neural Network Based Dutch Part of Speech Tagger",
+abstract = "In this paper a Neural Network is designed for Part-of-Speech Tagging of Dutch text. Our approach uses the Corpus Gesproken Nederlands (CGN) consisting of almost 9 million transcribed words of spoken Dutch, divided into 15 different categories. The outcome of the design is a Neural Network with an input window of size 8 (4 words back and 3 words ahead) and a hidden layer of 370 neurons. The words ahead are coded based on the relative frequency of the tags in the training set for the word. Special attention is paid to unknown words (words not in the training set) for which such a relative frequency cannot be determined. Based on a 10-fold cross validation an approximation of the relative frequency of tags for unknown words is determined. The performance of the Neural Network is 97.35%, 97.88% on known words and 41.67% on unknown words. This is comparable to state of the art performances found in the literature. The special coding of unknown words resulted of an increase of almost 13% for the tagging of unknown words.",
+keywords = "IR-65237, METIS-255028, EWI-14662",
+author = "Mannes Poel and Egwin Boschman and {op den Akker}, Rieks",
+note = "http://eprints.ewi.utwente.nl/14662 ; 20th Benelux Conference on Artificial Intelligence, BNAIC 2008, BNAIC ; Conference date: 30-10-2008 Through 31-10-2008",
+year = "2008",
+language = "English",
+series = "BNAIC: proceedings of the ... Belgium/Netherlands Artificial Intelligence Conference",
+publisher = "Twente University Press (TUP)",
+number = "20",
+pages = "217--224",
+editor = "Anton Nijholt and Maja Pantic and Mannes Poel and Hendri Hondorp",
+booktitle = "BNAIC 2008",
+address = "Netherlands",
+}
+
+
+@book{Eisenstein2019,
+  title={Introduction to Natural Language Processing},
+  author={Eisenstein, J.},
+  isbn={9780262042840},
+  lccn={2018059552},
+  series={Adaptive Computation and Machine Learning series},
+  url={https://books.google.be/books?id=72yuDwAAQBAJ},
+  year={2019},
+  publisher={MIT Press}
+}
+
+
+@inproceedings{Schovilet2017,
+author = {Scholivet, Manon and Ramisch, Carlos},
+year = {2017},
+month = {01},
+pages = {167-175},
+title = {Identification of Ambiguous Multiword Expressions Using Sequence Models and Lexical Resources},
+doi = {10.18653/v1/W17-1723}
+}
+
+@InProceedings{Zeng2005,
+    author={Zeng, Qing and Kim, Eunjung and Crowell, Jon and Tse, Tony},
+    editor={"Oliveira, Jos{\'e} Lu{\'i}s and Maojo, V{\'i}ctor and Mart{\'i}n-S{\'a}nchez, Fernando and Pereira, Ant{\'o}nio Sousa"},
+    title="A Text Corpora-Based Estimation of the Familiarity of Health Terminology",
+    booktitle="Biological and Medical Data Analysis",
+    year="2005",
+    publisher="Springer Berlin Heidelberg",
+    address="Berlin, Heidelberg",
+    pages="184--192",
+    abstract="In a pilot effort to improve health communication we created a method for measuring the familiarity of various medical terms. To obtain term familiarity data, we recruited 21 volunteers who agreed to take medical  terminology quizzes containing 68 terms. We then created predictive models for familiarity based on term occurrence in text corpora and reader's demographics. Although the sample size was small, our preliminary results indicate that predicting the familiarity of medical terms based on an analysis of the frequency in text corpora is feasible. Further, individualized familiarity assessment is feasible when demographic features are included as predictors.",
+    isbn="978-3-540-31658-9"
+}
+
+
+@Article{Lissens2020,
+  author   = {{Lissens, Femke and Masarrat Al Asmar, Masarrat and Willems, Daniëlle and Van Damme, Jana and De Coster, Sandrine and Demeestere, Emma and Maes, Romy and Baccarne, Bastiaan and Robaeyst, Ben and Duthoo, Wout and Desoete, Annemie}},
+  title    = {{Het stopt nooit… : de impact van dyslexie en/of dyscalculie op het welbevinden en studeren van (jong)volwassenen en op de transitie naar de arbeidsmarkt : een bundeling van Vlaamse pilootstudies}},
+  issn     = {{1370-706X}},
+  language = {{dut}},
+  number   = {{6}},
+  pages    = {{10--28}},
+  volume   = {{2020}},
+  abstract = {{Tot op heden werd er relatief weinig gepubliceerd over dyslexie en dyscalculie bij (jong)volwassenen. De impact van deze leerstoornissen in het hoger onderwijs en in de transitie naar de arbeidsmarkt is dan ook onderbelicht. Om hier een kentering in te brengen, werden twee bachelorstudies (één aan de Arteveldehogeschool en één aan HoGent) en een masterstudie (aan UGent) opgezet en werd ook een City of People (CoP) impulsproject ‘Inclusie in 4D’ (zie www.cityofpeople.be) gestart. De bevindingen van deze studies benadrukken dat de impact van leerstoornissen niet stopt nadat men de schoolbanken verlaat. Verder blijkt de nood aan selectieprocedures die een ‘eerlijker’ en ‘rijker’ beeld kunnen geven van de capaciteiten van de volwassenen met dyslexie/dyscalculie. Alleen op die manier kunnen werkgevers vermijden dat ze ‘hidden potentials’ missen. We moeten de arbeidsmarkt dan ook sensibiliseren om de kaart van de ‘diversiteit’ te trekken. Implicaties voor het werken met (jong)volwassenen met leerstoornissen worden belicht.}},
+  journal  = {{LOGOPEDIE (HERENTALS)}},
+  keywords = {{Dyslexie, drempels, sterktes, arbeidshandicap, inclusie, dyscalculie, volwassenen}},
+  year     = {{2020}},
+}
+
+@book{Ghesquiere2018,
+  title     = "Als leren pijn doet: Kinderen met een leerstoornis opvoeden en begeleiden",
+  author    = "Ghesquière, Pol",
+  year      = 2018,
+  publisher = "Acco",
+}
+
+@Online{Martens2021,
+  author       = {Martens, Marijn and De Wolf, Ralf and Evens, Tom},
+  date         = {2021},
+  title        = {Algoritmes en AI in de onderwijscontext: Een studie naar de perceptie, mening en houding van leerlingen en ouders in Vlaanderen},
+  url          = {https://data-en-maatschappij.ai/publicaties/survey-onderwijs-2021},
+  organization = {{Kenniscentrum Data en Maatschappij}},
+  urldate      = {2022-03-30},
+}
+
+@Report{Crevits2022,
+  author      = {Crevits, Hilde},
+  date        = {2022-03-13},
+  institution = {Vlaamse Overheid Departement Economie, Wetenschap en Innovatie},
+  title       = {Kwart van bedrijven gebruikt artificiële intelligentie: Vlaanderen bij beste leerlingen van de klas},
+  type        = {Persbericht},
+  file        = {:persbericht_-_kwart_van_bedrijven_gebruikt_artificiele_intelligentie_-_vlaanderen_bij_beste_leerlingen_van_de_klas.pdf:PDF},
+}
+
+@InProceedings{Gala2016,
+  author    = {Gala, N{\'u}ria and Ziegler, Johannes},
+  booktitle = {Proceedings of the Workshop on Computational Linguistics for Linguistic Complexity ({CL}4{LC})},
+  date      = {2016},
+  title     = {Reducing lexical complexity as a tool to increase text accessibility for children with dyslexia},
+  pages     = {59--66},
+  publisher = {The COLING 2016 Organizing Committee},
+  abstract  = {Lexical complexity plays a central role in readability, particularly for dyslexic children and poor readers because of their slow and laborious decoding and word recognition skills. Although some features to aid readability may be common to most languages (e.g., the majority of {`}easy{'} words are of low frequency), we believe that lexical complexity is mainly language-specific. In this paper, we define lexical complexity for French and we present a pilot study on the effects of text simplification in dyslexic children. The participants were asked to read out loud original and manually simplified versions of a standardized French text corpus and to answer comprehension questions after reading each text. The analysis of the results shows that the simplifications performed were beneficial in terms of reading speed and they reduced the number of reading errors (mainly lexical ones) without a loss in comprehension. Although the number of participants in this study was rather small (N=10), the results are promising and contribute to the development of applications in computational linguistics.},
+  address   = {Osaka, Japan},
+  file      = {:Reducing lexical complexity as a tool to increase text accessibility.pdf:PDF},
+  year      = {2016},
+}
+
+@InProceedings{Bingel2018,
+  author    = {Bingel, Joachim and Paetzold, Gustavo and S{\o}gaard, Anders},
+  booktitle = {Proceedings of the 27th International Conference on Computational Linguistics},
+  date      = {2018},
+  title     = {{L}exi: A tool for adaptive, personalized text simplification},
+  pages     = {245--258},
+  publisher = {Association for Computational Linguistics},
+  abstract  = {Most previous research in text simplification has aimed to develop generic solutions, assuming very homogeneous target audiences with consistent intra-group simplification needs. We argue that this assumption does not hold, and that instead we need to develop simplification systems that adapt to the individual needs of specific users. As a first step towards personalized simplification, we propose a framework for adaptive lexical simplification and introduce Lexi, a free open-source and easily extensible tool for adaptive, personalized text simplification. Lexi is easily installed as a browser extension, enabling easy access to the service for its users.},
+  address   = {Santa Fe, New Mexico, USA},
+  file      = {:Lexi - A tool for adaptive, personalized text simplification.pdf:PDF},
+  year      = {2018},
+}
+
+@Report{Muyters2019,
+  author      = {Muyters, Philippe},
+  date        = {2019-03-22},
+  institution = {Vlaamse Regering},
+  title       = {Vlaams Beleidsplan Artificiële Intelligentie},
+  file        = {:Vlaams Beleidsplan.pdf:PDF},
+}
+
+@Online{Martens2021a,
+  author       = {Martens, Marijn and De Wolf, Ralf and Evens, Tom},
+  date         = {2021-06-28},
+  title        = {School innovation forum 2021},
+  url          = {https://data-en-maatschappij.ai/nieuws/school-innovation-forum-2021},
+  organization = {{Kenniscentrum Data en Maatschappij}},
+  urldate      = {2022-04-01},
+}
+
+@Online{Swayamdipta2019,
+  author   = {Swabha Swayamdipta},
+  date     = {2019-01-22},
+  title    = {Learning Challenges in Natural Language Processing},
+  url      = {https://www.microsoft.com/en-us/research/video/learning-challenges-in-natural-language-processing/},
+  language = {Engels},
+  urldate  = {2022-04-01},
+  abstract = {As the availability of data for language learning grows, the role of linguistic structure is under scrutiny. At the same time, it is imperative to closely inspect patterns in data which might present loopholes for models to obtain high performance on benchmarks. In a two-part talk, I will address each of these challenges.
+First, I will introduce the paradigm of scaffolded learning. Scaffolds enable us to leverage inductive biases from one structural source for prediction of a different, but related structure, using only as much supervision as is necessary. We show that the resulting representations achieve improved performance across a range of tasks, indicating that linguistic structure remains beneficial even with powerful deep learning architectures.
+In the second part of the talk, I will showcase some of the properties exhibited by NLP models in large data regimes. Even as these models report excellent performance, sometimes claimed to beat humans, a closer look reveals that predictions are not a result of complex reasoning, and the task is not being completed in a generalizable way. Instead, this success can be largely attributed to exploitation of some artifacts of annotation in the datasets. I will discuss some questions our finding raises, as well as directions for future work.},
+}
+
+@Online{Roldos2020,
+  author       = {Inés Roldós},
+  date         = {2020-12-22},
+  title        = {Major Challenges of Natural Language Processing (NLP)},
+  url          = {https://monkeylearn.com/blog/natural-language-processing-challenges/},
+  organization = {MonkeyLearn},
+  urldate      = {2022-04-01},
+}
+
+@Article{Siddharthan2014,
+  author  = {Siddharthan, Advaith},
+  title   = {A survey of research on text simplification},
+  pages   = {259-298},
+  volume  = {165},
+  journal = {ITL - International Journal of Applied Linguistics},
+  month   = {12},
+  year    = {2014},
+}
+
+@Book{Chowdhary2020,
+  author    = {K.R. Chowdhary},
+  date      = {2020},
+  title     = {Fundamentals of Artificial Intelligence},
+  publisher = {Springer, New Delhi},
+}
+
+@Online{Sciforce2020,
+  author   = {{Sciforce}},
+  date     = {2020-02-04},
+  title    = {Biggest Open Problems in Natural Language Processing},
+  url      = {https://medium.com/sciforce/biggest-open-problems-in-natural-language-processing-7eb101ccfc9},
+  language = {Engels},
+  urldate  = {2022-04-01},
+  abstract = {The NLP domain reports great advances to the extent that a number of problems, such as part-of-speech tagging, are considered to be fully solved. At the same time, such tasks as text summarization or machine dialog systems are notoriously hard to crack and remain open for the past decades.},
+}
+
+@Article{PlavenSigray2017,
+  author       = {Plavén-Sigray, Pontus and Matheson, Granville James and Schiffler, Björn Christian and Thompson, William Hedley},
+  title        = {Research: The readability of scientific texts is decreasing over time},
+  editor       = {King, Stuart},
+  issn         = {2050-084X},
+  pages        = {e27725},
+  volume       = {6},
+  abstract     = {Clarity and accuracy of reporting are fundamental to the scientific process. Readability formulas can estimate how difficult a text is to read. Here, in a corpus consisting of 709,577 abstracts published between 1881 and 2015 from 123 scientific journals, we show that the readability of science is steadily decreasing. Our analyses show that this trend is indicative of a growing use of general scientific jargon. These results are concerning for scientists and for the wider public, as they impact both the reproducibility and accessibility of research findings.},
+  article_type = {journal},
+  citation     = {eLife 2017;6:e27725},
+  journal      = {eLife},
+  keywords     = {metascience, readability, data analysis, jargon, scientific communication},
+  pub_date     = {2017-09-05},
+  publisher    = {eLife Sciences Publications, Ltd},
+  year         = {2017},
+}
+
+@Article{Barnett2020,
+  author       = {Barnett, Adrian and Doubleday, Zoe},
+  title        = {Meta-Research: The growth of acronyms in the scientific literature},
+  editor       = {Rodgers, Peter},
+  issn         = {2050-084X},
+  pages        = {e60080},
+  volume       = {9},
+  abstract     = {Some acronyms are useful and are widely understood, but many of the acronyms used in scientific papers hinder understanding and contribute to the increasing fragmentation of science. Here we report the results of an analysis of more than 24 million article titles and 18 million article abstracts published between 1950 and 2019. There was at least one acronym in 19\% of the titles and 73\% of the abstracts. Acronym use has also increased over time, but the re-use of acronyms has declined. We found that from more than one million unique acronyms in our data, just over 2,000 (0.2\%) were used regularly, and most acronyms (79\%) appeared fewer than 10 times. Acronyms are not the biggest current problem in science communication, but reducing their use is a simple change that would help readers and potentially increase the value of science.},
+  article_type = {journal},
+  citation     = {eLife 2020;9:e60080},
+  journal      = {eLife},
+  keywords     = {meta-research, scientific writing, acronyms, communication, knowledge, scientific publishing},
+  pub_date     = {2020-07-23},
+  publisher    = {eLife Sciences Publications, Ltd},
+  year         = {2020},
+}
+
+@Online{Gupta2021,
+  author = {Jyoti Gupta},
+  date   = {2021-01-23},
+  title  = {NLP Trends and Use Cases in 2021},
+  url    = {https://www.whatech.com/og/artificial-intelligence/blog/688309-nlp-trends-and-use-cases-in-2021},
+}
+
+@Article{Donato2022,
+  author   = {Donato, Antonella and Muscolo, Maria and Arias Romero, Mateo and Caprì, Tindara and Calarese, Tiziana and Olmedo Moreno, Eva María},
+  title    = {Students with dyslexia between school and university: Post-diploma choices and the reasons that determine them. An Italian study},
+  number   = {1},
+  pages    = {110-127},
+  volume   = {28},
+  abstract = {Although the number of students with dyslexia enrolled in Italian universities is constantly growing, their presence remains relatively limited. The aim of this study was therefore to investigate the choices made by students with dyslexia in relation to university studies, and the underlying reasons for their choices. This study also compares these choices for students with and without dyslexia. In all, 440 high school students and their families agreed to take part in this project. Socio-demographic data was collected for the 47 students with dyslexia and 47 class-matched students without dyslexia, along with information on their current schools and their future educational plans. A specially developed questionnaire was used for the students, in combination with structured interviews with their families. The results show significant differences between these groups regarding both choices for university studies and the underlying motivations for these choices. Furthermore, certain psychological and emotional factors are implicated here in the decisions of the students with dyslexia regarding both university studies and their underlying reasons. Future research is needed to further investigate these factors in the educational choices of students with dyslexia.},
+  journal  = {Dyslexia},
+  keywords = {choices, dyslexia, reasons, students, university},
+  year     = {2022},
+}
+
+@Article{VasquezRodriguez2021,
+  author     = {Laura V{\'{a}}squez{-}Rodr{\'{\i}}guez and Matthew Shardlow and Piotr Przybyla and Sophia Ananiadou},
+  title      = {Investigating Text Simplification Evaluation},
+  eprint     = {2107.13662},
+  eprinttype = {arXiv},
+  volume     = {abs/2107.13662},
+  bibsource  = {dblp computer science bibliography, https://dblp.org},
+  biburl     = {https://dblp.org/rec/journals/corr/abs-2107-13662.bib},
+  journal    = {CoRR},
+  timestamp  = {Tue, 03 Aug 2021 14:53:34 +0200},
+  year       = {2021},
+}
+
+@InProceedings{Rello2012,
+  author    = {Rello, Luz and Kanvinde, Gaurang and Baeza-Yates, Ricardo},
+  booktitle = {Proceedings of the International Cross-Disciplinary Conference on Web Accessibility},
+  title     = {Layout Guidelines for Web Text and a Web Service to Improve Accessibility for Dyslexics},
+  isbn      = {9781450310192},
+  location  = {Lyon, France},
+  publisher = {Association for Computing Machinery},
+  series    = {W4A '12},
+  abstract  = {In this paper, we offer set of guidelines and a web service that presents Web texts in a more more accessible way to people with dyslexia. The layout guidelines for developing this service are based on a user study with a group of twenty two dyslexic users. The data collected from our study combines qualitative data from interviews and questionnaires and quantitative data from tests carried out using eye tracking. We analyze and compare both kinds of data and present a set of layout guidelines for making the text Web more readable for dyslexic users. To the best of our knowledge, our methodology for defining dyslexic-friendly guidelines and our web service are novel.},
+  address   = {New York, NY, USA},
+  articleno = {36},
+  keywords  = {browsing web service, web accessibility, dyslexia, readability, accessibility guidelines, usability tests},
+  numpages  = {9},
+  year      = {2012},
+}
+
+@Online{Readable2021,
+  author = {Readable},
+  date   = {2021},
+  title  = {Flesch Reading Ease and the Flesch Kincaid Grade Level},
+  url    = {https://readable.com/readability/flesch-reading-ease-flesch-kincaid-grade-level/},
+}
+
+@Online{Droogenbroeck2022,
+  author = {Kelly Van Droogenbroeck},
+  date   = {2022-11-23},
+  title  = {Scholen krijgen meer steun om leerlingen met beperking op te vangen},
+  url    = {https://www.demorgen.be/snelnieuws/scholen-krijgen-meer-steun-om-leerlingen-met-beperking-op-te-vangen~bb2469df/},
+}
+
+@Online{Miszczak2022,
+  author = {Patryk Miszczak},
+  date   = {2022-09-20},
+  title  = {Natural Language Processing Statistics (2022)},
+  url    = {https://businessolution.org/natural-language-processing-statistics/},
+}
+
+@InProceedings{Garbacea2021,
+  author    = {Garbacea, Cristina and Guo, Mengtian and Carton, Samuel and Mei, Qiaozhu},
+  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  title     = {Explainable Prediction of Text Complexity: The Missing Preliminaries for Text Simplification},
+  pages     = {1086--1097},
+  publisher = {Association for Computational Linguistics},
+  abstract  = {Text simplification reduces the language complexity of professional content for accessibility purposes. End-to-end neural network models have been widely adopted to directly generate the simplified version of input text, usually functioning as a blackbox. We show that text simplification can be decomposed into a compact pipeline of tasks to ensure the transparency and explainability of the process. The first two steps in this pipeline are often neglected: 1) to predict whether a given piece of text needs to be simplified, and 2) if yes, to identify complex parts of the text. The two tasks can be solved separately using either lexical or deep learning methods, or solved jointly. Simply applying explainable complexity prediction as a preliminary step, the out-of-sample text simplification performance of the state-of-the-art, black-box simplification models can be improved by a large margin.},
+  address   = {Online},
+  year      = {2021},
+}
+
+@Article{Bulte2018,
+  author       = {Bulté, Bram and Sevens, Leen and Vandeghinste, Vincent},
+  title        = {Automating lexical simplification in Dutch},
+  pages        = {24–48},
+  volume       = {8},
+  abstractnote = {&amp;lt;p&amp;gt;We discuss the design, development and evaluation of an automated lexical simplification tool for Dutch. A basic pipeline approach is used to perform both text adaptation and annotation. First, sentences are preprocessed and word sense disambiguation is performed. Then, the difficulty of each token is estimated by looking at their average age of acquisition and frequency in a corpus of simplified Dutch. We use Cornetto to find synonyms of words that have been identified as difficult and the SONAR500 corpus to perform reverse lemmatisation. Finally, we rely on a largescale language model to verify whether the selected replacement word fits the local context. In addition, the text is augmented with information from Wikipedia (word d

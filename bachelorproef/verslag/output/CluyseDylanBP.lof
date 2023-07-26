@@ -1,0 +1,93 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {dutch}{}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Het leesplezier bij 15-jarigen volgens de PISA-test \autocite {DeMeyer2019}.\relax }}{2}{figure.caption.7}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces De toename van benodigde leesgraad voor het lezen van wetenschappelijke artikelen. Bron: \autocite {PlavenSigray2017}\relax }}{11}{figure.caption.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces LayoutParser toepassen op drie verschillende documenten. De kaders geven verschillende geclassificeerde tekstblokken aan. Bron: \autocite {Shen2021}.\relax }}{12}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces De gemeten \textit {mean fixation duration} tijdens het begrijpend lezen van teksten uit het onderzoek van \textcite {Rello2013a}.\relax }}{15}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Voorbeeld van PoS-labeling uit het artikel van \textcite {Bilisci2021}.\relax }}{19}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Een pipeline voor LS volgens \textcite {Althunayyan2021}.\relax }}{20}{figure.caption.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Een experiment op de \textit {mean-regret} van GPT-3 engines uit \textcite {Binz2023}.\relax }}{30}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces De werking van \textit {prompt engineering} volgens \textcite {McFarland2023}\relax }}{31}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces De evolutie van LLM's. Bron: \autocite {Simon2021}\relax }}{33}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Het benodigde stappenplan bij de requirementanalyse.\relax }}{38}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Het gevolgde stappenplan voor de vergelijking van taalmodellen.\relax }}{44}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Algemeen overzicht van de ontwikkeling van het prototype voor ATS van wetenschappelijke artikelen.\relax }}{54}{figure.caption.43}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Informatie opvragen van een wetenschappelijk artikel met SciSpace\relax }}{78}{figure.caption.53}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schermafbeelding van de tekstanalyse bij Simplish na een tekstvereenvoudiging.\relax }}{79}{figure.caption.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Tekstanalyse met \textit {Rewordify}.\relax }}{80}{figure.caption.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Overzicht van het minimum, maximum en gemiddeld aantal woorden per zin per model in A1.\relax }}{82}{figure.caption.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Overzicht van het minimum, maximum en gemiddeld aantal woorden per zin per model in A2.\relax }}{83}{figure.caption.58}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Boxplot van de FRE-scores voor A1.\relax }}{83}{figure.caption.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Boxplot van de FRE-scores voor A2.\relax }}{84}{figure.caption.60}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Boxplot van de FOG-scores voor A1.\relax }}{84}{figure.caption.61}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Boxplot van de FOG-scores voor A2.\relax }}{85}{figure.caption.62}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Een boxplot van het aantal lange en complexe woorden per zin, gegroepeerd op model voor A1.\relax }}{85}{figure.caption.63}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Een staafdiagram van het aantal gebruikte hulpwerkwoorden in de tekst, gegroepeerd op model voor A1.\relax }}{86}{figure.caption.64}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Een staafdiagram van het aantal gebruikte hulpwerkwoorden in de tekst, gegroepeerd op model voor A2.\relax }}{86}{figure.caption.65}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Het aantal vervoegingen van het werkwoord 'zijn', gegroepeerd op model voor A1.\relax }}{87}{figure.caption.66}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Het aantal vervoegingen van het werkwoord 'zijn', gegroepeerd op model voor A2.\relax }}{87}{figure.caption.67}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces De verschillen tussen de oorspronkelijke tekst, T4P1 en T4P3 bij één uitgekozen paragraaf.\relax }}{88}{figure.caption.68}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Voorbeeldweergave van de instellingenpagina.\relax }}{89}{figure.caption.69}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Een mogelijke weergave van het lerarencomponent met het wetenschappelijk artikel van \textcite {VanBrakel2022} als input.\relax }}{90}{figure.caption.70}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Een voorbeeldweergave van het scholierencomponent.\relax }}{90}{figure.caption.71}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Een voorbeeldweergave van de toepassing van PoS-tagging bij het scholierencomponent.\relax }}{91}{figure.caption.72}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Stap 1 van een gepersonaliseerde tekstvereenvoudiging in het scholierencomponent.\relax }}{92}{figure.caption.73}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Stap 2 van een gepersonaliseerde tekstvereenvoudiging in het scholierencomponent.\relax }}{92}{figure.caption.74}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Stap 1 bij het stellen van een specifieke vraag bij gemarkeerde tekst.\relax }}{93}{figure.caption.75}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Stap 2 bij het stellen van een specifieke vraag bij gemarkeerde tekst.\relax }}{93}{figure.caption.76}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.24}{\ignorespaces De uitvoer na een vereenvoudiging met Pentimentor. De tekst is een vereenvoudigde versie van het artikel van \textcite {VanBrakel2022}.\relax }}{95}{figure.caption.77}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces De indeling van leesgraadscores per doelgroep. Bron: \autocite {Readable2021}\relax }}{108}{figure.caption.78}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\contentsfinish 

@@ -1,0 +1,321 @@
+\chapter{\IfLanguageName{dutch}{Resultaten}{Results}}%
+\label{ch:resultaten}
+
+In dit hoofdstuk overloopt het onderzoek de resultaten uit de requirementsanalyse, vergelijking van taalmodellen en de ontwikkeling van \textit{Pentimentor}. Allereerst bespreekt het de resultaten van de requirementsanalyse door het moscow-schema op de uitgeteste tools toe te passen. Daarna staat het onderzoek stil bij de verkregen machinale en menselijke resultaten. Met deze resultaten kan het een geschikt taalmodel uitkiezen voor personaliseerbare ATS. Tot slot bespreekt het onderzoek het Pentimentor en vergelijkt het dit met vergelijkbare tools op basis van functionaliteiten en verschillende uitvoer. 
+
+\medspace
+
+De resultaten bevatten enkel de belangrijkste \textit{listings}. De volledige code kan de lezer op deze \textit{GitHub}-repository\footnote{https://github.com/Dyashen/text-simplification-tool} terugvinden. Alle resultaten van de vergelijking slaat het onderzoek op in een csv-bestand. Hierop maakt het analyses om de machinale resultaten verder te interpreteren. Dit bestand kan de lezer terugvinden op de bijhorende GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob/main/STATISTIEKEN\_BACHELORPROEF\_ATS.csv}.
+
+\section{Ontbrekende functies bij AI-toepassingen}
+
+Tabel \ref{table:afgetoetste-criteria} toont de resultaten van de requirementsanalyse. De volgende subsecties gaan dieper in op de \textit{must-haves} en \textit{should-haves}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ | m{8cm} | m{0.5cm} | m{0.5cm} | m{0.5cm} | m{0.5cm} | m{0.5cm} | m{0.5cm} | m{1cm} | m{1cm} | }
+		\hline
+		\textbf{Richtlijn} & \textbf{E1} & \textbf{E2} & \textbf{E3} & \textbf{O1} & \textbf{O2} & \textbf{O3} & \textbf{O4} & \textbf{O5} \\ \hline
+		Rekening houden met doelgroep & - & - & - & - & - & - & P2 & P2 \\ \hline
+		Woorden met minder lettergrepen gebruiken & - & X & - & X & - & - & P1-6 & P1-6 \\ \hline
+		Extra uitleg schrijven bij zinnen & - & X & - & - & - & - & P1-3 & P1-3 \\ \hline
+		Paragrafen herschrijven zodat ze eerst uitleg geven op een high-level niveau & - & - & - & - & - & - & P2 & P2 \\ \hline
+		Woordenlijst aanmaken & X & X & X & X & - & - & P6 & P6 \\ \hline
+		Synoniemenlijst aanmaken & - & X & - & - & - & - & P6 & P6 \\ \hline
+		Idiomen vervangen door eenvoudigere synoniemen & - & - & - & X & - & - & P1-3,6 & P1-3,6 \\ \hline
+		Zinnen inkorten & - & - & - & X & X & X & P3-5 & P3-5 \\ \hline
+		Verwijswoorden aanpassen & - & - & - & X & - & X & P3 & P3 \\ \hline
+		Voorzetseluitdrukkingen aanpassen & - & - & - & - & - & - & P3 & P3 \\ \hline
+		Samengestelde werkwoorden aanpassen & - & - & - & X & - & X & P3 & P3 \\ \hline
+		Actieve stem toepassen & - & - & - & - & - & - & - & - \\ \hline
+		Enkel regelmatige werkwoorden gebruiken & - & - & - & - & - & - & P3 & P3 \\ \hline
+		Achtergrondkleur aanpassen & X & X & X & - & - & - & - & - \\ \hline
+		Woord- en karakterspatiëring aanpassen & - & X & X & - & - & - & - & - \\ \hline
+		Consistente lay-out & X & X & X & - & - & - & P1-6 & P1-6 \\ \hline
+		Duidelijk zichtbare koppenstructuur & X & X & X & - & - & - & X & X \\ \hline
+		Huidige positie benadrukken & X & X & X & - & - & - & - & - \\ \hline
+		Waarschuwingen geven omtrent formulieren en sessies & - & - & - & X & - & X & - & - \\ \hline
+		Inhoud visueel groeperen & - & X & X & - & - & - & - & - \\ \hline
+		Tekst herschrijven als tabel & - & - & - & - & - & - & P4, P6 & P4, P6 \\ \hline
+		Tekst herschrijven als opsomming & - & - & - & - & - & - & P5 & P5 \\ \hline
+		Artikel opladen als pdf & X & X & X & - & X & X & - & - \\ \hline
+		Artikel opladen als \textit{plain-text} & - & - & - & X & - & X & P1-6 & P1-6 \\ \hline
+		Artikel opladen via link & - & - & - & - & X* & - & P1-6* & - \\ \hline
+	\end{tabular}
+	\caption{Afgetoetste criteria volgens de experimenten.}
+	\label{table:afgetoetste-criteria}
+\end{table}
+
+\subsubsection{Must-haves}
+
+Niet alle toepassingen reiken personaliseerbare opmaakopties aan. Zo beschikken enkel E1, E2 en E3 over deze opties. Andere tools ontbreken dit en bieden een statische webweergave aan. Alle uitgeteste tools, met uitzondering op O1, O4 en O5, bieden een methode aan om eenduidig pdf-bestanden op te slaan. Deze bestanden ontbreken echter een duidelijke titelstructuur. Daarnaast kan de eindgebruiker de opmaak achteraf niet meer aanpassen. Geen toepassing biedt een functionaliteit aan om de vereenvoudigde versie als docx-bestand op te slaan. 
+
+\medspace
+
+Verder kunnen gebruikers met de geteste toepassingen wetenschappelijk artikelen als pdf opladen. Uitzonderlijk O4 en O5 laten dit niet toe en werken enkel met tekstinvoer. Verder toont figuur \ref{img:scispace-example} hoe gebruikers tekst kunnen samenvatten met toepassing O2. Dit toont hoe zij een tekst in het oorspronkelijk pdf-bestand kan selecteren, om deze vervolgens eenduidig te laten samenvatten. Tot slot kunnen eindgebruikers met O2 en O5 online wetenschappelijke artikelen via URL opladen.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/typeset-example.png}
+	\caption{Informatie opvragen van een wetenschappelijk artikel met SciSpace}
+	\label{img:scispace-example}
+\end{figure}
+
+De \textit{must-haves} bij LS uit het aanpassen van moeilijke woorden in doorlopende tekst en woorden- en synoniemenlijsten kunnen genereren. Specifiek kunnen O1, O3, O4 en O5 een annotatie toevoegen aan moeilijke woorden, maar alleen als er geen geschikte synoniemen beschikbaar zijn. Figuur \ref{img:simplish-output} illustreert hoe O1 een extra definitie kan geven als voetnoot. Hoewel dit het taalniveau voor de vereenvoudiging niet kan aanpassen, laat figuur \ref{img:scholarcy} zien hoe O3 probeert om deze inschatting te maken met een \textit{rewordifying level}. Bovendien kunnen O4 en O5 de doelgroep aanpassen afhankelijk van de \textit{prompts}. Andere uitgeteste tools tonen niet hoe zij de doelgroepinschatting maken. Geen van deze stelt gebruikers in staat om een woordenlijst mee te geven met moeilijke woorden.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/simplish-output.png}
+	\caption{Schermafbeelding van de tekstanalyse bij Simplish na een tekstvereenvoudiging.}
+	\label{img:simplish-output}
+\end{figure}
+
+Woorden- en synoniemenlijsten zijn mogelijk bij E1, E2, E3 en O1. Hier kunnen gebruikers handmatig moeilijke woorden selecteren die het systeem moet vereenvoudigen of een definitie moet ophalen. Enkel O1 geeft het woordsoort hierin mee, zoals adjectieven of werkwoord. Gebruikers kunnen niet bepalen waarvan de definitie moet komen, bijvoorbeeld een online woordenboek. Uitzonderlijk laat E1 dit wel toe.
+
+\medspace
+
+E1, E2 en E3 kunnen geen SS-technieken toepassen op de oorspronkelijke tekst. Overige uitgeteste tools kunnen zinnen inkorten door ze te splitsen. Geen van de uitgeteste tools is in staat om automatisch de tekst naar de actieve vorm te schrijven. O4 en O5 kunnen zinnen omvormen naar de actieve stem, maar enkel als de tool een extra voornaamwoord of onderwerp in de prompt meekrijgt. Tot slot slagen O2, O4 en O5 erin om de tekst te herschrijven als opsomming. O2 doet dit automatisch. O4 en O5 moeten deze vraag expliciet in hun prompt krijgen. De andere uitgeteste tools kunnen dit niet automatisch doen. 
+
+\subsubsection{Should-haves}
+
+O1 en O3 tonen automatisch leesgraadscores na de ATS, zoals weergegeven in figuren \ref{img:simplish-output} en \ref{img:scholarcy}. Deze tonen het aantal zinnen en complexe en lange woorden voor het oorspronkelijk en vereenvoudigde artikel. Andere tools, inclusief de verwante prompts van O4 en O5, tonen dit niet.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/scholarcy-attempt.png}
+	\caption{Tekstanalyse met \textit{Rewordify}.}
+	\label{img:scholarcy}
+\end{figure}
+
+Het onderzoek kan niet afleiden of toepassingen OCR-technieken gebruiken. Wel gebruikt O2 een andere inleestechniek dan de andere tools. Zo kan O2 alle uitgeteste wetenschappelijke artikelen inlezen. De gebruiker markeert enkel aanpassingen in het artikel, terwijl de uitvoer rechts in beeld komt. Daarmee kan de gebruiker de aanpassing niet afleiden uit de oorspronkelijke tekst, in tegenstelling tot O1 en O3. Deze tonen wel de verschillen tussen het oorspronkelijk en het vereenvoudigd artikel aan de eindgebruiker.
+
+\subsubsection{Could-haves}
+
+Geteste tools beschikken over gebruikerfeedbacktechnieken in de vorm van \textit{pop-ups}, zoals bij een tekstaanpassing. Uitzonderlijk O4 en O5 doen dit niet. Vervolgens zijn O4 en O5 de enige geteste tools die tekst in een tabelformaat kunnen schrijven, maar enkel na een expliciete prompt. Enkel O4 en O5 kunnen tekst interpreteren en deze in een tabelvorm gieten. De systemen gebruiken een 2 op 2 tabel, maar de gebruiker kan het aantal kolommen en rijen parameteriseren in de prompt. Tot slot kan geen uitgeteste tool automatisch moeilijke woorden of vakterminologie extraheren uit een tekst. Uitzonderlijk O4 en O5 kunnen dit wel met een expliciete prompt. O1, O2, O3, O4 en O5 kunnen extraherende en abstraherende samenvattingen maken van de oorspronkelijke tekst. E1, E2 en E3 kunnen een extraherende samenvatting van de tekst maken, maar enkel na een handmatige selectie van de zinnen. Enkel O4 en O5 kunnen een gekregen tekst herschrijven. Tot slot kunnen O1, O2, O4 en O5 onregelmatige werkwoorden wegwerken. Andere toepassingen kunnen dit niet uitvoeren.
+
+\subsubsection{Wont-haves}
+
+O4, O5 beschikken over een mobiele versie. O1, O2 en O3 kunnen gebruikers via een mobiel apparaat bekijken, maar leent geen speciale interface voor deze gebruikers toe. E1, E2 en E3 bieden geen mobiele versie aan. Enkel E1, E2 en E3 beschikken over luistersoftware. Browsers beschikken over ingebouwde luistertools, maar geen van de geteste tools beschikt over een zelfgemaakte of personaliseerbare \textit{text-to-speech} techniek. Tot slot beschikken de geteste toepassingen over geen integratie met andere spelcheckers. De browserextensie van Grammarly werkt bij zowel O1, O2, O3, O4 en O5.
+
+\section{Geschikte taalmodel voor gepersonaliseerde tekstvereenvoudiging met ATS}
+
+De vergelijkende studie evalueert de uitvoer van de uitgeteste taallmodellen, opgesomd in \ref{table:vergelijkende-studie-taalmodellen}, met een machinale en een menselijke beoordeling. Zo achterhaalt deze onderzoeksmethode welk taalmodel of LLM beter aansluit bij het aanbieden van gepersonaliseerde ATS voor scholieren met dyslexie in de derde graad van het middelbaar onderwijs. 
+
+\subsubsection{Machinale beoordeling van de vereenvoudigde teksten}
+
+Tabel \ref{table:resultaten-aantal-zinnen} geeft het aantal zinnen per (vereenvoudigd) artikel. De MTS-referentieteksten bevatten minder zinnen dan het oorspronkelijk artikel. Het aantal zinnen na ATS met T1, T2 en T3 is gehalveerd tot minder dan een kwart van oorspronkelijke hoeveelheid zinnen. Enkel T4P2 genereert meer zinnen dan de oorspronkelijke versie van A1 na ATS. T4P2 genereert bij zowel A1 als A2 meer zinnen vergeleken met de andere geteste taalmodellen. T2 daarentegen genereert bij beide artikelen het minst aantal zinnen. Figuren \ref{img:boxplot-min-max-avg-words-a1} en \ref{img:boxplot-min-max-avg-words-a2} illustreren deze verschillen tussen de taalmodellen.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ | m{3cm} | m{3cm} | m{3cm} | } 
+		\hline
+		\textbf{Bron} & \textbf{#Zinnen in A1} & \textbf{#Zinnen in A2} \\
+		\hline
+		Oorspronkelijk & 78  & 159 \\ 
+		\hline
+		MTS (door leerkracht) & 43 & 45 \\
+		\hline
+		MTS (door leerling) & n.v.t. & 50 \\
+		\hline
+		T1 & 26 & 24 \\
+		\hline
+		T2 & 11 & 7 \\
+		\hline
+		T3 & 67 & 130 \\
+		\hline
+		T4 P1 & 61 & 98 \\
+		\hline
+		T4 P2 & 89 & 133 \\
+		\hline
+		T4 P3 & 39 & 55 \\
+		\hline
+	\end{tabular}
+	\caption{Aantal zinnen (gemeten met Spacy sentence embeddings) per tekst.}
+	\label{table:resultaten-aantal-zinnen}
+\end{table}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-avg-a1.png}
+	\caption{Overzicht van het minimum, maximum en gemiddeld aantal woorden per zin per model in A1.}
+	\label{img:boxplot-min-max-avg-words-a1}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-avg-a2.png}
+	\caption{Overzicht van het minimum, maximum en gemiddeld aantal woorden per zin per model in A2.}
+	\label{img:boxplot-min-max-avg-words-a2}
+\end{figure}
+
+Verder vergelijkt het onderzoek de verkregen leesbaarheidsscores per zin dat ieder taalmodel kan genereren. Allereerst de FRE-scores die de leesgraad van een zin aanduidt. Alle geteste taalmodellen genereren zinnen waarvan de FRE-scores niet opmerkelijk hoger of lager zijn ten opzichte van het oorspronkelijk artikel. Figuren \ref{img:boxplot-fre-a1} en \ref{img:boxplot-fre-a2} tonen deze verschillen. Gemiddeld bevinden alle versies van het wetenschappelijk artikel zich tussen 20 en 50. Zonder \textit{outliers} beperkt T3 de FRE van alle zinnen tot hoogstens 40. T3, T4P1, T4P2 en T4P3 genereren zinnen met een hogere FRE dan OG en MTSL. 
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-fre-a1.png}
+	\caption{Boxplot van de FRE-scores voor A1.}
+	\label{img:boxplot-fre-a1}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-fre-a2.png}
+	\caption{Boxplot van de FRE-scores voor A2.}
+	\label{img:boxplot-fre-a2}
+\end{figure}
+
+De FOG-scores van alle geteste taalmodellen en MTS-referentieteksten zijn niet opmerkelijk hoger of lager bij de vereenvoudigde wetenschappelijke artikelen, zoals weergegeven in figuren \ref{img:boxplot-fog-a1} en \ref{img:boxplot-fog-a2}. De zinnen van MTSL2 en T2 scoren gemiddeld lagere FOG-scores dan OG. Daarnaast scoort T2 een lager gemiddelde dan andere taalmodellen. Dit gemiddelde ligt tussen 10 en 12. Tot slot scoren MTSL en andere taalmodellen gemiddeld hoger dan OG. Tot slot genereren de taalmodellen geen zinnen met een hogere FOG-score dan OG.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-fog-a1.png}
+	\caption{Boxplot van de FOG-scores voor A1.}
+	\label{img:boxplot-fog-a1}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-fog-a2.png}
+	\caption{Boxplot van de FOG-scores voor A2.}
+	\label{img:boxplot-fog-a2}
+\end{figure}
+
+T1, T2 en T3 genereren meer complexe woorden vergeleken met T4, MTSL en OG. Bij A1 genereert T4P3 opmerkelijk minder complexe woorden per zin dan de andere taalmodellen. Bij A2 is er geen opmerkelijk verschil tussen de taalmodellen. Vervolgens visualiseren figuren \ref{img:violinplot-long-a1} en \ref{img:violinplot-long-a2} het aantal lange woorden per zin. Het systeem betrekt een woord met minstens vier lettergrepen als een lang woord. MTSL, T2, T4P1, T4P2 en T4P3 genereren minder lange woorden per zin dan OG.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-poster.png}
+	\caption{Een boxplot van het aantal lange en complexe woorden per zin, gegroepeerd op model voor A1.}
+	\label{img:long-complex-words}
+\end{figure}
+
+
+Vervolgens tonen figuren \ref{img:histplot-aux-a1} en \ref{img:histplot-aux-a2} het aantal hulpwerkwoorden in de tekst. Deze figuren zijn geen absolute percentages en houden geen rekening met het aantal zinnen. Ten slotte tonen \ref{img:histplot-aux-a1} en \ref{img:histplot-aux-a2} het aantal vervoegingen van het werkwoord 'zijn' aan. 
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-aux-a1.png}
+	\caption{Een staafdiagram van het aantal gebruikte hulpwerkwoorden in de tekst, gegroepeerd op model voor A1.}
+	\label{img:histplot-aux-a1}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-aux-a2.png}
+	\caption{Een staafdiagram van het aantal gebruikte hulpwerkwoorden in de tekst, gegroepeerd op model voor A2.}
+	\label{img:histplot-aux-a2}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-tobe-a1.png}
+	\caption{Het aantal vervoegingen van het werkwoord 'zijn', gegroepeerd op model voor A1.}
+	\label{img:histplot-tobe-a1}
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/boxplot-tobe-a2.png}
+	\caption{Het aantal vervoegingen van het werkwoord 'zijn', gegroepeerd op model voor A2.}
+	\label{img:histplot-tobe-a2}
+\end{figure}
+
+\subsubsection{Menselijke beoordeling van de referentieteksten.}
+
+In het volgende deel bespreekt het onderzoek de menselijke beoordeling van de resultaten. Allereerst kunnen T4P1 en T4P2 Engelstalige vaktermen vertalen naar het Nederlands. Zo blijft de afkorting voor 'DPKIA' intact, maar vertaalt T4P1 hetzelfde woord naar het Nederlands.  T1, T2, T3 en T4P3 houden hier echter geen rekening mee en behouden de oorspronkelijke versie van de tekst. De auteurs schrijven alle afkortingen voluit, zoals beschreven in de richtlijnen. Figuur \ref{img:vergelijking-taalmodellen} illustreert deze verschillen.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/vergelijking.png}
+	\caption{De verschillen tussen de oorspronkelijke tekst, T4P1 en T4P3 bij één uitgekozen paragraaf.}
+	\label{img:vergelijking-taalmodellen}
+\end{figure}
+
+\medspace
+
+Alle taalmodellen kunnen LS toepassen. De handmatig vereenvoudigde referentieteksten bevatten zinnen die vakjargon gebruiken op het niveau van 15 tot 18 jarige studenten. T4P1 kan uitleg tussen ronde haakjes schrijven, wanneer het geen eenvoudiger synoniem kan vinden. T4P1, T1, T2 en T3 passen woorden aan, maar schrijven geen extra uitleg. T4P3 past deze techniek minder toe dan de vooraf vermelde taalmodellen. T4P3 verkort lange zinnen door deze op te splitsen. T1, T2 en T3 behalen een gelijke zinslengte als dat van de oorspronkelijke zin. T4P1 en T4P2 kunnen langere zinnen genereren, maar smelten geen twee zinnen met elkaar samen. 
+
+\medspace
+
+Geen taalmodel wijkt af van de hoofdgedachte van het oorspronkelijke wetenschappelijk artikel. Hoewel T1, T2 en T3 deels afgebroken zinnen kan genereren, bevatten deze zinnen de hoofdgedachte. T2 bevat minder dan 10\% van het oorspronkelijk artikel en ontbreekt daarbij bijzaken die nodig zijn om alle vragen in \ref{ch:referentietekst} te kunnen begrijpen en te beantwoorden. Tenslotte verwerken T1, T2 en T3 de APA- en California bronvermeldingen niet in de vereenvoudigde teksten. Hoewel T4 deze wel verwerkt, bevat de tekst na een vereenvoudiging deze bronvermeldingen niet meer.
+
+\medspace
+
+Ter conclusie van de resultaten scoren de drie prompts van T4 beter bij de menselijke beoordeling van de resultaten. Het taalmodel en de verwante drie prompts genereren coherente teksten met een verlaagde lexicale complexiteit. Echter houden de geteste taalmodellen weinig tot geen rekening met afkortingen of bronvermeldingen.
+
+\section{Pentimentor vergelijken met \textit{top-of-the-line} tools.}
+
+Gebruikers kunnen vanuit de homepagina drie schermen kiezen: het lerarencomponent, het scholierencomponent en een instellingenpagina. Op de instellingenpagina kunnen eindgebruikers hun persoonlijke opmaak toevoegen. Zo toont figuur \ref{img:website-instellingen} alle mogelijke opmaakopties die Pentimentor aanreikt.
+
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/website-instellingen.png}
+		\caption{Voorbeeldweergave van de instellingenpagina.}
+		\label{img:website-instellingen}
+	\end{figure}
+\end{center}
+
+Bovendien stelt Pentimentor gebruikers in staat om op basis van gekregen parameters automatisch personaliseerbare docx-documenten te genereren.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/proto-lerarencomponent.png}
+	\caption{Een mogelijke weergave van het lerarencomponent met het wetenschappelijk artikel van \textcite{VanBrakel2022} als input.}
+	\label{img:proto-lerarencomponent}
+\end{figure}
+
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/proto-melding.png}
+		\caption{Een voorbeeldweergave van het scholierencomponent.}
+		\label{img:proto-homescreen-scholieren}
+	\end{figure}
+\end{center}
+
+Figuur \ref{img:proto-pos-tagging-scholieren} toont een voorbeeldweergave van deze functionaliteit. 
+
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/proto-pos-tagging.png}
+		\caption{Een voorbeeldweergave van de toepassing van PoS-tagging bij het scholierencomponent.}
+		\label{img:proto-pos-tagging-scholieren}
+	\end{figure}
+\end{center}
+
+Scholieren kunnen zinnen selecteren om daarna deze tekst te laten vereenvoudigen met gepersonaliseerde ATS. Figuren \ref{img:proto-scholieren-step-1} en \ref{img:proto-scholieren-step-3} tonen hoe een gebruiker van gemarkeerde doorlopende tekst een opsomming kan maken met Pentimentor. Daarnaast kan het ook tekst herschrijven in een tabelformaat.
+
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/proto-opsomming-1.png}
+		\caption{Stap 1 van een gepersonaliseerde tekstvereenvoudiging in het scholierencomponent.}
+		\label{img:proto-scholieren-step-1}
+	\end{figure}
+\end{center}
+
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/proto-opsomming-3.png}
+		\caption{Stap 2 van een gepersonaliseerde tekstvereenvoudiging in het scholierencomponent.}
+		\label{img:proto-scholieren-step-3}
+	\end{figure}
+\end{center}
+
+Figuren \ref{img:step-1-proto-vraagstelling} en \ref{img:step-2-proto-vraagstelling} tonen een tweede functionaliteit. Zo kunnen scholieren specifieke vragen stellen aan Pentimentor door middel van een gecentreerd invoerscherm.
+
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/proto-vraagstelling-1.png}
+		\caption{Stap 1 bij het stellen van een specifieke vraag bij gemarkeerde tekst.}
+		\label{img:step-1-proto-vraagstelling}
+	\end{figure}
+\end{center}
+
+\begin{center}
+	\begin{figure}[H]
+		\includegraphics[width=\linewidth]{img/proto-vraagstelling-2.png}
+		\caption{Stap 2 bij het stellen van een specifieke vraag bij gemarkeerde tekst.}
+		\label{img:step-2-proto-vraagstelling}
+	\end{figure}
+\end{center}
+
+Uit evaluatie en experimenten blijkt Pentimentor te voldoen aan de \textit{must-have} functionaliteiten, zoals vastgesteld in het moscow-schema of tabel \ref{img:moscow-table}. Zo biedt het twee manieren aan om pdf-bestanden in te lezen, namelijk via een pipeline van ML en OCR. Daarnaast kan het de tekst met PDFMiner ophalen. Dit valt in lijn met de verwachtte functionaliteiten omtrent pdf-upload. Tot slot kunnen gebruikers kiezen welke tekstinhoud zij willen vereenvoudigen met gepersonaliseerde ATS. De eindgebruiker kan alle vragen beantwoorden met de inhoud van het vereenvoudigde artikel, zoals aangegeven door \textcite{Hollenkamp2020} als absolute must na de vereenvoudiging of samenvatting van een wetenschappelijk artikel.
+
+\medspace
+
+Eindgebruikers kunnen opmaakopties van Pentimentor aanpassen naargelang hun voorkeur. Deze aanpassingen past het systeem toe op de digitale weergave binnenin de webtool, maar ook de opmaak van het uitvoerbestan. Zo toont figuur \ref{img:screenshot-pdf-attempt} de vereenvoudigde versie van het wetenschappelijke artikel met de parameters uit tabel \ref{table:chosen-parameters-experiment}. Verder past Pentimentor de regeleindes, woord- en karakterspatiëring, lettertype -en grootte, koppenstructuur en marges van het uitvoerbestand. Deze functionaliteit is niet beschikbaar bij de uitgeteste tools, behalve E1 en E2 die enkel het lettertype -en grootte kan aanpassen. Tot slot illustreert figuur \ref{img:screenshot-docx-attempt} hoe een volledig personaliseerbaar docx-bestand er uit kan zien.
+
+\begin{figure}[H]
+	\includegraphics[width=\linewidth]{img/screenshot-prototype-word.png}
+	\caption{De uitvoer na een vereenvoudiging met Pentimentor. De tekst is een vereenvoudigde versie van het artikel van \textcite{VanBrakel2022}.}
+	\label{img:screenshot-docx-attempt}
+\end{figure}
+
+Verder beschikt Pentimentor over enkele \textit{should-haves}. Eindgebruikers kunnen op een eenduidige manier tekst markeren. Pentimentor voegt annotaties aan de gemarkeerde tekst toe of past de tekst aan door een \textit{in-line} definitie toe te voegen. Verder kan het abstraherende samenvattingen genereren in de vorm van opsommingen, tabellen of doorlopende tekst. Figuur \ref{img:screenshot-docx-attempt} toont een gegenereerde samenvatting in de vorm van een opsomming. Vervolgens geeft Pentimentor een vast meldingscherm wanneer het iets van de gebruiker verwacht, zoals getoond in figuur \ref{img:step-1-proto-vraagstelling}. Daarnaast geeft het ook waarschuwingen in de formulieren aan de gebruiker, zoals weergegeven in figuur \ref{img:proto-lerarencomponent}. Tot slot is er geen functionaliteit om automatisch een woordenlijst met moeilijke woorden of vakjargon aan te maken. Tot slot ontbreekt Pentimentor analytische functionaliteiten. Zo geeft het geen tekstanalyse aan de eindgebruiker. 
+
+\medspace
+
+Tot slot bevat Pentimentor geen \textit{wont-haves}. Zo ontbreekt het een luistercomponent waarmee scholieren de vereenvoudigde tekst kunnen beluisteren. Deze functionaliteit is wel aanwezig bij E1, E2 en E3. Andere uitgeteste tools beschikken hier ook niet over. Tot slot kunnen gebruikers Pentimentor enkel in een lokale omgeving met Docker raadplegen. Andere uitgeteste toepassingen vereisen geen installatie en kunnen gebruikers online raadplegen. Daarnaast is Pentimentor niet beschikbaar als browserextensie, wat O5 als enige toepassing wel kan.

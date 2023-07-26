@@ -1,0 +1,66 @@
+The Impact of AI on Jobs and Sexual Discrimination
+INTRODUCTION
+The definition of sexual discrimination could be a form of discrimination that a person is treated differently or unequally because of their sex/gender. Although under federal law sex discrimination in employment is illegal, such discrimination still happens in the job field and has always been hidden under the norm. For example, 42 % of women in the United States have faced gender discrimination on the job[2]. One of the purposes of creating AI is to help with diversity, solve problems like discrimination and racism, however, whether it works as people predicted is still a question mark. The concern is if AI and automation are not used in a gender responsible method, and it might reinforce pre-existing gender bias.
+Due to better productivity and decrease of cost and laborers, it is not hard to imagine that in the future AI technology would involve more deeply in manufacturing and jobs in general. Automation, big data and algorithms could cause great impacts on women in jobs. The concern of job replacement, automated hiring system, privacy information releases to the public, poorly selected training data, the issue with algorithm design and issue due to data inequality would all raise or influence sexual discrimination. Companies and governments would need to take action to face changes caused by AI to ensure social orders, justice and equality.
+2. AUTOMATION’S EFFECT
+Although the world is facing unprecedented growth in both jobs and economics, automation still has a high potential to replace numerous jobs, and especially those technologies are repetitive and have little human interaction in comparison. The cost to automate would also be one of the considerations. Thus a majority of workers that involve predictable tasks and activities would have a high replacement rate. Then how is it going to relate to gender discrimination.
+Although there is a bigger change that women’s job is prone to partial automation than being entirely replaced. In McKinsey's future prediction of women’s traditions by 2030, around 40 million to 160 million women might face a need to transition across occupations and skill sets to remain employed[3]. This number also established the need for higher education and different skills for success. It is 7 to 24 percent of women that are currently employed compared to the range of 8 to 28 percent for men. If women take advantage of transition opportunities, they could maintain their current share of employment.
+If they cannot, gender inequality in work could worsen. Thus, if they cannot make the necessary transition, many women could face an intensifying wage gap relative to men. Since talking automation, the STEM field would have a higher possibility for employment requirements in the future. However, the data in 2019 determined that women accounted for only 27% of workers in STEM-qualified industries, not to mention on average women made 19% less than men[4].
+Not to mention, with 78% of AI professionals being men, algorithms are created with male dominated experiences. Such gender bias could be significantly disadvantageous to female employers or resumes. Although robotization and automation in the job field would impact both gender, gender bias is likely to come into play and affect women disproportionately. Women over-represented in certain high-risk automation sectors could
+suffer more. The lack of mobility and flexibility could also be reasons for companies to unemploy women or
+reduce bargaining positions[5].
+The risks in automation are real. The US Equal Employment Opportunity Commission is investigating at least
+two cases involving algorithms that could be discriminated toward certain groups of job applicants[6]. To
+prevent sexual discrimination, the education system needs to change from the beginning to stop discrimination,
+provide more opportunities and support to STEM field, and future job supplements caused by automation.
+3. BIG DATA’S IMPACT
+Big data analysis and algorithm would also affect discrimination in occupations, it might turnover the traditional
+hiring process. Since the application is based on the collection of big data. If an AI application is trained on bias
+data, the algorithms would likely be biased. Good grade, school, or capabilities would not just be the only
+measurement. In the content of collecting more types of data, the metadata of the social media content, family
+members, anything remotely relevant would all be a double-edged sword. All information online could be used
+to identify individuals however the privacy law was not designed to consider what personal information should it
+protect and how to protect[7]. The recruiting tool Amazon developed since 2014 could be one of the examples.
+The program was supposedly used to review applicants' resumes to search for the people that are the best in
+capability. Although the intention is meant to create a gender-neutral system, the result came to be
+overwhelmingly male dominated. The reason behind it is because Amazon's system automatically downgraded
+the resumes that included the word "women's" in their applications. The company disbanded the team and
+announced that the tool "was never used by Amazon recruiters to evaluate candidates.[8,9]" However, it is hard
+to authorize their words and worry about the possibility of companies using these discriminated data on
+recruiting and hiring.
+This would not be an exception, other companies while using AI automation would face the same problem.
+Despite those concerns, more companies are still pushing hard to automate more parts of recruitment and hiring.
+The company's software developers would need to actively monitor the system to ensure that something like that
+wasn't happening. In general, AI works more efficiently than the human brain but when the system is massive,
+and the software is making decisions obscured behind a dashboard, there would be concerns of the potential for
+serious legal trouble here.
+Although under the laws enforced by EEOC( Equal Employment Opportunity Commission ), it is illegal to
+discriminate against someone (applicant or employee) because of that person's race, color, religion, sex
+(including gender identity, sexual orientation, and pregnancy), national origin, age (40 or older), disability or
+genetic information. It is also illegal to retaliate against a person because he or she complained about
+discrimination, filed a charge of discrimination, or participated in an employment discrimination investigation or
+lawsuit[10]. However, when the information is unintentionally included and judged by companies, it would raise
+multiple questions due to the responsibilities issue.
+IMPACT OF ALGORITHMS
+Algorithms could lead to gender bias. When we search for "CEO" on Google it returns overwhelmingly male
+images, we tell ourselves that Google is just reflecting the world to us " a world where discrimination exists".
+We believe that the Google bots that crawl the web are color and gender blind. We trust the algorithms that
+answering our search queries are more objective than humans. One couldn't possibly make an argument that
+Google's search algorithm and its related ad-serving platforms are inherently biased.
+Although they are potentially designed to reduce bias, most hiring algorithms still drift toward bias by default. In
+a recent study from Northeastern University and USC, broadly targeted ads on Facebook for supermarket cashier
+positions were shown to an audience of 85% women[11]. This could be a typical case where
+Advances in Social Science, Education and Humanities Research, volume 554
+859
+algorithms introduce bias into the system without human intervention. To ensure diversity in input data, collecting more training data specifically with sensitive groups would help with unfairness. When talking about another company, Google also reinforces sexual discrimination using the algorithm and it shows that AdFisher, an automated tool that explores how user behaviors, Google's ads, and Ad Settings interact. AdFisher can run browser-based experiments and analyze data using machine learning and significance tests. The Ad Settings was opaque about some features of a user's profile including providing some choice on ads. When setting the gender to female, it will result in getting fewer instances of an ad related to high paying jobs than setting it to males.
+Some possible reasons might be Google explicitly programming the system to show the ad less often to females. Males and female consumers respond differently to ads and Google's targeting algorithm responds to the difference (e.g., Google learned that males are more likely to click on this ad than females are). More competition existing for advertising to females causes the advertiser to win fewer ad slots for females. Some third parties (e.g., a hacker) manipulate the ad ecosystem.
+A research uses data from a field test of an ad that was intended to promote job opportunities and training in STEM (Science, Technology, Engineering and Math). The ad was intended to be gender-neutral and was targeted neutrally. This ad was tested in 191 countries across the world. However empirically, the ad was shown to 20% more men than women[12].
+Many reasons contributed to this result algorithm trying to maximize the clicks thus showing ads more to men than women, or women are less likely to visit websites with ads on them. All results point to the same point is that because a word already releases women to lower wages / not STEM jobs, these algorithms' sexual discrimination would create a higher possibility to increase rather than reduce. To ensure diversity in input data, collecting more training data specifically with sensitive groups would help with unfairness.
+SUGGESTION
+Companies should invest in training and reskilling, provide possible training and apprenticeship programs for women. Also, companies and the government could consider reskilling opportunities for mid career women or women returning to the workforce. Companies should subsidize transition costs, government or corporate reskilling subsidies for targeted occupations and sectors. Community and governments could provide childcare subsidies for parents undergoing reskilling or pursuing higher education. Governments could invest in digital platforms, industry partnerships with massive open online courses. Companies should increase transparency on labour demand trends, contribute to more technical school or university curriculums co-created with industry, invest in informational campaigns targeting women.
+Data testing: Put in place AI development standards, testing procedures, controls, and other technical governance elements designed to make sure the data used in training AI applications are thoroughly vetted and certified against a biased perspective before the application goes into production. Output testing: Establish testing requirements and controls around the outputs produced or decisions made by the AI.
+Review and challenge these outputs and decisions against a biased perspective to make sure they represent fair and positive outcomes that are in line with expectations and do not adversely and unfairly impact any group of people. Development teams: Make sure AI design and development teams are diverse and include female data scientists, programmers, designers, and other key team members who influence how an AI application is developed. Set targets and put in place training, recruiting, and rotation programs to move toward this target.
+CONCLUSION
+Since automation is the major trend in the future, companies and the government should be double careful with the use of it. The effect of biased data, algorithms in the workforce could turnover the equality in the workforce. Thus companies must develop and deploy AI applications in a responsible manner that proactively seeks to identify and eliminate existing societal biases so they are not encoded and amplified in the digital world. Toward this goal, these are some future suggestions for companies and the government. It is important to note that, even though the focus of this essay is gender bias, AI applications can and often do suffer from different types of societal biases, for example, around race, ethnicity, and religion. As a result, companies should expand the above efforts and measures to make sure the AI applications they put in place do not hurt any group of people.
+AI has the potential to mitigate the corporate gender and leadership gaps by removing bias in recruiting,
+Advances in Social

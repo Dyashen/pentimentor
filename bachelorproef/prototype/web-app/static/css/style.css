@@ -1,0 +1,212 @@
+h1 {
+    text-align: center;
+    padding-bottom:5%;
+}
+
+body {
+    font-family: sans-serif;
+    word-spacing: 0cm;
+    line-height: 0.5cm;
+    font-size: 12px;
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    font-size: 10pt;
+    text-align: left;
+}
+
+.extra-info{
+    width: 100%;
+    margin:auto;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container-index {
+    box-sizing: border-box;
+    margin: auto;
+    width:50%;
+}
+
+.container-index h1, h2, h3{text-align: center;}
+
+.left-container{
+    width: 45%;
+    margin: auto;
+    padding: 1.5%;
+}
+
+.right-container{
+    width: 45%;
+    padding: 1.5%;
+    vertical-align: top;
+}
+
+.text-container {
+    padding: 10px;
+    margin: 3%;
+}
+
+.container-param {
+    display: flex;
+    border-color: black;
+    padding: 5%;
+}
+
+.param {
+    width: 10%;
+}
+
+.container-index fieldset{
+    margin:5%;
+    padding:5%;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: aliceblue;
+    margin: auto;
+    padding: 1%;
+    font-size: 15pt;
+    overflow: scroll;
+}
+
+.page {
+    width: 100%;
+}
+
+.buttons {
+    margin: auto;
+    width:100%;
+    padding: 5px;
+}
+
+.fixed-bottom button {
+    font-size: 14pt;
+    margin:auto;
+}
+
+.fixed-bottom::-webkit-scrollbar {
+    width: 10px;
+}
+
+.fixed-bottom::-webkit-scrollbar-track {
+    display: none;
+}
+
+.fixed-bottom::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.dazzle p:nth-child(uneven) {
+    font-weight: bold;
+    background-color: darkgoldenrod;
+}
+
+.buttons {
+    width: 70%;
+    margin: auto;
+}
+
+.btn, .btn-hf, .btn-gpt {
+    color: #fff;
+    padding: 10px 10px;
+    cursor:pointer;
+    border: none;
+    margin:auto;
+    width: 15%;
+}
+
+.btn{
+    background-color: #333;
+}
+
+.btn-hf{
+    background-color: #631501;
+}
+
+.btn-gpt{
+    background-color: #016306;
+}
+
+#explainWord.active,
+#explainSentence.active {
+    background-color: #333;
+}
+
+span.verb:hover,
+span.propn:hover,
+span.noun:hover,
+span.adj:hover {
+    background-color: grey;
+    color: black
+}
+
+#colors {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.personalisation label, input{
+    padding: 5px;
+}
+
+.personalized {
+    display: none;
+}
+
+.left-side {
+    width: 75%;
+    display: inline;
+    float: left;
+}
+
+.right-side {
+    width: 20%;
+    padding: 5%;
+    display: inline;
+}
+
+fieldset{
+    margin:auto;
+    padding:5%;
+}
+
+.settings-for-teachers{
+    width: 100%;
+    padding: 5px;
+}
+
+.settings-for-teachers input, select{width: 20%; text-align: center; margin:auto}
+.settings-for-teachers label{width: 30%;}
+
+.div-glossary{
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.div-glossary table{
+    width: 80%;
+    margin:auto;
+}
+
+.div-glossary th{
+    font-style: bold;
+    text-align: center;
+}
+
+.div-glossary th, td{
+    border: 1px solid #8a8a8a;
+}

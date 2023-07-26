@@ -1,0 +1,576 @@
+\chapter{\IfLanguageName{dutch}{Code: Ontwikkeling Van Het Prototype}{Attachment 2}}%
+\label{ch:bijlage-code-2}
+
+\begin{lstlisting}[language=Python, caption={Writer-klasse omvattende de code om dynamische PDF- en Word-documenten te genereren.}, label={code:writer-klasse}]
+import subprocess, io, os, pypandoc
+from datetime import date
+import zipfile
+
+markdown_file = "saved_files/file.md"
+zip_filename = 'saved_files/simplified_docs.zip'
+pdf_file = "saved_files/output.pdf"
+docx_file = "saved_files/output.docx"
+DATE_NOW = str(date.today())
+
+class Creator():
+	def create_header(self, title, margin, fontsize, chosen_font, chosen_title_font, word_spacing, type_spacing):
+		with open(markdown_file, 'w', encoding='utf-8') as f:
+			f.write("---\n")
+			f.write(f"title: {title}\n") 
+			f.write(f"mainfont: {chosen_font}.ttf\n")
+			f.write(f"titlefont: {chosen_title_font}.ttf\n")
+			f.write(f'date: {DATE_NOW}\n')
+			f.write(f'document: article\n')
+			f.write(f'geometry: margin={margin}cm\n')
+			f.write(f'fontsize: {fontsize}pt\n')
+			f.write('header-includes:\n')
+			f.write(f'- \spaceskip={word_spacing}cm\n')
+			f.write(f'- \\usepackage{{setspace}}\n')
+			f.write(f'- \{type_spacing}\n')
+			f.write("---\n")
+	
+	
+	def generate\_glossary(self, list):
+		with open(markdown_file, 'a', encoding='utf-8') as f:
+			f.write("---\n")
+			f.write("# Woordenlijst\n")
+			f.write("| Woord | Soort | Definitie |\n")
+			f.write("| --- | --- | --- |\n")
+			for word in list.keys(): 
+				f.write(f"| {word} | {list[word]['type']} | {list[word]['definition']} |\n")
+	
+	""""""
+	def generate_summary(self, full_text):
+		with open(markdown_file,'a', encoding="utf-8", errors="surrogateescape") as f:
+			for key in full_text.keys():
+				title = str(key).replace('\n',' ')
+				text = full_text[key]
+				f.write('\n\n')
+				f.write(f'## {title}')
+				f.write('\n\n')
+				f.write(" ".join(text))
+				f.write('\n\n')
+	
+	
+	def generate_summary_w_summation(self, full_text):
+		with open(markdown_file,'a', encoding="utf-8", errors="surrogateescape") as f:
+			for key in full_text.keys():
+				title = str(key).replace('\n',' ')
+				text = full_text[key][0].split('|')
+				f.write('\n\n')
+				f.write(f'## {title}')
+				for sentence in text:    
+				f.write('\n\n')
+				f.write(f'* {sentence}')
+				f.write('\n\n')
+	
+	
+	def create_pdf(self, title, margin, list, full_text, fonts, word_spacing, type_spacing, summation):
+		if title is not None:
+			self.create_header(title=title, margin=margin, fontsize=14, chosen_font=fonts[0], chosen_title_font=fonts[1], word_spacing=word_spacing, type_spacing=type_spacing)
+		else:
+			self.create_header(title='Vereenvoudigde tekst', margin=0.5, fontsize=14, chosen_font=fonts[0], chosen_title_font=fonts[1], word_spacing=word_spacing, type_spacing=type_spacing)
+	
+		"""GLOSSARY"""
+		if len(list) != 0:
+			self.generate_glossary(list=list)
+		
+		"""SUMMARY"""
+		if summation:
+			self.generate_summary_w_summation(full_text=full_text)
+		else:
+			self.generate_summary(full_text=full_text)
+	
+		"""FILE_CREATION"""
+		pypandoc.convert_file(source_file=markdown_file, to='docx', outputfile=docx_file,   extra_args=["-M2GB", "+RTS", "-K64m", "-RTS"])
+		pypandoc.convert_file(source_file=markdown_file, to='pdf',  outputfile=pdf_file,    extra_args=['--pdf-engine=xelatex'])
+		with zipfile.ZipFile(zip_filename, 'w') as myzip:
+		myzip.write(pdf_file)
+		myzip.write(docx_file)
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript, caption={De toegepaste scripts voor het verwijderen van adjectieven en togglen van type woorden.}, label={code:js-toggle-adjectives-nouns-verbs}]
+/* Adjectieven uitfilteren op basis van span-tag */
+function removeAdjectives() {
+	const elements = document.querySelectorAll(".adj");
+	elements.forEach(function (element) {
+		element.remove();
+	});
+}
+
+/* Checkboxes */
+const nouns = document.getElementById('noun-show');
+const verbs = document.getElementById('verb-show');
+const adjs = document.getElementById('adj-show');
+
+nouns.addEventListener('change', function () {
+	if (this.checked) {
+		const color = document.getElementById('colorForNouns').value;
+		console.log(color);
+		const elements = document.querySelectorAll("span.noun");
+		elements.forEach(function (element) {
+			element.style.color = color;
+		});
+	} else {
+		const elements = document.querySelectorAll("span.noun");
+		elements.forEach(function (element) {
+			element.style.color = "black";
+		});
+	}
+});
+
+verbs.addEventListener('change', function () {
+	if (this.checked) {
+		const color = document.getElementById('colorForVerbs').value;
+		const elements = document.querySelectorAll("span.verb, span.aux");
+		console.log(color, elements[0])
+		elements.forEach(function (element) {
+			element.style.color = color;
+		});
+	} else {
+		const elements = document.querySelectorAll("span.verb, span.aux");
+		elements.forEach(function (element) {
+			element.style.color = "black";
+		});
+	}
+});
+
+
+adjs.addEventListener('change', function () {
+	if (this.checked) {
+		const color = document.getElementById('colorForAdjs').value;
+		const elements = document.querySelectorAll("span.adj");
+		elements.forEach(function (element) {
+			element.style.color = color;
+		});
+	} else {
+		const elements = document.querySelectorAll("span.adj");
+		elements.forEach(function (element) {
+			element.style.color = "black";
+		});
+	}
+});
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript, caption={De toegepaste scripts voor enkel het scholierencomponent.}, label={code:js-scholars}]
+document.addEventListener("DOMContentLoaded", () => {
+	const spans = document.querySelectorAll(".verb, .adj, .noun, .aux");
+	spans.forEach((span) => {
+		span.addEventListener("click", async (event) => {
+			const radioButton = document.querySelector("#explainWords");
+			if (radioButton && !radioButton.checked) {
+				return;
+			}
+			let leftSideTag = span.closest("p");
+			let rightSideTag = leftSideTag.nextElementSibling;
+			sentence_of_origin = span.closest(".sentence");
+			
+			var context = "";
+			for (const child of sentence_of_origin.children) {
+				context = context + " " + child.textContent;
+			}
+			const word = event.target.textContent;
+			const response = await fetch(`http://localhost:5000/look-up-word`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ word: word, sentence: context }),
+			});
+			result = await response.json();
+			
+			if (result.result == "error") {
+				alert("Incorrect API key provided: " + result.word);
+			} else {
+				var pos_tag = result.result.split('|')[0];
+				var definition = result.result.split('|')[1];
+				let table = document.querySelector(".table-glossary");
+				let newRow = table.insertRow(-1);
+				let cell1 = newRow.insertCell(0);
+				let cell2 = newRow.insertCell(1);
+				let cell3 = newRow.insertCell(2);
+				cell1.innerHTML = result.word;
+				cell2.innerHTML = 'Bijvoeglijk naamwoord';
+				cell3.innerHTML = definition.lower;
+			}
+		});
+	});
+});
+
+/* --- */
+async function syntacticSimplification() {
+	var selectedText = window.getSelection().toString();
+	if (selectedText == "" || selectedText == null) {
+		alert('Markeer de tekst die u wilt vereenvoudigen.');
+		return;
+	}
+	
+	var dazzle = document.querySelector(".dazzle");
+	var p = document.createElement("p");
+	var p2 = document.createElement("p");
+	var text = document.createTextNode("Zinsbouw vereenvoudigen...");
+	var prompt = document.createTextNode("...");
+	p.appendChild(prompt);
+	dazzle.appendChild(p);
+	p2.appendChild(text);
+	dazzle.appendChild(p2);
+	const response = await fetch(`http://localhost:5000/simplify`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({ text: selectedText, key: "sc" }),
+	});
+	result = await response.json();
+	prompt.nodeValue = JSON.stringify(result.prompt);
+	text.nodeValue = JSON.stringify(result.result);
+}
+
+/* --- */
+function insertAfter(newNode, existingNode) {
+	existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+
+/* --- */
+document.addEventListener("DOMContentLoaded", () => {
+	const spans = document.querySelectorAll(".sentence");
+	spans.forEach((span) => {
+		span.addEventListener("click", async (event) => {
+			const radioButton = document.querySelector("#simplifySentences"); // get reference to radio button
+			if (radioButton && !radioButton.checked) {
+				return;
+			}
+			sentence_of_origin = span.closest(".sentence");
+			var context = "";
+			for (const child of sentence_of_origin.children) {
+				context = context + " " + child.textContent;
+			}
+			const response = await fetch(`http://localhost:5000/simplify`, {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ text: context, key: "sc" }),
+			});
+			result = await response.json();
+			var p = document.createElement("p");
+			newNode = document.createTextNode(JSON.stringify(result.result));
+			p.append(newNode);
+			insertAfter(p, span);
+			sentence_of_origin.innerHTML = "<del>" + context + "</del>";
+			parent = sentence_of_origin.parent;
+		});
+	});
+});
+
+async function personalizedSimplification() {
+	var selectedText = window.getSelection().toString();
+	if (selectedText == "" || selectedText == null) {
+		alert('Markeer de tekst die u wilt vereenvoudigen.');
+		return;
+	}
+	
+	let checkedValues = [];
+	let checkboxes = document.querySelectorAll(
+	'.personalisation input[type="checkbox"]'
+	);
+	
+	checkboxes.forEach((checkbox) => {
+		if (checkbox.checked) {
+			checkedValues.push(checkbox.name);
+		}
+	});
+	
+	if (checkedValues.length == 0) {
+		alert('Duidt één van de onderstaande opties aan.');
+		return;
+	}
+	
+	var selectedChoices = checkedValues;
+	var prompt = document.createTextNode("Gepersonaliseerde tekst ophalen...");
+	var text = document.createTextNode("...");
+	var dazzle = document.querySelector(".dazzle");
+	var p = document.createElement("p");
+	var p2 = document.createElement("p");
+	
+	p.appendChild(prompt);
+	dazzle.appendChild(p);
+	p2.appendChild(text);
+	dazzle.appendChild(p2);
+	
+	const response = await fetch(`http://localhost:5000/personalized-simplify`, {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({ text: selectedText, choices: selectedChoices }),
+	});
+	
+	result = await response.json();
+	
+	array = result.result;
+	console.log(array);
+	
+	if (array.length > 1) {
+		prompt.nodeValue = JSON.stringify(result.prompt);
+		const ul = document.createElement("ul");
+		array.forEach((item) => {
+			const li = document.createElement("li");
+			li.textContent = item;
+			ul.appendChild(li);
+		});
+		text.remove;
+		p2.appendChild(ul);
+	} else {
+		prompt.nodeValue = JSON.stringify(result.prompt);
+		text.nodeValue = JSON.stringify(result.result[0]);
+	}
+}
+
+async function askGPT() {
+	var selectedText = window.getSelection().toString();
+	if (selectedText == "" || selectedText == null) {
+		alert('Markeer de tekst die u wilt vereenvoudigen.');
+		return;
+	}
+	
+	var promptText = window.prompt(
+	"Wat wilt u doen met de geselecteerde tekst? Schrijf hier de prompt...'"
+	);
+	
+	var fullPrompt = promptText + "///\n" + selectedText;
+	var prompt = document.createTextNode("Gepersonaliseerde tekst ophalen...");
+	var text = document.createTextNode("");
+	var dazzle = document.querySelector(".dazzle");
+	var p = document.createElement("p");
+	var p2 = document.createElement("p");
+	
+	p.appendChild(prompt);
+	dazzle.appendChild(p);
+	p2.appendChild(text);
+	dazzle.appendChild(p2);
+	
+	const response = await fetch(
+	`http://localhost:5000/personalized-simplify-custom-prompt`,
+	{
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({ text: selectedText, prompt: fullPrompt }),
+	}
+	);
+	
+	result = await response.json();
+	console.log(result);
+	prompt.nodeValue = JSON.stringify(result.prompt);
+	text.nodeValue = JSON.stringify(result.result);
+}
+
+async function emptyChat() {
+	const dazzleDiv = document.querySelector(".dazzle");
+	dazzleDiv.innerHTML = "";
+}
+
+window.onload = async function () {
+	/* --- */
+	var url = `http://localhost:5000/get-settings-user`;
+	const response = await fetch(url, { method: "POST" });
+	var result = await response.json();
+	document.body.style.fontSize = result.fontSize + "px";
+	document.body.style.fontFamily = result.fontSettings;
+	document.body.style.backgroundColor = result.favcolor;
+	document.body.style.lineHeight = result.lineHeight + "cm";
+	document.body.style.wordSpacing = result.wordSpacing + "cm";
+	document.body.style.textAlign = result.textAlign;
+	
+	/* --- */
+	var url = "http://localhost:5000/get-session-keys";
+	const session_keys_response = await fetch(url, { method: "POST" });
+	result = await session_keys_response.json();
+	
+	let missing_keys = [];
+	
+	if (result.hf_api_key === undefined) {
+		missing_keys.push("HuggingFace");
+		document.querySelector("#simple-syntactic-simplification").style.display =
+		"none";
+	}
+	
+	if (result.gpt3 === undefined) {
+		missing_keys.push("GPT-3");
+		document.querySelector("#prompt-synt-simplification").style.display =
+		"none";
+		document.querySelector("#personalized-synt-simplification").style.display =
+		"none";
+		document.querySelector(".personalisation").style.display = "none";
+	}
+	
+	if (missing_keys.length > 0){
+		alert("Sleutel(s) voor " + missing_keys.join(" & ") + " ontbreken.");
+	}
+};
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=JavaScript, caption={De toegepaste scripts voor enkel het lerarencomponent.}, label={code:js-teachers}]
+/* --- */
+const checkbox = document.querySelector("#personalizedSummary");
+const fieldsets = document.querySelectorAll(".personalized");
+checkbox.addEventListener("change", () => {
+	fieldsets.forEach((fieldset) => {
+		if (checkbox && checkbox.checked) {
+			fieldset.style.display = "block";
+		} else {
+			fieldset.style.display = "none";
+		}
+	});
+});
+
+/* Add word to glossary */
+var checkboxAddWordToGlossary = document.getElementById(
+"checkboxAddWordToGlossary"
+);
+checkboxAddWordToGlossary.addEventListener("change", function () {
+	if (checkboxAddWordToGlossary && checkboxAddWordToGlossary.checked) {
+		const words = document.querySelectorAll(
+		"span.verb, span.noun, span.aux, span.verb, span.adj"
+		);
+		words.forEach((w) => {
+			w.addEventListener("click", async (event) => {
+				if (checkboxAddWordToGlossary.checked) {
+					var pTag = event.target;
+					sentence_of_origin = w.closest("span.sentence");
+					var context = "";
+					for (const child of sentence_of_origin.children) {
+						context = context + " " + child.textContent;
+					}
+					console.log(context);
+					var textarea = document.getElementById("glossaryList");
+					pTag.style.backgroundColor = "black";
+					pTag.style.color = "white";
+					pTag.style.fontWeight = "bold";
+					textarea.value += pTag.innerHTML + ":" + context + "\n";
+					console.log(textarea.value);
+				}
+			});
+		});
+	}
+});
+
+/* Deleting sentences */
+const checkboxDeleteSents = document.getElementById("checkboxDeleteSents");
+checkboxDeleteSents.addEventListener("change", function () {
+	if (checkboxDeleteSents && checkboxDeleteSents.checked) {
+		const sentences = document.querySelectorAll(".sentence");
+		sentences.forEach((span) => {
+			span.addEventListener("click", async (event) => {
+				if (checkboxDeleteSents.checked) span.remove();
+			});
+		});
+	}
+});
+
+/* Tekst toevoegen */
+function addTextToTextArea() {
+	const fullTextBox = document.querySelector(".left-container").innerHTML;
+	var textarea = document.getElementById("fullText");
+	textarea.value = fullTextBox;
+	document.getElementById("summarize-with-presets-button").disabled = false;
+}
+
+function makeTitle(button) {
+	const titleText = document.getElementById("title").value;
+	const newTitle = document.createElement("h3");
+	newTitle.innerText = titleText;
+	const titleContainer = document.getElementById("title").parentElement;
+	titleContainer.replaceChild(newTitle, document.getElementById("title"));
+	button.parentNode.removeChild(button);
+}
+
+function deleteTitle(button) {
+	var parent = button.parentNode;
+	parent.parentNode.removeChild(parent);
+}
+
+window.onload = async function () {
+	/* --- */
+	var url = `http://localhost:5000/get-settings-user`;
+	const response = await fetch(url, { method: "POST" });
+	var result = await response.json();
+	document.body.style.fontSize = result.fontSize + "px";
+	document.body.style.fontFamily = result.fontSettings;
+	document.body.style.backgroundColor = result.favcolor;
+	document.body.style.lineHeight = result.lineHeight + "cm";
+	document.body.style.wordSpacing = result.wordSpacing + "cm";
+	document.body.style.textAlign = result.textAlign;
+	
+	/* --- */
+	var url = "http://localhost:5000/get-session-keys";
+	const session_keys_response = await fetch(url, { method: "POST" });
+	result = await session_keys_response.json();
+	
+	let missing_keys = [];
+	
+	if (result.hf_api_key === undefined) {
+		missing_keys.push("HuggingFace");
+		document.getElementById("huggingface").innerHTML =
+		"Geen HuggingFace sleutel werd opgegeven. ";
+		document.getElementById("huggingface").style.color = "red";
+	} else {
+		document.getElementById("huggingface").innerHTML =
+		"HuggingFace API-sleutel:\t" + result.hf_api_key;
+	}
+	
+	if (result.gpt3 === undefined) {
+		missing_keys.push("GPT-3");
+		document.getElementById("gpt3").innerHTML =
+		"Geen GPT-3 sleutel werd opgegeven.";
+		document.getElementById("gpt3").style.color = "red";
+	} else {
+		document.getElementById("gpt3").innerHTML =
+		"GPT-3 API-sleutel: " + result.gpt3;
+	}
+	
+	if (missing_keys.length > 0) {
+		alert("Sleutel(s) voor " + missing_keys.join(" & ") + " ontbreken.");
+	}
+};
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=Dockerfile, caption={Dockerfile voor het prototype.}, label={code:dockerfile}]
+FROM python:3.8-slim-buster
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN apt-get update && apt-get install -y pandoc texlive-xetex texlive poppler-utils
+
+RUN pip3 install -r requirements.txt \
+&& python3 -m spacy download nl_core_news_md \
+&& python3 -m spacy download en_core_web_md
+
+COPY . .
+
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=5000"]
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=Powershell, caption={Script voor het opstarten van de Docker-container voor Windows-gebruikers}, label={code:shell-boot}]
+@echo off
+
+cd web-app
+docker stop text-application-prototype
+docker rm text-application-prototype
+
+docker rmi text-app
+
+docker build -t text-app .
+docker run --name text-application-prototype --network webapp_simplification -d -p 5000:5000 text-app
+\end{lstlisting}
+
+\begin{lstlisting}[language=Bash, caption={Script voor het opstarten van de Docker-container voor Unix-gebruikers}, label={code:bash-boot}]
+#!/bin/sh
+	
+cd web-app || exit
+docker stop text-application-prototype
+docker rm text-application-prototype
+	
+docker rmi text-app
+	
+docker build -t text-app .
+docker run --name text-application-prototype --network webapp_simplification -d -p 5000:5000 text-app
+\end{lstlisting}

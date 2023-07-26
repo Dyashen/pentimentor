@@ -1,0 +1,2199 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Barnett2020}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b13ccee6642fee40f7da5bdea3589ec2}{%
+           family={Barnett},
+           familyi={B\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecbf2277d044881b198fce5d16380243}{%
+           family={Doubleday},
+           familyi={D\bibinitperiod},
+           given={Zoe},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=2d9903865fc5d8f379b82bfe1ed54d0a}{%
+           family={Rodgers},
+           familyi={R\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{citation}{1}{%
+        {eLife 2020;9:e60080}%
+      }
+      \list{publisher}{1}{%
+        {eLife Sciences Publications, Ltd}%
+      }
+      \strng{namehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{fullhash}{9ec177a31299ab764178b7e23259478d}
+      \strng{bibnamehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{authorbibnamehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{authornamehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{authorfullhash}{9ec177a31299ab764178b7e23259478d}
+      \strng{editorbibnamehash}{2d9903865fc5d8f379b82bfe1ed54d0a}
+      \strng{editornamehash}{2d9903865fc5d8f379b82bfe1ed54d0a}
+      \strng{editorfullhash}{2d9903865fc5d8f379b82bfe1ed54d0a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Some acronyms are useful and are widely understood, but many of the acronyms used in scientific papers hinder understanding and contribute to the increasing fragmentation of science. Here we report the results of an analysis of more than 24 million article titles and 18 million article abstracts published between 1950 and 2019. There was at least one acronym in 19\% of the titles and 73\% of the abstracts. Acronym use has also increased over time, but the re-use of acronyms has declined. We found that from more than one million unique acronyms in our data, just over 2,000 (0.2\%) were used regularly, and most acronyms (79\%) appeared fewer than 10 times. Acronyms are not the biggest current problem in science communication, but reducing their use is a simple change that would help readers and potentially increase the value of science.}
+      \field{issn}{2050-084X}
+      \field{journaltitle}{eLife}
+      \field{title}{Meta-Research: The growth of acronyms in the scientific literature}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{e60080}
+      \range{pages}{-1}
+      \keyw{meta-research,scientific writing,acronyms,communication,knowledge,scientific publishing}
+    \endentry
+    \entry{Bingel2018}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=30664427b42981e3ff578e2712ef4b22}{%
+           family={Bingel},
+           familyi={B\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc6874a9706b0d5ec3af854985947c30}{%
+           family={Paetzold},
+           familyi={P\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=396b0ec2b034423c37af7048cb81a7b4}{%
+           family={S{ø}gaard},
+           familyi={S\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Santa Fe, New Mexico, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{52b1c2ac7e95faf55e4c14d74e82c40c}
+      \strng{fullhash}{fae03496135b2729f630cd701cc85cfe}
+      \strng{bibnamehash}{fae03496135b2729f630cd701cc85cfe}
+      \strng{authorbibnamehash}{fae03496135b2729f630cd701cc85cfe}
+      \strng{authornamehash}{52b1c2ac7e95faf55e4c14d74e82c40c}
+      \strng{authorfullhash}{fae03496135b2729f630cd701cc85cfe}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Most previous research in text simplification has aimed to develop generic solutions, assuming very homogeneous target audiences with consistent intra-group simplification needs. We argue that this assumption does not hold, and that instead we need to develop simplification systems that adapt to the individual needs of specific users. As a first step towards personalized simplification, we propose a framework for adaptive lexical simplification and introduce Lexi, a free open-source and easily extensible tool for adaptive, personalized text simplification. Lexi is easily installed as a browser extension, enabling easy access to the service for its users.}
+      \field{journaltitle}{Proceedings of the 27th International Conference on Computational Linguistics}
+      \field{title}{{L}exi: A tool for adaptive, personalized text simplification}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{245\bibrangedash 258}
+      \range{pages}{14}
+      \verb{file}
+      \verb :Lexi - A tool for adaptive, personalized text simplification.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Chowdhary2020}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b85e59bf81a08b351c1b0047ffe26df}{%
+           family={Chowdhary},
+           familyi={C\bibinitperiod},
+           given={K.R.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, New Delhi}%
+      }
+      \strng{namehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{fullhash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{bibnamehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{authorbibnamehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{authornamehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{authorfullhash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fundamentals of Artificial Intelligence}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Dapaah2022}{online}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=993d444a600643f17bde7fe6b5366784}{%
+           family={Dapaah},
+           familyi={D\bibinitperiod},
+           given={Josephine},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62b338f43af32adfddaf8492d5886294}{%
+           family={Maenhout},
+           familyi={M\bibinitperiod},
+           given={Klaas},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=09e6ab761d283a3f2fb6ac2c5247a056}{%
+           family={Standaard},
+           familyi={S\bibinitperiod},
+           given={De},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{fullhash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{bibnamehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{authorbibnamehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{authornamehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{authorfullhash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{editorbibnamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editornamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editorfullhash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{7}
+      \field{title}{Iedereen heeft boter op zijn hoofd}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.standaard.be/cnt/dmf20220607_97763592
+      \endverb
+      \verb{url}
+      \verb https://www.standaard.be/cnt/dmf20220607_97763592
+      \endverb
+    \endentry
+    \entry{Deckmyn2021}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25242fc3148bfa733eef563ae290c0d8}{%
+           family={Deckmyn},
+           familyi={D\bibinitperiod},
+           given={Dominique},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=09e6ab761d283a3f2fb6ac2c5247a056}{%
+           family={Standaard},
+           familyi={S\bibinitperiod},
+           given={De},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{fullhash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{bibnamehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{authorbibnamehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{authornamehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{authorfullhash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{editorbibnamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editornamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editorfullhash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{3}
+      \field{title}{Robot schrijft mee De Standaard}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.standaard.be/cnt/dmf20210319_05008561
+      \endverb
+      \verb{url}
+      \verb https://www.standaard.be/cnt/dmf20210319_05008561
+      \endverb
+    \endentry
+    \entry{Donato2022}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=d8e81a3a7edd3a121de6cffb2c1fc333}{%
+           family={Donato},
+           familyi={D\bibinitperiod},
+           given={Antonella},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2662dfaef82a935adcba46694442a30b}{%
+           family={Muscolo},
+           familyi={M\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddcdb3b0424bad805144fc38872ff291}{%
+           family={Arias\bibnamedelima Romero},
+           familyi={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Mateo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7495c125b77117bd5fc4ae4bf974c4c7}{%
+           family={Caprì},
+           familyi={C\bibinitperiod},
+           given={Tindara},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2bcac707aab8ce3fb7ece8d5375fb8a6}{%
+           family={Calarese},
+           familyi={C\bibinitperiod},
+           given={Tiziana},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=574b7f22dcf2421bf32fd50ae02561ff}{%
+           family={Olmedo\bibnamedelima Moreno},
+           familyi={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Eva\bibnamedelima María},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3d5a6122e9f9817328588fc014656927}
+      \strng{fullhash}{b0f849cc5abf5cd61e13f355acba013e}
+      \strng{bibnamehash}{b0f849cc5abf5cd61e13f355acba013e}
+      \strng{authorbibnamehash}{b0f849cc5abf5cd61e13f355acba013e}
+      \strng{authornamehash}{3d5a6122e9f9817328588fc014656927}
+      \strng{authorfullhash}{b0f849cc5abf5cd61e13f355acba013e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Although the number of students with dyslexia enrolled in Italian universities is constantly growing, their presence remains relatively limited. The aim of this study was therefore to investigate the choices made by students with dyslexia in relation to university studies, and the underlying reasons for their choices. This study also compares these choices for students with and without dyslexia. In all, 440 high school students and their families agreed to take part in this project. Socio-demographic data was collected for the 47 students with dyslexia and 47 class-matched students without dyslexia, along with information on their current schools and their future educational plans. A specially developed questionnaire was used for the students, in combination with structured interviews with their families. The results show significant differences between these groups regarding both choices for university studies and the underlying motivations for these choices. Furthermore, certain psychological and emotional factors are implicated here in the decisions of the students with dyslexia regarding both university studies and their underlying reasons. Future research is needed to further investigate these factors in the educational choices of students with dyslexia.}
+      \field{journaltitle}{Dyslexia}
+      \field{number}{1}
+      \field{title}{Students with dyslexia between school and university: Post-diploma choices and the reasons that determine them. An Italian study}
+      \field{volume}{28}
+      \field{year}{2022}
+      \field{pages}{110\bibrangedash 127}
+      \range{pages}{18}
+      \keyw{choices,dyslexia,reasons,students,university}
+    \endentry
+    \entry{Gala2016}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2d6c91557f3b168f0a6f4351a0c4e095}{%
+           family={Gala},
+           familyi={G\bibinitperiod},
+           given={Núria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e39b4f3a07b67c4334f9c6e12c6e4a8}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Osaka, Japan}%
+      }
+      \list{publisher}{1}{%
+        {The COLING 2016 Organizing Committee}%
+      }
+      \strng{namehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{fullhash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{bibnamehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{authorbibnamehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{authornamehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{authorfullhash}{1854d31d34b29e506f4c7b48355d77c4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Lexical complexity plays a central role in readability, particularly for dyslexic children and poor readers because of their slow and laborious decoding and word recognition skills. Although some features to aid readability may be common to most languages (e.g., the majority of {`}easy{'} words are of low frequency), we believe that lexical complexity is mainly language-specific. In this paper, we define lexical complexity for French and we present a pilot study on the effects of text simplification in dyslexic children. The participants were asked to read out loud original and manually simplified versions of a standardized French text corpus and to answer comprehension questions after reading each text. The analysis of the results shows that the simplifications performed were beneficial in terms of reading speed and they reduced the number of reading errors (mainly lexical ones) without a loss in comprehension. Although the number of participants in this study was rather small (N=10), the results are promising and contribute to the development of applications in computational linguistics.}
+      \field{journaltitle}{Proceedings of the Workshop on Computational Linguistics for Linguistic Complexity ({CL}4{LC})}
+      \field{title}{Reducing lexical complexity as a tool to increase text accessibility for children with dyslexia}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{59\bibrangedash 66}
+      \range{pages}{8}
+      \verb{file}
+      \verb :Reducing lexical complexity as a tool to increase text accessibility.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Garbacea2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6f7b7e6d6cd38a15f6be00643ce82f71}{%
+           family={Garbacea},
+           familyi={G\bibinitperiod},
+           given={Cristina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f28f6fa87c0f4949b475e02a6ad6d03}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Mengtian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=47d71d143d2d509f11c3b42f237d5462}{%
+           family={Carton},
+           familyi={C\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ca1c136fc4a8c4c39869eeaf7fade74}{%
+           family={Mei},
+           familyi={M\bibinitperiod},
+           given={Qiaozhu},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Online}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{0b438a809bd2cd087cd72f68927dca23}
+      \strng{fullhash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \strng{bibnamehash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \strng{authorbibnamehash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \strng{authornamehash}{0b438a809bd2cd087cd72f68927dca23}
+      \strng{authorfullhash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Text simplification reduces the language complexity of professional content for accessibility purposes. End-to-end neural network models have been widely adopted to directly generate the simplified version of input text, usually functioning as a blackbox. We show that text simplification can be decomposed into a compact pipeline of tasks to ensure the transparency and explainability of the process. The first two steps in this pipeline are often neglected: 1) to predict whether a given piece of text needs to be simplified, and 2) if yes, to identify complex parts of the text. The two tasks can be solved separately using either lexical or deep learning methods, or solved jointly. Simply applying explainable complexity prediction as a preliminary step, the out-of-sample text simplification performance of the state-of-the-art, black-box simplification models can be improved by a large margin.}
+      \field{journaltitle}{Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)}
+      \field{title}{Explainable Prediction of Text Complexity: The Missing Preliminaries for Text Simplification}
+      \field{year}{2021}
+      \field{pages}{1086\bibrangedash 1097}
+      \range{pages}{12}
+    \endentry
+    \entry{Gooding2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=641874c2c50473d46ebdd78ff57c967d}{%
+           family={Gooding},
+           familyi={G\bibinitperiod},
+           given={Sian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Dublin, Ireland}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{fullhash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{bibnamehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{authorbibnamehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{authornamehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{authorfullhash}{641874c2c50473d46ebdd78ff57c967d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper outlines the ethical implications of text simplification within the framework of assistive systems. We argue that a distinction should be made between the technologies that perform text simplification and the realisation of these in assistive technologies. When using the latter as a motivation for research, it is important that the subsequent ethical implications be carefully considered. We provide guidelines for the framing of text simplification independently of assistive systems, as well as suggesting directions for future research and discussion based on the concerns raised.}
+      \field{journaltitle}{Ninth Workshop on Speech and Language Processing for Assistive Technologies (SLPAT-2022)}
+      \field{month}{05}
+      \field{title}{On the Ethical Considerations of Text Simplification}
+      \field{year}{2022}
+      \field{pages}{50\bibrangedash 57}
+      \range{pages}{8}
+    \endentry
+    \entry{Iavarone2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=378a356cb4c4a2e7bbc58982f8fe7c43}{%
+           family={Iavarone},
+           familyi={I\bibinitperiod},
+           given={Benedetta},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0743dd7569b8a6d973b08ed0f49a882}{%
+           family={Brunato},
+           familyi={B\bibinitperiod},
+           given={Dominique},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18dc967263b005b6c493d7bb502cc88b}{%
+           family={Dell{'}Orletta},
+           familyi={D\bibinitperiod},
+           given={Felice},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Online}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{ef84a039f012fc4cac4b2c00cdf60923}
+      \strng{fullhash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \strng{bibnamehash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \strng{authorbibnamehash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \strng{authornamehash}{ef84a039f012fc4cac4b2c00cdf60923}
+      \strng{authorfullhash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the influence of context on how humans evaluate the complexity of a sentence in English. We collect a new dataset of sentences, where each sentence is rated for perceived complexity within different contextual windows. We carry out an in-depth analysis to detect which linguistic features correlate more with complexity judgments and with the degree of agreement among annotators. We train several regression models, using either explicit linguistic features or contextualized word embeddings, to predict the mean complexity values assigned to sentences in the different contextual windows, as well as their standard deviation. Results show that models leveraging explicit features capturing morphosyntactic and syntactic phenomena perform always better, especially when they have access to features extracted from all contextual sentences.}
+      \field{journaltitle}{Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics}
+      \field{title}{Sentence Complexity in Context}
+      \field{year}{2021}
+      \field{pages}{186\bibrangedash 199}
+      \range{pages}{14}
+    \endentry
+    \entry{Malik2022}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc9b20b0e882f7bad79ff07f866e756}{%
+           family={Malik},
+           familyi={M\bibinitperiod},
+           given={Rijul\bibnamedelima Sing},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=43a8886fd70084e650ac0521c147e1f1}{%
+           family={AI},
+           familyi={A\bibinitperiod},
+           given={Towards},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{fullhash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{bibnamehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{authorbibnamehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{authornamehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{authorfullhash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{editorbibnamehash}{43a8886fd70084e650ac0521c147e1f1}
+      \strng{editornamehash}{43a8886fd70084e650ac0521c147e1f1}
+      \strng{editorfullhash}{43a8886fd70084e650ac0521c147e1f1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{7}
+      \field{title}{Top 5 NLP Libraries To Use in Your Projects}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://towardsai.net/p/l/top-5-nlp-libraries-to-use-in-your-projects
+      \endverb
+      \verb{url}
+      \verb https://towardsai.net/p/l/top-5-nlp-libraries-to-use-in-your-projects
+      \endverb
+    \endentry
+    \entry{Martens2021}{online}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=748b4791936091d1cfa1ed6eef897b00}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Marijn},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ede85b377833a2b061e0707b09fea714}{%
+           family={De\bibnamedelima Wolf},
+           familyi={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7105c2121896d02a4f5c4b715abaabc1}{%
+           family={Evens},
+           familyi={E\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kenniscentrum Data en Maatschappij}%
+      }
+      \strng{namehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{fullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{bibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authorbibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authornamehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{authorfullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algoritmes en AI in de onderwijscontext: Een studie naar de perceptie, mening en houding van leerlingen en ouders in Vlaanderen}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data-en-maatschappij.ai/publicaties/survey-onderwijs-2021
+      \endverb
+      \verb{url}
+      \verb https://data-en-maatschappij.ai/publicaties/survey-onderwijs-2021
+      \endverb
+    \endentry
+    \entry{Martens2021a}{online}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=748b4791936091d1cfa1ed6eef897b00}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Marijn},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ede85b377833a2b061e0707b09fea714}{%
+           family={De\bibnamedelima Wolf},
+           familyi={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7105c2121896d02a4f5c4b715abaabc1}{%
+           family={Evens},
+           familyi={E\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kenniscentrum Data en Maatschappij}%
+      }
+      \strng{namehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{fullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{bibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authorbibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authornamehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{authorfullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{28}
+      \field{month}{6}
+      \field{title}{School innovation forum 2021}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data-en-maatschappij.ai/nieuws/school-innovation-forum-2021
+      \endverb
+      \verb{url}
+      \verb https://data-en-maatschappij.ai/nieuws/school-innovation-forum-2021
+      \endverb
+    \endentry
+    \entry{PlavenSigray2017}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e0937b5b8d7347d247d3386989e98477}{%
+           family={Plavén-Sigray},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={Pontus},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01c276fd7b6c47cb3c85bc21c350ad1f}{%
+           family={Matheson},
+           familyi={M\bibinitperiod},
+           given={Granville\bibnamedelima James},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f62415a29511a4483022a8b981c41b34}{%
+           family={Schiffler},
+           familyi={S\bibinitperiod},
+           given={Björn\bibnamedelima Christian},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dbe1dfbf816c27c2ae2350230cda97b8}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={William\bibnamedelima Hedley},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=b5b6fc78668a017deed7aae19aaf2efa}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{citation}{1}{%
+        {eLife 2017;6:e27725}%
+      }
+      \list{publisher}{1}{%
+        {eLife Sciences Publications, Ltd}%
+      }
+      \strng{namehash}{6ba740adb39374fef91d7ed73f275d54}
+      \strng{fullhash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{bibnamehash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{authorbibnamehash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{authornamehash}{6ba740adb39374fef91d7ed73f275d54}
+      \strng{authorfullhash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{editorbibnamehash}{b5b6fc78668a017deed7aae19aaf2efa}
+      \strng{editornamehash}{b5b6fc78668a017deed7aae19aaf2efa}
+      \strng{editorfullhash}{b5b6fc78668a017deed7aae19aaf2efa}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Clarity and accuracy of reporting are fundamental to the scientific process. Readability formulas can estimate how difficult a text is to read. Here, in a corpus consisting of 709,577 abstracts published between 1881 and 2015 from 123 scientific journals, we show that the readability of science is steadily decreasing. Our analyses show that this trend is indicative of a growing use of general scientific jargon. These results are concerning for scientists and for the wider public, as they impact both the reproducibility and accessibility of research findings.}
+      \field{issn}{2050-084X}
+      \field{journaltitle}{eLife}
+      \field{title}{Research: The readability of scientific texts is decreasing over time}
+      \field{volume}{6}
+      \field{year}{2017}
+      \field{pages}{e27725}
+      \range{pages}{-1}
+      \keyw{metascience,readability,data analysis,jargon,scientific communication}
+    \endentry
+    \entry{Readable2021}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b8123df4e2b3456270c11394adf7607}{%
+           family={Readable},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{fullhash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{bibnamehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{authorbibnamehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{authornamehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{authorfullhash}{4b8123df4e2b3456270c11394adf7607}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Flesch Reading Ease and the Flesch Kincaid Grade Level}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://readable.com/readability/flesch-reading-ease-flesch-kincaid-grade-level/
+      \endverb
+      \verb{url}
+      \verb https://readable.com/readability/flesch-reading-ease-flesch-kincaid-grade-level/
+      \endverb
+    \endentry
+    \entry{Rello2012}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=beb516ae4b9334129c564a1d33d9ec9b}{%
+           family={Rello},
+           familyi={R\bibinitperiod},
+           given={Luz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecd6fb01cce2230c5d4a653f1df9cb57}{%
+           family={Kanvinde},
+           familyi={K\bibinitperiod},
+           given={Gaurang},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14e9e2c7e918f62ba13b9e040fb7f468}{%
+           family={Baeza-Yates},
+           familyi={B\bibinithyphendelim Y\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Lyon, France}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{5f8b0dbae47e570be334bb804b81d6ad}
+      \strng{fullhash}{a76335588d8c2243e2f83afbb4bbab25}
+      \strng{bibnamehash}{a76335588d8c2243e2f83afbb4bbab25}
+      \strng{authorbibnamehash}{a76335588d8c2243e2f83afbb4bbab25}
+      \strng{authornamehash}{5f8b0dbae47e570be334bb804b81d6ad}
+      \strng{authorfullhash}{a76335588d8c2243e2f83afbb4bbab25}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we offer set of guidelines and a web service that presents Web texts in a more more accessible way to people with dyslexia. The layout guidelines for developing this service are based on a user study with a group of twenty two dyslexic users. The data collected from our study combines qualitative data from interviews and questionnaires and quantitative data from tests carried out using eye tracking. We analyze and compare both kinds of data and present a set of layout guidelines for making the text Web more readable for dyslexic users. To the best of our knowledge, our methodology for defining dyslexic-friendly guidelines and our web service are novel.}
+      \field{isbn}{9781450310192}
+      \field{journaltitle}{Proceedings of the International Cross-Disciplinary Conference on Web Accessibility}
+      \field{series}{W4A '12}
+      \field{title}{Layout Guidelines for Web Text and a Web Service to Improve Accessibility for Dyslexics}
+      \field{year}{2012}
+      \keyw{browsing web service,web accessibility,dyslexia,readability,accessibility guidelines,usability tests}
+    \endentry
+    \entry{Roldos2020}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7c83da6c5da5b8824f3a4eba92e5bfb9}{%
+           family={Roldós},
+           familyi={R\bibinitperiod},
+           given={Inés},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {MonkeyLearn}%
+      }
+      \strng{namehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{fullhash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{bibnamehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{authorbibnamehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{authornamehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{authorfullhash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{12}
+      \field{title}{Major Challenges of Natural Language Processing (NLP)}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://monkeylearn.com/blog/natural-language-processing-challenges/
+      \endverb
+      \verb{url}
+      \verb https://monkeylearn.com/blog/natural-language-processing-challenges/
+      \endverb
+    \endentry
+    \entry{Sciforce2020}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=36dac3d3117c0faf099f8800d37a828f}{%
+           family={{Sciforce}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {Engels}%
+      }
+      \strng{namehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{fullhash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{bibnamehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{authorbibnamehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{authornamehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{authorfullhash}{36dac3d3117c0faf099f8800d37a828f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The NLP domain reports great advances to the extent that a number of problems, such as part-of-speech tagging, are considered to be fully solved. At the same time, such tasks as text summarization or machine dialog systems are notoriously hard to crack and remain open for the past decades.}
+      \field{day}{4}
+      \field{month}{2}
+      \field{title}{Biggest Open Problems in Natural Language Processing}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/sciforce/biggest-open-problems-in-natural-language-processing-7eb101ccfc9
+      \endverb
+      \verb{url}
+      \verb https://medium.com/sciforce/biggest-open-problems-in-natural-language-processing-7eb101ccfc9
+      \endverb
+    \endentry
+    \entry{Shardlow2014}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d15f65dc3a8314f8ec6692eb6b0f5c1a}{%
+           family={Shardlow},
+           familyi={S\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {The Science}%
+        {Information Organization}%
+      }
+      \strng{namehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{fullhash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{bibnamehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{authorbibnamehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{authornamehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{authorfullhash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications(IJACSA), Special Issue on Natural Language Processing 2014}
+      \field{number}{1}
+      \field{title}{A Survey of Automated Text Simplification}
+      \field{volume}{4}
+      \field{year}{2014}
+    \endentry
+    \entry{Siddharthan2014}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cb280ee34b558048f3051f70a81863a7}{%
+           family={Siddharthan},
+           familyi={S\bibinitperiod},
+           given={Advaith},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{fullhash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{bibnamehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{authorbibnamehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{authornamehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{authorfullhash}{cb280ee34b558048f3051f70a81863a7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ITL - International Journal of Applied Linguistics}
+      \field{month}{12}
+      \field{title}{A survey of research on text simplification}
+      \field{volume}{165}
+      \field{year}{2014}
+      \field{pages}{259\bibrangedash 298}
+      \range{pages}{40}
+    \endentry
+    \entry{Suter2016}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=933daad69e6a8ff914e7bebc7d877283}{%
+           family={Suter},
+           familyi={S\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41494d58d71e95c6ae8a3744ace7dc41}{%
+           family={Ebling},
+           familyi={E\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44d45eb86aa9f68623f1a47d90e5d9dd}{%
+           family={Volk},
+           familyi={V\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{875b111a60cb42f4a2e3b6e62b0fdbf4}
+      \strng{fullhash}{83f2e8774d0d3da07df0e5ad59795543}
+      \strng{bibnamehash}{83f2e8774d0d3da07df0e5ad59795543}
+      \strng{authorbibnamehash}{83f2e8774d0d3da07df0e5ad59795543}
+      \strng{authornamehash}{875b111a60cb42f4a2e3b6e62b0fdbf4}
+      \strng{authorfullhash}{83f2e8774d0d3da07df0e5ad59795543}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{Rule-based Automatic Text Simplification for German}
+      \field{year}{2016}
+    \endentry
+    \entry{Swayamdipta2019}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=17a53fd167ccca7245cb9e8082ccb3a7}{%
+           family={Swayamdipta},
+           familyi={S\bibinitperiod},
+           given={Swabha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {Engels}%
+      }
+      \strng{namehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{fullhash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{bibnamehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{authorbibnamehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{authornamehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{authorfullhash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As the availability of data for language learning grows, the role of linguistic structure is under scrutiny. At the same time, it is imperative to closely inspect patterns in data which might present loopholes for models to obtain high performance on benchmarks. In a two-part talk, I will address each of these challenges. First, I will introduce the paradigm of scaffolded learning. Scaffolds enable us to leverage inductive biases from one structural source for prediction of a different, but related structure, using only as much supervision as is necessary. We show that the resulting representations achieve improved performance across a range of tasks, indicating that linguistic structure remains beneficial even with powerful deep learning architectures. In the second part of the talk, I will showcase some of the properties exhibited by NLP models in large data regimes. Even as these models report excellent performance, sometimes claimed to beat humans, a closer look reveals that predictions are not a result of complex reasoning, and the task is not being completed in a generalizable way. Instead, this success can be largely attributed to exploitation of some artifacts of annotation in the datasets. I will discuss some questions our finding raises, as well as directions for future work.}
+      \field{day}{22}
+      \field{month}{1}
+      \field{title}{Learning Challenges in Natural Language Processing}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.microsoft.com/en-us/research/video/learning-challenges-in-natural-language-processing/
+      \endverb
+      \verb{url}
+      \verb https://www.microsoft.com/en-us/research/video/learning-challenges-in-natural-language-processing/
+      \endverb
+    \endentry
+    \entry{Thangarajah2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4e2ee739837d14190e574c05b7e9980a}{%
+           family={Thangarajah},
+           familyi={T\bibinitperiod},
+           given={Vinothraj},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{fullhash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{bibnamehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{authorbibnamehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{authornamehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{authorfullhash}{4e2ee739837d14190e574c05b7e9980a}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Python current trend applications-an overview}
+      \field{year}{2019}
+    \endentry
+    \entry{Vasista2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=393944a75e014494a6c6ea234f37838d}{%
+           family={Vasista},
+           familyi={V\bibinitperiod},
+           given={Kola},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{fullhash}{393944a75e014494a6c6ea234f37838d}
+      \strng{bibnamehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{authorbibnamehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{authornamehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{authorfullhash}{393944a75e014494a6c6ea234f37838d}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Central Asian Journal of Theoretical and Applied Science}
+      \field{number}{3}
+      \field{title}{Evolution of AI Design Models}
+      \field{volume}{3}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+    \endentry
+    \entry{Verhoeven2023}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1cc7fa46d72b7efc0ca39a8b7e5c4c3}{%
+           family={Verhoeven},
+           familyi={V\bibinitperiod},
+           given={Wim},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=9cf69763de83f9db7f4a87c51fe6ae23}{%
+           family={Trends},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{fullhash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{bibnamehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{authorbibnamehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{authornamehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{authorfullhash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{editorbibnamehash}{9cf69763de83f9db7f4a87c51fe6ae23}
+      \strng{editornamehash}{9cf69763de83f9db7f4a87c51fe6ae23}
+      \strng{editorfullhash}{9cf69763de83f9db7f4a87c51fe6ae23}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{2}
+      \field{title}{Applaus voor de studenten die ChatGPT gebruiken}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://trends.knack.be/economie/bedrijven/applaus-voor-de-studenten-die-chatgpt-gebruiken/article-opinion-1934277.html?cookie_check=1676034368
+      \endverb
+      \verb{url}
+      \verb https://trends.knack.be/economie/bedrijven/applaus-voor-de-studenten-die-chatgpt-gebruiken/article-opinion-1934277.html?cookie_check=1676034368
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{Barnett2020}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b13ccee6642fee40f7da5bdea3589ec2}{%
+           family={Barnett},
+           familyi={B\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecbf2277d044881b198fce5d16380243}{%
+           family={Doubleday},
+           familyi={D\bibinitperiod},
+           given={Zoe},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=2d9903865fc5d8f379b82bfe1ed54d0a}{%
+           family={Rodgers},
+           familyi={R\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{citation}{1}{%
+        {eLife 2020;9:e60080}%
+      }
+      \list{publisher}{1}{%
+        {eLife Sciences Publications, Ltd}%
+      }
+      \strng{namehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{fullhash}{9ec177a31299ab764178b7e23259478d}
+      \strng{bibnamehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{authorbibnamehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{authornamehash}{9ec177a31299ab764178b7e23259478d}
+      \strng{authorfullhash}{9ec177a31299ab764178b7e23259478d}
+      \strng{editorbibnamehash}{2d9903865fc5d8f379b82bfe1ed54d0a}
+      \strng{editornamehash}{2d9903865fc5d8f379b82bfe1ed54d0a}
+      \strng{editorfullhash}{2d9903865fc5d8f379b82bfe1ed54d0a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Some acronyms are useful and are widely understood, but many of the acronyms used in scientific papers hinder understanding and contribute to the increasing fragmentation of science. Here we report the results of an analysis of more than 24 million article titles and 18 million article abstracts published between 1950 and 2019. There was at least one acronym in 19\% of the titles and 73\% of the abstracts. Acronym use has also increased over time, but the re-use of acronyms has declined. We found that from more than one million unique acronyms in our data, just over 2,000 (0.2\%) were used regularly, and most acronyms (79\%) appeared fewer than 10 times. Acronyms are not the biggest current problem in science communication, but reducing their use is a simple change that would help readers and potentially increase the value of science.}
+      \field{issn}{2050-084X}
+      \field{journaltitle}{eLife}
+      \field{title}{Meta-Research: The growth of acronyms in the scientific literature}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{e60080}
+      \range{pages}{-1}
+      \keyw{meta-research,scientific writing,acronyms,communication,knowledge,scientific publishing}
+    \endentry
+    \entry{Bingel2018}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=30664427b42981e3ff578e2712ef4b22}{%
+           family={Bingel},
+           familyi={B\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc6874a9706b0d5ec3af854985947c30}{%
+           family={Paetzold},
+           familyi={P\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=396b0ec2b034423c37af7048cb81a7b4}{%
+           family={S{ø}gaard},
+           familyi={S\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Santa Fe, New Mexico, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{52b1c2ac7e95faf55e4c14d74e82c40c}
+      \strng{fullhash}{fae03496135b2729f630cd701cc85cfe}
+      \strng{bibnamehash}{fae03496135b2729f630cd701cc85cfe}
+      \strng{authorbibnamehash}{fae03496135b2729f630cd701cc85cfe}
+      \strng{authornamehash}{52b1c2ac7e95faf55e4c14d74e82c40c}
+      \strng{authorfullhash}{fae03496135b2729f630cd701cc85cfe}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Most previous research in text simplification has aimed to develop generic solutions, assuming very homogeneous target audiences with consistent intra-group simplification needs. We argue that this assumption does not hold, and that instead we need to develop simplification systems that adapt to the individual needs of specific users. As a first step towards personalized simplification, we propose a framework for adaptive lexical simplification and introduce Lexi, a free open-source and easily extensible tool for adaptive, personalized text simplification. Lexi is easily installed as a browser extension, enabling easy access to the service for its users.}
+      \field{journaltitle}{Proceedings of the 27th International Conference on Computational Linguistics}
+      \field{title}{{L}exi: A tool for adaptive, personalized text simplification}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{245\bibrangedash 258}
+      \range{pages}{14}
+      \verb{file}
+      \verb :Lexi - A tool for adaptive, personalized text simplification.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Chowdhary2020}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8b85e59bf81a08b351c1b0047ffe26df}{%
+           family={Chowdhary},
+           familyi={C\bibinitperiod},
+           given={K.R.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, New Delhi}%
+      }
+      \strng{namehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{fullhash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{bibnamehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{authorbibnamehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{authornamehash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \strng{authorfullhash}{8b85e59bf81a08b351c1b0047ffe26df}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fundamentals of Artificial Intelligence}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Dapaah2022}{online}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=993d444a600643f17bde7fe6b5366784}{%
+           family={Dapaah},
+           familyi={D\bibinitperiod},
+           given={Josephine},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62b338f43af32adfddaf8492d5886294}{%
+           family={Maenhout},
+           familyi={M\bibinitperiod},
+           given={Klaas},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=09e6ab761d283a3f2fb6ac2c5247a056}{%
+           family={Standaard},
+           familyi={S\bibinitperiod},
+           given={De},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{fullhash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{bibnamehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{authorbibnamehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{authornamehash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{authorfullhash}{9744d7c83d7eb830dd9fa0e4837149df}
+      \strng{editorbibnamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editornamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editorfullhash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{7}
+      \field{title}{Iedereen heeft boter op zijn hoofd}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.standaard.be/cnt/dmf20220607_97763592
+      \endverb
+      \verb{url}
+      \verb https://www.standaard.be/cnt/dmf20220607_97763592
+      \endverb
+    \endentry
+    \entry{Deckmyn2021}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25242fc3148bfa733eef563ae290c0d8}{%
+           family={Deckmyn},
+           familyi={D\bibinitperiod},
+           given={Dominique},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=09e6ab761d283a3f2fb6ac2c5247a056}{%
+           family={Standaard},
+           familyi={S\bibinitperiod},
+           given={De},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{fullhash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{bibnamehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{authorbibnamehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{authornamehash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{authorfullhash}{25242fc3148bfa733eef563ae290c0d8}
+      \strng{editorbibnamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editornamehash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \strng{editorfullhash}{09e6ab761d283a3f2fb6ac2c5247a056}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{3}
+      \field{title}{Robot schrijft mee De Standaard}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.standaard.be/cnt/dmf20210319_05008561
+      \endverb
+      \verb{url}
+      \verb https://www.standaard.be/cnt/dmf20210319_05008561
+      \endverb
+    \endentry
+    \entry{Donato2022}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=d8e81a3a7edd3a121de6cffb2c1fc333}{%
+           family={Donato},
+           familyi={D\bibinitperiod},
+           given={Antonella},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2662dfaef82a935adcba46694442a30b}{%
+           family={Muscolo},
+           familyi={M\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddcdb3b0424bad805144fc38872ff291}{%
+           family={Arias\bibnamedelima Romero},
+           familyi={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Mateo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7495c125b77117bd5fc4ae4bf974c4c7}{%
+           family={Caprì},
+           familyi={C\bibinitperiod},
+           given={Tindara},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2bcac707aab8ce3fb7ece8d5375fb8a6}{%
+           family={Calarese},
+           familyi={C\bibinitperiod},
+           given={Tiziana},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=574b7f22dcf2421bf32fd50ae02561ff}{%
+           family={Olmedo\bibnamedelima Moreno},
+           familyi={O\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Eva\bibnamedelima María},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3d5a6122e9f9817328588fc014656927}
+      \strng{fullhash}{b0f849cc5abf5cd61e13f355acba013e}
+      \strng{bibnamehash}{b0f849cc5abf5cd61e13f355acba013e}
+      \strng{authorbibnamehash}{b0f849cc5abf5cd61e13f355acba013e}
+      \strng{authornamehash}{3d5a6122e9f9817328588fc014656927}
+      \strng{authorfullhash}{b0f849cc5abf5cd61e13f355acba013e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Although the number of students with dyslexia enrolled in Italian universities is constantly growing, their presence remains relatively limited. The aim of this study was therefore to investigate the choices made by students with dyslexia in relation to university studies, and the underlying reasons for their choices. This study also compares these choices for students with and without dyslexia. In all, 440 high school students and their families agreed to take part in this project. Socio-demographic data was collected for the 47 students with dyslexia and 47 class-matched students without dyslexia, along with information on their current schools and their future educational plans. A specially developed questionnaire was used for the students, in combination with structured interviews with their families. The results show significant differences between these groups regarding both choices for university studies and the underlying motivations for these choices. Furthermore, certain psychological and emotional factors are implicated here in the decisions of the students with dyslexia regarding both university studies and their underlying reasons. Future research is needed to further investigate these factors in the educational choices of students with dyslexia.}
+      \field{journaltitle}{Dyslexia}
+      \field{number}{1}
+      \field{title}{Students with dyslexia between school and university: Post-diploma choices and the reasons that determine them. An Italian study}
+      \field{volume}{28}
+      \field{year}{2022}
+      \field{pages}{110\bibrangedash 127}
+      \range{pages}{18}
+      \keyw{choices,dyslexia,reasons,students,university}
+    \endentry
+    \entry{Gala2016}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2d6c91557f3b168f0a6f4351a0c4e095}{%
+           family={Gala},
+           familyi={G\bibinitperiod},
+           given={Núria},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e39b4f3a07b67c4334f9c6e12c6e4a8}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Osaka, Japan}%
+      }
+      \list{publisher}{1}{%
+        {The COLING 2016 Organizing Committee}%
+      }
+      \strng{namehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{fullhash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{bibnamehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{authorbibnamehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{authornamehash}{1854d31d34b29e506f4c7b48355d77c4}
+      \strng{authorfullhash}{1854d31d34b29e506f4c7b48355d77c4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Lexical complexity plays a central role in readability, particularly for dyslexic children and poor readers because of their slow and laborious decoding and word recognition skills. Although some features to aid readability may be common to most languages (e.g., the majority of {`}easy{'} words are of low frequency), we believe that lexical complexity is mainly language-specific. In this paper, we define lexical complexity for French and we present a pilot study on the effects of text simplification in dyslexic children. The participants were asked to read out loud original and manually simplified versions of a standardized French text corpus and to answer comprehension questions after reading each text. The analysis of the results shows that the simplifications performed were beneficial in terms of reading speed and they reduced the number of reading errors (mainly lexical ones) without a loss in comprehension. Although the number of participants in this study was rather small (N=10), the results are promising and contribute to the development of applications in computational linguistics.}
+      \field{journaltitle}{Proceedings of the Workshop on Computational Linguistics for Linguistic Complexity ({CL}4{LC})}
+      \field{title}{Reducing lexical complexity as a tool to increase text accessibility for children with dyslexia}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{59\bibrangedash 66}
+      \range{pages}{8}
+      \verb{file}
+      \verb :Reducing lexical complexity as a tool to increase text accessibility.pdf:PDF
+      \endverb
+    \endentry
+    \entry{Garbacea2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6f7b7e6d6cd38a15f6be00643ce82f71}{%
+           family={Garbacea},
+           familyi={G\bibinitperiod},
+           given={Cristina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f28f6fa87c0f4949b475e02a6ad6d03}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Mengtian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=47d71d143d2d509f11c3b42f237d5462}{%
+           family={Carton},
+           familyi={C\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ca1c136fc4a8c4c39869eeaf7fade74}{%
+           family={Mei},
+           familyi={M\bibinitperiod},
+           given={Qiaozhu},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Online}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{0b438a809bd2cd087cd72f68927dca23}
+      \strng{fullhash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \strng{bibnamehash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \strng{authorbibnamehash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \strng{authornamehash}{0b438a809bd2cd087cd72f68927dca23}
+      \strng{authorfullhash}{4d4c216cbeec339e7616d1cd12fa3481}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Text simplification reduces the language complexity of professional content for accessibility purposes. End-to-end neural network models have been widely adopted to directly generate the simplified version of input text, usually functioning as a blackbox. We show that text simplification can be decomposed into a compact pipeline of tasks to ensure the transparency and explainability of the process. The first two steps in this pipeline are often neglected: 1) to predict whether a given piece of text needs to be simplified, and 2) if yes, to identify complex parts of the text. The two tasks can be solved separately using either lexical or deep learning methods, or solved jointly. Simply applying explainable complexity prediction as a preliminary step, the out-of-sample text simplification performance of the state-of-the-art, black-box simplification models can be improved by a large margin.}
+      \field{journaltitle}{Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)}
+      \field{title}{Explainable Prediction of Text Complexity: The Missing Preliminaries for Text Simplification}
+      \field{year}{2021}
+      \field{pages}{1086\bibrangedash 1097}
+      \range{pages}{12}
+    \endentry
+    \entry{Gooding2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=641874c2c50473d46ebdd78ff57c967d}{%
+           family={Gooding},
+           familyi={G\bibinitperiod},
+           given={Sian},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Dublin, Ireland}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{fullhash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{bibnamehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{authorbibnamehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{authornamehash}{641874c2c50473d46ebdd78ff57c967d}
+      \strng{authorfullhash}{641874c2c50473d46ebdd78ff57c967d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper outlines the ethical implications of text simplification within the framework of assistive systems. We argue that a distinction should be made between the technologies that perform text simplification and the realisation of these in assistive technologies. When using the latter as a motivation for research, it is important that the subsequent ethical implications be carefully considered. We provide guidelines for the framing of text simplification independently of assistive systems, as well as suggesting directions for future research and discussion based on the concerns raised.}
+      \field{journaltitle}{Ninth Workshop on Speech and Language Processing for Assistive Technologies (SLPAT-2022)}
+      \field{month}{05}
+      \field{title}{On the Ethical Considerations of Text Simplification}
+      \field{year}{2022}
+      \field{pages}{50\bibrangedash 57}
+      \range{pages}{8}
+    \endentry
+    \entry{Iavarone2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=378a356cb4c4a2e7bbc58982f8fe7c43}{%
+           family={Iavarone},
+           familyi={I\bibinitperiod},
+           given={Benedetta},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0743dd7569b8a6d973b08ed0f49a882}{%
+           family={Brunato},
+           familyi={B\bibinitperiod},
+           given={Dominique},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=18dc967263b005b6c493d7bb502cc88b}{%
+           family={Dell{'}Orletta},
+           familyi={D\bibinitperiod},
+           given={Felice},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Online}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{ef84a039f012fc4cac4b2c00cdf60923}
+      \strng{fullhash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \strng{bibnamehash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \strng{authorbibnamehash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \strng{authornamehash}{ef84a039f012fc4cac4b2c00cdf60923}
+      \strng{authorfullhash}{7d44b7009388d00a06c6331ddd98cbc1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the influence of context on how humans evaluate the complexity of a sentence in English. We collect a new dataset of sentences, where each sentence is rated for perceived complexity within different contextual windows. We carry out an in-depth analysis to detect which linguistic features correlate more with complexity judgments and with the degree of agreement among annotators. We train several regression models, using either explicit linguistic features or contextualized word embeddings, to predict the mean complexity values assigned to sentences in the different contextual windows, as well as their standard deviation. Results show that models leveraging explicit features capturing morphosyntactic and syntactic phenomena perform always better, especially when they have access to features extracted from all contextual sentences.}
+      \field{journaltitle}{Proceedings of the Workshop on Cognitive Modeling and Computational Linguistics}
+      \field{title}{Sentence Complexity in Context}
+      \field{year}{2021}
+      \field{pages}{186\bibrangedash 199}
+      \range{pages}{14}
+    \endentry
+    \entry{Malik2022}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=acc9b20b0e882f7bad79ff07f866e756}{%
+           family={Malik},
+           familyi={M\bibinitperiod},
+           given={Rijul\bibnamedelima Sing},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=43a8886fd70084e650ac0521c147e1f1}{%
+           family={AI},
+           familyi={A\bibinitperiod},
+           given={Towards},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{fullhash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{bibnamehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{authorbibnamehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{authornamehash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{authorfullhash}{acc9b20b0e882f7bad79ff07f866e756}
+      \strng{editorbibnamehash}{43a8886fd70084e650ac0521c147e1f1}
+      \strng{editornamehash}{43a8886fd70084e650ac0521c147e1f1}
+      \strng{editorfullhash}{43a8886fd70084e650ac0521c147e1f1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{7}
+      \field{title}{Top 5 NLP Libraries To Use in Your Projects}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://towardsai.net/p/l/top-5-nlp-libraries-to-use-in-your-projects
+      \endverb
+      \verb{url}
+      \verb https://towardsai.net/p/l/top-5-nlp-libraries-to-use-in-your-projects
+      \endverb
+    \endentry
+    \entry{Martens2021}{online}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=748b4791936091d1cfa1ed6eef897b00}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Marijn},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ede85b377833a2b061e0707b09fea714}{%
+           family={De\bibnamedelima Wolf},
+           familyi={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7105c2121896d02a4f5c4b715abaabc1}{%
+           family={Evens},
+           familyi={E\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kenniscentrum Data en Maatschappij}%
+      }
+      \strng{namehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{fullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{bibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authorbibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authornamehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{authorfullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algoritmes en AI in de onderwijscontext: Een studie naar de perceptie, mening en houding van leerlingen en ouders in Vlaanderen}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data-en-maatschappij.ai/publicaties/survey-onderwijs-2021
+      \endverb
+      \verb{url}
+      \verb https://data-en-maatschappij.ai/publicaties/survey-onderwijs-2021
+      \endverb
+    \endentry
+    \entry{Martens2021a}{online}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=748b4791936091d1cfa1ed6eef897b00}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Marijn},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ede85b377833a2b061e0707b09fea714}{%
+           family={De\bibnamedelima Wolf},
+           familyi={D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Ralf},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7105c2121896d02a4f5c4b715abaabc1}{%
+           family={Evens},
+           familyi={E\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Kenniscentrum Data en Maatschappij}%
+      }
+      \strng{namehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{fullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{bibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authorbibnamehash}{8c97900faea8097ac8d977a004b1e8af}
+      \strng{authornamehash}{954a1c9b6de1cd7028854361c15fd70e}
+      \strng{authorfullhash}{8c97900faea8097ac8d977a004b1e8af}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{28}
+      \field{month}{6}
+      \field{title}{School innovation forum 2021}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data-en-maatschappij.ai/nieuws/school-innovation-forum-2021
+      \endverb
+      \verb{url}
+      \verb https://data-en-maatschappij.ai/nieuws/school-innovation-forum-2021
+      \endverb
+    \endentry
+    \entry{PlavenSigray2017}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e0937b5b8d7347d247d3386989e98477}{%
+           family={Plavén-Sigray},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={Pontus},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01c276fd7b6c47cb3c85bc21c350ad1f}{%
+           family={Matheson},
+           familyi={M\bibinitperiod},
+           given={Granville\bibnamedelima James},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f62415a29511a4483022a8b981c41b34}{%
+           family={Schiffler},
+           familyi={S\bibinitperiod},
+           given={Björn\bibnamedelima Christian},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dbe1dfbf816c27c2ae2350230cda97b8}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={William\bibnamedelima Hedley},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=b5b6fc78668a017deed7aae19aaf2efa}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{citation}{1}{%
+        {eLife 2017;6:e27725}%
+      }
+      \list{publisher}{1}{%
+        {eLife Sciences Publications, Ltd}%
+      }
+      \strng{namehash}{6ba740adb39374fef91d7ed73f275d54}
+      \strng{fullhash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{bibnamehash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{authorbibnamehash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{authornamehash}{6ba740adb39374fef91d7ed73f275d54}
+      \strng{authorfullhash}{dfd1fa08f4eb24fce522ab8cb3aa3a3b}
+      \strng{editorbibnamehash}{b5b6fc78668a017deed7aae19aaf2efa}
+      \strng{editornamehash}{b5b6fc78668a017deed7aae19aaf2efa}
+      \strng{editorfullhash}{b5b6fc78668a017deed7aae19aaf2efa}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Clarity and accuracy of reporting are fundamental to the scientific process. Readability formulas can estimate how difficult a text is to read. Here, in a corpus consisting of 709,577 abstracts published between 1881 and 2015 from 123 scientific journals, we show that the readability of science is steadily decreasing. Our analyses show that this trend is indicative of a growing use of general scientific jargon. These results are concerning for scientists and for the wider public, as they impact both the reproducibility and accessibility of research findings.}
+      \field{issn}{2050-084X}
+      \field{journaltitle}{eLife}
+      \field{title}{Research: The readability of scientific texts is decreasing over time}
+      \field{volume}{6}
+      \field{year}{2017}
+      \field{pages}{e27725}
+      \range{pages}{-1}
+      \keyw{metascience,readability,data analysis,jargon,scientific communication}
+    \endentry
+    \entry{Readable2021}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b8123df4e2b3456270c11394adf7607}{%
+           family={Readable},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{fullhash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{bibnamehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{authorbibnamehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{authornamehash}{4b8123df4e2b3456270c11394adf7607}
+      \strng{authorfullhash}{4b8123df4e2b3456270c11394adf7607}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Flesch Reading Ease and the Flesch Kincaid Grade Level}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://readable.com/readability/flesch-reading-ease-flesch-kincaid-grade-level/
+      \endverb
+      \verb{url}
+      \verb https://readable.com/readability/flesch-reading-ease-flesch-kincaid-grade-level/
+      \endverb
+    \endentry
+    \entry{Rello2012}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=beb516ae4b9334129c564a1d33d9ec9b}{%
+           family={Rello},
+           familyi={R\bibinitperiod},
+           given={Luz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecd6fb01cce2230c5d4a653f1df9cb57}{%
+           family={Kanvinde},
+           familyi={K\bibinitperiod},
+           given={Gaurang},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14e9e2c7e918f62ba13b9e040fb7f468}{%
+           family={Baeza-Yates},
+           familyi={B\bibinithyphendelim Y\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Lyon, France}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{5f8b0dbae47e570be334bb804b81d6ad}
+      \strng{fullhash}{a76335588d8c2243e2f83afbb4bbab25}
+      \strng{bibnamehash}{a76335588d8c2243e2f83afbb4bbab25}
+      \strng{authorbibnamehash}{a76335588d8c2243e2f83afbb4bbab25}
+      \strng{authornamehash}{5f8b0dbae47e570be334bb804b81d6ad}
+      \strng{authorfullhash}{a76335588d8c2243e2f83afbb4bbab25}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we offer set of guidelines and a web service that presents Web texts in a more more accessible way to people with dyslexia. The layout guidelines for developing this service are based on a user study with a group of twenty two dyslexic users. The data collected from our study combines qualitative data from interviews and questionnaires and quantitative data from tests carried out using eye tracking. We analyze and compare both kinds of data and present a set of layout guidelines for making the text Web more readable for dyslexic users. To the best of our knowledge, our methodology for defining dyslexic-friendly guidelines and our web service are novel.}
+      \field{isbn}{9781450310192}
+      \field{journaltitle}{Proceedings of the International Cross-Disciplinary Conference on Web Accessibility}
+      \field{series}{W4A '12}
+      \field{title}{Layout Guidelines for Web Text and a Web Service to Improve Accessibility for Dyslexics}
+      \field{year}{2012}
+      \keyw{browsing web service,web accessibility,dyslexia,readability,accessibility guidelines,usability tests}
+    \endentry
+    \entry{Roldos2020}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7c83da6c5da5b8824f3a4eba92e5bfb9}{%
+           family={Roldós},
+           familyi={R\bibinitperiod},
+           given={Inés},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {MonkeyLearn}%
+      }
+      \strng{namehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{fullhash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{bibnamehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{authorbibnamehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{authornamehash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \strng{authorfullhash}{7c83da6c5da5b8824f3a4eba92e5bfb9}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{12}
+      \field{title}{Major Challenges of Natural Language Processing (NLP)}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://monkeylearn.com/blog/natural-language-processing-challenges/
+      \endverb
+      \verb{url}
+      \verb https://monkeylearn.com/blog/natural-language-processing-challenges/
+      \endverb
+    \endentry
+    \entry{Sciforce2020}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=36dac3d3117c0faf099f8800d37a828f}{%
+           family={{Sciforce}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {Engels}%
+      }
+      \strng{namehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{fullhash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{bibnamehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{authorbibnamehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{authornamehash}{36dac3d3117c0faf099f8800d37a828f}
+      \strng{authorfullhash}{36dac3d3117c0faf099f8800d37a828f}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The NLP domain reports great advances to the extent that a number of problems, such as part-of-speech tagging, are considered to be fully solved. At the same time, such tasks as text summarization or machine dialog systems are notoriously hard to crack and remain open for the past decades.}
+      \field{day}{4}
+      \field{month}{2}
+      \field{title}{Biggest Open Problems in Natural Language Processing}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/sciforce/biggest-open-problems-in-natural-language-processing-7eb101ccfc9
+      \endverb
+      \verb{url}
+      \verb https://medium.com/sciforce/biggest-open-problems-in-natural-language-processing-7eb101ccfc9
+      \endverb
+    \endentry
+    \entry{Shardlow2014}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d15f65dc3a8314f8ec6692eb6b0f5c1a}{%
+           family={Shardlow},
+           familyi={S\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {The Science}%
+        {Information Organization}%
+      }
+      \strng{namehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{fullhash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{bibnamehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{authorbibnamehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{authornamehash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \strng{authorfullhash}{d15f65dc3a8314f8ec6692eb6b0f5c1a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications(IJACSA), Special Issue on Natural Language Processing 2014}
+      \field{number}{1}
+      \field{title}{A Survey of Automated Text Simplification}
+      \field{volume}{4}
+      \field{year}{2014}
+    \endentry
+    \entry{Siddharthan2014}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cb280ee34b558048f3051f70a81863a7}{%
+           family={Siddharthan},
+           familyi={S\bibinitperiod},
+           given={Advaith},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{fullhash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{bibnamehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{authorbibnamehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{authornamehash}{cb280ee34b558048f3051f70a81863a7}
+      \strng{authorfullhash}{cb280ee34b558048f3051f70a81863a7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ITL - International Journal of Applied Linguistics}
+      \field{month}{12}
+      \field{title}{A survey of research on text simplification}
+      \field{volume}{165}
+      \field{year}{2014}
+      \field{pages}{259\bibrangedash 298}
+      \range{pages}{40}
+    \endentry
+    \entry{Suter2016}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=933daad69e6a8ff914e7bebc7d877283}{%
+           family={Suter},
+           familyi={S\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41494d58d71e95c6ae8a3744ace7dc41}{%
+           family={Ebling},
+           familyi={E\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44d45eb86aa9f68623f1a47d90e5d9dd}{%
+           family={Volk},
+           familyi={V\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{875b111a60cb42f4a2e3b6e62b0fdbf4}
+      \strng{fullhash}{83f2e8774d0d3da07df0e5ad59795543}
+      \strng{bibnamehash}{83f2e8774d0d3da07df0e5ad59795543}
+      \strng{authorbibnamehash}{83f2e8774d0d3da07df0e5ad59795543}
+      \strng{authornamehash}{875b111a60cb42f4a2e3b6e62b0fdbf4}
+      \strng{authorfullhash}{83f2e8774d0d3da07df0e5ad59795543}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{Rule-based Automatic Text Simplification for German}
+      \field{year}{2016}
+    \endentry
+    \entry{Swayamdipta2019}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=17a53fd167ccca7245cb9e8082ccb3a7}{%
+           family={Swayamdipta},
+           familyi={S\bibinitperiod},
+           given={Swabha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {Engels}%
+      }
+      \strng{namehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{fullhash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{bibnamehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{authorbibnamehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{authornamehash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \strng{authorfullhash}{17a53fd167ccca7245cb9e8082ccb3a7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As the availability of data for language learning grows, the role of linguistic structure is under scrutiny. At the same time, it is imperative to closely inspect patterns in data which might present loopholes for models to obtain high performance on benchmarks. In a two-part talk, I will address each of these challenges. First, I will introduce the paradigm of scaffolded learning. Scaffolds enable us to leverage inductive biases from one structural source for prediction of a different, but related structure, using only as much supervision as is necessary. We show that the resulting representations achieve improved performance across a range of tasks, indicating that linguistic structure remains beneficial even with powerful deep learning architectures. In the second part of the talk, I will showcase some of the properties exhibited by NLP models in large data regimes. Even as these models report excellent performance, sometimes claimed to beat humans, a closer look reveals that predictions are not a result of complex reasoning, and the task is not being completed in a generalizable way. Instead, this success can be largely attributed to exploitation of some artifacts of annotation in the datasets. I will discuss some questions our finding raises, as well as directions for future work.}
+      \field{day}{22}
+      \field{month}{1}
+      \field{title}{Learning Challenges in Natural Language Processing}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.microsoft.com/en-us/research/video/learning-challenges-in-natural-language-processing/
+      \endverb
+      \verb{url}
+      \verb https://www.microsoft.com/en-us/research/video/learning-challenges-in-natural-language-processing/
+      \endverb
+    \endentry
+    \entry{Thangarajah2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4e2ee739837d14190e574c05b7e9980a}{%
+           family={Thangarajah},
+           familyi={T\bibinitperiod},
+           given={Vinothraj},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{fullhash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{bibnamehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{authorbibnamehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{authornamehash}{4e2ee739837d14190e574c05b7e9980a}
+      \strng{authorfullhash}{4e2ee739837d14190e574c05b7e9980a}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Python current trend applications-an overview}
+      \field{year}{2019}
+    \endentry
+    \entry{Vasista2022}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=393944a75e014494a6c6ea234f37838d}{%
+           family={Vasista},
+           familyi={V\bibinitperiod},
+           given={Kola},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{fullhash}{393944a75e014494a6c6ea234f37838d}
+      \strng{bibnamehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{authorbibnamehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{authornamehash}{393944a75e014494a6c6ea234f37838d}
+      \strng{authorfullhash}{393944a75e014494a6c6ea234f37838d}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Central Asian Journal of Theoretical and Applied Science}
+      \field{number}{3}
+      \field{title}{Evolution of AI Design Models}
+      \field{volume}{3}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+    \endentry
+    \entry{Verhoeven2023}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a1cc7fa46d72b7efc0ca39a8b7e5c4c3}{%
+           family={Verhoeven},
+           familyi={V\bibinitperiod},
+           given={Wim},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=9cf69763de83f9db7f4a87c51fe6ae23}{%
+           family={Trends},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{fullhash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{bibnamehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{authorbibnamehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{authornamehash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{authorfullhash}{a1cc7fa46d72b7efc0ca39a8b7e5c4c3}
+      \strng{editorbibnamehash}{9cf69763de83f9db7f4a87c51fe6ae23}
+      \strng{editornamehash}{9cf69763de83f9db7f4a87c51fe6ae23}
+      \strng{editorfullhash}{9cf69763de83f9db7f4a87c51fe6ae23}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{2}
+      \field{title}{Applaus voor de studenten die ChatGPT gebruiken}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://trends.knack.be/economie/bedrijven/applaus-voor-de-studenten-die-chatgpt-gebruiken/article-opinion-1934277.html?cookie_check=1676034368
+      \endverb
+      \verb{url}
+      \verb https://trends.knack.be/economie/bedrijven/applaus-voor-de-studenten-die-chatgpt-gebruiken/article-opinion-1934277.html?cookie_check=1676034368
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
