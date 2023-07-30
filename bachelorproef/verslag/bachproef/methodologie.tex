@@ -49,7 +49,7 @@ Allereerst start het onderzoek met een toolselectie. Zoals aangewezen in sectie 
 \end{center}
 
 % Inclusiecritera
-Vervolgens bouwt het onderzoek een lijst op van de toetsingscriteria. Zo dienen de MTS-technieken uit tabel \ref{table:scientific-paper-struggles} en tabel \ref{table:manual-simplification} als bouwstenen voor het opstellen van de toetsingscriteria. Tabel \ref{table:criteria-requirementsanalysis} geeft een opsomming van de MTS-technieken waaraan tools moeten voldoen. Daarnaast dient dit schema om een inschatting van de functionaliteiten van deze tools te maken.
+Vervolgens bouwt het onderzoek een lijst op van toetsingscriteria. Zo dienen de MTS-technieken uit tabel \ref{table:scientific-paper-struggles} en tabel \ref{table:manual-simplification} als bouwstenen voor het opstellen van de toetsingscriteria. Tabel \ref{table:criteria-requirementsanalysis} geeft een opsomming van de MTS-technieken waaraan tools moeten voldoen. Daarnaast dient dit schema als een inschatting van de functionaliteiten van deze tools.
 
 \begin{center}
 	\begin{table}[H]
@@ -57,7 +57,8 @@ Vervolgens bouwt het onderzoek een lijst op van de toetsingscriteria. Zo dienen 
 			\hline
 			\textbf{MTS-techniek} & \textbf{Functionaliteit} \\
 			\hline
-			LS & Gepersonaliseerde LS, ofwel woordenschat dat niet te hooggegrepen is. Gekende woordenschat mag blijven. \\
+			LS & Gepersonaliseerde LS, ofwel woordenschat dat niet te hooggegrepen is. \\
+            & Gekende woordenschat mag blijven. \\
 			& Woorden met minder lettergrepen gebruiken \\
 			& Extra uitleg schrijven bij zinnen \\
 			& Paragrafen herschrijven zodat ze eerst uitleg geven op een high-level niveau, vervolgens lagen van complexiteit toevoegen om de lezer te begeleiden \\
@@ -87,7 +88,7 @@ Vervolgens bouwt het onderzoek een lijst op van de toetsingscriteria. Zo dienen 
 	\end{table}
 \end{center}
 
-Als realistisch testmateriaal, maken de experimenten gebruik van twee gepubliceerde wetenschappelijke artikelen. Zo kunnen deze artikelen relevant zijn voor leerkrachten om aan scholieren in de derde graad van het middelbaar onderwijs te geven als leesvoer. Beide artikelen volgen de kenmerken van een wetenschappelijk artikel, zoals beschreven in tabel \ref{table:scientific-paper-struggles}. Daarnaast gebruiken ze vakjargon en wetenschappelijke concepten in een compact formaat. Tabel \ref{table:referentieteksten-bronvermelding} geeft een overzicht van de twee artikelen en een bijhorende bronvermelding.
+Als realistisch testmateriaal maken de experimenten gebruik van twee gepubliceerde wetenschappelijke artikelen. Zo kunnen deze artikelen relevant zijn voor leerkrachten om aan scholieren in de derde graad van het middelbaar onderwijs te geven als leesvoer. Beide artikelen volgen de kenmerken van een wetenschappelijk artikel, zoals beschreven in tabel \ref{table:scientific-paper-struggles}. Daarnaast gebruiken ze vakjargon en wetenschappelijke concepten in een compact formaat. Tabel \ref{table:referentieteksten-bronvermelding} geeft een overzicht van de twee artikelen en een bijhorende bronvermelding.
 
 \begin{center}
 	\begin{table}[H]
@@ -106,13 +107,13 @@ Als realistisch testmateriaal, maken de experimenten gebruik van twee gepublicee
 \end{center}
 
 % 4. 
-Om een overzicht te hebben van de functionaliteiten volgens prioriteit, bouwt het onderzoek een moscow-schema vanuit de opgestelde richtlijnen. Zo komen belangrijke functionaliteiten, die nodig zijn om gepersonaliseerde tekstvereenvoudiging met ATS mogelijk te maken, in de categorie \textit{must-haves} terecht. Alle vereiste functionaliteiten om (gepersonaliseerde) ATS mogelijk te maken, moet als \textit{must-have} in het moscow-schema voorkomen. Irrelevante functionaliteiten binnen de scope van een prototype of niet toepasselijk voor de doelgroep plaatst het onderzoek als \textit{wont-have}.
+Om een overzicht van de functionaliteiten volgens prioriteit te verkrijgen, bouwt het onderzoek een moscow-schema op vanuit de opgestelde richtlijnen. Zo komen belangrijke functionaliteiten, die nodig zijn om gepersonaliseerde tekstvereenvoudiging met ATS mogelijk te maken, in de categorie \textit{must-haves} terecht. Daarnaast omvatten \textit{should-haves} alle functionaliteiten die niet bijdragen tot gepersonaliseerde ATS, maar wel een meerwaarde biedt in dergelijke toepassingen. Vervolgens bestaan de \textit{could-haves} uit alle functionaliteiten die huidige toepassingen kunnen doen, maar weinig bijdragen tot gepersonaliseerde ATS. Irrelevante functionaliteiten binnen de scope van een prototype of niet toepasselijk voor de doelgroep plaatst het onderzoek als \textit{wont-have}.
 
 \begin{center}
 	\begin{table}[H]
 		\begin{tabular}{ | m{2cm} | m{13cm} | } 
 			\hline
-			\textbf{MoSCoW-principe} & \textbf{Functionaliteit} \\
+			\textbf{MoSCoW-methode} & \textbf{Functionaliteit} \\
 			\hline
 			Must-have & Gepersonaliseerde LS, ofwel woordenschat dat niet te hooggegrepen is. Gekende woordenschat mag blijven. \\
 			& Woorden met minder lettergrepen gebruiken. \\
@@ -148,7 +149,7 @@ Om een overzicht te hebben van de functionaliteiten volgens prioriteit, bouwt he
 	\end{table}
 \end{center}
 
-Vervolgens komen experimenten op functionaliteiten voor gepersonaliseerde ATS op wetenschappelijke artikelen aan bod. Allereerst moeten eindgebruikers wetenschappelijke artikelen kunnen opladen. Indien het onderzoek een wetenschappelijk artikel niet als pdf kan opladen, dan extraheert het onderzoek de tekstinhoud van het wetenschappelijk artikel. Vervolgens krijgt de toepassing deze tekst als invoer. Zo krijgen de chatbots eerst de prompt, gevolgd door een stuk van het wetenschappelijk artikel. Met zes verschillende prompts kan het onderzoek de LS, SS en SA-functionaliteiten van een promptgebaseerde toepassing achterhalen. Tabel \ref{table:tested-prompts-requirementsanalysis} vermeldt de toegepaste prompts. Toepassingen krijgen eerst een link van het wetenschappelijk artikel. Als de toepassing hier niet over beschikt, dan krijgt de chatbot de tekstinhoud van het wetenschappelijk artikel in \textit{plain-text} mee. 
+Vervolgens komen experimenten op functionaliteiten voor gepersonaliseerde ATS op wetenschappelijke artikelen aan bod. Allereerst moeten eindgebruikers wetenschappelijke artikelen kunnen opladen. Indien het onderzoek een wetenschappelijk artikel als pdf kan opladen, dan extraheert het de tekstinhoud van het wetenschappelijk artikel. Vervolgens krijgt de toepassing deze tekst als invoer. Zo krijgen de chatbots eerst de prompt, gevolgd door een stuk van het wetenschappelijk artikel. Met zes verschillende prompts kan het onderzoek de LS, SS en SA-functionaliteiten van een promptgebaseerde toepassing achterhalen. Tabel \ref{table:tested-prompts-requirementsanalysis} vermeldt de toegepaste prompts. Toepassingen krijgen eerst een link van het wetenschappelijk artikel. Als de toepassing hier niet over beschikt, dan krijgt de chatbot de tekstinhoud van het wetenschappelijk artikel in \textit{plain-text} mee. 
 
 \begin{center}
 	\begin{table}[H]
@@ -174,12 +175,12 @@ Vervolgens komen experimenten op functionaliteiten voor gepersonaliseerde ATS op
 	\end{table}
 \end{center}
 
-Daarna voert het onderzoek experimenten rond gepersonaliseerde opmaakopties uit. Kurzweil, SprintPlus en AlineaSuite bieden opmaakopties aan in het instellingenscherm. Zo kunnen eindgebruikers het lettertype, -kleur -en grootte en de achtergrondkleur aanpassen naar keuze. Als een toepassing niet over opmaakopties beschikt, stopt het experiment rond opmaakopties voor die toepassing. Tot slot test het onderzoek de mogelijkheden om het formaat van teksten aan te passen met structurele aanpassingen. Zo vragen P4 en P5 specifiek naar een structurele aanpassing, terwijl P1, P2 en P3 minstens een doorlopende tekst als resultaat verwachten. Andere beschikbare tools missen checkboxen of keuzelijsten om deze keuze aan te reiken, waardoor het testen van deze functionaliteit niet mogelijk is.
+Daarna voert het onderzoek experimenten uit rond gepersonaliseerde opmaakopties. Kurzweil, SprintPlus en AlineaSuite bieden opmaakopties aan in het instellingenscherm. Zo kunnen eindgebruikers het lettertype, -kleur, -grootte en de achtergrondkleur van de tekst aanpassen naar keuze. Als een toepassing niet over opmaakopties beschikt, stopt het experiment rond opmaakopties voor die toepassing. Tot slot test het onderzoek de mogelijkheden om het formaat van teksten aan te passen met structurele aanpassingen. Zo vragen P4 en P5 specifiek naar een structurele aanpassing, terwijl P1, P2 en P3 minstens een doorlopende tekst als resultaat verwachten. Andere beschikbare tools missen checkboxen of keuzelijsten om deze keuze aan te reiken, waardoor het testen van deze functionaliteit niet mogelijk is.
 
 \section{Vergelijking van taalmodellen}
 \label{sec:vergelijkende-studie}
 
-Om wetenschappelijke artikelen met gepersonaliseerde ATS te vereenvoudigen, moet dergelijk toepassing gebruikmaken van een geschikt taalmodel. Zo moet Pentimentor vereenvoudigde versies van wetenschappelijke artikelen kunnen geven, specifiek volgens de noden van scholieren met dyslexie in de derde graad van het middelbaar onderwijs. Om de uitvoer van het prototype nauwkeurig af te stemmen, moet het onderzoek een antwoord op de volgende vraag geven.
+Om wetenschappelijke artikelen met gepersonaliseerde ATS te vereenvoudigen, moet een dergelijk toepassing gebruikmaken van een geschikt taalmodel. Zo moet Pentimentor vereenvoudigde versies van wetenschappelijke artikelen kunnen geven, specifiek volgens de noden van scholieren met dyslexie in de derde graad van het middelbaar onderwijs. Om de uitvoer van het prototype nauwkeurig af te stemmen, moet het onderzoek een antwoord geven op de volgende vraag.
 
 \begin{itemize}
 	\item Welk taalmodel kunnen ontwikkelaars inzetten voor tekstvereenvoudiging met ATS van wetenschappelijke artikelen voor scholieren met dyslexie in de derde graad van het middelbaar onderwijs, met dezelfde of gelijkaardige kwaliteiten als gepersonaliseerde tekstvereenvoudiging met MTS?
@@ -207,7 +208,7 @@ Zoals in de literatuurstudie aangegeven, beschikken ontwikkelaars over onvoldoen
 	\end{table}
 \end{center}
 
-Deze onderzoeksfase bestaat uit vijf deelfasen, weergegeven op figuur \ref{img:flowchart-vergelijkende-studie-metrics}. Het staat vooral stil bij de vergelijking van leesmetrieken van de oorspronkelijke wetenschappelijke artikelen, MTS-referentieteksten en ATS-teksten. Met een \textit{mixed-methods} onderzoek kan deze onderzoeksfase taalmodellen beoordelen op machinaal en menselijk niveau. Alle scripts kan u terugvinden op de GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/tree/main/scripts}. De gebruikte wetenschappelijke artikelen, afgekort OG, zijn identiek aan de wetenschappelijke artikelen in tabel \ref{table:referentieteksten-bronvermelding}. Om realistisch referentiemateriaal te verkrijgen, schrijven twee leerkrachten (MTSL) en twee leerlingen zonder dyslexie (MTSL2) zelf een vereenvoudiging van de twee wetenschappelijke artikelen met MTS. Deze vier personen baseren zich op vooraf meegekregen richtlijnen, toegelicht in bijlage \ref{ch:referentietekst}. 
+Deze onderzoeksfase bestaat uit vijf deelfasen, weergegeven op figuur \ref{img:flowchart-vergelijkende-studie-metrics}. Het staat vooral stil bij de vergelijking van leesmetrieken van de oorspronkelijke wetenschappelijke artikelen, MTS-referentieteksten en ATS-teksten. Met een \textit{mixed-methods} onderzoek kan deze onderzoeksfase taalmodellen beoordelen op machinaal en menselijk niveau. Alle scripts kan de lezer terugvinden op de GitHub-repository\footnote{https://github.com/Dyashen/pentimentor/tree/main/bachelorproef/scripts}. Het onderzoek hergebruikt dezelfde wetenschappelijke artikelen als in de requirementsanalyse, namelijk die in tabel \ref{table:referentieteksten-bronvermelding}. Om realistisch referentiemateriaal te verkrijgen, schrijven twee leerkrachten (MTSL) en twee leerlingen zonder dyslexie (MTSL2) zelf een vereenvoudiging van de twee wetenschappelijke artikelen met MTS. Deze vier personen baseren zich op vooraf meegekregen richtlijnen, toegelicht in bijlage \ref{ch:referentietekst}. 
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{img/flowchart-vergelijkende-studie.jpg}
@@ -215,8 +216,7 @@ Deze onderzoeksfase bestaat uit vijf deelfasen, weergegeven op figuur \ref{img:f
 	\label{img:flowchart-vergelijkende-studie-metrics}
 \end{figure}
 
-% SCRIPT 1
-Allereerst haalt het script de inhoud van de map met wetenschappelijke artikelen op om deze vervolgens in een tekstbestand te plaatsen, zoals weergegeven in codeblok \ref{code:verg-studie-phase-1}. Hier schrijft het script tekstinhoud van het wetenschappelijk artikel over naar een nieuw tekstbestand.
+Allereerst haalt het script de inhoud van de map op met wetenschappelijke artikelen om deze vervolgens in een tekstbestand te plaatsen, zoals weergegeven in codeblok \ref{code:verg-studie-phase-1}. Hier schrijft het script tekstinhoud van het wetenschappelijk artikel over naar een nieuw tekstbestand.
 
 \begin{lstlisting}[language=Python, caption={Script voor de eerste fase van de vergelijkende studie.}, label={code:verg-studie-phase-1}]
 def add_newline_after_dot(input_file, output_file):
@@ -236,7 +236,7 @@ def add_newline_after_dot(input_file, output_file):
 			add_newline_after_dot(input_file, output_file)
 \end{lstlisting} 
 
-Vervolgens vertaalt het tweede script alle zinnen naar Engels. Eerst doorloopt het alle wetenschappelijke artikelen. Daarna vertaalt het tekstinhoud met de \textit{deep translator} python-bibliotheek. Als resultaat ontstaat er een csv-bestand met twee kolommen: alle Nederlandstalige en alle Engelstalige zinnen van één wetenschappelijk artikel. Als separator gebruikt het csv-bestand een \textit{pipe}-symbool en zo houdt het rekening met punten en komma's in zinnen.
+Vervolgens vertaalt het tweede script alle zinnen naar het Engels. Eerst doorloopt het alle zinnen binnen het wetenschappelijk artikel. Daarna vertaalt het de tekstinhoud met de \textit{deep translator} python-bibliotheek. Als resultaat ontstaat er een csv-bestand met twee kolommen: alle Nederlandstalige en alle Engelstalige zinnen van één wetenschappelijk artikel. Als separator gebruikt het csv-bestand een \textit{pipe}-symbool en zo houdt het rekening met punten en komma's in zinnen.
 
 \begin{center}
 	\begin{lstlisting}[language=Python, caption={Script voor de tweede fase van de vergelijkende studie.}, label={code:verg-studie-phase-2}]
@@ -264,7 +264,7 @@ def translate_dutch_to_english(dutch_text_file):
 		\end{lstlisting}
 \end{center}
 
-In een derde fase moet het script API-calls voor iedere zin of paragraaf versturen naar ieder taalmodel. Eerst slaat het script een dictionary op van taalmodellen om de inhoud van de wetenschappelijke artikelen te vereenvoudigen, weergegeven in listing \ref{code:verg-studie-phase-3}. Daarna vindt een tokenisatiefase plaats, waarvoor het Spacy \textit{sentence tokenisation} en verwante \textit{embedding models} gebruikt. Deze modellen staan in tabel \ref{table:wordembeddings-spacy}. Na de tokenisatiefase stuurt het script API-calls naar de hosts van de taalmodellen. De request naar de HF API bestaat uit de parameters weergegeven in tabel \ref{table:huggingface-requests-parameters}. Alle HF-taalmodellen vereisen een laadfase. Daarom bevat de \textit{API-call} een extra parameter, namelijk \textit{wait\_for\_model}. Verder past dit script geen extra parameters van de taalmodellen aan. 
+In een derde fase moet het script API-calls voor iedere zin of paragraaf versturen naar ieder taalmodel. Eerst slaat het script een \textit{dictionary} op van taalmodellen om de inhoud van de wetenschappelijke artikelen te vereenvoudigen, zoals weergegeven in listing \ref{code:verg-studie-phase-3}. Daarna vindt tokenisatie plaats, waarvoor het script Spacy \textit{sentence tokenisation} en verwante \textit{embedding models} gebruikt. Deze modellen staan in tabel \ref{table:wordembeddings-spacy}. Na de tokenisatie stuurt het script API-calls naar de hosts van de taalmodellen. Het verzoek naar de \textit{HuggingFace} (HF) API bestaat uit de parameters weergegeven in tabel \ref{table:huggingface-requests-parameters}. Alle HF-taalmodellen vereisen een laadfase. Daarom bevat de \textit{API-call} een extra parameter, namelijk \textit{wait\_for\_model}. Verder past dit script geen extra parameters van de taalmodellen aan. 
 
 \begin{center}
 	\begin{table}[H]
@@ -284,7 +284,7 @@ In een derde fase moet het script API-calls voor iedere zin of paragraaf verstur
 	\end{table}
 \end{center}
 
-Zoals aangehaald door \textcite{Gooding2022} kunnen promptgebaseerde testen verschillende resultaten krijgen, afhankelijk van de gegeven input. Daarom gebruikt het script drie verschillende prompts, gebaseerd op de MTS-technieken beschreven in tabel \ref{table:manual-simplification}. Tabel \ref{table:tested-prompts} visualiseert de gebruikte prompts voor de testen met het GPT-3 model. 
+Zoals aangehaald door \textcite{Gooding2022} kunnen promptgebaseerde testen verschillende resultaten leveren, afhankelijk van de gegeven input. Daarom gebruikt het script drie verschillende prompts, gebaseerd op de MTS-technieken beschreven in tabel \ref{table:manual-simplification}. Tabel \ref{table:tested-prompts} visualiseert de gebruikte prompts voor de testen met het GPT-3 model. 
 
 \begin{center}
 	\begin{table}[H]
@@ -304,7 +304,7 @@ Zoals aangehaald door \textcite{Gooding2022} kunnen promptgebaseerde testen vers
 	\end{table}
 \end{center}
 
-Zowel T1 als T4 gebruiken een \textit{nul-temperature} en een \textit{top-p} waarde van 90\% om vertrouwde antwoorden te krijgen. Daarnaast dient de top-p om een hoge woordfrequentie te verkrijgen, zoals aangegeven in tabel \ref{table:gpt-3-parameters}. Bij T1 zijn deze twee parameters ingebakken in de functie. Nadien verwerken de taalmodellen iedere zin uit de tekst. Tot slot beantwoordt de HF of GPT API in JSON-formaat, bevattende de vereenvoudigde versie van de opgegeven zin. T1, T2 en T3 vereenvoudigen de Engelstalige zinnen, in tegenstelling tot T4 en verwante prompts die de Nederlandstalige zinnen vereenvoudigen. Om een \textit{request failure} door een te lange input te voorkomen, breekt het script de volledige input op per 1000 tokens.
+Zowel T1 als T4 gebruiken een \textit{nul-temperature} en een \textit{top-p} waarde van 90\% om vertrouwde antwoorden te krijgen. Daarnaast dient de top-p om een hoge woordfrequentie te verkrijgen, zoals aangegeven in tabel \ref{table:gpt-3-parameters}. Bij T1 zijn deze twee parameters ingebakken in de functie. Nadien verwerken de taalmodellen iedere zin uit de tekst. Tot slot geeft de HF of GPT-3 API een resultaat in JSON-formaat, bevattende de vereenvoudigde versie van de opgegeven zin. T1, T2 en T3 vereenvoudigen de Engelstalige zinnen, in tegenstelling tot T4 en verwante prompts die de Nederlandstalige zinnen vereenvoudigen. Om een \textit{request failure} door een te lange input te voorkomen, breekt het script de volledige input op per 1000 tokens.
 
 \begin{center}
 	\begin{table}[H]
@@ -323,112 +323,50 @@ Zowel T1 als T4 gebruiken een \textit{nul-temperature} en een \textit{top-p} waa
 \end{center}
 
 \begin{center}
-	\begin{lstlisting}[language=Python, caption={Script voor de derde fase van de vergelijkende studie}, label={code:verg-studie-phase-3}]		
-folder_path = 'scripts\pdf'
-dutch_spacy_model = "nl_core_news_md"
-english_spacy_model = "en_core_web_sm"
-	
-dict = {
-	'nl':'nl_core_news_md',
-	'en':'en_core_web_sm'
-}
-		
-total_df = None
-gt = Translator()
-		
-huggingfacemodels = {
-	'T1':"https://api-inference.huggingface.co/models/haining/scientific_abstract_simplification",
-	'T2': "https://api-inference.huggingface.co/models/sambydlo/bart-large-scientific-lay-summarisation",
-	'T3': "https://api-inference.huggingface.co/models/philippelaban/keep_it_simple"
-}
-		
-max_length = 2000
-COMPLETIONS_MODEL = "text-davinci-003"
-EMBEDDING_MODEL = "text-embedding-ada-002"
-	
-languages = {
-	'nl':'nl_core_news_md',
-	'en':'en_core_web_md'
-}
-		
-class HuggingFaceModels:
-	def __init__(self, key=None):
-		global huggingface_api_key
-		try:
-			huggingface_api_key = key
-		except:
-			huggingface_api_key = 'not_submitted'
-				
-	def query(self, payload, API_URL):
-		headers = {"Authorization": f"Bearer {huggingface_api_key}"}
-		response = requests.post(API_URL, headers=headers, json=payload)
-		return response.json()
-			
-	def scientific_simplify(self, text, lm_key):
-		try:
-			API_URL = huggingfacemodels.get(lm_key)
-			translated = GoogleTranslator(source='auto', target='en').translate(str(text))
-			
-			if lm_key == 'T1':
-				result = self.query({"inputs": str('simplify: ' + str(translated)),"parameters": {"max_length": len(sentence)+10},"options":{"wait_for_model":True}}, API_URL)
-			else:
-				result  = self.query({"inputs": str(translated),"parameters": {"max_length": len(sentence)+10},"options":{"wait_for_model":True}}, API_URL)
-					
-					
-			if 'generated_text' in result[0]:
-				translated = GoogleTranslator(source='auto', target='nl').translate(str(result[0]['generated_text']))
-				return translated
-			elif 'summary_text' in result[0]:
-				translated = GoogleTranslator(source='auto', target='nl').translate(str(result[0]['summary_text']))
-				return translated
-			else:
-				return None
-		except:
-			return text
-		
-	def get_sentence_length(sentence):
-			txt_language = detect(sentence)
-			dic_language = languages.get(txt_language)
-			nlp = spacy.load(dic_language)
-			doc = nlp(sentence)
-			return len()	
-			
-	def tokenize_text(text):
-		txt_language = detect(text)
-		dic_language = languages.get(txt_language)
-		nlp = spacy.load(dic_language)
-		doc = nlp(text)
-		return doc.sents
-					
-	def process_file(file_path):
-		with open(folder_path + '/' + file_path, "r", encoding='utf8') as file:
-			text = file.read()
-			tokens = tokenize_text(text)
-			return tokens
-				
-		hf = HuggingFaceModels(key=os.getenv('huggingface_key'))
-		original_scientific_papers = [f for f in os.listdir(folder_path)]
-		
-		for paper in original_scientific_papers[3:]:
-			sentence_tokens = process_file(paper) 
-			for sentence in sentence_tokens:
-				for model in huggingfacemodels.keys():
-					filename = "SIMPLIFIED_"+model+'_'+paper
-					with open(filename, 'a', encoding='utf-8') as f:
-						output = hf.scientific_simplify(str(sentence), model)
-						f.write(str(output)) 	
+	\begin{lstlisting}[language=Python, caption={Script voor de derde fase van de vergelijkende studie}, label={code:verg-studie-phase-3}]
+ def scientific_simplify(self, text, lm_key):
+    try:
+        API_URL = huggingfacemodels.get(lm_key)
+        translated = GoogleTranslator(source='auto', target='en').translate(str(text))
+    
+        if lm_key == 'T1':
+            result = self.query({"inputs": str('simplify: ' + str(translated)),"parameters": {"max_length": len(sentence)+10},"options":{"wait_for_model":True}}, API_URL)
+        else:
+            result  = self.query({"inputs": str(translated),"parameters": {"max_length": len(sentence)+10},"options":{"wait_for_model":True}}, API_URL)
+    
+        if 'generated_text' in result[0]:
+            translated = GoogleTranslator(source='auto', target='nl').translate(str(result[0]['generated_text']))
+            return translated
+        elif 'summary_text' in result[0]:
+            translated = GoogleTranslator(source='auto', target='nl').translate(str(result[0]['summary_text']))
+            return translated
+        else:
+            return None
+        except:
+            return text		
+            
+hf = HuggingFaceModels(os.getenv('huggingface-api-key'))
+original_scientific_papers = [f for f in os.listdir(folder_path)]
+for paper in original_scientific_papers:
+    sentence_tokens = process_file(paper) 
+        for sentence in sentence_tokens:
+            for model in huggingfacemodels.keys():
+                filename = "SIMPLIFIED_"+model+'_'+paper
+                with open(filename, 'a', encoding='utf-8') as f:
+                    output = hf.scientific_simplify(str(sentence), model)
+                    f.write(str(output)) 
 	\end{lstlisting}
 \end{center}
 
 Vervolgens berekent het script leesmetrieken met de \textit{readability} python-bibliotheek. Leesmetrieken dienen als objectieve maatstaf bij deze vergelijkende studie, zoals aangegeven door \textcite{Nenkova2004}. 
 
 \begin{itemize}
-	\item De vergelijkende studie neemt de FRE en FOG scores op, want deze scores kunnen de moeilijkheidsgraad van een zin of tekst machinaal meten.
-	\item Het aantal complexe en lange woorden kan wijzen op de gebruikte \textit{substitution generation} van het taalmodel. De DCI bepaalt de complexiteit van een woord in deze library. Ten slotte tellen alle woorden met meer dan vier lettergrepen mee als een lang woord volgens de \textit{readability}-library.
+	\item De vergelijkende studie neemt de Flesch-Reading-Ease (FRE) en Gunning FOG (FOG) scores op, want deze scores kunnen de moeilijkheidsgraad van een zin of tekst machinaal meten.
+	\item Het aantal complexe en lange woorden kan wijzen op de gebruikte \textit{substitution generation} van het taalmodel. De \textit{Dale-Chall Index} bepaalt de complexiteit van een woord in deze library. Ten slotte tellen alle woorden met meer dan vier lettergrepen mee als een lang woord volgens de \textit{readability}-library.
 	\item Het aantal hulpwerkwoorden en vervoegingen van 'zijn' kan aanduiden op mogelijke passieve stem, wat het onderzoek van \textcite{Ruelas2020} als 'hinderende' zinsyntax vernoemt.
 \end{itemize}
 
-Dit script resulteert in een \textit{Pandas-dataframe} met alle leesbaarheidsmetrieken uit de \textit{readability}-library. Uiteindelijk slaat het script de \textit{Pandas-dataframe} op als CSV-bestand. Listing \ref{code:verg-studie-phase-4} omvat de code voor fase 4. Hierin berekent het script leesmetrieken voor iedere zin. Allereerst laadt het script twee embeddingsmodellen in, weergegeven in tabel \ref{table:wordembeddings-spacy}. Daarna bouwt het lege dataframes op om de meetresultaten te kunnen opslaan. Vervolgens itereert het python-script door alle tekstbestanden om deze tekst in te lezen. Voor elke zin probeert het script om leesmetrieken te verkrijgen met de \textit{readability.getmeasures} functie. Hierbij specifieert het script welke taal de readability-library moet gebruiken. Als het script alle meetwaarden succesvol kan verkrijgen, dan maakt het script een nieuwe rij met machinaal berekende leesmetrieken. Tot slot voegt het alle rijen toe aan de DataFrame. Zinnen waarbij het script geen leesmetrieken kan berekenen, dan verwerpt het die zin voor dat artikel.
+Dit script resulteert in een \textit{Pandas-dataframe} met alle leesbaarheidsmetrieken uit de \textit{readability}-library. Uiteindelijk slaat het script de \textit{Pandas-dataframe} op als csv-bestand. Listing \ref{code:verg-studie-phase-4} omvat de code voor fase 4. Hierin berekent het script de leesmetrieken voor iedere zin. Allereerst laadt het script twee embeddingsmodellen in, weergegeven in tabel \ref{table:wordembeddings-spacy}. Daarna bouwt het lege dataframes op om de meetresultaten te kunnen opslaan. Vervolgens itereert het python-script door alle tekstbestanden om deze tekst in te lezen. Voor elke zin probeert het script leesmetrieken te verkrijgen met de \textit{readability.getmeasures} functie. Hierbij specifieert het script welke taal de readability-library moet gebruiken. Als het script alle meetwaarden succesvol kan verkrijgen, dan maakt het script een nieuwe rij met machinaal berekende leesmetrieken. Tot slot voegt het alle rijen toe aan de DataFrame. Het script verwerpt de zinnen voor het specifieke artikel waarbij het geen leesmetrieken kan berekenen.
 
 \begin{center}
 	\begin{lstlisting}[language=Python, caption={Script voor de vierde fase van de vergelijkende studie}, label={code:verg-studie-phase-4}]	
@@ -477,7 +415,7 @@ Dit script resulteert in een \textit{Pandas-dataframe} met alle leesbaarheidsmet
 	\end{lstlisting}
 \end{center}
 
-In de laatste fase visualiseert het onderzoek de verkregen resultaten. Hierbij gebruikt het \textit{Jupyter-notebooks} en \textit{Matplotlib} om de verkregen resultaten te visualiseren. Allereerst gebruikt de \textit{Jupyter-notebook} een kleinere dataframe met enkel de data van A1. Daarna groepeert het script de data op basis van modellen. Het aantal woorden per zin fungeert als geaggregeerd veld. Met Matplotlib kan het script vervolgens een eenvoudige boxplot genereren. De notebook herhaalt dit proces voor beide artikelen en voor alle leesmetrieken vermeldt in tabel \ref{table:verg-studie-metrieken}. Zo illlustreert \textit{listing} \ref{code:generation-boxplot} hoe het script boxplots genereert. Deze visualiseren woordgebruik van de verschillende taalmodellen bij A1. Alle code om grafieken te genereren kan de lezer op de GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob main/scripts/PHASE\_5.ipynb} terugvinden. 
+In de laatste fase visualiseert het onderzoek de verkregen resultaten. Hierbij gebruikt het \textit{Jupyter-notebooks} en \textit{Matplotlib} om de verkregen resultaten voor te stellen. Allereerst gebruikt de \textit{Jupyter-notebook} een kleinere dataframe met enkel de data van A1. Daarna groepeert het script de data op basis van modellen. Het aantal woorden per zin fungeert als geaggregeerd veld. Met Matplotlib kan het script vervolgens een eenvoudige boxplot genereren. De notebook herhaalt dit proces voor beide artikelen en voor alle leesmetrieken vermeldt in tabel \ref{table:verg-studie-metrieken}. Zo illlustreert \textit{listing} \ref{code:generation-boxplot} hoe het script boxplots genereert. Deze visualiseren het woordgebruik van de verschillende taalmodellen bij A1. Alle code om grafieken te genereren kan de lezer op de GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob main/scripts/PHASE\_5.ipynb} terugvinden. 
 
 \begin{lstlisting}[language=Python, caption={Code om een boxplot voor het aantal woorden per zin te genereren.}, label={code:generation-boxplot}]	
 artikel_1 = df[(df['paper'] == 'Artikel 1 AI') & (df['FRE'] > 0)]
@@ -492,7 +430,7 @@ plt.ylabel('Woorden per zin')
 plt.savefig('boxplot-avg-a1.png')
 \end{lstlisting}
 
-Verder toont tabel \ref{table:verg-studie-metrieken} alle leesmetrieken, samen met de toegepaste visualisatietechniek. De boxplots dienen om de spreiding van een leesmetrieken te tonen. Zo kan het onderzoek achterhalen hoe gespreid de gebruikte woordenschat is op het vlak van de leesmetrieken FRE en FOG. De spreiding bij het aantal woorden per zinnen geeft het onderzoek ook weer als een boxplot. Zo kan het onderzoek de regelmaat van korte zinnen achterhalen uit een tekst. De \textit{violinplots} dienen om de verdeling van moeilijke of lange woorden weer te geven. Tot slot maakt het onderzoek gebruik van een staafdiagram om het aantal hulpwerkwoorden of aantal zinnen met een vervoeging van het werkwoord 'zijn' te visualiseren.
+Verder toont tabel \ref{table:verg-studie-metrieken} alle leesmetrieken, samen met de toegepaste visualisatietechniek. De boxplots dienen om de spreiding van de leesmetrieken te tonen. Zo kan het onderzoek achterhalen hoe gespreid de gebruikte woordenschat is op het vlak van de leesmetrieken FRE en FOG. De spreiding bij het aantal woorden per zinnen geeft het onderzoek ook weer als een boxplot. Zo kan het onderzoek de regelmaat van korte zinnen achterhalen uit een tekst. De \textit{violinplots} dienen om de verdeling van moeilijke of lange woorden weer te geven. Tot slot maakt het onderzoek gebruik van een staafdiagram om het aantal hulpwerkwoorden of aantal zinnen met een vervoeging van het werkwoord 'zijn' te visualiseren.
 
 \begin{center}
 	\begin{table}[H]
@@ -520,7 +458,7 @@ Verder toont tabel \ref{table:verg-studie-metrieken} alle leesmetrieken, samen m
 	\end{table}
 \end{center}
 
-Tenslotte komen de resultaten van de menselijke beoordeling aan bod. Deze fase van de vergelijkende studie staat stil bij aspecten die leesmetrieken niet kunnen meten, waaronder de normen vermeld in tabel \ref{table:criteria-vergelijkende-studie-human-obv}. De referentietekst dient hier als hulpmiddel om de referentietekst, ofwel het verwachte resultaat, te vergelijken met de vereenvoudigde tekst door een taalmodel. 
+Tenslotte komen de resultaten van de menselijke beoordeling aan bod. Deze fase van de vergelijkende studie staat stil bij aspecten die de leesmetrieken niet kunnen meten, waaronder de normen vermeld in tabel \ref{table:criteria-vergelijkende-studie-human-obv}. De referentietekst dient hier als hulpmiddel om de referentietekst, ofwel het verwachte resultaat, te vergelijken met de vereenvoudigde tekst door een taalmodel. 
 
 \begin{table}[H]
 	\begin{tabular}{| m{10cm} | m{4.5cm} |}
@@ -540,17 +478,17 @@ Tenslotte komen de resultaten van de menselijke beoordeling aan bod. Deze fase v
 
 \section{Prototype voor tekstvereenvoudiging}
 
-Met requirements uit het moscow-schema en geschikte taalmodellen voor gepersonaliseerde ATS kan het onderzoek een volgende stap zetten om de onderzoeksvraag te beantwoorden. De volgende sectie omschrijft de ontwikkeling van Pentimentor, namelijk een prototype voor gepersonaliseerde ATS voor scholieren met dyslexie in de derde graad van het middelbaar onderwijs. Deze ontwikkeling kan ontwikkelaars helpen als rode draad bij de ontwikkeling van dergelijke toepassingen. Zo beantwoordt de ontwikkeling van \textit{Pentimentor} volgende deelvraag: 
+Met de gevonden vereisten voor een taalmodel uit het moscow-schema en de geschikte taalmodellen voor gepersonaliseerde ATS kan het onderzoek een volgende stap zetten om de onderzoeksvraag te beantwoorden. De volgende sectie omschrijft de ontwikkeling van Pentimentor, namelijk een prototype voor gepersonaliseerde ATS voor scholieren met dyslexie in de derde graad van het middelbaar onderwijs. Deze ontwikkeling kan ontwikkelaars helpen als rode draad bij het maken van dergelijke toepassingen. Zo beantwoordt de ontwikkeling van \textit{Pentimentor} volgende deelvraag: 
 
 \begin{itemize}
 	\item Hoe kunnen ontwikkelaars een intuïtieve en lokale webtoepassing ontwikkelen die zowel scholieren met dyslexie als leerkrachten kan helpen bij het vereenvoudigen van wetenschappelijke artikelen met behoud van semantiek, jargon en zinsstructuren?
 \end{itemize}
 
-Voor de ontwikkeling van het prototype volgt het onderzoek figuur \ref{img:general-overview-prototype}. Deze flowchart toont zes algemene fasen. Zo start het onderzoek met een voorbereidende fase waarin het onderzoek nodige technieken en taalmodellen opsomt. Vervolgens ontwikkelt het back end en front end. Daarna ontwikkelt het twee algemene componenten: een leraren -en scholierencomponent. Hierna moet het onderzoek stilstaan bij de opzet van Pentimentor. 
+Voor de ontwikkeling van het prototype volgt het onderzoek figuur \ref{img:general-overview-prototype}. Deze flowchart toont zes algemene fasen. Zo start het onderzoek met een voorbereidende fase waarin het onderzoek de nodige technieken en taalmodellen opsomt. Vervolgens ontwikkelt het de backend en frontend. Daarna ontwikkelt het twee algemene componenten: een leraren -en scholierencomponent. Hierna moet het onderzoek stilstaan bij de opzet van Pentimentor. 
 
 \medspace
 
-Uiteindelijk beoordeelt het onderzoek Pentimentor. Het vergelijkt dit met andere toepassingen volgens het moscow-schema. Zo moet het lerarencomponent wetenschappelijke artikelen kunnen vereenvoudigen, nadat de gebruiker ATS-technieken selecteert. Daarnaast moet het scholierencomponent ondersteuning bieden aan scholieren die de verschillen tussen origineel en vereenvoudigd willen zien. Hier moeten scholieren met dyslexie in \textit{real-time} aanpassingen kunnen maken aan de tekst en ondersteuning krijgen tijdens het begrijpend lezen van een tekst. Tot slot moeten gepersonaliseerde opmaakopties gelijk blijven over alle pagina's van Pentimentor.
+Uiteindelijk beoordeelt het onderzoek de \textit{Pentimentor} prototype. Het vergelijkt dit met andere toepassingen volgens het moscow-schema. Zo moet het lerarencomponent wetenschappelijke artikelen kunnen vereenvoudigen, nadat de gebruiker ATS-technieken selecteert. Daarnaast moet het scholierencomponent ondersteuning bieden aan scholieren die de verschillen tussen de originele en vereenvoudigde tekst willen zien. Hier moeten scholieren met dyslexie in \textit{real-time} aanpassingen kunnen maken aan de tekst en ondersteuning krijgen tijdens het begrijpend lezen van een tekst. Tot slot moeten gepersonaliseerde opmaakopties gelijk blijven over alle pagina's heen van Pentimentor.
 
 
 \begin{sidewaysfigure}
@@ -563,11 +501,11 @@ Uiteindelijk beoordeelt het onderzoek Pentimentor. Het vergelijkt dit met andere
 
 \subsubsection{Taalmodellen selecteren}
 
-Omdat de keuze van taalmodellen verdere technologiekeuzes kan beïnvloeden, bepaalt het onderzoek eerst één of meerdere taalmodellen voor gepersonaliseerde ATS. Zo wijst de vorige onderzoeksfase uit dat GPT-3 een geschikt taalmodel is voor gepersonaliseerde ATS. Voor abstraherende samenvatting kan Pentimentor één van drie taalmodellen uit de vorige onderzoeksfase gebruiken.
+Omdat de keuze van taalmodellen verdere technologiekeuzes kan beïnvloeden, bepaalt het onderzoek eerst één of meerdere taalmodellen voor gepersonaliseerde ATS. Zo wijst de vorige onderzoeksfase uit dat GPT-3 een geschikt taalmodel is voor gepersonaliseerde ATS. Voor een abstraherende samenvatting kan \textit{Pentimentor} één van drie taalmodellen uit de vorige onderzoeksfase gebruiken.
 
 \subsubsection{Programmeertalen, frameworks en verwante libraries selecteren}
 
-Voor snelle en gratis ontwikkeling gebruikt Pentimentor \textit{open-source} pakketten. Taalmodellen kan het aanspreken via \textit{API-calls} met JS of Python. Omdat het systeem de API-sleutel moet opslaan als sessievariabele, gebeuren alle \textit{API-calls} vanuit de \textit{back end}. Verder vermeldt tabel \ref{table:technologies} alle gebruikte programmeertalen. Tot slot vermeldt tabel \ref{table:python-libraries} alle gebruikte python-libraries.
+Voor een snelle en gratis ontwikkeling gebruikt \textit{Pentimentor} \textit{open-source} pakketten. Taalmodellen kunnen het aanspreken via \textit{API-calls} met JS of Python. Omdat het systeem de API-sleutel moet opslaan als sessievariabele, gebeuren alle \textit{API-calls} vanuit de backend. Verder vermeldt tabel \ref{table:technologies} alle gebruikte programmeertalen. Tot slot vermeldt tabel \ref{table:python-libraries} alle gebruikte python-libraries.
 
 \begin{center}
 	\begin{table}[H]
@@ -575,13 +513,13 @@ Voor snelle en gratis ontwikkeling gebruikt Pentimentor \textit{open-source} pak
 		\hline
 		\textbf{Technologie} 	& \textbf{Functionaliteit} \\
 		\hline
-		Python 					& Dit dient voor de back end die API-calls en PoS-tags verwerken. \\
+		Python 					& Dit dient voor de backend die API-calls en PoS-tags verwerkt. \\
 		\hline
-		JavaScript (JS)			& Dit maakt de toepassing gebruikersvriendelijk door commandline instructies te vervangen door eenduidige knoppen. \\
+		JavaScript (JS)			& Dit maakt de toepassing eenduidig door CLI-instructies te vervangen door knoppen. \\
 		\hline
 		HTML en CSS 			& Dit past het uiterlijk aan, naargelang de gekozen parameters van de eindgebruiker. \\
 		\hline
-		Jinja 					& Dit geeft alle Python back end data door aan de front-end.  \\
+		Jinja 					& Dit geeft alle Python backend data door aan de frontend.  \\
 		\hline
 		Docker 					& Dit dient om Pentimentor lokaal op te kunnen starten en voorziet een lokale omgeving waarin het systeem alle software installeert. \\
 		\hline
@@ -601,7 +539,7 @@ Voor snelle en gratis ontwikkeling gebruikt Pentimentor \textit{open-source} pak
 		\hline
 		\textbf{Python-bibliotheek} & \textbf{Functionaliteit} \\
 		\hline
-		Flask					& Het websiteframework van Pentimentor. Dit framework combineert front end en back end. \\ 
+		Flask					& Het websiteframework van Pentimentor. Dit framework combineert frontend en backend. \\ 
 		\hline
 		PDFMiner 				& Tekstinhoud van PDF's extraheren. \\ 
 		\hline
@@ -619,12 +557,12 @@ Voor snelle en gratis ontwikkeling gebruikt Pentimentor \textit{open-source} pak
 	\end{table}
 \end{center}
 
-\subsubsection{Back end opzet}
+\subsubsection{Backend opzet}
 
-Nadat het onderzoek taalmodellen, technologieën en frameworks uitkiest, start het met front end implementatie. Allereerst voegt het de homepagina toe. Dit dient als portaal voor de componenten. Daarna implementeert het personaliseerbare opmaakopties. Zoals aangeraden door \textcite{Galliussi2020}, moeten ontwikkelaars hiermee rekening houden. Zo gebruikt Pentimentor parameters onderzocht door \textcite{Rello2013a, Rello2013b}. Om deze instellingen aan te bieden, voegt het onderzoek een webpagina toe. Deze HTML-pagina bevat formulieren met aanpasbare parameters. Nadat de gebruiker parameters aanpast, stuurt de pagina POST-requests naar de back end. Die verwerkt dit en slaat de ontvangen dictionary op als sessievariabele, zoals weergegeven in listing \ref{code:back-end-session-personalized}. Tot slot laadt de \textit{front end} deze opmaakopties bij iedere wegpagina in. Dit gebeurt met \textit{window onload}, zoals weergegeven in listing \ref{code:window-onload-js}. Zo hoeven eindgebruikers deze parameters niet bij iedere webpagina opnieuw aan te passen.
+Nadat het onderzoek taalmodellen, technologieën en frameworks uitkiest, start het met de frontend implementatie. Allereerst voegt het de homepagina toe. Dit dient als portaal voor de componenten. Daarna implementeert het personaliseerbare opmaakopties. Zoals aangeraden door \textcite{Galliussi2020}, moeten ontwikkelaars hiermee rekening houden. Zo gebruikt Pentimentor parameters onderzocht door \textcite{Rello2013a, Rello2013b}. Om deze instellingen aan te bieden, voegt het onderzoek een webpagina toe. Deze HTML-pagina bevat formulieren met aanpasbare parameters. Nadat de gebruiker parameters aanpast, stuurt de pagina een POST-request naar de backend. Het verwerkt dit en slaat de ontvangen dictionary op als sessievariabele, zoals weergegeven in listing \ref{code:back-end-session-personalized}. Tot slot laadt de frontend deze opmaakopties in bij iedere wegpagina. Dit gebeurt met \textit{window onload}, zoals weergegeven in listing \ref{code:window-onload-js}. Zo hoeven eindgebruikers deze parameters niet bij iedere webpagina opnieuw aan te passen.
 
 
-\begin{lstlisting}[language=python, caption={De back end functie die de aanpassingen uit het formulier opslaat als sessievariabele.}, label={code:back-end-session-personalized}]
+\begin{lstlisting}[language=python, caption={De backend functie die de aanpassingen uit het formulier opslaat als sessievariabele.}, label={code:back-end-session-personalized}]
 PER_SET_SESSION_NAME = 'personalized_settings'
 
 @app.route('/get-settings-user',methods=['POST'])
@@ -659,13 +597,13 @@ window.onload = async function () {
 }
 \end{lstlisting}
 
-Naast personaliseerbare opmaakopties moet Pentimentor wetenschappelijke artikelen kunnen opladen en inlezen. Zo kan het met \textit{PDF-extractors} zoals \textit{PDFMiner} tekst uit de PDF extraheren. Niet alle \textit{PDF-extractors} zijn foutbestendig, want zoals opgemerkt in de literatuurstudie kunnen \textit{PDF-extractors} ook tekst verliezen tijdens dit proces. Om dit te voorkomen, biedt het prototype een OCR-optie met \textit{LayoutParser} aan. Beide manieren vereisen functies in de back end en front end.
+Naast personaliseerbare opmaakopties moet \textit{Pentimentor} wetenschappelijke artikelen kunnen inladen en inlezen. Zo kan het met \textit{PDF-extractors} zoals \textit{PDFMiner} tekst uit de PDF extraheren. Niet alle \textit{PDF-extractors} zijn foutbestendig, want zoals opgemerkt in de literatuurstudie kunnen \textit{PDF-extractors} ook tekst verliezen tijdens dit proces. Om dit te voorkomen, biedt het prototype een OCR-optie met \textit{LayoutParser} aan. Beide manieren vereisen functies in de backend en frontend.
 
 \medspace
 
-Aan de \textit{front end} voegt het onderzoek checkboxes, \textit{file-input} en \textit{textarea-input tags} toe. Uiteindelijk stuurt het formulier een POST-request om alle meegekregen informatie door te sturen naar de back end. Na het ontvangen van de request van de front-end, handelt de Flask back end het bestand verder af zoals aangewezen in listing \ref{code:inlezen-wetenschappelijk-artikel-front-end-back-end}. Nadat de gebruiker het formulier bevestigt, geeft het binaries van het wetenschappelijk artikel aan de back end. Die controleert het type invoer en slaat het nadien tijdelijk \textit{in-memory} op. Daarnaast krijgt het de keuze tussen normale of OCR-upload mee als boolean, waarbij \textit{true} gelijk staat aan een afhandeling met LayoutParser.
+Aan de frontend voegt het onderzoek checkboxes, file-input en texarea-input tags toe. Uiteindelijk stuurt het formulier een POST-request om alle meegekregen informatie door te sturen naar de backend. Na het ontvangen van de request van de frontend, handelt de Flask backend het bestand verder af zoals aangewezen in listing \ref{code:inlezen-wetenschappelijk-artikel-front-end-back-end}. Nadat de gebruiker het formulier bevestigt, geeft het de binaries van het wetenschappelijk artikel door aan de backend. Die controleert het type invoer en slaat het nadien tijdelijk \textit{in-memory} op. Daarnaast krijgt het de keuze tussen normale of OCR-upload mee als boolean, waarbij \textit{true} gelijk staat aan een afhandeling met LayoutParser.
 
-\begin{lstlisting}[language=Python, caption={Koppeling tussen front-end en back-end voor het inlezen van een wetenschappelijk artikel}, label={code:inlezen-wetenschappelijk-artikel-front-end-back-end}]
+\begin{lstlisting}[language=Python, caption={Koppeling tussen frontend en backend voor het inlezen van een wetenschappelijk artikel}, label={code:inlezen-wetenschappelijk-artikel-front-end-back-end}]
 def setup_scholars_teachers(request):
 	settings = request.form
 	if 'fullText' in request.form:
@@ -711,7 +649,7 @@ def analysing_choosing_for_teachers():
 
 \subsubsection{PDFMiner implementatie}
 
-Bij een gewone PDF-extractie gebruikt de Reader-klasse PDFMiner met de functie in listing \ref{code:inlezen-van-pdf}. Die itereert door alle pagina's van een opgeladen wetenschappelijk artikel. Nadien extraheert het alle tekst op een pagina en concateneert dit alle opgehaalde tekst van één pagina aan een lege string. Zo herhaalt dit proces tot het geen pagina's meer kan inlezen. Tot slot resulteert dit in een string-object met alle geëxtraheerde tekst uit het wetenschappelijk artikel. Hierna moet de Reader-klasse deze tekst formatteren tot een leesbaar formaat voor het component.
+Bij een gewone PDF-extractie gebruikt de Reader-klasse PDFMiner met de functie in listing \ref{code:inlezen-van-pdf}. Het itereert door alle pagina's van een opgeladen wetenschappelijk artikel. Nadien extraheert het alle tekst van een pagina en concateneert het alle opgehaalde tekst van één pagina aan een lege string. Dit proces herhaalt zich tot het geen pagina's meer kan inlezen. Tot slot resulteert dit in een string-object met alle geëxtraheerde tekst uit het wetenschappelijk artikel. Hierna moet de Reader-klasse deze tekst formatteren tot een leesbaar formaat.
 
 \begin{lstlisting}[language=Python, caption={Een PDF inlezen met PDFMiner}, label={code:inlezen-van-pdf}]
 	def get_full_text_from_pdf(self, all_pages):
@@ -726,11 +664,11 @@ Bij een gewone PDF-extractie gebruikt de Reader-klasse PDFMiner met de functie i
 
 \subsubsection{OCR implementatie}
 
-Tekst kan ontbreken na het extraheerproces met PDFMiner. Daarnaast krijgt Pentimentor als resultaat één string van alle karakters. Tot gevolg toont het deze tekst als een niet-georganiseerde blok tekst. Daarom voorziet het prototype een tweede techniek met OCR en ML-technieken. Zo maakt Pentimentor gebruik van LayoutParser om dit probleem op te lossen. Eerst moet de back end alle pagina's van een wetenschappelijk artikel omzetten naar een afbeelding. Voor iedere afbeelding gaat het de tekst (titels en tekstblokken) markeren. Listing \ref{code:reader-ocr} illustreert het proces voor één afbeelding van een ingeladen wetenschappelijk artikel. 
+Tekst kan ontbreken na het extraheerproces met PDFMiner. Daarnaast krijgt Pentimentor als resultaat één string van alle karakters. Tot gevolg toont het deze tekst op een niet-georganiseerde manier. Daarom voorziet het prototype een tweede methode met OCR en machineleertechnieken (ML). Zo gebruikt Pentimentor het Python-pakket \textit{Layoutparser} om bovenstaand probleem op te lossen.
 
 \medspace
 
-Allereerst converteert het script de afbeelding naar een array van binaire waarden die het ML-model kan interpreteren. Vervolgens geeft het deze array aan het ML-model. Dit ML-model kan tekstblokken op vier manieren classificeren, namelijk: tekst, titel, figuur of tabel. Omdat figuren en tabellen buiten de scope van dit onderzoek vallen, houdt het script enkel rekening met titels en tekst. Deze twee namen houdt het bij in een array genaamd 'valid'. Verder omkadert LayoutParser de tekstblokken en vervolgens kent het per tekstblok een id-tag toe. Deze omkadering is nodig voor de volgende stap: de OCR-fase.
+In eerste instantie moet de backend alle pagina's omzetten naar een machine-interpreteerbaar formaat door ze eerst om te zetten naar afbeeldingen en vervolgens naar binaire waarden. Met behulp van LayoutParser en het Detectron2-algoritme kan Pentimentor de verschillende tekstonderdelen op elke pagina classificeren, waaronder tekst-, titel-, figuur- en tabelblokken. Omdat figuren en tabellen niet relevant zijn voor dit onderzoek, concentreert Pentimentor zich op het achterhalen van titels en tekst. Die slaat het systeem op in een array genaamd 'valid'. Daarna omkadert LayoutParser alle tekstblokken en koppelt het elk tekstblok met een unieke id-tag. Listing \ref{code:reader-ocr} illustreert het proces om de blokken op één pagina te achterhalen.
 
 \begin{lstlisting}[language=Python, caption={Een PDF inlezen met OCR}, label={code:reader-ocr}]
 model = lp.Detectron2LayoutModel(
@@ -764,9 +702,9 @@ lp.draw_box(image, text_blocks, box_width=3, show_element_id=True)
 	
 \end{lstlisting}
 
-Nu beschikt het script over een array van afbeeldingen. Zo moet het systeem deze tekst uit de afbeeldingen kunnen extraheren. Het systeem gebruikt Tesseract om de tekst, onafhankelijk van de gekozen taal, te extraheren uit de afbeeldingen. Verder haalt het enkel de tekstblokken op die Layoutparser als tekst of titel classificeert. Omdat het systeem niet achteraf bijhoudt wat titel of tekstblok is, voegt het 'titel:' toe voor iedere titelblok. Tot slot bekomt deze functie een array van alle titel- en tekstblokken.
+Nu beschikt Pentimentor over een array van afbeeldingen. Vervolgens moet het alle tekst uit deze blokken kunnen extraheren. Hiervoor raadt de documentatie van Layoutparser een OCR-methode aan. Listing \ref{code:text-collecting} illustreert dit. Zo gebruikt Pentimentor de Python-bibliotheek \textit{Tesseract} om de titels en tekst te extraheren uit de afbeeldingen. Omdat het systeem niet bijhoudt wat titel of tekstblok is, voegt het systeem een string toe aan iedere tekstblok. Zo resulteert deze functie in een array met alle teruggevonden titel- en tekstblokken.
 
-\begin{lstlisting}[language=Python, caption={Tekst extraheren uit de geparsete inhoud.}, label={code:text-collecting}
+\begin{lstlisting}[language=Python, caption={Tekst extraheren uit de geparsete inhoud.}, label={code:text-collecting}}
 language = language
 ocr_agent = lp.TesseractAgent(languages=language)
 
@@ -787,7 +725,7 @@ for t in text_blocks:
 
 \subsubsection{Geëxtraheerde inhoud formatteren naar een webpagina.}
 
-Na het extraheren van de tekstinhoud, komt een formatteerfase aan bod. Hier converteert het systeem tekst naar het gewenste formaat voor de \textit{front end}. Eerst transformeert de \textit{back end} de string van geëxtraheerde tekst naar \textit{arrays} van zinnen met Spacy \textit{word embeddings} en \textit{sentence embeddings}. Listing \ref{code:reader-formatting} omschrijft dit proces. Het prototype bundelt een dynamisch aantal zinnen met \textit{Numpy reshape}. Eindgebruikers kunnen deze parameter aanpassen in het instellingenscherm. Om de PoS-tag bij het respectievelijke woord bij te houden, gebruikt het prototype sleutelparen. Zo verwijst de sleutel naar een woord in een zin en de waarde verwijst naar de PoS-tag. Het prototype houdt rekening met enkel Nederlandstalige en Engelstalige wetenschappelijke artikelen. Daarom laadt het prototype hoogstens twee embeddingsmodellen op. Deze embeddingsmodellen staan vermeld in tabel \ref{table:wordembeddings-spacy}. Om hardcoding te vermijden, slaat het een \textit{dictionary} op met alle namen van deze embeddingsmodellen. Het prototype gebruikt Engels als standaardtaal, als de \textit{back end} de taal niet kan herkennen of als de taal niet in de lijst van de dictionary staat. 
+Na het extraheren van tekst volgt het formatteren ervan. Hier zet het systeem de tekst om naar het gewenste formaat voor de \textit{frontend}. In eerste instantie transformeert de \textit{backend} de geëxtraheerde tekst naar \textit{arrays} van zinnen met behulp van Spacy \textit{word embeddings} en \textit{sentence embeddings}. Listing \ref{code:reader-formatting} illustreert de werking van deze techniek. Zo bundelt de backend een parameteriseerbaar aanal zinnen met behulp van \textit{Numpy reshape}. Om de Part-of-Speech (PoS)-tag bij het respectievelijke woorde te behouden, gebruikt de backend een sleutelpaarstructuur. Elke sleutel verwijst naar een woord in een zin, terwijl de waarde naar de bijbehorende PoS-tag verwijst. Het onderzoek focust zich op de ontwikkeling voor de vereenvoudiging van Nederlandstalige of Engelstalige wetenschappelijke artikelen. Daarom laadt Pentimentor hoogstens twee embeddingsmodellen in. Tabel \ref{table:wordembeddings-spacy} vermeldt deze embeddingsmodellen. Standaard maakt Pentimentor gebruik van een Engelstalig embeddingsmodel als de backend de taal niet kan herkennen of als de taal niet voorkomt in een \textit{dictionary}. 
 
 \begin{lstlisting}[language=Python, caption={Het formatteren van de tekst naar een formaat voor de website.}, label={code:reader-formatting}]
 	def get_full_text_site(self, full_text):
@@ -828,7 +766,7 @@ Na het extraheren van de tekstinhoud, komt een formatteerfase aan bod. Hier conv
 		return text_w_pos
 \end{lstlisting}
 
-Het leraren -en scholierencomponent gebruiken een dynamische HTML-structuur. De vorige fase van Pentimentor resulteert in een array van dictionaries. Daarom gebruikt deze fase een Jinja-iteratie waarin het iedere dictionary doorloopt. Ieder woord slaat Pentimentor op onder de PoS-tag. De PoS-tag houdt het bij als klasse. Zo kan de eindgebruiker woorden uitfilteren of specifieke woorden aanduiden om deze aan een woordenlijst toe te voegen. Iedere zin koppelt het systeem met de overkoepelende span-tag \textit{sentence}. Dan koppelt het ieder woord met de klasse \textit{nouns}, \textit{adjectives} of \textit{verbs}. Andere woorden, zoals conjuncties, koppelt het systeem met de klasse \textit{other}.
+Beide componenten moeten het artikel in een aangepaste pagina tonen. Daarom maakt deze fase gebruik van Jinja2, de \textit{templating engine} van Flask. Hiermee kan de frontend de array uit de vorige fase itereren en vervolgens uitprinten. Ieder woord koppelt de backend met een PoS-tag. Daarom koppelt de frontend iedere zin met de overkoepelende span-tag \textit{sentence}. Daarna koppelt het ieder woord met de klasse \textit{nouns}, \textit{adjectives} of \textit{verbs}. Andere woorden, zoals conjuncties, koppelt het systeem met de klasse \textit{other}.
 
 \begin{lstlisting}[language=html, caption={Het doorlopen van de PDF-tekst op de webpagina en het toekennen van de span-tags.}, label={code:html-span-tags}]
 {% for paragraph in pdf %}
@@ -861,9 +799,9 @@ Zo kunnen leerkrachten beschikken over een tool waarin zij de geëxtraheerde tek
 			\hline
 			Opties voor gepersonaliseerde ATS aanreiken. & Met behulp van een HTML-formulier kunnen leerkrachten opties aanvinken waaraan de vereenvoudigde tekst moet voldoen. \\
 			\hline
-			Werkwoorden, bijvoeglijke en zelfstandige naamwoorden markeren & Front-end aanpassing met \textit{eventlistener}. De tekstkleur van het aangeduide type woorden verandert naar het gekozen kleur. \\
+			Werkwoorden, bijvoeglijke en zelfstandige naamwoorden markeren & Frontend aanpassing met \textit{eventlistener}. De tekstkleur van het aangeduide type woorden verandert naar het gekozen kleur. \\
 			\hline
-			Zinnen verwijderen & \textit{Front-end} filter aangesproken door een \textit{eventlistener}. \\
+			Zinnen verwijderen & \textit{Frontend} filter aangesproken door een \textit{eventlistener}. \\
 			\hline
 			Woord toevoegen aan de woordenlijst & Een \textit{eventlistener} handelt de functionaliteit af. Het prototype slaat woorden en hun context tijdelijk op. Het formulier houdt dit bij en geeft het vervolgens mee bij het indienen. Deze woorden en hun respectievelijke zin van voorkomen dienen om de woordenlijst op te vullen in het gegenereerde PDF of Word-bestand. \\ 
 			\hline 
@@ -916,7 +854,7 @@ Het onderzoek stelt de prompts op volgens de richtlijnen beschreven in tabel \re
 
 \subsubsection{Functies voor gepersonaliseerde ATS in het lerarencomponent}
 
-Gebruikers kunnen met Pentimentor op twee manieren aan de slag gaan: het volledige artikel automatisch laten vereenvoudigen of samenvatten, of specifiek delen uit de tekst markeren om een gepersonaliseerde vereenvoudiging of samenvatting op te kunnen bouwen. Zo moet Pentimentor een nieuwe doorlopende tekst kunnen genereren, als opsomming of tabel laten herschrijven of woordenlijsten genereren. Hiervoor moet het twee zaken bijhouden: de gemarkeerde tekst en de optie die de gebruiker wenst te kiezen. Het onderzoek gebruikt hiervoor sleutelparen. Localstorage biedt een tijdelijk persistente manier om deze keuzes op te slaan. Zo moet het systeem \textit{localstorage} opvullen met gemarkeerde tekst en na gebruik opnieuw leegmaken. Als het systeem dit niet leegmaakt, dan neemt het systeem overblijfselen van vorige of irrelevante artikelen over naar artikelen. Om de eindgebruiker bewust te maken van wat het systeem met de tekst moet doen, markeert de front end deze tekst met een kleur. Verder maakt de front end de eindgebruiker bewust welke kleur bij welke transformatie hoort. Tot slot toont listing \ref{listing:localstorage} de werking van deze methode.
+Gebruikers kunnen Pentimentor op twee manieren gebruiken. Zij kunnen het volledige artikel automatisch laten vereenvoudigen of samenvatten, of specifiek fragmenten markeren om een gepersonaliseerde vereenvoudiging of samenvatting te laten maken. Zo moet Pentimentor een nieuwe doorlopende tekst kunnen genereren, als opsomming of tabel laten herschrijven of woordenlijsten genereren. Hiervoor moet het twee zaken bijhouden: de gemarkeerde tekst en de optie die de gebruiker wenst te kiezen. Hiervoor gebruikt het onderzoek een sleutelpaarstructuur. Zo biedt \textit{localstorage} een tijdelijk persistente methode. De frontend moet de \textit{localstorage} opvullen met gemarkeerde tekst en na gebruik opnieuw leegmaken. Als het systeem dit niet leegmaakt, dan neemt het systeem overblijfselen van vorige artikelen over. Om eindgebruikers van hun keuzes bewust te maken, markeert de frontend deze tekst met een kleur. Verder maakt de frontend de eindgebruiker bewust welke kleur bij welke transformatie hoort. Tot slot toont listing \ref{listing:localstorage} de werking van deze methode.
 
 \begin{lstlisting}[language=javascript, caption={Implementatie rond localstorage en tekst markeren.}, label={listing:localstorage}]
 function addTextWithParagraph() {
@@ -932,7 +870,6 @@ function addTextWithParagraph() {
 				values.push(inputs[i].value);
 			}
 		}
-		
 		
 		var selection = window.getSelection();
 		if (selection.rangeCount > 0) {
@@ -985,7 +922,7 @@ function getAllLocalStorageValues() {
 
 \subsubsection{Verbinding met GPT-3}
 
-Om de gemarkeerde tekst met opties te kunnen verwerken, moet het systeem de inhoud van de \textit{localstorage} doorsturen naar de back end. Vervolgens moet het ieder sleutelpaar overlopen. Iedere sleutel stelt een zin of paragraaf voor dat het systeem moet vereenvoudigen of samenvatten. Als de tekst het maximum aantal tokens overschrijdt, dan splitst de back end deze tekst op in een aantal delen dat gelijk staat aan een gelijke deling van het maximum aantal tokens, zoals weergegeven in listing \ref{code:localstorage-iteration}.
+Om de gemarkeerde tekst te kunnen verwerken, moet het systeem de inhoud van de \textit{localstorage} doorsturen naar de backend. Vervolgens moet het ieder sleutelpaar overlopen. Iedere sleutel stelt een fragment voor dat de backend moet vereenvoudigen of samenvatten. Als de tekst het maximum aantal tokens overschrijdt, splitst de backend deze tekst op in een aantal delen dat gelijk staat aan de gelijke deling van het maximum aantal tokens, zoals weergegeven in listing \ref{code:localstorage-iteration}.
 
 \begin{lstlisting}[language=Python, caption={Alle gemarkeerde tekstblokken uit de localstorage aflopen en doorsturen naar het markdown document.}, label={code:localstorage-iteration}]
 for key, value in full_text.items():
@@ -1008,7 +945,7 @@ for key, value in full_text.items():
 			doc_creator.generate_simplification(new_sent)
 \end{lstlisting}
 
-Vervolgens moet de \textit{back end} deze prompts naar de GPT-3 API sturen. Zo itereert het over ieder sleutelpaar en bouwt het daarmee prompts op. Deze bestaat uit gekozen opties en gemarkeerde tekst van de gebruiker. Naast de prompt dient de back end ook parameters mee te geven. Deze omvatten alle waarden opgelijst in tabel \ref{table:gpt-3-parameters-lerarencomponent}. Omdat formaatwijzigingen specifieke prompts vereisen, bestaat de prompt uit extra klemtonen om het resultaat in markdowncode terug te krijgen. Als de \textit{back end} geen formaatwijziging moet uitvoeren, dan stuurt het generieke prompts met daarin een opsomming van alle kenmerken die de eindgebruiker wilt zien in de vereenvoudigde tekst. Listing \ref{code:gpt-api-calls} toont de code die de back end voor één gemarkeerd tekstblok uitvoert. Deze instructies herhaalt het voor ieder tekstblok dat de gebruiker heeft gemarkeerd.
+Vervolgens moet de \textit{backend} deze prompts naar de GPT-3 API sturen. Zo itereert het over ieder sleutelpaar en bouwt het daarmee prompts op. Deze bestaat uit gekozen opties en gemarkeerde tekst van de gebruiker. Naast de prompt dient de backend ook parameters mee te geven. Deze omvatten alle waarden opgelijst in tabel \ref{table:gpt-3-parameters-lerarencomponent}. Omdat formaatwijzigingen specifieke prompts vereisen, bestaat de prompt uit extra klemtonen om het resultaat in markdowncode terug te krijgen. Als de \textit{backend} geen formaatwijziging moet uitvoeren, dan stuurt het generieke prompts met daarin een opsomming van alle kenmerken die de eindgebruiker wilt zien in de vereenvoudigde tekst. Listing \ref{code:gpt-api-calls} toont de code die de backend voor één gemarkeerd tekstblok uitvoert. Deze instructies herhaalt het voor ieder tekstblok dat de gebruiker heeft gemarkeerd.
 
 \begin{lstlisting}[language=Python, caption={API-calls versturen naar de GPT-3 API.}, label={code:gpt-api-calls}]
 def personalised_simplify(self, sentence, personalisation):
@@ -1184,13 +1121,13 @@ Net zoals bij het lerarencomponent, moet het prototype een oorspronkelijke weerg
 
 De prompts in tabel \ref{table:prompts-lerarencomponent} kan het scholierencomponent overnemen van het lerarencomponent. Aanvullend hierop kunnen scholieren zelf een prompt schrijven. Het systeem gebruikt deze prompt met de gemarkeerde tekst als input voor GPT-3.
 
-\subsubsection{Back end functies schrijven voor gepersonaliseerde ATS}
+\subsubsection{Backend functies schrijven voor gepersonaliseerde ATS}
 
-Om zinnen in de doorlopende tekst te verwijderen, moet de front end over de nodige span-tags beschikken. Bij het inlezen van de PDF voert de back end dit al uit, zoals verwezen in listing \ref{code:reader-formatting}. Daarom hoeft het onderzoek geen nieuwe functie in de back end te schrijven. Vervolgens moet de back end over een functie beschikken om een zin te vereenvoudigen. Het lerarencomponent gebruikt al dergelijk functie. Daarmee hergebruikt de \textit{back end} de functie in listing \ref{listing:gpt-personalised-simplify}. 
+Om zinnen in de doorlopende tekst te verwijderen, moet de frontend over de nodige span-tags beschikken. Bij het inlezen van de PDF voert de backend dit al uit, zoals verwezen in listing \ref{code:reader-formatting}. Daarom hoeft het onderzoek geen nieuwe functie in de backend te schrijven. Vervolgens moet de backend over een functie beschikken om een zin te vereenvoudigen. Het lerarencomponent gebruikt al dergelijk functie. Daarmee hergebruikt het de functie in listing \ref{code:gpt-api-calls}. 
 
 \medspace
 
-Zinnen baseren op een zelfgemaakte prompt moet de \textit{back end} echter wel toevoegen. Zo gebruikt de back end de functie in listing \ref{code:custom-prompt} om een \textit{custom prompt} te verwerken. Deze functie stuurt de oorspronkelijke prompt, samen met de context, door naar de GPT-3 API.
+Zinnen baseren op een zelfgemaakte prompt moet de \textit{backend} echter wel toevoegen. Zo gebruikt de backend de functie in listing \ref{code:custom-prompt} om een \textit{custom prompt} te verwerken. Deze functie stuurt de oorspronkelijke prompt, samen met de context, door naar de GPT-3 API.
 
 \begin{lstlisting}[language=python, caption={Een API-call sturen naar GPT-3 met een custom prompt.}, label={code:custom-prompt}]
 def personalised_simplify_w_prompt(self, sentences, personalisation):
@@ -1210,21 +1147,21 @@ def personalised_simplify_w_prompt(self, sentences, personalisation):
 
 % 4.
 
-Vervolgens heeft de back end als een functie die een woord opzoekt met GPT-3. Deze functie staat beschreven in listing \ref{listing:gpt-look-up-word} en de back end kan deze functie zonder problemen hergebruiken. Tot slot hoeft de \textit{back end} geen nieuwe functie te krijgen om woordmarkering af te handelen.
+Vervolgens heeft de backend als een functie die een woord opzoekt met GPT-3. Deze functie staat beschreven in listing \ref{listing:gpt-look-up-word} en de backend kan deze functie zonder problemen hergebruiken. Tot slot hoeft de \textit{backend} geen nieuwe functie te krijgen om woordmarkering af te handelen.
 
-\subsubsection{Front end implementatie voor ATS functionaliteiten}
+\subsubsection{Frontend implementatie voor ATS functionaliteiten}
 
 % 1.
 
-Allereerst kan de \textit{front end} zonder hulp van de \textit{back end} zinnen met JS verwijderen. Alle woorden in een zin bundelt de front end in een span-tag van de klasse 'sentence'. Als de gebruiker dergelijk span-tag aanklikt, dan verwijdert de \textit{front end} de gekozen span-tag.
+Allereerst kan de \textit{frontend} zonder hulp van de \textit{backend} zinnen verwijderen. Zo bundelt het alle woorden in een zin met een span-tag van de 'sentence' klasse. Als de gebruiker dergelijk span-tags aanklikt, dan verwijdert het de gekozen span-tag.
 
-% 2.
+\medspace
 
-Eerst slaat JS de gemarkeerde tekst en meegekregen ATS-opties op en geeft deze door aan de back end met een API-call. Vervolgens verwerkt de back end deze aanvraag door een nieuwe aanvraag te sturen naar GPT-3, met daarin een prompt die de tekst en de gekozen ATS-technieken bevat. De prompt specifieert het formaat waaraan de uitvoer van het taalmodel moet voldoen.  Als de tekst doorlopend is, dan verwerkt JS dit resultaat als een p-tag.  Als het taalmodel een opsomming moest genereren, dan zal de front-end alle zinnen doorlopen en uitprinten tussen twee li-tags.
+Eerst slaat JS de gemarkeerde tekst en meegekregen ATS-opties op en geeft deze door aan de backend met een API-call. Vervolgens verwerkt de backend deze aanvraag door een nieuwe aanvraag te sturen naar GPT-3, met daarin een prompt die de tekst en de gekozen ATS-technieken bevat. De prompt specifieert het formaat waaraan de uitvoer van het taalmodel moet voldoen.  Als de tekst doorlopend is, dan verwerkt JS dit resultaat als een p-tag.  Als het taalmodel een opsomming moest genereren, dan zal de frontend alle zinnen doorlopen en uitprinten tussen twee li-tags.
 
-% 3.
+\medspace
 
-Listing \ref{code:frontend-add-word-to-glossary} toont de aanpak om via de front end een woord, pos-tag en definitie toe te voegen aan de woordenlijst tabel. De front end handelt enkel aanvragen voor werkwoorden, adjectieven, hulpwerkwoorden en zelfsandige naamwoorden af. Eenmaal de scholier op een woord drukt, stuurt de front end een aanvraag naar de back end. Hiervoor stuurt de front end de context en het woord naar de back end. De front end voegt nadien een nieuwe rij aan de tabel toe met daar in het woord, de PoS-tag en de definitie.
+Listing \ref{code:frontend-add-word-to-glossary} toont de aanpak om via de frontend een woord, pos-tag en definitie toe te voegen aan de woordenlijst tabel. De frontend handelt enkel aanvragen voor werkwoorden, adjectieven, hulpwerkwoorden en zelfsandige naamwoorden af. Eenmaal de scholier op een woord drukt, stuurt de frontend een aanvraag naar de backend. Hiervoor stuurt de frontend de context en het woord naar de backend. De frontend voegt nadien een nieuwe rij aan de tabel toe met daar in het woord, de PoS-tag en de definitie.
 
 \begin{lstlisting}[language=javascript, caption={Een woord aan de woordenlijst toevoegen in het scholierencomponent.}, label={code:frontend-add-word-to-glossary}]
 document.addEventListener("DOMContentLoaded", () => {
@@ -1272,7 +1209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 % 4.
 
-Tot slot moet de front end specifieke woorden kunnen markeren. De front-end beschikt al over de PoS-tags. Zo kan de front end, met de JS-functie in listing \ref{code:frontend-mark-pos-tag}, deze woorden een specifieke kleur geven als markering. De listing toont enkel het markeren van zelfstandige naamwoorden. Daarnaast kan de front end ook adjectieven uit de tekst verwijderen zonder taalmodel. Zo hoeft de JS-functie enkel de span-tags van de klasse 'adj' verwijderen uit de document.
+Tot slot moet de frontend specifieke woorden kunnen markeren. De frontend beschikt al over de PoS-tags. Zo kan de frontend, met de JS-functie in listing \ref{code:frontend-mark-pos-tag}, deze woorden een specifieke kleur geven als markering. De listing toont enkel het markeren van zelfstandige naamwoorden. Daarnaast kan de frontend ook adjectieven uit de tekst verwijderen zonder taalmodel. Zo hoeft de JS-functie enkel de span-tags van de klasse 'adj' verwijderen uit de document.
 
 \begin{lstlisting}[language=javascript, caption={Zelfstandige naamwoorden in het scholierencomponent markeren.}, label={code:frontend-mark-pos-tag}]
 const nouns = document.getElementById('noun-show');
