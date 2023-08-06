@@ -91,7 +91,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Ontbrekende functies bij AI-toepassingen}{74}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Must-haves}{76}{table.caption.52}%
+\contentsline {subsubsection}{Experimenten op de must-have functionaliteiten}{76}{table.caption.52}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Should-haves}{78}{figure.caption.54}%
 \defcounter {refsection}{0}\relax 
@@ -99,47 +99,47 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Wont-haves}{79}{figure.caption.55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Geschikte taalmodel voor gepersonaliseerde tekstvereenvoudiging met ATS}{79}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Geschikte taalmodel voor gepersonaliseerde tekstvereenvoudiging met ATS}{80}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Machinale beoordeling van de vereenvoudigde teksten}{79}{section.4.2}%
+\contentsline {subsubsection}{Machinale beoordeling van de vereenvoudigde teksten}{80}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Menselijke beoordeling van de referentieteksten.}{85}{figure.caption.67}%
+\contentsline {subsubsection}{Menselijke beoordeling van de referentieteksten.}{86}{figure.caption.67}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Pentimentor vergelijken met \textit {top-of-the-line} tools.}{87}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusie}{95}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Conclusie}{94}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Discussie}{97}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Discussie}{96}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{101}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{100}{appendix.A}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{101}{section.A.1}%
+\contentsline {section}{\numberline {A.1}Introductie}{100}{section.A.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}State-of-the-art}{103}{section.A.2}%
+\contentsline {section}{\numberline {A.2}State-of-the-art}{102}{section.A.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.1}Tekstvereenvoudiging}{103}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.1}Tekstvereenvoudiging}{102}{subsection.A.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.2}Noden van scholieren met dyslexie}{103}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.2}Noden van scholieren met dyslexie}{102}{subsection.A.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.3}Huidige toepassingen}{105}{subsection.A.2.3}%
+\contentsline {subsection}{\numberline {A.2.3}Huidige toepassingen}{104}{subsection.A.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2.4}Ontwikkelen met AI}{105}{subsection.A.2.4}%
+\contentsline {subsection}{\numberline {A.2.4}Ontwikkelen met AI}{104}{subsection.A.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{106}{section.A.3}%
+\contentsline {section}{\numberline {A.3}Methodologie}{105}{section.A.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwacht resultaat, conclusie}{108}{section.A.4}%
+\contentsline {section}{\numberline {A.4}Verwacht resultaat, conclusie}{107}{section.A.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Referentieteksten: Richtlijnen}{109}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Referentieteksten: Richtlijnen}{108}{appendix.B}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Lexicale vereenvoudiging}{111}{section.B.1}%
+\contentsline {section}{\numberline {B.1}Lexicale vereenvoudiging}{110}{section.B.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Syntactische vereenvoudiging}{111}{section.B.2}%
+\contentsline {section}{\numberline {B.2}Syntactische vereenvoudiging}{110}{section.B.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Structurele aanpassingen}{111}{section.B.3}%
+\contentsline {section}{\numberline {B.3}Structurele aanpassingen}{110}{section.B.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.4}Specifieke richtlijnen voor A1}{112}{section.B.4}%
+\contentsline {section}{\numberline {B.4}Specifieke richtlijnen voor A1}{111}{section.B.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.5}Specifieke richtlijnen voor A2}{113}{section.B.5}%
+\contentsline {section}{\numberline {B.5}Specifieke richtlijnen voor A2}{112}{section.B.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{115}{appendix*.79}%
+\contentsline {chapter}{Bibliografie}{114}{appendix*.78}%
 \contentsfinish 

@@ -2007,12 +2007,6 @@ INPUT img/vergelijking.png
 INPUT ./img/website-instellingen.png
 INPUT ./img/website-instellingen.png
 INPUT img/website-instellingen.png
-INPUT ./img/proto-lerarencomponent.png
-INPUT ./img/proto-lerarencomponent.png
-INPUT img/proto-lerarencomponent.png
-INPUT ./img/proto-melding.png
-INPUT ./img/proto-melding.png
-INPUT img/proto-melding.png
 INPUT ./img/proto-pos-tagging.png
 INPUT ./img/proto-pos-tagging.png
 INPUT img/proto-pos-tagging.png
@@ -2031,6 +2025,9 @@ INPUT img/proto-vraagstelling-2.png
 INPUT ./img/screenshot-prototype-word.png
 INPUT ./img/screenshot-prototype-word.png
 INPUT img/screenshot-prototype-word.png
+INPUT ./img/proto-lerarencomponent.png
+INPUT ./img/proto-lerarencomponent.png
+INPUT img/proto-lerarencomponent.png
 INPUT ./conclusie.tex
 INPUT ./conclusie.tex
 INPUT ./conclusie.tex
