@@ -1,15 +1,15 @@
 \chapter{\IfLanguageName{dutch}{Resultaten}{Results}}%
 \label{ch:resultaten}
 
-In dit hoofdstuk overloopt het onderzoek de resultaten uit de requirementsanalyse, vergelijking van taalmodellen en de ontwikkeling van \textit{Pentimentor}. Allereerst bespreekt het de resultaten van de requirementsanalyse door het moscow-schema op de uitgeteste tools toe te passen. Daarna staat het onderzoek stil bij de verkregen machinale en menselijke resultaten. Met deze resultaten kan het een geschikt taalmodel uitkiezen voor personaliseerbare ATS. Tot slot bespreekt het onderzoek het Pentimentor en vergelijkt het dit met vergelijkbare tools op basis van functionaliteiten en verschillende uitvoer. 
+In dit hoofdstuk overloopt het onderzoek de resultaten van alle onderzoeksmethoden. Deze omvatten de requirementsanalyse, de vergelijking van taalmodellen en de ontwikkeling van \textit{Pentimentor}. Allereerst bespreekt dit hoofdstuk de resultaten van de requirementsanalyse door het moscow-schema op de uitgeteste tools toe te passen. Daarna staat het onderzoek stil bij de verkregen machinale en menselijke resultaten bij de vergelijking van vier taalmodellen. Met deze resultaten kan het onderzoek een geschikt taalmodel voor personaliseerbare \textit{automatic text simplification} (ATS) uitkiezen. Tot slot bespreekt het onderzoek het Pentimentor en vergelijkt het dit met vergelijkbare tools op basis van functionaliteiten en verschillende uitvoer. 
 
 \medspace
 
-De resultaten bevatten enkel de belangrijkste \textit{listings}. De volledige code kan de lezer op deze \textit{GitHub}-repository\footnote{https://github.com/Dyashen/text-simplification-tool} terugvinden. Alle resultaten van de vergelijking slaat het onderzoek op in een csv-bestand. Hierop maakt het analyses om de machinale resultaten verder te interpreteren. Dit bestand kan de lezer terugvinden op de bijhorende GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob/main/STATISTIEKEN\_BACHELORPROEF\_ATS.csv}.
+Verder bevatten de resultaten enkel de belangrijkste grafieken. Alle resultaten slaat het onderzoek op in csv-bestanden. Deze bestanden kan de lezer terugvinden op de bijhorende GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob/main/STATISTIEKEN\_BACHELORPROEF\_ATS.csv}.
 
 \section{Ontbrekende functies bij AI-toepassingen}
 
-Tabel \ref{table:afgetoetste-criteria} toont de resultaten van de requirementsanalyse. De volgende subsecties gaan dieper in op de \textit{must-haves} en \textit{should-haves}.
+Tabel \ref{table:afgetoetste-criteria} toont de resultaten van de requirementsanalyse.
 
 \begin{table}[H]
 	\centering
@@ -46,13 +46,9 @@ Tabel \ref{table:afgetoetste-criteria} toont de resultaten van de requirementsan
 	\label{table:afgetoetste-criteria}
 \end{table}
 
-\subsubsection{Must-haves}
+\subsubsection{Experimenten op de must-have functionaliteiten}
 
-Niet alle toepassingen reiken personaliseerbare opmaakopties aan. Zo beschikken enkel E1, E2 en E3 over deze opties. Andere tools ontbreken dit en bieden een statische webweergave aan. Alle uitgeteste tools, met uitzondering op O1, O4 en O5, bieden een methode aan om eenduidig pdf-bestanden op te slaan. Deze bestanden ontbreken echter een duidelijke titelstructuur. Daarnaast kan de eindgebruiker de opmaak achteraf niet meer aanpassen. Geen toepassing biedt een functionaliteit aan om de vereenvoudigde versie als docx-bestand op te slaan. 
-
-\medspace
-
-Verder kunnen gebruikers met de geteste toepassingen wetenschappelijk artikelen als pdf opladen. Uitzonderlijk O4 en O5 laten dit niet toe en werken enkel met tekstinvoer. Verder toont figuur \ref{img:scispace-example} hoe gebruikers tekst kunnen samenvatten met toepassing O2. Dit toont hoe zij een tekst in het oorspronkelijk pdf-bestand kan selecteren, om deze vervolgens eenduidig te laten samenvatten. Tot slot kunnen eindgebruikers met O2 en O5 online wetenschappelijke artikelen via URL opladen.
+Allereerst wijzen de experimenten uit dat niet alle toepassingen de vermelde personaliseerbare opmaakopties aanreiken. Zo beschikken enkel E1, E2 en E3 over deze opties. Andere tools bieden enkel een statische webweergave aan. Verder bieden alle uitgeteste tools een methode aan om eenduidig pdf-bestanden op te slaan, met uitzondering op O1, O4 en O5. Deze uitvoerbestanden ontbreken echter een duidelijke titelstructuur en deze kunnen eindgebruikers niet eenduidig als word-bestand raadplegen. Verder kunnen gebruikers met de geteste toepassingen een wetenschappelijk artikel als pdf opladen. Uitzonderlijk laten O4 en O5 dit niet toe. Zij werken enkel met tekstinvoer. Figuur \ref{img:scispace-example} toont de werking van toepassing O2. Deze figuur toont hoe een eindgebruiker de tekst van het oorspronkelijk pdf-bestand kan selecteren. Vervolgens kunnen zij dit eenvoudig laten samenvatten door de toepassing. Tot slot kunnen zij uitzonderlijk met O2 en O5 online wetenschappelijke artikelen via URL opladen.
 
 \begin{figure}[H]
 	\includegraphics[width=\linewidth]{img/typeset-example.png}
@@ -60,7 +56,7 @@ Verder kunnen gebruikers met de geteste toepassingen wetenschappelijk artikelen 
 	\label{img:scispace-example}
 \end{figure}
 
-De \textit{must-haves} bij LS uit het aanpassen van moeilijke woorden in doorlopende tekst en woorden- en synoniemenlijsten kunnen genereren. Specifiek kunnen O1, O3, O4 en O5 een annotatie toevoegen aan moeilijke woorden, maar alleen als er geen geschikte synoniemen beschikbaar zijn. Figuur \ref{img:simplish-output} illustreert hoe O1 een extra definitie kan geven als voetnoot. Hoewel dit het taalniveau voor de vereenvoudiging niet kan aanpassen, laat figuur \ref{img:scholarcy} zien hoe O3 probeert om deze inschatting te maken met een \textit{rewordifying level}. Bovendien kunnen O4 en O5 de doelgroep aanpassen afhankelijk van de \textit{prompts}. Andere uitgeteste tools tonen niet hoe zij de doelgroepinschatting maken. Geen van deze stelt gebruikers in staat om een woordenlijst mee te geven met moeilijke woorden.
+Verder moeten toepassingen een moeilijk woord in een doorlopende tekst kunnen aanpassen. Specifiek kunnen O1, O3, O4 en O5 een annotatie toevoegen aan moeilijke woorden, maar dit gebeurt alleen als er daarvoor geen geschikt synoniem beschikbaar is. Zo illustreert figuur \ref{img:simplish-output} hoe O1 een extra definitie als annotatie kan geven. Hoewel dit het taalniveau niet kan aanpassen, toch laat figuur \ref{img:scholarcy} zien hoe O3 dit probeert in te schatten met een \textit{rewordifying level}. Bovendien kunnen O4 en O5 de doelgroep aanpassen afhankelijk van de \textit{prompts}. Andere uitgeteste tools tonen niet hoe zij de doelgroepinschatting maken. Geen tool laat gebruikers toe om een vooraf opgestelde woordenlijst met moeilijke woorden mee te geven waarop de tool zich kan baseren.
 
 \begin{figure}[H]
 	\includegraphics[width=\linewidth]{img/simplish-output.png}
@@ -68,15 +64,19 @@ De \textit{must-haves} bij LS uit het aanpassen van moeilijke woorden in doorlop
 	\label{img:simplish-output}
 \end{figure}
 
-Woorden- en synoniemenlijsten zijn mogelijk bij E1, E2, E3 en O1. Hier kunnen gebruikers handmatig moeilijke woorden selecteren die het systeem moet vereenvoudigen of een definitie moet ophalen. Enkel O1 geeft het woordsoort hierin mee, zoals adjectieven of werkwoord. Gebruikers kunnen niet bepalen waarvan de definitie moet komen, bijvoorbeeld een online woordenboek. Uitzonderlijk laat E1 dit wel toe.
+Daarnaast kunnen toepassingen ook handmatig een woordenlijst maken. Zo kunnen E1, E2, E3 en O1 een woorden- of synoniemenlijst opstellen. Bij deze toepassingen selecteren gebruikers handmatig moeilijke woorden. Die moet de toepassing vereenvoudigen of een definitie ervan ophalen. Uitzonderlijk O1 geeft de woordsoort mee. Verder kunnen gebruikers niet bepalen uit welke bron de definitie moet komen, bijvoorbeeld een online woordenboek. Enkel E1 laat dit toe.
 
 \medspace
 
-E1, E2 en E3 kunnen geen SS-technieken toepassen op de oorspronkelijke tekst. Overige uitgeteste tools kunnen zinnen inkorten door ze te splitsen. Geen van de uitgeteste tools is in staat om automatisch de tekst naar de actieve vorm te schrijven. O4 en O5 kunnen zinnen omvormen naar de actieve stem, maar enkel als de tool een extra voornaamwoord of onderwerp in de prompt meekrijgt. Tot slot slagen O2, O4 en O5 erin om de tekst te herschrijven als opsomming. O2 doet dit automatisch. O4 en O5 moeten deze vraag expliciet in hun prompt krijgen. De andere uitgeteste tools kunnen dit niet automatisch doen. 
+Verder kunnen E1, E2 en E3 geen syntactische vereenvoudiging toepassen op de oorspronkelijke tekst. Overige uitgeteste tools kunnen zinnen inkorten door deze te splitsen. Geen van de uitgeteste tools kunnen de geselecteerde tekst automatisch naar een actieve vorm schrijven. In tegenstelling tot O4 en O5 die dit wel kunnen doen, maar enkel als de tool een onderwerp in de prompt meekrijgt. 
+
+\medspace
+
+Tot slot slagen O2, O4 en O5 erin om de tekst te herschrijven als opsomming. Zo doet O2 dit automatisch, vergeleken met O4 en O5 die deze vraag expliciet in hun prompt moeten krijgen. De andere uitgeteste tools kunnen dit niet automatisch doen. 
 
 \subsubsection{Should-haves}
 
-O1 en O3 tonen automatisch leesgraadscores na de ATS, zoals weergegeven in figuren \ref{img:simplish-output} en \ref{img:scholarcy}. Deze tonen het aantal zinnen en complexe en lange woorden voor het oorspronkelijk en vereenvoudigde artikel. Andere tools, inclusief de verwante prompts van O4 en O5, tonen dit niet.
+Allereerst tonen O1 en O3 automatisch leesgraadmetrieken nadat die een vereenvoudiging of samenvatting maken van de oorspronkelijke tekst. Zo tonen figuren \ref{img:simplish-output} en \ref{img:scholarcy} een voorbeeld van deze analyse. Deze analyse toont het aantal zinnen en complexe/lange woorden voor zowel het oorspronkelijk als het vereenvoudigde artikel. Andere uitgeteste tools tonen dit niet.
 
 \begin{figure}[H]
 	\includegraphics[width=\linewidth]{img/scholarcy-attempt.png}
@@ -84,15 +84,31 @@ O1 en O3 tonen automatisch leesgraadscores na de ATS, zoals weergegeven in figur
 	\label{img:scholarcy}
 \end{figure}
 
-Het onderzoek kan niet afleiden of toepassingen OCR-technieken gebruiken. Wel gebruikt O2 een andere inleestechniek dan de andere tools. Zo kan O2 alle uitgeteste wetenschappelijke artikelen inlezen. De gebruiker markeert enkel aanpassingen in het artikel, terwijl de uitvoer rechts in beeld komt. Daarmee kan de gebruiker de aanpassing niet afleiden uit de oorspronkelijke tekst, in tegenstelling tot O1 en O3. Deze tonen wel de verschillen tussen het oorspronkelijk en het vereenvoudigd artikel aan de eindgebruiker.
+Verder kan het onderzoek niet afleiden of de uitgeteste tools een OCR-techniek gebruiken. Wel gebruikt O2 een andere inleestechniek dan de andere tools. Zo kan het de twee gebruikte wetenschappelijke artikelen inlezen met een identieke lay-out als het oorspronkelijk artikel. Daarna markeert de gebruiker enkel aanpassingen in het artikel, terwijl alle uitvoer van het taalmodel rechts in beeld komt. Echter, de gebruiker kan deze aanpassing niet afleiden uit de oorspronkelijke tekst, in tegenstelling tot O1 en O3. Die tonen wel de verschillen tussen het oorspronkelijk en het vereenvoudigd artikel aan de eindgebruiker.
 
 \subsubsection{Could-haves}
 
-Geteste tools beschikken over gebruikerfeedbacktechnieken in de vorm van \textit{pop-ups}, zoals bij een tekstaanpassing. Uitzonderlijk O4 en O5 doen dit niet. Vervolgens zijn O4 en O5 de enige geteste tools die tekst in een tabelformaat kunnen schrijven, maar enkel na een expliciete prompt. Enkel O4 en O5 kunnen tekst interpreteren en deze in een tabelvorm gieten. De systemen gebruiken een 2 op 2 tabel, maar de gebruiker kan het aantal kolommen en rijen parameteriseren in de prompt. Tot slot kan geen uitgeteste tool automatisch moeilijke woorden of vakterminologie extraheren uit een tekst. Uitzonderlijk O4 en O5 kunnen dit wel met een expliciete prompt. O1, O2, O3, O4 en O5 kunnen extraherende en abstraherende samenvattingen maken van de oorspronkelijke tekst. E1, E2 en E3 kunnen een extraherende samenvatting van de tekst maken, maar enkel na een handmatige selectie van de zinnen. Enkel O4 en O5 kunnen een gekregen tekst herschrijven. Tot slot kunnen O1, O2, O4 en O5 onregelmatige werkwoorden wegwerken. Andere toepassingen kunnen dit niet uitvoeren.
+Verschillende geteste tools maken gebruik van gebruikerfeedbacktechnieken in de vorm van \textit{pop-ups}, zoals bij een aanpassing van de tekst. O4 en O5 vormen hierop een uitzondering, omdat zij deze technieken niet bevatten. Uitzonderlijk O4 en O5 kunnen tekst omzetten naar een tabelformaat, maar dit gebeurt alleen na een expliciete prompt. Ze hebben de mogelijkheid om tekst te interpreteren en deze in een tabel te gieten. Zo maken ze gebruik van een 2 op 2 tabel, maar de gebruiker kan het aantal kolommen en rijen instellen via de prompt.
+
+\medspace
+
+Geen van de geteste tools kan automatisch moeilijke woorden of vakterminologie extraheren uit een tekst, behalve O4 en O5, die dit wel kunnen met behulp van een expliciete prompt.
+
+\medspace
+
+Wat betreft samenvattingen kunnen O1, O2, O3, O4 en O5 zowel extraherende als abstraherende samenvattingen maken van de oorspronkelijke tekst. E1, E2 en E3 kunnen alleen een extraherende samenvatting maken, maar dit gebeurt pas na een handmatige selectie van de zinnen.
+
+\medspace
+
+Alleen O4 en O5 hebben de mogelijkheid om een gegeven tekst te herschrijven. Dezelfde prompt kan leiden tot een ontelbaar aantal resultaten. Alle andere toepassingen slagen hier niet in en alle versies van een herschreven artikel leiden tot hetzelfde resultaat. Tot slot kunnen enkel O1, O2, O4 en O5 wel onregelmatige werkwoorden corrigeren.
 
 \subsubsection{Wont-haves}
 
-O4, O5 beschikken over een mobiele versie. O1, O2 en O3 kunnen gebruikers via een mobiel apparaat bekijken, maar leent geen speciale interface voor deze gebruikers toe. E1, E2 en E3 bieden geen mobiele versie aan. Enkel E1, E2 en E3 beschikken over luistersoftware. Browsers beschikken over ingebouwde luistertools, maar geen van de geteste tools beschikt over een zelfgemaakte of personaliseerbare \textit{text-to-speech} techniek. Tot slot beschikken de geteste toepassingen over geen integratie met andere spelcheckers. De browserextensie van Grammarly werkt bij zowel O1, O2, O3, O4 en O5.
+Op het vlak van toegankelijkheid beschikken O4 en O5 over een mobiele versie. Daarnaast kan een gebruiker O1, O2 en O3 wel via een mobiel apparaat bekijken, maar deze lenen geen speciale interface toe. Vervolgens bieden E1, E2 en E3 geen mobiele versie aan. 
+
+\medspace
+
+Daarnaast beschikken enkel E1, E2 en E3 over luistersoftware. Hoewel browsers over ingebouwde luistertools beschikken, toch bieden de andere tools geen personaliseerbare \textit{text-to-speech} techniek aan. Tot slot beschikken de geteste toepassingen over geen integratie met andere spelcheckers. Wel werkt de browserextensie van \textit{Grammarly} bij zowel O1, O2, O3, O4 en O5. 
 
 \section{Geschikte taalmodel voor gepersonaliseerde tekstvereenvoudiging met ATS}
 
@@ -314,8 +330,16 @@ Eindgebruikers kunnen opmaakopties van Pentimentor aanpassen naargelang hun voor
 	\label{img:screenshot-docx-attempt}
 \end{figure}
 
-Verder beschikt Pentimentor over enkele \textit{should-haves}. Eindgebruikers kunnen op een eenduidige manier tekst markeren. Pentimentor voegt annotaties aan de gemarkeerde tekst toe of past de tekst aan door een \textit{in-line} definitie toe te voegen. Verder kan het abstraherende samenvattingen genereren in de vorm van opsommingen, tabellen of doorlopende tekst. Figuur \ref{img:screenshot-docx-attempt} toont een gegenereerde samenvatting in de vorm van een opsomming. Vervolgens geeft Pentimentor een vast meldingscherm wanneer het iets van de gebruiker verwacht, zoals getoond in figuur \ref{img:step-1-proto-vraagstelling}. Daarnaast geeft het ook waarschuwingen in de formulieren aan de gebruiker, zoals weergegeven in figuur \ref{img:proto-lerarencomponent}. Tot slot is er geen functionaliteit om automatisch een woordenlijst met moeilijke woorden of vakjargon aan te maken. Tot slot ontbreekt Pentimentor analytische functionaliteiten. Zo geeft het geen tekstanalyse aan de eindgebruiker. 
+Verder bevat Pentimentor enkele \textit{should-haves}. Allereerst kunnen gebruikers een tekst op een duidelijke manier markeren. Hiermee kunnen zij annotaties toevoegen, de tekst aanpassen door \textit{in-line} definities toe te voegen. Bovendien kan Pentimentor abstraherende samenvattingen genereren in verschillende formaten, zoals opsommingen, tabellen of doorlopende tekst. Zo toont figuur \ref{img:screenshot-docx-attempt} een voorbeeld van een gegenereerde opsommingssamenvatting.
 
 \medspace
 
-Tot slot bevat Pentimentor geen \textit{wont-haves}. Zo ontbreekt het een luistercomponent waarmee scholieren de vereenvoudigde tekst kunnen beluisteren. Deze functionaliteit is wel aanwezig bij E1, E2 en E3. Andere uitgeteste tools beschikken hier ook niet over. Tot slot kunnen gebruikers Pentimentor enkel in een lokale omgeving met Docker raadplegen. Andere uitgeteste toepassingen vereisen geen installatie en kunnen gebruikers online raadplegen. Daarnaast is Pentimentor niet beschikbaar als browserextensie, wat O5 als enige toepassing wel kan.
+Pentimentor zorgt voor een duidelijke gebruikerservaring door meldingsschermen te tonen wanneer het iets van de gebruiker verwacht. Figuur \ref{img:step-1-proto-vraagstelling} illustreert deze werking. Bovendien toont het waarschuwingen in formulieren, zoals getoond in figuur \ref{img:proto-lerarencomponent}.
+
+\medspace
+
+Echter voldoet Pentimentor niet aan alle \textit{should-haves}. Zo ontbreekt de mogelijkheid om automatisch een woordenlijst met moeilijke woorden of vakjargon te genereren. Daarnaast mist Pentimentor analytische functionaliteiten, zoals het tonen van tekstanalyse aan de eindgebruiker.
+
+\medspace
+
+Tot slot bevat Pentimentor geen \textit{wont-haves}. Zo ontbreekt het een luistercomponent waarmee scholieren de vereenvoudigde tekst kunnen beluisteren. Deze functionaliteit is wel aanwezig bij E1, E2 en E3. Andere uitgeteste tools beschikken hier ook niet over. Bovendien kunnen gebruikers Pentimentor alleen raadplegen in een lokale omgeving met Docker, terwijl zij wel andere geteste toepassingen zonder installatie kunnen raadplegen. Daarnaast heeft Pentimentor geen browserextensie, terwijl O5 dit als enige toepassing wel kan.
