@@ -74,6 +74,16 @@ def upload():
     file.save(f'uploads/{filename}')
     return redirect('/')
 
+@app.route('/tryout-article',methods=['GET'])
+def tryout():
+    return render_template(
+        'read.html', 
+        article=[
+            "title:Wetenschappelijke teksten versus populair-wetenschappelijke teksten: de voornaamste verschilpunten.",
+            "Een populairwetenschappelijke tekst heeft een opbouw die gelijkt op een bovenpuntsdriehoek. Dit betekent dat de centrale boodschap eerst wordt gegeven. Naarmate de tekst vordert wordt die centrale boodschap toegelicht en met gerelateerde aspecten onderbouwd.",
+            "Een wetenschappelijke tekst heeft een opbouw gelijkend op een benedenpuntsdriehoek. De abstract en de inleiding buiten beschouwing gelaten, begint een wetenschappelijke tekst met eerder gepubliceerde wetenschappelijke concepten en resultaten, die nodig zijn om de bijdrage(n) in deze tekst te kunnen begrijpen. Vervolgens introduceert de tekst nieuwe concepten, methodes en resultaten die hierop voortbouwen. Uiteindelijk komt de tekst tot de centrale boodschap: de nieuwe ontwikkeling waar de tekst over rapporteert. De tekst sluit af met conclusies en/of een discussie en eventueel een bespreking van gerelateerde resultaten uit de literatuur. "
+        ]
+    )
 
 @app.route('/read-article', methods=['GET'])
 def read():

@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../static/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../static/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-</head>
-<body>
+    <body>
 
-    <div class="article-left">
-        {% for paragraph in article %}
-        {% if paragraph.startswith('title:') %}
-        <h1>{{ paragraph.replace('title:', '') }}</h1>
-        {% else %}
-        <p>{{ paragraph }}</p>
-        {% endif %}
-        {% endfor %}
+        <div class="container">
 
-    </div>
+            <div class="article-left">
+                {% for paragraph in article %}
+                {% if paragraph.startswith('title:') %}
+                <h1>{{ paragraph.replace('title:', '') }}</h1>
+                {% else %}
+                <p>{{ paragraph }}</p>
+                {% endif %}
+                {% endfor %}
+            </div>
 
-    <div class="article-right">
+            <div class="article-right">
+                {% for paragraph in article %}
+                {% if paragraph.startswith('title:') %}
+                <h1>{{ paragraph.replace('title:', '') }}</h1>
+                {% else %}
+                <p>{{ paragraph }}</p>
+                {% endif %}
+                {% endfor %}
+            </div>
 
-    </div>
+        </div>
 
-    <strong>{{ error }}</strong>
-</body>
+        <strong>{{ error }}</strong>
+    </body>
+
+<script type="text/javascript" src={{ url_for('static', filename='ReadingScripts.js' )}}></script>
+
 </html>
