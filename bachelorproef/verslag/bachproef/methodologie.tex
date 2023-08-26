@@ -702,9 +702,9 @@ lp.draw_box(image, text_blocks, box_width=3, show_element_id=True)
 	
 \end{lstlisting}
 
-Nu beschikt Pentimentor over een array van afbeeldingen. Vervolgens moet het alle tekst uit deze blokken kunnen extraheren. Hiervoor raadt de documentatie van Layoutparser een OCR-methode aan. Listing \ref{code:text-collecting} illustreert dit. Zo gebruikt Pentimentor de Python-bibliotheek \textit{Tesseract} om de titels en tekst te extraheren uit de afbeeldingen. Omdat het systeem niet bijhoudt wat titel of tekstblok is, voegt het systeem een string toe aan iedere tekstblok. Zo resulteert deze functie in een array met alle teruggevonden titel- en tekstblokken.
+Nu beschikt Pentimentor over een array van afbeeldingen. Vervolgens moet het alle tekst uit deze blokken kunnen extraheren. Hiervoor raadt de documentatie van Layoutparser een OCR-methode aan. Listing \ref{listing:text-collecting} illustreert dit. Zo gebruikt Pentimentor de Python-bibliotheek \textit{Tesseract} om de titels en tekst te extraheren uit de afbeeldingen. Omdat het systeem niet bijhoudt wat titel of tekstblok is, voegt het systeem een string toe aan iedere tekstblok. Zo resulteert deze functie in een array met alle teruggevonden titel- en tekstblokken.
 
-\begin{lstlisting}[language=Python, caption={Tekst extraheren uit de geparsete inhoud.}, label={code:text-collecting}}
+\begin{lstlisting}[language=Python, caption={Tekst extraheren uit de geparsete inhoud.}, label={listing:text-collecting}]
 language = language
 ocr_agent = lp.TesseractAgent(languages=language)
 
@@ -1130,7 +1130,7 @@ Om zinnen in de doorlopende tekst te verwijderen, moet de frontend over de nodig
 Zinnen baseren op een zelfgemaakte prompt moet de \textit{backend} echter wel toevoegen. Zo gebruikt de backend de functie in listing \ref{code:custom-prompt} om een \textit{custom prompt} te verwerken. Deze functie stuurt de oorspronkelijke prompt, samen met de context, door naar de GPT-3 API.
 
 \begin{lstlisting}[language=python, caption={Een API-call sturen naar GPT-3 met een custom prompt.}, label={code:custom-prompt}]
-def personalised_simplify_w_prompt(self, sentences, personalisation):
+def personalised_simplify_with_prompt(self, sentences, personalisation):
 	try:
 		result = openai.Completion.create(
 			prompt=personalisation,
@@ -1147,9 +1147,34 @@ def personalised_simplify_w_prompt(self, sentences, personalisation):
 
 % 4.
 
-Vervolgens heeft de backend als een functie die een woord opzoekt met GPT-3. Deze functie staat beschreven in listing \ref{listing:gpt-look-up-word} en de backend kan deze functie zonder problemen hergebruiken. Tot slot hoeft de \textit{backend} geen nieuwe functie te krijgen om woordmarkering af te handelen.
+Tot slot heeft de backend als een functie die een woord opzoekt met GPT-3. Deze functie staat beschreven in listing \ref{listing:gpt-look-up-word} en de backend kan deze functie zonder problemen hergebruiken. Tot slot hoeft de \textit{backend} geen nieuwe functie te krijgen om woordmarkering af te handelen.
+
+\begin{lstlisting}[language=python, caption={Een API-call sturen naar GPT-3 om de definitie van een woord op te halen.}, label={listing:gpt-look-up-word}]
+def look_up_word_gpt(self, word, context, lemma, pos):
+	try:
+		prompt = f"""
+		Geef een eenvoudige definitie:
+		woord: {word} /// lemma: {lemma} /// pos: {pos} /// context: {context}
+		///
+		"""
+	
+		result = openai.Completion.create(
+				model=COMPLETIONS_MODEL,
+				prompt=prompt,
+				temperature=0,
+				max_tokens=80,
+				top_p=0.9,
+				stream=False
+				)["choices"][0]["text"].strip(" \n")   
+		
+		return result, word, prompt
+	except Exception as e:
+		return 'error', str(e), str(e)
+\end{lstlisting}
 
 \subsubsection{Frontend implementatie voor ATS functionaliteiten}
+
+Backend logica kan voorlopig enkel via commandline worden geraadpleegd. Zo moeten deze functies ook op een eenduidige manier beschikbaar zijn voor eindgebruikers. Daarom maakt Pentimentor gebruik van Javascript om de \textit{backend} logica met eenduidige handelingen te kunnen aanspreken. Dit gebeurt op verschillende manieren.
 
 % 1.
 
