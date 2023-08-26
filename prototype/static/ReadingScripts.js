@@ -12,8 +12,6 @@ function convertPTag(pTag, count) {
     
     pTag.parentNode.replaceChild(container, pTag);
   }
-  
-  
 
   window.addEventListener('load', function() {
     let pTagsLeft = document.querySelectorAll('.article-left p');
@@ -35,15 +33,40 @@ function convertPTag(pTag, count) {
 
 window.onload = function() {
 
+  /*
+    Woorden uit woordenlijst onderlijnen
+  */
+    Object.keys(localStorage).forEach(function(key) {
+      const spans = document.getElementsByTagName('span');
+      for (let i = 0; i < spans.length; i++) {
+          const span = spans[i];
+          if (span.innerText === key) {
+            span.className = 'markedWord'
+          }
+      }
+    });
+
+  /*
+    Woord + definities tonen
+  */
+    const markedWords = document.querySelectorAll('.markedWord');
+    markedWords.forEach(word => {
+        word.addEventListener('click', () => {
+            alert(word);
+        });
+    });
+    
+
   function addToLocalstorage(event, definition) {
-    const key = event.target.innerHTML;
+    const key = event.target.innerHTML;    
     const existingValue = localStorage.getItem(key);
+    
     if (existingValue) {
         const definitions = JSON.parse(existingValue);
         definitions.push(definition);
         localStorage.setItem(key, JSON.stringify(definitions));
     } else {
-        localStorage.setItem(key, JSON.stringify([definition]));
+        localStorage.setItem(key, definition);
     }
   }
 
@@ -64,12 +87,8 @@ window.onload = function() {
   function lookInLocalstorage(event){
     const key = event.target.innerHTML;
     const value = localStorage.getItem(key);
-    if(value){
-      showPentimento(event, value)
-    } else {
-      addToLocalstorage(event, getDefinition(event));
-      lookInLocalstorage(event);
-    }
+    addToLocalstorage(event, getDefinition(event));
+    showPentimento(event, value);
   }
 
   const spanElements = document.querySelectorAll('span');
@@ -97,11 +116,53 @@ window.onload = function() {
   }
 
   function getRewrittenText(text){
-    console.log(text);
     return text;
   }
 
-
+    /*
+    Woordenboek tonen of verbergen
+  */
+    const showDictionaryButton = document.querySelector('.show');
+    const stopShowingDictionaryButton = document.querySelector('.dontShow');
+    if(showDictionaryButton){
+      showDictionaryButton.addEventListener('click', () => {
+        const table = document.createElement('table');
+        const tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+    
+        const sortedKeys = Object.keys(localStorage).sort();
+        for (let i = 0; i < sortedKeys.length; i++) {
+            const tr = document.createElement('tr');
+            const key = sortedKeys[i];
+            const value = localStorage.getItem(key);
+            const td1 = document.createElement('td');
+            td1.textContent = key;
+            tr.appendChild(td1);
+            const td2 = document.createElement('td');
+            td2.textContent = value;
+            tr.appendChild(td2);
+            tbody.appendChild(tr);
+        }
+    
+        document.body.appendChild(table);
+        showDictionaryButton.style.display = 'none';
+        stopShowingDictionaryButton.style.display = 'inline'
+      })
+    }
+    
+    
+    if(stopShowingDictionaryButton){
+      stopShowingDictionaryButton.addEventListener('click', () => {
+        const table = document.querySelector('table');
+        table.remove();
+        showDictionaryButton.style.display = 'inline';
+        stopShowingDictionaryButton.style.display = 'none';
+      })
+    }
+    
+  /*
+    Gemarkeerde tekst herschrijven
+  */
   const rewriteButton = document.querySelector('.rewrite');
   rewriteButton.addEventListener('click', () => {
     const selection = window.getSelection();
@@ -121,7 +182,6 @@ window.onload = function() {
         }
 
         const endRange = rangeDivs[1]
-
         const int_text = startRange.innerText + endRange.innerText;
 
         const rightArticle = document.querySelector('.article-right');

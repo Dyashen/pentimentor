@@ -54,6 +54,14 @@ p{
 }
 
 .fixed-buttons{
-    top:            10px;
-    position:       fixed;
+    background-color: whitesmoke;
+    top:                10px;
+    position:           fixed;
+    padding:            1%;
+    margin: auto;
+}
+
+.article-left .markedWord{
+    background-color:   blueviolet;
+    color:              whitesmoke;
 }
