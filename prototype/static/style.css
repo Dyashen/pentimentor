@@ -1,32 +1,59 @@
 body{
-    width:      100%;
-    margin:     auto;
-    font-family: Arial, Helvetica, sans-serif;
-    word-spacing: 0.5cm;
+    padding-top:    4%;
+    width:          80%;
+    margin:         auto;
+    font-family:    Arial, Helvetica, sans-serif;
+    word-spacing:   0.5cm;
 }
 
 .container{
-    border:     3px solid;
-    padding:    1%;
-    margin:     auto;
+    border:         3px solid;
+    padding:        1%;
+    margin:         1%;
+    text-align:     left;
+}
+
+.container:after {
+    content:        "";
+    display:        table;
+    clear:          both;
+}
+
+.container h1{
+    font-family:    'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container fieldset{
+    display:        inline-block;
+    vertical-align: top;
+    border:         none;
 }
 
 .article-left, .article-right{
-    width:      35%;
-    margin:     3%;
-    padding:    3%;
+    width:          35%;
+    margin:         3%;
+    padding:        3%;
 }
 
 .article-left{
-    float:      left;
+    float:          left;
     background-color:antiquewhite;
 }
 
 .article-right{
-    float:      left;
+    float:          left;
     background-color:aliceblue;
 }
 
+.article-left div, .article-right div{
+    margin:         5%;
+}
+
 p{
-    margin: 2cm;
+    margin:         2cm;
+}
+
+.fixed-buttons{
+    top:            10px;
+    position:       fixed;
 }

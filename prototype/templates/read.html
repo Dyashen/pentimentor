@@ -35,7 +35,13 @@
         </div>
 
         <strong>{{ error }}</strong>
-        <button class="rewrite">Test</button>
+
+        <div class="fixed-buttons">
+            <button class="rewrite">    Tekst herschrijven                              </button>
+            <button class="look_up">    Woord opzoeken en toevoegen aan woordenboek     </button>
+            <button class="show">       Woordenboek tonen                               </button>
+        </div>
+        
     </body>
 
 <script type="text/javascript" src={{ url_for('static', filename='ReadingScripts.js' )}}></script>
