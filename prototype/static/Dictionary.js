@@ -21,5 +21,5 @@ document.body.appendChild(table);
 function emptyDictionary(){
     localStorage.clear();
     const table = document.body.querySelector('table');
-    table.clear();
+    if (table){table.remove();}
 }

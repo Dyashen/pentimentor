@@ -1,53 +1,84 @@
 body {
-    padding-top: 4%;
-    width: 100%;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    word-spacing: 0.5cm;
+    padding-top:        4%;
+    width:              100%;
+    margin:             auto;
+    font-family:        Arial, Helvetica, sans-serif;
+    text-align:         left;
 }
 
 .container {
-    padding: 1%;
-    margin: 1%;
-    text-align: left;
-    margin: auto;
+    padding:            1%;
+    text-align:         left;
+    margin:             auto;
 }
 
 .container:after {
-    content: "";
-    display: table;
-    clear: both;
+    content:            "";
+    display:            table;
+    clear:              both;
 }
 
-.container h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.container h1,
+.container h2 {
+    font-family:        'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:         center;
 }
 
 .container fieldset {
-    display: inline-table;
-    vertical-align: top;
-    border: none;
-    width: 40%;
+    text-align:         center;
+    vertical-align:     top;
+    border:             none;
+    margin:             3%;
+    background-color: aliceblue;
+    border:             solid 1px black;
 }
 
 .container fieldset table {
-    border: 1%;
+    margin:             auto;
+    width:              50%;
+    border:             1%;
+}
+
+.container fieldset table td:first-child{
+    border:             solid black 1px;
+}
+
+.container fieldset table td:first-child:hover{
+    background-color:   rgb(201, 230, 255);
+}
+
+.container fieldset table td a{
+    text-decoration:    none;
+}
+
+.container fieldset table td a:visited{
+    font-weight:        bold;
+}
+
+.container fieldset form input{
+    margin: 1%;
 }
 
 .article-left,
 .article-right {
-    width: 35%;
-    margin: 3%;
-    padding: 3%;
+    width:              40%;
+    margin:             2%;
+    padding:            2%;
 }
 
 .article-left {
-    float: left;
-    background-color: antiquewhite;
+    float:              left;
+    background-color:   antiquewhite;
+}
+
+.article-left span:hover{
+    cursor:             pointer;
+    background-color:   burlywood;
+    font-weight:        bolder;
 }
 
 .article-right {
-    float: left;
+    float:              left;
     background-color: aliceblue;
 }
 
@@ -58,6 +89,10 @@ body {
 
 p {
     margin: 2cm;
+}
+
+a {
+
 }
 
 .fixed-buttons {

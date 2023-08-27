@@ -57,10 +57,10 @@ window.onload = function() {
     });
     
 
-  function addToLocalstorage(event, definition) {
+  async function addToLocalstorage(event, definition) {
     const key = event.target.innerHTML;    
     const existingValue = localStorage.getItem(key);
-    
+
     if (existingValue) {
         const definitions = JSON.parse(existingValue);
         definitions.push(definition);
@@ -79,16 +79,24 @@ window.onload = function() {
   /*
     GPT-3 API hier toevoegen
   */
-  function getDefinition(event) {
-    const api_key = 'test';
-    return api_key
+  async function getDefinition(event) {
+    const response = await fetch(`http://localhost:5000/get-definition`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ word: event.target.innerText, sentence: event.target.innerText }),
+    });
+    
+    result = await response.json();
+    console.log(result.simplified);
+    return result.simplified;
   }
 
-  function lookInLocalstorage(event){
+  async function lookInLocalstorage(event){
     const key = event.target.innerHTML;
     const value = localStorage.getItem(key);
-    addToLocalstorage(event, getDefinition(event));
-    showPentimento(event, value);
+    const definition = await getDefinition(event);
+    addToLocalstorage(event, definition);
+    showPentimento(event, definition);
   }
 
   const spanElements = document.querySelectorAll('span');
@@ -111,12 +119,21 @@ window.onload = function() {
     return([startDiv, endDiv]);
   }
 
-  function changeBackgroundMarkedText(divs){
+  async function getRewrittenText(type, text, startRange){
+    const response = await fetch(`http://localhost:5000/get-simplification`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: type, text: text }),
+    });
+    
+    result = await response.json();
+    console.log(result.simplified);
 
-  }
-
-  function getRewrittenText(type, text){
-    return String(type) + String(text);
+    const rightArticle = document.querySelector('.article-right');
+    var childElements = rightArticle.querySelectorAll('.' + startRange.className);
+    childElements[0].innerText = result.simplified;
+    
+    return;
   }
 
   /*
@@ -197,9 +214,25 @@ window.onload = function() {
         const endRange = rangeDivs[1]
         const int_text = startRange.innerText + endRange.innerText;
 
-        const rightArticle = document.querySelector('.article-right');
-        var childElements = rightArticle.querySelectorAll('.' + startRange.className);
-        childElements[0].innerText = getRewrittenText(String(typeVereenvoudiging), String(int_text))   
+        getRewrittenText(typeVereenvoudiging, int_text, startRange); 
     }
   });
 };
+
+
+/*
+  Webpagina doorsturen
+*/
+async function sendHTMLPageToBackend(){
+  var articleRightElement = document.querySelector('.article-right');
+  var serializer = new XMLSerializer();
+  var htmlString = serializer.serializeToString(articleRightElement);
+  
+  const response = await fetch(`http://localhost:5000/convert-to-word`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ html: htmlString }),
+  });
+
+  //result = await response.json();
+}

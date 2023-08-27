@@ -112,5 +112,21 @@ def read():
     else:
         return render_template('read.html', article="", error="Er ging iets fout!")
 
+
+
+@app.route('/get-simplification', methods=['POST'])
+def get_simplification():
+    return jsonify(simplified = 'deze test werkt :)')
+
+
+@app.route('/get-definition', methods=['POST'])
+def get_definition():
+    return jsonify(simplified = 'deze definitie krijgt u!')
+
+@app.route('/convert-to-word', methods=['POST'])
+def convert_to_word():
+    html_page = request.json['html']
+    return jsonify(html_page = html_page)
+
 if __name__ == "__main__":
     app.run()

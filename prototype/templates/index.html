@@ -27,14 +27,14 @@
             <table>
                 <tr>
                     <th>Artikelnaam</th>
-                    <th>Link</th>
+                    <th>Extra info</th>
                 </tr>
                 {% for file in files %}
                 {% if file.endswith('.pdf') %}
                 <tr>
                     {% set name, ext = file.rsplit('.', 1) %}
-                    <td>{{name}}</td>
-                    <td><a href="/read-article?article={{ file }}">klik hier</a></td>
+                    <td><a href="/read-article?article={{ file }}">{{name}}</a></td>
+                    <td>...</td>
                 </tr>
                 {% endif %}
                 {% endfor %}
@@ -43,9 +43,9 @@
         </fieldset>
 
         <fieldset>
-            <h2>Nieuw wetenschappelijk artikel opladen:</h3>
+            <h2>Nieuw wetenschappelijk artikel opladen</h3>
                 <form action="/upload" method="POST" enctype="multipart/form-data">
-                    <input type="file" id="pdf" name="pdf">
+                    <input type="file" id="pdf" name="pdf"><br>
                     <input type="submit" value="Upload artikel">
                 </form>
         </fieldset>
