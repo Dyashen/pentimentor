@@ -7,4 +7,6 @@ docker rm text-application-prototype
 docker rmi text-app
 
 docker build -t text-app .
-docker run --name text-application-prototype --network webapp_simplification -d -p 5000:5000 text-app
+docker run --name text-application-prototype -d -p 5000:5000 text-app
+
+pause

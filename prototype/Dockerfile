@@ -1,13 +1,13 @@
-FROM ubuntu:20.4
+FROM ubuntu
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
-
 RUN apt-get update
 
-RUN apt-get install -y git \ 
-    && apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils
+RUN apt-get install -y git python3-pip \ 
+    && apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils 
+
+RUN pip install --upgrade pip
 
 RUN pip install layoutparser \
     && pip install "layoutparser[effdet]" layoutparser torchvision && pip install "git+https://github.com/facebookresearch/detectron2.git@v0.5#egg=detectron2" \
