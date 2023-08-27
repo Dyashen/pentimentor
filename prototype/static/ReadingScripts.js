@@ -115,11 +115,11 @@ window.onload = function() {
 
   }
 
-  function getRewrittenText(text){
-    return text;
+  function getRewrittenText(type, text){
+    return String(type) + String(text);
   }
 
-    /*
+  /*
     Woordenboek tonen of verbergen
   */
     const showDictionaryButton = document.querySelector('.show');
@@ -129,7 +129,11 @@ window.onload = function() {
         const table = document.createElement('table');
         const tbody = document.createElement('tbody');
         table.appendChild(tbody);
-    
+        
+
+        /*
+          Alfabetische sortering
+        */
         const sortedKeys = Object.keys(localStorage).sort();
         for (let i = 0; i < sortedKeys.length; i++) {
             const tr = document.createElement('tr');
@@ -143,8 +147,11 @@ window.onload = function() {
             tr.appendChild(td2);
             tbody.appendChild(tr);
         }
-    
-        document.body.appendChild(table);
+
+        table.className = 'dictionary'
+        
+        const firstContainer = document.querySelector('.container');
+        document.body.insertBefore(table, firstContainer);
         showDictionaryButton.style.display = 'none';
         stopShowingDictionaryButton.style.display = 'inline'
       })
@@ -153,7 +160,7 @@ window.onload = function() {
     
     if(stopShowingDictionaryButton){
       stopShowingDictionaryButton.addEventListener('click', () => {
-        const table = document.querySelector('table');
+        const table = document.querySelector('.dictionary');
         table.remove();
         showDictionaryButton.style.display = 'inline';
         stopShowingDictionaryButton.style.display = 'none';
@@ -177,8 +184,14 @@ window.onload = function() {
         const startRange = rangeDivs[0]
 
         if(!parentDiv.contains(startRange)){
-          alert("Hier kan je geen tekst markeren. Markeer tekst in de linkerzijde van de pagina.")
+          alert("Hier kan je geen tekst markeren. Markeer tekst in de linkerzijde van de pagina.");
           return
+        }
+
+        const typeVereenvoudiging = prompt('Hoe wil je de tekst vereenvoudigen?\n Kies uit: opsomming, tabel, doorlopende tekst.');
+        if (!['opsomming','tabel','doorlopend'].includes(typeVereenvoudiging)){
+          alert('Geef een geldige vereenvoudigingstechniek mee!');
+          return;
         }
 
         const endRange = rangeDivs[1]
@@ -186,7 +199,7 @@ window.onload = function() {
 
         const rightArticle = document.querySelector('.article-right');
         var childElements = rightArticle.querySelectorAll('.' + startRange.className);
-        childElements[0].innerText = getRewrittenText(String(int_text))   
+        childElements[0].innerText = getRewrittenText(String(typeVereenvoudiging), String(int_text))   
     }
   });
 };

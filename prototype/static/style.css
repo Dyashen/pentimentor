@@ -1,67 +1,92 @@
-body{
-    padding-top:    4%;
-    width:          80%;
-    margin:         auto;
-    font-family:    Arial, Helvetica, sans-serif;
-    word-spacing:   0.5cm;
+body {
+    padding-top: 4%;
+    width: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.5cm;
 }
 
-.container{
-    border:         3px solid;
-    padding:        1%;
-    margin:         1%;
-    text-align:     left;
-}
-
-.container:after {
-    content:        "";
-    display:        table;
-    clear:          both;
-}
-
-.container h1{
-    font-family:    'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.container fieldset{
-    display:        inline-block;
-    vertical-align: top;
-    border:         none;
-}
-
-.article-left, .article-right{
-    width:          35%;
-    margin:         3%;
-    padding:        3%;
-}
-
-.article-left{
-    float:          left;
-    background-color:antiquewhite;
-}
-
-.article-right{
-    float:          left;
-    background-color:aliceblue;
-}
-
-.article-left div, .article-right div{
-    margin:         5%;
-}
-
-p{
-    margin:         2cm;
-}
-
-.fixed-buttons{
-    background-color: whitesmoke;
-    top:                10px;
-    position:           fixed;
-    padding:            1%;
+.container {
+    padding: 1%;
+    margin: 1%;
+    text-align: left;
     margin: auto;
 }
 
-.article-left .markedWord{
-    background-color:   blueviolet;
-    color:              whitesmoke;
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container fieldset {
+    display: inline-table;
+    vertical-align: top;
+    border: none;
+    width: 40%;
+}
+
+.container fieldset table {
+    border: 1%;
+}
+
+.article-left,
+.article-right {
+    width: 35%;
+    margin: 3%;
+    padding: 3%;
+}
+
+.article-left {
+    float: left;
+    background-color: antiquewhite;
+}
+
+.article-right {
+    float: left;
+    background-color: aliceblue;
+}
+
+.article-left div,
+.article-right div {
+    margin: 5%;
+}
+
+p {
+    margin: 2cm;
+}
+
+.fixed-buttons {
+    background-color:   whitesmoke;
+    top:                5%;
+    left:               30%;
+    padding:            1%;
+    position:           fixed;
+    margin:             auto;
+    border:             solid 1px black;
+}
+
+.article-left .markedWord {
+    background-color: rgb(236, 216, 255);
+    color: rgb(0, 0, 0);
+}
+
+.logo {
+    position:   fixed;
+    top:        5%;
+    left:       85%;
+    max-width:  10%;
+}
+
+.dictionary{
+    background-color: rgb(255, 249, 240);
+    position:           fixed;
+    top:                5%;
+    left:               5%;
+    width:              20%;
+    border:             solid 1px black;
 }

@@ -17,3 +17,9 @@ for (let i = 0; i < sortedKeys.length; i++) {
 }
 
 document.body.appendChild(table);
+
+function emptyDictionary(){
+    localStorage.clear();
+    const table = document.body.querySelector('table');
+    table.clear();
+}
