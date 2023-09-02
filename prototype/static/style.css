@@ -28,8 +28,9 @@ body {
     text-align:         center;
     vertical-align:     top;
     border:             none;
-    margin:             3%;
+    margin:             1% auto 1% auto;
     background-color: aliceblue;
+    width:              50%;
     border:             solid 1px black;
 }
 
@@ -124,4 +125,5 @@ a {
     left:               5%;
     width:              20%;
     border:             solid 1px black;
+    text-align:         left;
 }
