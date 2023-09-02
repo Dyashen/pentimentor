@@ -59,23 +59,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {3.13}{\ignorespaces Gebruikte Python-libraries en hun respectievelijke functie in het prototype.\relax }}{54}{table.caption.45}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.14}{\ignorespaces Alle beschikbare functionaliteiten in het lerarencomponent.\relax }}{60}{table.caption.46}%
+\contentsline {table}{\numberline {3.14}{\ignorespaces Alle beschikbare functionaliteiten in het lerarencomponent.\relax }}{61}{table.caption.46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.15}{\ignorespaces Tabel met de gebruikte prompts voor het lerarencomponent.\relax }}{61}{table.caption.47}%
+\contentsline {table}{\numberline {3.15}{\ignorespaces Tabel met de gebruikte prompts voor het lerarencomponent.\relax }}{62}{table.caption.47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.16}{\ignorespaces Gebruikte parameters om definities van woorden te genereren met GPT-3.\relax }}{61}{table.caption.48}%
+\contentsline {table}{\numberline {3.16}{\ignorespaces Gebruikte parameters om definities van woorden te genereren met GPT-3.\relax }}{62}{table.caption.48}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.17}{\ignorespaces Benodigde labels voor een gepersonaliseerd document met Pandoc.\relax }}{65}{table.caption.49}%
+\contentsline {table}{\numberline {3.17}{\ignorespaces Benodigde labels voor een gepersonaliseerd document met Pandoc.\relax }}{66}{table.caption.49}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.18}{\ignorespaces Beschikbare functionaliteiten in het scholierencomponent.\relax }}{68}{table.caption.50}%
+\contentsline {table}{\numberline {3.18}{\ignorespaces Beschikbare functionaliteiten in het scholierencomponent.\relax }}{69}{table.caption.50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.19}{\ignorespaces Gekozen parameter voor experimenten.\relax }}{73}{table.caption.51}%
+\contentsline {table}{\numberline {3.19}{\ignorespaces Gekozen parameter voor experimenten.\relax }}{75}{table.caption.51}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Afgetoetste criteria volgens de experimenten.\relax }}{75}{table.caption.52}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Afgetoetste criteria volgens de experimenten.\relax }}{77}{table.caption.52}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Aantal zinnen (gemeten met Spacy sentence embeddings) per tekst.\relax }}{80}{table.caption.56}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Aantal zinnen (gemeten met Spacy sentence embeddings) per tekst.\relax }}{82}{table.caption.56}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
