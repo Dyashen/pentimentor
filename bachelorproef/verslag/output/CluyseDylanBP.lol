@@ -3,7 +3,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {3.2}Script voor de tweede fase van de vergelijkende studie.}{44}{lstlisting.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {3.3}Script voor de derde fase van de vergelijkende studie}{46}{lstlisting.3.3}%
+\contentsline {lstlisting}{\numberline {3.3}Script voor de derde fase van de vergelijkende studie}{47}{lstlisting.3.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {3.4}Script voor de vierde fase van de vergelijkende studie}{48}{lstlisting.3.4}%
 \defcounter {refsection}{0}\relax 

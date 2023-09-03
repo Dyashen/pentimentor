@@ -322,6 +322,8 @@ Zowel T1 als T4 gebruiken een \textit{nul-temperature} en een \textit{top-p} waa
 	\end{table}
 \end{center}
 
+\newpage
+
 \begin{center}
 	\begin{lstlisting}[language=Python, caption={Script voor de derde fase van de vergelijkende studie}, label={code:verg-studie-phase-3}]
  def scientific_simplify(self, text, lm_key):
@@ -415,7 +417,7 @@ Dit script resulteert in een \textit{Pandas-dataframe} met alle leesbaarheidsmet
 	\end{lstlisting}
 \end{center}
 
-In de laatste fase visualiseert het onderzoek de verkregen resultaten. Hierbij gebruikt het \textit{Jupyter-notebooks} en \textit{Matplotlib} om de verkregen resultaten voor te stellen. Allereerst gebruikt de \textit{Jupyter-notebook} een kleinere dataframe met enkel de data van A1. Daarna groepeert het script de data op basis van modellen. Het aantal woorden per zin fungeert als geaggregeerd veld. Met Matplotlib kan het script vervolgens een eenvoudige boxplot genereren. De notebook herhaalt dit proces voor beide artikelen en voor alle leesmetrieken vermeldt in tabel \ref{table:verg-studie-metrieken}. Zo illlustreert \textit{listing} \ref{code:generation-boxplot} hoe het script boxplots genereert. Deze visualiseren het woordgebruik van de verschillende taalmodellen bij A1. Alle code om grafieken te genereren kan de lezer op de GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob main/scripts/PHASE\_5.ipynb} terugvinden. 
+In de laatste fase visualiseert het onderzoek de verkregen resultaten. Hierbij gebruikt het \textit{Jupyter-notebooks} en \textit{Matplotlib} om de verkregen resultaten voor te stellen. Allereerst gebruikt de \textit{Jupyter-notebook} een kleinere dataframe met enkel de data van A1. Daarna groepeert het script de data op basis van modellen. Het aantal woorden per zin fungeert als geaggregeerd veld. Met Matplotlib kan het script vervolgens een eenvoudige boxplot genereren. De notebook herhaalt dit proces voor beide artikelen en voor alle leesmetrieken vermeldt in tabel \ref{table:verg-studie-metrieken}. Zo illlustreert \textit{listing} \ref{code:generation-boxplot} hoe het script boxplots genereert. Deze visualiseren het woordgebruik van de verschillende taalmodellen bij A1. Alle code om grafieken te genereren kan de lezer op de GitHub-repository\footnote{https://github.com/Dyashen/pentimentor/blob/main/bachelorproef/scripts/PHASE\_5.ipynb} terugvinden. 
 
 \begin{lstlisting}[language=Python, caption={Code om een boxplot voor het aantal woorden per zin te genereren.}, label={code:generation-boxplot}]	
 artikel_1 = df[(df['paper'] == 'Artikel 1 AI') & (df['FRE'] > 0)]
