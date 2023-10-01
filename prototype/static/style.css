@@ -1,59 +1,129 @@
-body{
-    padding-top:    4%;
-    width:          80%;
-    margin:         auto;
-    font-family:    Arial, Helvetica, sans-serif;
-    word-spacing:   0.5cm;
+body {
+    padding-top:        4%;
+    width:              100%;
+    margin:             auto;
+    font-family:        Arial, Helvetica, sans-serif;
+    text-align:         left;
 }
 
-.container{
-    border:         3px solid;
-    padding:        1%;
-    margin:         1%;
-    text-align:     left;
+.container {
+    padding:            1%;
+    text-align:         left;
+    margin:             auto;
 }
 
 .container:after {
-    content:        "";
-    display:        table;
-    clear:          both;
+    content:            "";
+    display:            table;
+    clear:              both;
 }
 
-.container h1{
-    font-family:    'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.container h1,
+.container h2 {
+    font-family:        'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:         center;
 }
 
-.container fieldset{
-    display:        inline-block;
-    vertical-align: top;
-    border:         none;
+.container fieldset {
+    text-align:         center;
+    vertical-align:     top;
+    border:             none;
+    margin:             1% auto 1% auto;
+    background-color: aliceblue;
+    width:              50%;
+    border:             solid 1px black;
 }
 
-.article-left, .article-right{
-    width:          35%;
-    margin:         3%;
-    padding:        3%;
+.container fieldset table {
+    margin:             auto;
+    width:              50%;
+    border:             1%;
 }
 
-.article-left{
-    float:          left;
-    background-color:antiquewhite;
+.container fieldset table td:first-child{
+    border:             solid black 1px;
 }
 
-.article-right{
-    float:          left;
-    background-color:aliceblue;
+.container fieldset table td:first-child:hover{
+    background-color:   rgb(201, 230, 255);
 }
 
-.article-left div, .article-right div{
-    margin:         5%;
+.container fieldset table td a{
+    text-decoration:    none;
 }
 
-p{
-    margin:         2cm;
+.container fieldset table td a:visited{
+    font-weight:        bold;
 }
 
-.fixed-buttons{
-    top:            10px;
-    position:       fixed;
+.container fieldset form input{
+    margin: 1%;
+}
+
+.article-left,
+.article-right {
+    width:              40%;
+    margin:             2%;
+    padding:            2%;
+}
+
+.article-left {
+    float:              left;
+    background-color:   antiquewhite;
+}
+
+.article-left span:hover{
+    cursor:             pointer;
+    background-color:   burlywood;
+    font-weight:        bolder;
+}
+
+.article-right {
+    float:              left;
+    background-color: aliceblue;
+}
+
+.article-left div,
+.article-right div {
+    margin: 5%;
+}
+
+p {
+    margin: 2cm;
+}
+
+a {
+
+}
+
+.fixed-buttons {
+    background-color:   whitesmoke;
+    top:                5%;
+    left:               30%;
+    padding:            1%;
+    position:           fixed;
+    margin:             auto;
+    border:             solid 1px black;
+}
+
+.article-left .markedWord {
+    background-color: rgb(236, 216, 255);
+    color: rgb(0, 0, 0);
+}
+
+.logo {
+    position:   fixed;
+    top:        5%;
+    left:       85%;
+    max-width:  10%;
+}
+
+.dictionary{
+    background-color: rgb(255, 249, 240);
+    position:           fixed;
+    top:                5%;
+    left:               5%;
+    width:              20%;
+    border:             solid 1px black;
+    text-align:         left;
 }

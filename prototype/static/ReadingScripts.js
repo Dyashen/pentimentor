@@ -12,8 +12,6 @@ function convertPTag(pTag, count) {
     
     pTag.parentNode.replaceChild(container, pTag);
   }
-  
-  
 
   window.addEventListener('load', function() {
     let pTagsLeft = document.querySelectorAll('.article-left p');
@@ -35,15 +33,40 @@ function convertPTag(pTag, count) {
 
 window.onload = function() {
 
-  function addToLocalstorage(event, definition) {
-    const key = event.target.innerHTML;
+  /*
+    Woorden uit woordenlijst onderlijnen
+  */
+    Object.keys(localStorage).forEach(function(key) {
+      const spans = document.getElementsByTagName('span');
+      for (let i = 0; i < spans.length; i++) {
+          const span = spans[i];
+          if (span.innerText === key) {
+            span.className = 'markedWord'
+          }
+      }
+    });
+
+  /*
+    Woord + definities tonen
+  */
+    const markedWords = document.querySelectorAll('.markedWord');
+    markedWords.forEach(word => {
+        word.addEventListener('click', () => {
+            alert(word);
+        });
+    });
+    
+
+  async function addToLocalstorage(event, definition) {
+    const key = event.target.innerHTML;    
     const existingValue = localStorage.getItem(key);
+
     if (existingValue) {
         const definitions = JSON.parse(existingValue);
         definitions.push(definition);
         localStorage.setItem(key, JSON.stringify(definitions));
     } else {
-        localStorage.setItem(key, JSON.stringify([definition]));
+        localStorage.setItem(key, definition);
     }
   }
 
@@ -56,20 +79,24 @@ window.onload = function() {
   /*
     GPT-3 API hier toevoegen
   */
-  function getDefinition(event) {
-    const api_key = 'test';
-    return api_key
+  async function getDefinition(event) {
+    const response = await fetch(`http://localhost:5000/get-definition`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ word: event.target.innerText, sentence: event.target.innerText }),
+    });
+    
+    result = await response.json();
+    console.log(result.simplified);
+    return result.simplified;
   }
 
-  function lookInLocalstorage(event){
+  async function lookInLocalstorage(event){
     const key = event.target.innerHTML;
     const value = localStorage.getItem(key);
-    if(value){
-      showPentimento(event, value)
-    } else {
-      addToLocalstorage(event, getDefinition(event));
-      lookInLocalstorage(event);
-    }
+    const definition = await getDefinition(event);
+    addToLocalstorage(event, definition);
+    showPentimento(event, definition);
   }
 
   const spanElements = document.querySelectorAll('span');
@@ -92,16 +119,74 @@ window.onload = function() {
     return([startDiv, endDiv]);
   }
 
-  function changeBackgroundMarkedText(divs){
+  async function getRewrittenText(type, text, startRange){
+    const response = await fetch(`http://localhost:5000/get-simplification`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: type, text: text }),
+    });
+    
+    result = await response.json();
+    console.log(result.simplified);
 
+    const rightArticle = document.querySelector('.article-right');
+    var childElements = rightArticle.querySelectorAll('.' + startRange.className);
+    childElements[0].innerText = result.simplified;
+    
+    return;
   }
 
-  function getRewrittenText(text){
-    console.log(text);
-    return text;
-  }
+  /*
+    Woordenboek tonen of verbergen
+  */
+    const showDictionaryButton = document.querySelector('.show');
+    const stopShowingDictionaryButton = document.querySelector('.dontShow');
+    if(showDictionaryButton){
+      showDictionaryButton.addEventListener('click', () => {
+        const table = document.createElement('table');
+        const tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+        
 
+        /*
+          Alfabetische sortering
+        */
+        const sortedKeys = Object.keys(localStorage).sort();
+        for (let i = 0; i < sortedKeys.length; i++) {
+            const tr = document.createElement('tr');
+            const key = sortedKeys[i];
+            const value = localStorage.getItem(key);
+            const td1 = document.createElement('td');
+            td1.textContent = key;
+            tr.appendChild(td1);
+            const td2 = document.createElement('td');
+            td2.textContent = value;
+            tr.appendChild(td2);
+            tbody.appendChild(tr);
+        }
 
+        table.className = 'dictionary'
+        
+        const firstContainer = document.querySelector('.container');
+        document.body.insertBefore(table, firstContainer);
+        showDictionaryButton.style.display = 'none';
+        stopShowingDictionaryButton.style.display = 'inline'
+      })
+    }
+    
+    
+    if(stopShowingDictionaryButton){
+      stopShowingDictionaryButton.addEventListener('click', () => {
+        const table = document.querySelector('.dictionary');
+        table.remove();
+        showDictionaryButton.style.display = 'inline';
+        stopShowingDictionaryButton.style.display = 'none';
+      })
+    }
+    
+  /*
+    Gemarkeerde tekst herschrijven
+  */
   const rewriteButton = document.querySelector('.rewrite');
   rewriteButton.addEventListener('click', () => {
     const selection = window.getSelection();
@@ -116,17 +201,38 @@ window.onload = function() {
         const startRange = rangeDivs[0]
 
         if(!parentDiv.contains(startRange)){
-          alert("Hier kan je geen tekst markeren. Markeer tekst in de linkerzijde van de pagina.")
+          alert("Hier kan je geen tekst markeren. Markeer tekst in de linkerzijde van de pagina.");
           return
         }
 
-        const endRange = rangeDivs[1]
+        const typeVereenvoudiging = prompt('Hoe wil je de tekst vereenvoudigen?\n Kies uit: opsomming, tabel, doorlopende tekst.');
+        if (!['opsomming','tabel','doorlopend'].includes(typeVereenvoudiging)){
+          alert('Geef een geldige vereenvoudigingstechniek mee!');
+          return;
+        }
 
+        const endRange = rangeDivs[1]
         const int_text = startRange.innerText + endRange.innerText;
 
-        const rightArticle = document.querySelector('.article-right');
-        var childElements = rightArticle.querySelectorAll('.' + startRange.className);
-        childElements[0].innerText = getRewrittenText(String(int_text))   
+        getRewrittenText(typeVereenvoudiging, int_text, startRange); 
     }
   });
 };
+
+
+/*
+  Webpagina doorsturen
+*/
+async function sendHTMLPageToBackend(){
+  var articleRightElement = document.querySelector('.article-right');
+  var serializer = new XMLSerializer();
+  var htmlString = serializer.serializeToString(articleRightElement);
+  
+  const response = await fetch(`http://localhost:5000/convert-to-word`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ html: htmlString }),
+  });
+
+  //result = await response.json();
+}

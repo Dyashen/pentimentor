@@ -5,35 +5,55 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pentimentor - homepage</title>
 </head>
+
+<a href="/"><img class="logo" src="../static/img_logo_tool.png" alt=""></a>
 
 <body>
 
     <div class="container">
-        <img src="../static/img_logo_tool.png" alt="">
-        <p>Wetenschappelijke artikelen zijn geen eenvoudig leesvoer. Het complexe vakjargon en de vele inhoud in een compact formaat maakt het begrijpend lezen hiervan extra moeilijk voor scholieren in het middelbaar onderwijs. Voor mijn bachelorproef werkte ik dit idee verder uit. Ik toetste naar de haalbaarheid voor ontwikkelaars om dergelijke toepassingen te kunnen ontwikkelen.</p>
+        <p>Wetenschappelijke artikelen zijn geen eenvoudig leesvoer. Het complexe vakjargon en de vele inhoud in een
+            compact formaat maakt het begrijpend lezen hiervan extra moeilijk voor scholieren in het middelbaar
+            onderwijs. Voor mijn bachelorproef werkte ik dit idee verder uit. Ik toetste naar de haalbaarheid voor
+            ontwikkelaars om dergelijke toepassingen te kunnen ontwikkelen.</p>
     </div>
 
-    
+
 
     <div class="container">
         <fieldset>
-            <h2>Opgeladen wetenschappelijke artikelen:</h2>
-            <ul>
-            {% for file in files %}
+            <h2>Geüploadede wetenschappelijke artikelen</h2>
+            <table>
+                <tr>
+                    <th>Artikelnaam</th>
+                    <th>Extra info</th>
+                </tr>
+                {% for file in files %}
                 {% if file.endswith('.pdf') %}
-                    <li><a href="/read-article?article={{ file }}">{{file}}</a></li>
+                <tr>
+                    {% set name, ext = file.rsplit('.', 1) %}
+                    <td><a href="/read-article?article={{ file }}">{{name}}</a></td>
+                    <td>...</td>
+                </tr>
                 {% endif %}
-            {% endfor %}
-            </ul>
+                {% endfor %}
+
+            </table>
         </fieldset>
 
         <fieldset>
-            <h2>Nieuw wetenschappelijk artikel opladen:</h3>
-            <form action="/upload" method="POST" enctype="multipart/form-data">
-                <input type="file" id="pdf" name="pdf">
-                <input type="submit" value="Upload artikel">
+            <h2>Nieuw wetenschappelijk artikel opladen</h3>
+                <form action="/upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="pdf" name="pdf"><br>
+                    <input type="submit" value="Upload artikel">
+                </form>
+        </fieldset>
+
+        <fieldset>
+            <h2>Woordenlijst</h2>
+            <form action="/get-dictionary" method="get">
+                <input type="submit" value="Toon woordenlijst">
             </form>
         </fieldset>
     </div>

@@ -5,7 +5,7 @@ In dit hoofdstuk overloopt het onderzoek de resultaten van alle onderzoeksmethod
 
 \medspace
 
-Verder bevatten de resultaten enkel de belangrijkste grafieken. Alle resultaten slaat het onderzoek op in csv-bestanden. Deze bestanden kan de lezer terugvinden op de bijhorende GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob/main/STATISTIEKEN\_BACHELORPROEF\_ATS.csv}.
+Verder bevatten de resultaten enkel de belangrijkste grafieken. Alle resultaten slaat het onderzoek op in csv-bestanden. Deze bestanden kan de lezer terugvinden op de bijhorende GitHub-repository\footnote{https://github.com/Dyashen/pentimentor/blob/main/bachelorproef/STATISTIEKEN\_BACHELORPROEF\_ATS.csv}.
 
 \section{Ontbrekende functies bij AI-toepassingen}
 
@@ -187,7 +187,7 @@ De FOG-scores van alle geteste taalmodellen en MTS-referentieteksten zijn niet o
 	\label{img:boxplot-fog-a2}
 \end{figure}
 
-Vervolgens meet het onderzoek het aantal lange en complexe woorden die de taalmodellen genereren. Deze resultaten geeft figuur \ref{img:boxplot-poster.png} weer. Zo genereren T1, T2 en T3 meer complexe woorden vergeleken met T4, MTSL en OG. Bij A1 genereert T4P3 opmerkelijk minder complexe woorden per zin dan de andere taalmodellen. Verder volgt A2 een gelijke trend met de andere taalmodellen. Het gebruikte script ziet een woord als 'lang' wanneer dit minstens vier lettergrepen heeft. Tot slot genereren MTSL, T2, T4P1, T4P2 en T4P3 minder lange woorden per zin dan OG.
+Vervolgens meet het onderzoek het aantal lange en complexe woorden die de taalmodellen genereren. Deze resultaten geeft figuur \ref{img:long-complex-words} weer. Zo genereren T1, T2 en T3 meer complexe woorden vergeleken met T4, MTSL en OG. Bij A1 genereert T4P3 opmerkelijk minder complexe woorden per zin dan de andere taalmodellen. Verder volgt A2 een gelijke trend met de andere taalmodellen. Het gebruikte script ziet een woord als 'lang' wanneer dit minstens vier lettergrepen heeft. Tot slot genereren MTSL, T2, T4P1, T4P2 en T4P3 minder lange woorden per zin dan OG.
 
 \begin{figure}[H]
 	\includegraphics[width=\linewidth]{img/boxplot-poster.png}
@@ -244,59 +244,31 @@ Ter conclusie van de resultaten scoren de drie prompts van T4 beter bij de mense
 
 \section{Pentimentor vergelijken met \textit{top-of-the-line} tools.}
 
-Gebruikers kunnen vanuit de homepagina drie schermen kiezen: het lerarencomponent, het scholierencomponent en een instellingenpagina. Op de instellingenpagina kunnen eindgebruikers hun persoonlijke opmaak toevoegen. Zo toont figuur \ref{img:website-instellingen} alle mogelijke opmaakopties die Pentimentor aanreikt.
+In de volgende sectie bespreekt het onderzoek het bekomen prototype. Dit prototype kan de lezer terugvinden op de volgende Github-repository\footnote{https://github.com/Dyashen/pentimentor/tree/main}. Gebruikers kunnen vanuit de homepagina uit de verschillende functionaliteiten kiezen, namelijk het uploaden van een wetenschappelijk artikel, het tonen van een geüpload wetenschappelijk artikel, opmaakopties toevoegen en de woordenlijst tonen. Op de instellingenpagina kunnen eindgebruikers hun persoonlijke opmaak toevoegen. Zo toont figuur \ref{img:website-instellingen} alle mogelijke opmaakopties die Pentimentor aanreikt. Pentimentor past deze aanpassingen toe op alle webpagina's.
 
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{img/website-instellingen.png}
-		\caption{Voorbeeldweergave van de instellingenpagina.}
-		\label{img:website-instellingen}
-	\end{figure}
-\end{center}
-
-Bovendien stelt Pentimentor gebruikers in staat om op basis van gekregen parameters automatisch personaliseerbare docx-documenten te genereren. Zo toont figuur \ref{img:proto-pos-tagging-scholieren} een voorbeeldweergave van deze functionaliteit.
-
-\begin{center}
-	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{img/proto-pos-tagging.png}
-		\caption{Een voorbeeldweergave van de toepassing van PoS-tagging bij het scholierencomponent.}
-		\label{img:proto-pos-tagging-scholieren}
-	\end{figure}
-\end{center}
-
-Scholieren kunnen zinnen selecteren om daarna deze tekst te laten vereenvoudigen met gepersonaliseerde ATS. Figuren \ref{img:proto-scholieren-step-1} en \ref{img:proto-scholieren-step-3} tonen hoe gebruikers met Pentimentor de gemarkeerde doorlopende tekst kunnen laten herschrijven naar een opsomming. Eerst markeren zij een stuk tekst om hiermee opties aan het mee te geven. Daarnaast kan het ook tekst herschrijven in een tabelformaat.
-
-\begin{center}
-	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{img/proto-opsomming-1.png}
-		\caption{Stap 1 van een gepersonaliseerde tekstvereenvoudiging in het scholierencomponent.}
-		\label{img:proto-scholieren-step-1}
+		\includegraphics[width=\linewidth]{img/homepagina.png}
+		\caption{Voorbeeldweergave van de homepagina.}
+		\label{img:homepagina}
 	\end{figure}
 \end{center}
 
 \begin{center}
-	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{img/proto-opsomming-3.png}
-		\caption{Stap 2 van een gepersonaliseerde tekstvereenvoudiging in het scholierencomponent.}
-		\label{img:proto-scholieren-step-3}
-	\end{figure}
+    \begin{figure}[H]
+        \includegraphics[width=\linewidth]{img/website-instellingen.png}
+        \caption{Voorbeeldweergave van de instellingenpagina.}
+        \label{img:website-instellingen}
+    \end{figure}
 \end{center}
 
-Verder tonen figuren \ref{img:step-1-proto-vraagstelling} en \ref{img:step-2-proto-vraagstelling} een tweede functionaliteit. Zo kunnen scholieren specifieke vragen stellen aan Pentimentor door middel van een gecentreerd invoerscherm.
+Vervolgens toont figuur \ref{img:pentimentor-afbeelding} een mogelijke weergave van het scholierencomponent. In deze weergave kunnen scholieren een zelfgekozen tekst markeren om deze te laten vereenvoudigen met gepersonaliseerde ATS. Eerst toont de schermafbeelding hoe gebruikers met Pentimentor de gemarkeerde doorlopende tekst kunnen laten herschrijven naar een tabel. Eerst markeren zij een stuk tekst om hiermee opties aan het mee te geven. Tot slot toont de schermafbeelding hoe scholieren een specifieke vraag kunnen stellen. Eerst geven zij een vraag in met een gecentreerd invoerscherm. Daarna zien ze de uitvoer naast de gemarkeerde tekst. Bovendien stelt Pentimentor gebruikers in staat om op basis van gekregen parameters automatisch personaliseerbare docx-documenten te genereren. Dit gebeurt automatisch op maat van de instellingen die zij op de instellingenpagina doorvoeren.
 
 \begin{center}
 	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{img/proto-vraagstelling-1.png}
-		\caption{Stap 1 bij het stellen van een specifieke vraag bij gemarkeerde tekst.}
-		\label{img:step-1-proto-vraagstelling}
-	\end{figure}
-\end{center}
-
-\begin{center}
-	\begin{figure}[H]
-		\includegraphics[width=\linewidth]{img/proto-vraagstelling-2.png}
-		\caption{Stap 2 bij het stellen van een specifieke vraag bij gemarkeerde tekst.}
-		\label{img:step-2-proto-vraagstelling}
+		\includegraphics[width=\linewidth]{img/pentimentor-afbeelding}
+		\caption{Voorbeeldweergave van het scholierencomponent.}
+		\label{img:pentimentor-afbeelding}
 	\end{figure}
 \end{center}
 
@@ -304,7 +276,7 @@ Volgens de evaluatie en experimenten blijkt Pentimentor te voldoen aan de \texti
 
 \medspace
 
-Verder kunnen gebruikers de opmaak van Pentimentor aanpassen naargelang hun voorkeur. Zo past het systeem deze voorkeuren toe op de digitale weergave in de webtool, maar ook de opmaak van het uitvoerbestand. Figuur \ref{img:screenshot-pdf-attempt} toont de vereenvoudigde versie van het wetenschappelijke artikel met de parameters uit tabel \ref{table:chosen-parameters-experiment}. Daarnaast houdt Pentimentor rekening met de gekozen regeleindes, woord- en karakterspatiëring, lettertype -en grootte, koppenstructuur en marges van het uitvoerbestand. Pentimentor houdt hier rekening mee, in tegenstelling tot de andere uitgeteste toools. Enkel E1 en E2 kunnen het lettertype -en grootte aanpassen. Tot slot toont figuur \ref{img:screenshot-docx-attempt} hoe een volledig personaliseerbaar docx-bestand er uit kan zien.
+Verder kunnen gebruikers de opmaak van Pentimentor aanpassen naargelang hun voorkeur. Zo past het systeem deze voorkeuren toe op de digitale weergave in de webtool, maar ook de opmaak van het uitvoerbestand. Daarnaast houdt Pentimentor rekening met de gekozen regeleindes, woord- en karakterspatiëring, lettertype -en grootte, koppenstructuur en marges van het uitvoerbestand. Pentimentor houdt hier rekening mee, in tegenstelling tot de andere uitgeteste toools. Enkel E1 en E2 kunnen het lettertype -en grootte aanpassen. Tot slot toont figuur \ref{img:screenshot-docx-attempt} hoe een volledig personaliseerbaar docx-bestand er uit kan zien.
 
 \begin{figure}[H]
 	\includegraphics[width=\linewidth]{img/screenshot-prototype-word.png}
@@ -316,7 +288,7 @@ Verder bevat Pentimentor enkele \textit{should-haves}. Allereerst kunnen gebruik
 
 \medspace
 
-Pentimentor zorgt voor een duidelijke gebruikerservaring door meldingsschermen te tonen wanneer het iets van de gebruiker verwacht. Figuur \ref{img:step-1-proto-vraagstelling} illustreert deze werking. Bovendien toont het waarschuwingen in formulieren, zoals getoond in figuur \ref{img:proto-lerarencomponent}.
+Pentimentor zorgt voor een duidelijke gebruikerservaring door meldingsschermen te tonen wanneer het iets van de gebruiker verwacht. Zo toont het onder andere waarschuwingen in formulieren, zoals getoond in figuur \ref{img:proto-lerarencomponent}.
 
 \begin{figure}[H]
     \includegraphics[width=\linewidth]{img/proto-lerarencomponent.png}
@@ -324,7 +296,7 @@ Pentimentor zorgt voor een duidelijke gebruikerservaring door meldingsschermen t
     \label{img:proto-lerarencomponent}
 \end{figure}
 
-Echter voldoet Pentimentor niet aan alle \textit{should-haves}. Zo ontbreekt de mogelijkheid om automatisch een woordenlijst met moeilijke woorden of vakjargon te genereren. Daarnaast mist Pentimentor analytische functionaliteiten, zoals het tonen van tekstanalyse aan de eindgebruiker.
+Echter voldoet Pentimentor niet aan alle \textit{should-haves}. Zo ontbreekt het de mogelijkheid om automatisch een woordenlijst met moeilijke woorden of vakjargon te genereren. Daarnaast mist Pentimentor analytische functionaliteiten, zoals het tonen van tekstanalyse aan de eindgebruiker.
 
 \medspace
 

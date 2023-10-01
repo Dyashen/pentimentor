@@ -322,6 +322,8 @@ Zowel T1 als T4 gebruiken een \textit{nul-temperature} en een \textit{top-p} waa
 	\end{table}
 \end{center}
 
+\newpage
+
 \begin{center}
 	\begin{lstlisting}[language=Python, caption={Script voor de derde fase van de vergelijkende studie}, label={code:verg-studie-phase-3}]
  def scientific_simplify(self, text, lm_key):
@@ -415,7 +417,7 @@ Dit script resulteert in een \textit{Pandas-dataframe} met alle leesbaarheidsmet
 	\end{lstlisting}
 \end{center}
 
-In de laatste fase visualiseert het onderzoek de verkregen resultaten. Hierbij gebruikt het \textit{Jupyter-notebooks} en \textit{Matplotlib} om de verkregen resultaten voor te stellen. Allereerst gebruikt de \textit{Jupyter-notebook} een kleinere dataframe met enkel de data van A1. Daarna groepeert het script de data op basis van modellen. Het aantal woorden per zin fungeert als geaggregeerd veld. Met Matplotlib kan het script vervolgens een eenvoudige boxplot genereren. De notebook herhaalt dit proces voor beide artikelen en voor alle leesmetrieken vermeldt in tabel \ref{table:verg-studie-metrieken}. Zo illlustreert \textit{listing} \ref{code:generation-boxplot} hoe het script boxplots genereert. Deze visualiseren het woordgebruik van de verschillende taalmodellen bij A1. Alle code om grafieken te genereren kan de lezer op de GitHub-repository\footnote{https://github.com/dylancluyse/bachelorproef-nlp-tekstvereenvoudiging/blob main/scripts/PHASE\_5.ipynb} terugvinden. 
+In de laatste fase visualiseert het onderzoek de verkregen resultaten. Hierbij gebruikt het \textit{Jupyter-notebooks} en \textit{Matplotlib} om de verkregen resultaten voor te stellen. Allereerst gebruikt de \textit{Jupyter-notebook} een kleinere dataframe met enkel de data van A1. Daarna groepeert het script de data op basis van modellen. Het aantal woorden per zin fungeert als geaggregeerd veld. Met Matplotlib kan het script vervolgens een eenvoudige boxplot genereren. De notebook herhaalt dit proces voor beide artikelen en voor alle leesmetrieken vermeldt in tabel \ref{table:verg-studie-metrieken}. Zo illlustreert \textit{listing} \ref{code:generation-boxplot} hoe het script boxplots genereert. Deze visualiseren het woordgebruik van de verschillende taalmodellen bij A1. Alle code om grafieken te genereren kan de lezer op de GitHub-repository\footnote{https://github.com/Dyashen/pentimentor/blob/main/bachelorproef/scripts/PHASE\_5.ipynb} terugvinden. 
 
 \begin{lstlisting}[language=Python, caption={Code om een boxplot voor het aantal woorden per zin te genereren.}, label={code:generation-boxplot}]	
 artikel_1 = df[(df['paper'] == 'Artikel 1 AI') & (df['FRE'] > 0)]
@@ -668,9 +670,9 @@ Tekst kan ontbreken na het extraheerproces met PDFMiner. Daarnaast krijgt Pentim
 
 \medspace
 
-In eerste instantie moet de backend alle pagina's omzetten naar een machine-interpreteerbaar formaat door ze eerst om te zetten naar afbeeldingen en vervolgens naar binaire waarden. Met behulp van LayoutParser en het Detectron2-algoritme kan Pentimentor de verschillende tekstonderdelen op elke pagina classificeren, waaronder tekst-, titel-, figuur- en tabelblokken. Omdat figuren en tabellen niet relevant zijn voor dit onderzoek, concentreert Pentimentor zich op het achterhalen van titels en tekst. Die slaat het systeem op in een array genaamd 'valid'. Daarna omkadert LayoutParser alle tekstblokken en koppelt het elk tekstblok met een unieke id-tag. Listing \ref{code:reader-ocr} illustreert het proces om de blokken op één pagina te achterhalen.
+In eerste instantie moet de backend alle pagina's omzetten naar een machine-interpreteerbaar formaat door ze eerst om te zetten naar afbeeldingen en vervolgens naar binaire waarden. Met behulp van LayoutParser en het Detectron2-algoritme kan Pentimentor de verschillende tekstonderdelen op elke pagina classificeren, waaronder tekst-, titel-, figuur- en tabelblokken. Omdat figuren en tabellen niet relevant zijn voor dit onderzoek, concentreert Pentimentor zich op het achterhalen van titels en tekst. Die slaat het systeem op in een array genaamd 'valid'. Daarna omkadert LayoutParser alle tekstblokken en koppelt het elk tekstblok met een unieke id-tag. Listing \ref{listing:reader-ocr} illustreert het proces om de blokken op één pagina te achterhalen.
 
-\begin{lstlisting}[language=Python, caption={Een PDF inlezen met OCR}, label={code:reader-ocr}]
+\begin{lstlisting}[language=Python, caption={Een PDF inlezen met OCR}, label={listing:reader-ocr}]
 model = lp.Detectron2LayoutModel(
 	config_path ='lp://PubLayNet/faster_rcnn_R_50_FPN_3x/config',
 	label_map   ={0: "Text", 1: "Title", 2: "List", 3:"Table", 4:"Figure"}, 
@@ -721,6 +723,7 @@ for t in text_blocks:
 	else:
 		full_text.append(t.text)    
 	return full_text
+    
 \end{lstlisting}
 
 \subsubsection{Geëxtraheerde inhoud formatteren naar een webpagina.}
@@ -1257,20 +1260,40 @@ nouns.addEventListener('change', function () {
 
 \subsection{De opzet voor een lokale webtoepassing.}
 
-Eindgebruikers kunnen voorlopig enkel Pentimentor via \textit{commandline} opstarten. Het online plaatsen valt buiten de \textit{scope} van dit onderzoek, maar Docker en zelfgeschreven scripts bieden een eenduidige opstart. Hierbij moet de eindgebruiker geen technische vaardigheden gebruiken. Omdat Pentimentor enkel API's aanspreekt, werkt het met één Docker-container. Listing \ref{code:dockerfile} toont de zelfgeschreven code van de Dockerfile. Om de installatie van Python soepel te laten verlopen, bouwt het onderzoek een lijst van nodige python-bibliotheken op. Met Pipreq kan dit automatisch. Daarnaast moet het systeem de nodige Spacy word-embeddings en LayoutParser pakketten installeren. Dat gebeurt met aparte commando's in de Dockerfile. Dit proces als eerste laten verlopen kan de versies tegen het einde van de ontwikkeling gedateerd maken. Ten laatste moeten ook alle lettertypen zich in de lokale map bevinden, want Pandoc moet over alle lettertypen beschikken om een docx-bestand te maken. Een scriptbestand in Powershell, zoals weergegeven in \ref{code:shell-boot}, of Bash zoals weergegeven in \ref{code:bash-boot}, maakt de opstart van deze webapplicatie intuïtiever dan via commandline. Hiermee kunnen MacOS, Linux en Windows-gebruikers Pentimentor installeren. De automatische installatie van Docker valt buiten het doel van het script, maar het systeem prompt gebruikers om eerst Docker te installeren.
+Eindgebruikers kunnen voorlopig enkel Pentimentor via \textit{commandline} opstarten. Het online plaatsen valt buiten de \textit{scope} van dit onderzoek, maar Docker en zelfgeschreven scripts bieden een eenduidige opstart. Hierbij moet de eindgebruiker geen technische vaardigheden gebruiken. Omdat Pentimentor enkel API's aanspreekt, werkt het met één Docker-container. Listing \ref{code:dockerfile} toont de zelfgeschreven code van de Dockerfile. Om de installatie van Python soepel te laten verlopen, bouwt het onderzoek een lijst van nodige python-bibliotheken op. Daarnaast moet het systeem de nodige Spacy word-embeddings en \textit{LayoutParser} pakketten installeren. Dat gebeurt met aparte commando's in de Dockerfile. Met dit proces starten kan de versies tegen het einde van de ontwikkeling gedateerd maken. Ten laatste moeten ook alle lettertypen zich in de lokale map bevinden, want Pandoc moet over alle lettertypen beschikken om een docx-bestand te maken.
 
 \begin{lstlisting}[language=Dockerfile, caption={Dockerfile voor Pentimentor.}, label={code:dockerfile}]
-FROM python:3.8-slim-buster
+FROM ubuntu
+
 WORKDIR /app
-COPY requirements.txt requirements.txt
-RUN apt-get update && apt-get install -y pandoc texlive-xetex texlive poppler-utils
-RUN pip3 install -r requirements.txt \
-	&& python3 -m spacy download nl_core_news_md \
-	&& python3 -m spacy download en_core_web_md
-COPY . .	
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=5000"]
+
+RUN apt-get update
+
+RUN apt-get install -y git python3-pip \ 
+&& apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils 
+
+RUN pip install --upgrade pip
+
+RUN pip install layoutparser \
+&& pip install "layoutparser[effdet]" layoutparser torchvision && pip install "git+https://github.com/facebookresearch/detectron2.git@v0.5#egg=detectron2" \
+&& pip install "layoutparser[paddledetection]" \
+&& pip install "layoutparser[ocr]" \
+&& pip install pytesseract easyocr pdf2image flask spacy
+
+RUN export LD_LIBRARY_PATH=/usr/lib/wsl/lib:$LD_LIBRARY_PATH
+
+RUN python3 -m spacy download nl_core_news_md
+
+RUN apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils
+
+RUN pip uninstall -y Pillow && pip install Pillow==9.5.0
+
+COPY . .
+
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=5000"]
 \end{lstlisting}
 
+Tot slot kan niet iedereen eenvoudig een Docker-container opstarten. Daarom voegt het onderzoek een optioneel scriptbestand toe. Een scriptbestand in Powershell, zoals weergegeven in listing \ref{code:shell-boot}, of Bash zoals weergegeven in listing \ref{code:bash-boot}, maakt de opstart van deze webapplicatie intuïtiever dan via \textit{commandline}. Hiermee kunnen MacOS, Linux en Windows-gebruikers Pentimentor installeren. De automatische installatie van Docker valt buiten het doel van het script, maar het systeem prompt gebruikers om eerst Docker te installeren.
 
 \begin{lstlisting}[language=Powershell, caption={Script voor het opstarten van de Docker-container voor Windows-gebruikers}, label={code:shell-boot}]
 @echo off
