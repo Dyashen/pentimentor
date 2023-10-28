@@ -1,6 +1,8 @@
+from Writer import Creator
+from ATS import GPT
+
 import glob
 from bs4 import BeautifulSoup, Tag
-from Writer import Creator
 import layoutparser as lp
 import cv2
 from pdf2image import convert_from_path
@@ -170,14 +172,48 @@ def read():
 
 @app.route("/get-simplification", methods=["POST"])
 def get_simplification():
-    api_key = session["gpt-api-key"]
+    if "gpt-api-key" in session:
+        gpt_api_key = session["gpt-api-key"]
+    else:
+        return jsonify(error="Geen gpt-sleutel opgegeven!")
 
-    return jsonify(simplified="deze test werkt :)")
+    data = request.get_json()
+
+    type_vereenvoudiging = data["type"]
+    tekst_vereenvoudiging = data["text"]
+
+    try:
+        if type_vereenvoudiging in ("tabel", "doorlopende tekst", "opsomming"):
+            vereenvoudigde_tekst = GPT(key=gpt_api_key).personalised_simplify(
+                sentence=tekst_vereenvoudiging, personalisation=[type_vereenvoudiging]
+            )
+        else:
+            vereenvoudigde_tekst = GPT(key=gpt_api_key).generieke_vereenvoudiging()
+            return jsonify(simplified=vereenvoudigde_tekst)
+    except:
+        print("error")
+        return jsonify(error="Geen geldige GPT-3 sleutel opgegeven!")
 
 
 @app.route("/get-definition", methods=["POST"])
 def get_definition():
-    return jsonify(simplified="deze definitie krijgt u!")
+    if "gpt-api-key" in session:
+        gpt_api_key = session["gpt-api-key"]
+    else:
+        return jsonify(error="Geen GPT-3 sleutel opgegeven!")
+
+    data = request.get_json()
+
+    ruw_woord = data["word"]
+    ruw_context = data["sentence"]
+
+    try:
+        vereenvoudigde_context = GPT(key=gpt_api_key).give_synonym(
+            word=ruw_woord, context=ruw_context
+        )
+        return jsonify(simplified=vereenvoudigde_context)
+    except:
+        return jsonify(error="Geen geldige GPT-3 sleutel opgegeven!")
 
 
 @app.route("/convert-to-word", methods=["POST"])
@@ -194,12 +230,6 @@ def convert_to_word():
         new_text = {"Error": "Error"}
 
     title = "Vereenvoudigd document"
-    # margin = 2
-    # fonts = ["Arial", "Arial"]
-    # word_spacing = 0.8
-    # character_spacing = 0.5
-    # type_spacing = "onehalfspacing"
-
     gekozen_instellingen = session["persoonlijke_instellingen"]
 
     Creator().create_pdf(

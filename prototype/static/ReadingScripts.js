@@ -81,7 +81,14 @@ window.onload = function () {
       });
 
       result = await response.json();
-      return result.simplified;
+      if (result.error) {
+        alert(String(result.error))
+        return
+      } else {
+        alert(String(result.simplified))
+        return result.simplified;
+      }
+
     } else {
       return;
     }
@@ -130,10 +137,14 @@ window.onload = function () {
     });
 
     result = await response.json();
-    const rightArticle = document.querySelector('.article-right');
-    var childElements = rightArticle.querySelectorAll('.' + startRange.className);
-    childElements[0].innerText = result.simplified;
-    return;
+
+    if (result.error) {
+      alert(String(result.error))
+    } else {
+      const rightArticle = document.querySelector('.article-right');
+      var childElements = rightArticle.querySelectorAll('.' + startRange.className);
+      childElements[0].innerText = result.simplified;
+    }
   }
 
   /*
