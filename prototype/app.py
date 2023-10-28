@@ -1,3 +1,4 @@
+from Writer import Creator
 import layoutparser as lp
 import cv2
 from pdf2image import convert_from_path
@@ -7,6 +8,7 @@ import numpy as np
 from werkzeug.utils import secure_filename
 
 img_folder = 'afbeeldingen/'
+ZIP_FILE_LOCATION = 'saved_files/simplified_docs.zip'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
@@ -100,9 +102,7 @@ def read():
         for i in range(len(images)):
             images[i].save(img_folder + 'page'+str(i) + '.png', 'PNG')
 
-
         full_text = []
-
         for i in range(0, len(os.listdir(img_folder))):
             filename = f'page{i}.png'
             text = ml_work(filename)
@@ -126,7 +126,28 @@ def get_definition():
 @app.route('/convert-to-word', methods=['POST'])
 def convert_to_word():
     html_page = request.json['html']
-    return jsonify(html_page = html_page)
+    
+    title='test'
+    margin=0.8
+    glossary=dict()
+    full_text={'Title': str(html_page)}
+    fonts=['Arial', 'Arial']
+    word_spacing=0.8
+    character_spacing=0.5
+    type_spacing='onehalfspacing'
+
+    Creator().create_pdf(
+        title=title, 
+        margin=margin, 
+        list=glossary, 
+        full_text=full_text, 
+        fonts=fonts, 
+        word_spacing=word_spacing, 
+        type_spacing=type_spacing, 
+        summation=False
+    )
+
+    return send_file(path_or_file=ZIP_FILE_LOCATION)
 
 if __name__ == "__main__":
     app.run()

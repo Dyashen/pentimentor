@@ -4,8 +4,8 @@ WORKDIR /app
 
 RUN apt-get update
 
-RUN apt-get install -y git python3-pip \ 
-    && apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils 
+RUN apt-get install -y git python3-pip pandoc texlive-xetex texlive \ 
+    && apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils --fix-missing
 
 RUN pip install --upgrade pip
 

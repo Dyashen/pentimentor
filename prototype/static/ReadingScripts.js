@@ -227,12 +227,27 @@ async function sendHTMLPageToBackend(){
   var articleRightElement = document.querySelector('.article-right');
   var serializer = new XMLSerializer();
   var htmlString = serializer.serializeToString(articleRightElement);
-  
-  const response = await fetch(`http://localhost:5000/convert-to-word`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ html: htmlString }),
+  console.log(htmlString);
+  var url = 'http://localhost:5000/convert-to-word';
+  var response = await fetch(url, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          html: htmlString
+      })
   });
 
-  //result = await response.json();
+  if(response.ok) {
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const tempLink = document.createElement('a');
+      tempLink.href = blobUrl;
+      tempLink.setAttribute('download', 'file.zip');
+      tempLink.click();
+  } else {
+      // console.error('Server responded with', response.status);
+      alert('Server responded with ' + String(response.status))
+  }
 }
