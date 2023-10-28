@@ -1,3 +1,4 @@
+import glob
 from bs4 import BeautifulSoup, Tag
 from Writer import Creator
 import layoutparser as lp
@@ -142,6 +143,10 @@ def read():
     article = request.args["article"]
     list_files = os.listdir(app.config["UPLOAD_FOLDER"])
 
+    img_files = glob.glob("afbeeldingen/*")
+    for img in img_files:
+        os.remove(img)
+
     if article in list_files:
         images = convert_from_path("uploads/" + str(article))
         for i in range(len(images)):
@@ -151,6 +156,11 @@ def read():
         for i in range(0, len(os.listdir(img_folder))):
             filename = f"page{i}.png"
             text = ml_work(filename)
+
+            # Rare pijlen op het einde van iedere zin.
+            for i in range(0, len(text)):
+                text[i] = text[i][:-1]
+
             full_text = full_text + text
 
         return render_template("read.html", article=full_text, error="")
