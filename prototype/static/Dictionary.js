@@ -37,6 +37,5 @@ window.onload = function(){
 
 function emptyDictionary(){
     localStorage.clear();
-    const table = document.body.querySelector('table');
-    if (table){table.remove();}
+    location.reload();
 }

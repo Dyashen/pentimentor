@@ -133,3 +133,11 @@ fieldset#api-sleutel{
     text-align: left;
     margin-bottom: 2%;
 }
+
+.tooltip {
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 1;
+}

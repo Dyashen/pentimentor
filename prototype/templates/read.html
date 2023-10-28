@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="../static/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
 
-    <a href="/"><img class="logo" src="../static/img_logo_tool.png" alt=""></a>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-    <body>
+<a href="/"><img class="logo" src="../static/img_logo_tool.png" alt=""></a>
 
-        <div class="container">
+<body>
 
-            <div class="article-left">
-                {% for paragraph in article %}
-                {% if paragraph.startswith('title:') %}
-                <h1>{{ paragraph.replace('title:', '') }}</h1>
-                {% else %}
-                <p>{{ paragraph }}</p>
-                {% endif %}
-                {% endfor %}
-            </div>
+    <div class="container">
 
-            <div class="article-right">
-                {% for paragraph in article %}
-                {% if paragraph.startswith('title:') %}
-                <h1>{{ paragraph.replace('title:', '') }}</h1>
-                {% else %}
-                <p>{{ paragraph }}</p>
-                {% endif %}
-                {% endfor %}
-            </div>
-
+        <div class="article-left">
+            {% for paragraph in article %}
+            {% if paragraph.startswith('title:') %}
+            <h1>{{ paragraph.replace('title:', '') }}</h1>
+            {% else %}
+            <p>{{ paragraph }}</p>
+            {% endif %}
+            {% endfor %}
         </div>
 
-        <strong>{{ error }}</strong>
-
-        <div class="fixed-buttons">
-            <button class="rewrite">                            Tekst herschrijven                              </button>
-            <button class="look_up">                            Woord opzoeken en toevoegen aan woordenboek     </button>
-            <button class="show">                               Woordenboek tonen                               </button>
-            <button style="display: none;" class="dontShow">    Woordenboek verbergen                           </button>
-            <button onclick="sendHTMLPageToBackend()">          Omzetten naar Word-document                     </button>
+        <div class="article-right">
+            {% for paragraph in article %}
+            {% if paragraph.startswith('title:') %}
+            <h1>{{ paragraph.replace('title:', '') }}</h1>
+            {% else %}
+            <p>{{ paragraph }}</p>
+            {% endif %}
+            {% endfor %}
         </div>
-        
-    </body>
+
+    </div>
+
+    <strong>{{ error }}</strong>
+
+    <div class="fixed-buttons">
+        <button class="rewrite"> Tekst herschrijven </button>
+        <button class="show"> Woordenboek tonen </button>
+        <button style="display: none;" class="dontShow"> Woordenboek verbergen </button>
+        <button onclick="sendHTMLPageToBackend()"> Omzetten naar Word-document </button>
+    </div>
+
+</body>
 
 <script type="text/javascript" src={{ url_for('static', filename='ReadingScripts.js' )}}></script>
 
