@@ -63,8 +63,8 @@ window.onload = function () {
     GPT-3 API hier toevoegen
   */
   async function getDefinition(event) {
-    var keuze = prompt("Wil je een vereenvoudigde definitie genereren of zelf schrijven. Typ 1 voor zelf een definitie te schrijven. Typ 2 voor een vereenvoudigde definitie te laten genereren.");
 
+    var keuze = prompt("Wil je een vereenvoudigde definitie genereren of zelf schrijven. Typ 1 voor zelf een definitie te schrijven. Typ 2 voor een vereenvoudigde definitie te laten genereren.");
     if (keuze == 1) {
       var definitie = prompt("Geef een (eenvoudige) definitie in voor dit woord:");
       return definitie;
@@ -89,19 +89,19 @@ window.onload = function () {
   }
 
   async function lookInLocalstorage(event) {
-    const key = String(event.target.innerHTML).toLowerCase();
-    const value = localStorage.getItem(key);
-    const definition = await getDefinition(event);
-    addToLocalstorage(event, definition);
-    alert(key + "werd zonet toegevoegd aan de woordenlijst. Dit woord betekent: " + definition);
-    event.target.className = 'markedWord';
+    if (event.target.className !== 'markedWord') {
+      const key = String(event.target.innerHTML).toLowerCase();
+      const definition = await getDefinition(event);
+      addToLocalstorage(event, definition);
+      alert(key + "werd zonet toegevoegd aan de woordenlijst. Dit woord betekent: " + definition);
+      event.target.className = 'markedWord';
+    }
   }
 
   const spanElements = document.querySelectorAll('span');
   spanElements.forEach(span => {
     span.addEventListener('click', lookInLocalstorage);
   });
-
 
   function getStartAndEnd(startContainer, endContainer) {
     let startDiv = startContainer;

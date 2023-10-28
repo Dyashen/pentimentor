@@ -70,6 +70,7 @@ body {
 .article-left {
     float:              left;
     background-color:   antiquewhite;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .article-left span:hover{
@@ -81,6 +82,7 @@ body {
 .article-right {
     float:              left;
     background-color: aliceblue;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .article-left div,
@@ -92,10 +94,6 @@ p {
     margin: 2cm;
 }
 
-a {
-
-}
-
 .fixed-buttons {
     background-color:   whitesmoke;
     top:                5%;
@@ -104,6 +102,7 @@ a {
     position:           fixed;
     margin:             auto;
     border:             solid 1px black;
+    box-shadow:         5px 5px 5px grey;
 }
 
 .article-left .markedWord {
