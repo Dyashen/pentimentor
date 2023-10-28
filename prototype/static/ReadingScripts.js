@@ -225,19 +225,19 @@ window.onload = function() {
 */
 async function sendHTMLPageToBackend(){
   var articleRightElement = document.querySelector('.article-right');
-  var serializer = new XMLSerializer();
-  var htmlString = serializer.serializeToString(articleRightElement);
-  console.log(htmlString);
   var url = 'http://localhost:5000/convert-to-word';
+  var woordenlijst = { ...localStorage };
   var response = await fetch(url, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-          html: htmlString
+          html: articleRightElement.innerHTML,
+          glossary: woordenlijst
       })
   });
+
 
   if(response.ok) {
       const blob = await response.blob();
@@ -247,7 +247,6 @@ async function sendHTMLPageToBackend(){
       tempLink.setAttribute('download', 'file.zip');
       tempLink.click();
   } else {
-      // console.error('Server responded with', response.status);
       alert('Server responded with ' + String(response.status))
   }
 }

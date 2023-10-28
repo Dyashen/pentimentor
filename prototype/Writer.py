@@ -26,17 +26,20 @@ class Creator():
             f.write(f'- \spaceskip={word_spacing}cm\n')
             f.write(f'- \\usepackage{{setspace}}\n')
             f.write(f'- \{type_spacing}\n')
-            f.write("---\n")
+            # f.write('- \usepackage{glossaries}')
+            # f.write('- \makeglossaries')
+            # f.write('- \newglossaryentry{foo}{name=bar, description={baz}}')
+            f.write('---\n')
 
     
     def generate_glossary(self, list):
         with open(markdown_file, 'a', encoding='utf-8') as f:
             f.write("---\n")
             f.write("# Woordenlijst\n")
-            f.write("| Woord | Soort | Definitie |\n")
-            f.write("| --- | --- | --- |\n")
+            f.write("| Woord | Definitie |\n")
+            f.write("| --- | --- |\n")
             for word in list.keys(): 
-                f.write(f"| {word} | {list[word]['type']} | {list[word]['definition']} |\n")
+                f.write(f"| {word} | {list[word]} |\n")
 
     def generate_summary(self, full_text):
         with open(markdown_file,'a', encoding="utf-8", errors="surrogateescape") as f:
@@ -46,7 +49,7 @@ class Creator():
                 f.write('\n\n')
                 f.write(f'## {title}')
                 f.write('\n\n')
-                f.write(" ".join(text))
+                f.write(text)
                 f.write('\n\n')
 
     def generate_summary_w_summation(self, full_text):
@@ -62,7 +65,7 @@ class Creator():
                     f.write('\n\n')
 
 
-    def create_pdf(self, title, margin, list, full_text, fonts, word_spacing, type_spacing, summation):
+    def create_pdf(self, title, margin, list, full_text, fonts, word_spacing, type_spacing, summation, character_spacing):
         if title is not None:
             self.create_header(title=title, margin=margin, fontsize=14, chosen_font=fonts[0], chosen_title_font=fonts[1], word_spacing=word_spacing, type_spacing=type_spacing)
         else:

@@ -1,3 +1,4 @@
+from bs4 import BeautifulSoup, Tag
 from Writer import Creator
 import layoutparser as lp
 import cv2
@@ -12,6 +13,29 @@ ZIP_FILE_LOCATION = 'saved_files/simplified_docs.zip'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
+
+def reformat_html_page(volledige_pagina):
+
+    html_string = volledige_pagina
+    soup = BeautifulSoup(html_string, 'html.parser')
+    content_dict = {}
+    current_title = None
+    current_content = []
+
+    for tag in soup:
+        if isinstance(tag, Tag):
+            if tag.name == 'h1':
+                if current_title is not None:
+                    content_dict[current_title] = ' '.join(current_content)
+                current_title = tag.text
+                current_content = []
+            else:
+                current_content.append(tag.text)
+
+    if current_title is not None:
+        content_dict[current_title] = ' '.join(current_content)
+
+    return content_dict 
 
 @app.route('/', methods=['GET'])
 def home():
@@ -35,25 +59,20 @@ def ml_work(afbeelding):
 
     valid = ['Text', 'Title']
     text_blocks = lp.Layout([b for b in layout if b.type in valid])
-
     h, w = image.shape[:2]
 
     left_interval = lp.Interval(0, w/2*1.05, axis='x').put_on_canvas(image)
-
     left_blocks = text_blocks.filter_by(left_interval, center=True)
     left_blocks.sort(key=lambda b:b.coordinates[1], inplace=True)
 
     right_blocks = [b for b in text_blocks if b not in left_blocks]
     right_blocks.sort(key=lambda b:b.coordinates[1])
-
     text_blocks = lp.Layout([b.set(id=idx) for idx, b in enumerate(left_blocks+right_blocks)])
 
     lp.draw_box(image, text_blocks, box_width=3, show_element_id=True)
-
     ocr_agent = lp.TesseractAgent(languages='eng')
 
     full_text = []
-
     for block in text_blocks:
         segment_image = (block.pad(left=5, right=5, top=5, bottom=5).crop_image(image))
         text          = ocr_agent.detect(segment_image)
@@ -70,7 +89,6 @@ def ml_work(afbeelding):
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
-    
     file = request.files['pdf']
     filename = secure_filename(file.filename)
     file.save(f'uploads/{filename}')
@@ -125,12 +143,22 @@ def get_definition():
 
 @app.route('/convert-to-word', methods=['POST'])
 def convert_to_word():
-    html_page = request.json['html']
+
     
-    title='test'
-    margin=0.8
-    glossary=dict()
-    full_text={'Title': str(html_page)}
+    if 'glossary' in request.json:
+        woordenlijst = request.json['glossary']
+    else:
+        woordenlijst =  {}
+
+    if 'html' in request.json:
+        html_page = request.json['html']
+        new_text = reformat_html_page(html_page)
+    else:
+        new_text = {'Error':'Error'}
+     
+    title='Vereenvoudigd document'
+    margin=2
+    full_text=new_text
     fonts=['Arial', 'Arial']
     word_spacing=0.8
     character_spacing=0.5
@@ -139,15 +167,18 @@ def convert_to_word():
     Creator().create_pdf(
         title=title, 
         margin=margin, 
-        list=glossary, 
+        list=woordenlijst, 
         full_text=full_text, 
         fonts=fonts, 
         word_spacing=word_spacing, 
         type_spacing=type_spacing, 
+        character_spacing=0.5,
         summation=False
     )
 
-    return send_file(path_or_file=ZIP_FILE_LOCATION)
+    return send_file(
+        path_or_file=ZIP_FILE_LOCATION
+    )
 
 if __name__ == "__main__":
     app.run()
