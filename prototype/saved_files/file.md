@@ -1,13 +1,13 @@
 ---
 title: Vereenvoudigd document
-mainfont: Arial.ttf
-titlefont: Arial.ttf
+mainfont: Montserrat.ttf
+titlefont: Montserrat.ttf
 date: 2023-10-28
 document: article
-geometry: margin=2cm
+geometry: margin=2.0cm
 fontsize: 14pt
 header-includes:
-- \spaceskip=0.8cm
+- \spaceskip=2.0cm
 - \usepackage{setspace}
 - \onehalfspacing
 ---
@@ -15,9 +15,17 @@ header-includes:
 # Woordenlijst
 | Woord | Definitie |
 | --- | --- |
-| overspoelen  | deze definitie krijgt u! |
-| Werkdruk  | deze definitie krijgt u! |
-| onderwijs  | deze definitie krijgt u! |
+| Vlaams <span class="tooltip">van Vlaandere</span> | undefined |
+| wetenschappelijke  | alles rond de wetenschap |
+| Werkdruk <span class="tooltip">druk van het werk</span> | undefined |
+| grip  | undefined |
+| Werkdruk  | druk van het werk |
+| overspoelen  | overweldigen |
+| volgens  | undefined |
+| Vlaams  | van Vlaandere |
+| onderwijs  | undefined |
+| technologische  | deze definitie krijgt u! |
+| wetenschappelijke <span class="tooltip">alles rond de wetenschap</span> | undefined |
 
 
 ## Introductie.

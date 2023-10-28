@@ -193,15 +193,18 @@ def convert_to_word():
     gekozen_instellingen = session["persoonlijke_instellingen"]
 
     Creator().create_pdf(
-        title=title,
-        margin=gekozen_instellingen["margin"],
+        title=str(title),
+        margin=float(gekozen_instellingen["margin"]),
         list=woordenlijst,
         full_text=new_text,
-        fonts=[gekozen_instellingen["main-font"], gekozen_instellingen["title-font"]],
-        word_spacing=gekozen_instellingen["word-spacing"],
-        type_spacing=gekozen_instellingen["type-spacing"],
-        character_spacing=0.5,
-        summation=False,
+        fonts=[
+            str(gekozen_instellingen["main-font"]),
+            str(gekozen_instellingen["title-font"]),
+        ],
+        word_spacing=float(gekozen_instellingen["word-spacing"]),
+        type_spacing=str(gekozen_instellingen["type-spacing"]),
+        character_spacing=float(0.5),
+        summation=bool(False),
     )
 
     return send_file(path_or_file=ZIP_FILE_LOCATION)

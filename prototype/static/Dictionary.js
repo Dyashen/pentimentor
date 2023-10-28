@@ -1,8 +1,8 @@
-window.onload = function(){
-    const table             = document.createElement('table');
-    table.className         = "dictionary";
-    table.style.position    = "relative";
-    const tbody             = document.createElement('tbody');
+window.onload = function () {
+    const table = document.createElement('table');
+    table.className = "dictionary";
+    table.style.position = "relative";
+    const tbody = document.createElement('tbody');
     table.appendChild(tbody);
 
     /* Header */
@@ -30,12 +30,12 @@ window.onload = function(){
         tr.appendChild(td2);
         tbody.appendChild(tr);
     }
-    
-    const container = document.querySelector('.container');
+
+    const container = document.querySelector('#table');
     container.appendChild(table);
 }
 
-function emptyDictionary(){
+function emptyDictionary() {
     localStorage.clear();
     location.reload();
 }
