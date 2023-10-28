@@ -127,3 +127,9 @@ a {
     border:             solid 1px black;
     text-align:         left;
 }
+
+fieldset#instellingen,
+fieldset#api-sleutel{
+    text-align: left;
+    margin-bottom: 2%;
+}

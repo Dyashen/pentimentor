@@ -2,10 +2,12 @@ FROM ubuntu
 
 WORKDIR /app
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update
 
 RUN apt-get install -y git python3-pip pandoc texlive-xetex texlive \ 
-    && apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils --fix-missing
+    && apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils
 
 RUN pip install --upgrade pip
 

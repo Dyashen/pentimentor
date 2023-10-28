@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentimentor - Instellingen</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <fieldset>
+            <a href="/">Terug naar homepage</a>
+        </fieldset>
+    </div>
+
+    <div class="container">
+
+        <fieldset id="instellingen">
+            <form action="/instellingen-aanpassen" method="POST">
+
+                <label for="">Marge in centimeter</label><input required type="number" name="margin" value="2"><br>
+
+                <label for="">Lettertype voor doorlopende tekst in punt</label>
+                <select name="main-font">
+                    <option value="Arial">Arial</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Montserrat">Montserrat</option>
+                </select><br>
+
+                <label for="">Lettertype voor titels in punt</label>
+                <select name="title-font">
+                    <option value="Arial">Arial</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Montserrat">Montserrate</option>
+                </select><br>
+
+                <label for="">Woordspatiëring in centimeter</label>
+                <input required type="number" name="word-spacing"><br>
+
+                <label for="">Regelafstand (kies één van de drie)</label>
+                <select name="type-spacing" id="">
+                    <option value="onehalfspacing">Enkele</option>
+                </select><br>
+
+                <button type="submit">
+                    Instellingen doorvoeren
+                </button>
+
+            </form>
+        </fieldset>
+
+        <fieldset id="api-sleutel">
+            <form action="/set-api-key" method="post">
+                <label for="">GPT3 api sleutel</label>
+                <input type="text" name="gpt-api-key" value="{{ api_key }}">
+                <input type="submit" value="GPT3 sleutel instellen">
+            </form>
+        </fieldset>
+
+    </div>
+
+</body>
+
+</html>
