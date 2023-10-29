@@ -21,3 +21,27 @@ Dit prototype vereist echter enkele technische kennis, maar is zodanig opgebouwd
 4. Voer het `pentimentor-opstarten` bestand uit. Dit kan 30 minuten tot hoogstens een uur duren.
 
 5. Ga naar `http://localhost:5000`.
+
+6. Maak indien nodig een nieuw ChatGPT account aan. Onder API-keys moet u een nieuwe api-sleutel aanmaken. Indien u die al heeft, gebruik die sleutel.
+
+7. Voer uw API-sleutel in Pentimentor zoals in de onderstaande video.
+
+https://github.com/Dyashen/pentimentor/assets/70543493/f1157143-75dc-48eb-b0b0-711bec64e3f8
+
+## Functionaliteiten
+
+### Personaliseerbare instellingen aanpassen.
+
+https://github.com/Dyashen/pentimentor/assets/70543493/8cac120a-6dd8-4b24-a982-2309c4aba724
+
+### Synoniemen of korte definities laten genereren en deze laten toevoegen aan de woordenlijst.
+
+https://github.com/Dyashen/pentimentor/assets/70543493/f5eb8ba4-7f7e-48c9-89d2-5f061d97c5b5
+
+### Tekst laten herschrijven met Pentimentor
+
+https://github.com/Dyashen/pentimentor/assets/70543493/4ed8d334-63ee-43f9-a108-0faf1ce3e167
+
+### De nieuwe tekst opslaan als Word of PDF document.
+
+TODO
