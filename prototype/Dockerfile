@@ -15,7 +15,7 @@ RUN pip install --upgrade pip
 RUN pip install layoutparser \
     && pip install "layoutparser[effdet]" layoutparser torchvision && pip install "git+https://github.com/facebookresearch/detectron2.git@v0.5#egg=detectron2" \
     && pip install "layoutparser[paddledetection]" \
-    && pip install "layoutparser[ocr]" \
+    && pip install "layoutparser[ocr]"
 
 RUN pip install pytesseract easyocr pdf2image
 
@@ -30,6 +30,8 @@ RUN pip install spacy && python3 -m spacy download nl_core_news_md
 RUN apt install -y cmake tesseract-ocr libtesseract-dev poppler-utils
 
 RUN pip uninstall -y Pillow && pip install Pillow==9.5.0
+
+RUN pip install pypandoc beautifulsoup4
 
 COPY . .
 

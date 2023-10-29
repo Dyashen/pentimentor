@@ -2,3 +2,4 @@ saved_files/*
 afbeeldingen/*
 uploads/*
 *.pyc
+.env
