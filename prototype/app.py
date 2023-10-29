@@ -187,9 +187,16 @@ def get_simplification():
             vereenvoudigde_tekst = GPT(key=gpt_api_key).personalised_simplify(
                 sentence=tekst_vereenvoudiging, personalisation=[type_vereenvoudiging]
             )
+            return jsonify(
+                simplified=vereenvoudigde_tekst[0], prompt=vereenvoudigde_tekst[1]
+            )
         else:
-            vereenvoudigde_tekst = GPT(key=gpt_api_key).generieke_vereenvoudiging()
-            return jsonify(simplified=vereenvoudigde_tekst)
+            vereenvoudigde_tekst = GPT(key=gpt_api_key).generieke_vereenvoudiging(
+                sentence=tekst_vereenvoudiging
+            )
+            return jsonify(
+                simplified=vereenvoudigde_tekst[0], prompt=vereenvoudigde_tekst[1]
+            )
     except:
         print("error")
         return jsonify(error="Geen geldige GPT-3 sleutel opgegeven!")
@@ -211,7 +218,11 @@ def get_definition():
         vereenvoudigde_context = GPT(key=gpt_api_key).give_synonym(
             word=ruw_woord, context=ruw_context
         )
-        return jsonify(simplified=vereenvoudigde_context)
+        return jsonify(
+            simplified=vereenvoudigde_context[0],
+            woord=vereenvoudigde_context[1],
+            prompt=[2],
+        )
     except:
         return jsonify(error="Geen geldige GPT-3 sleutel opgegeven!")
 
@@ -230,7 +241,17 @@ def convert_to_word():
         new_text = {"Error": "Error"}
 
     title = "Vereenvoudigd document"
-    gekozen_instellingen = session["persoonlijke_instellingen"]
+
+    if "persoonlijke_instellingen" in session:
+        gekozen_instellingen = session["persoonlijke_instellingen"]
+    else:
+        gekozen_instellingen = {
+            "margin": 2,
+            "main-font": "Arial",
+            "title-font": "Arial",
+            "word-spacing": 0.4,
+            "type-spacing": "onehalfspacing",
+        }
 
     Creator().create_pdf(
         title=str(title),

@@ -21,14 +21,14 @@ class GPT:
 
     def give_synonym(self, word, context):
         prompt = f"""
-            Geef een Nederlands synoniem voor '{word}'. Als onbestaand, leg dit woord kort uit (max. 1 zin):
-            context:
-            {context}
+            Leg dit woord kort uit of geef een synoniem. De output mag hoogstens 1 zin zijn.
+            Woord: {word}
+            Context: {context}
             """
         result = openai.Completion.create(
             prompt=prompt,
             temperature=0,
-            max_tokens=10,
+            max_tokens=25,
             model=COMPLETIONS_MODEL,
             top_p=0.9,
             stream=False,
@@ -36,35 +36,32 @@ class GPT:
         return result, word, prompt
 
     def personalised_simplify(self, sentence, personalisation):
-        if "summary" in personalisation:
-            prompt = f"""
-            Simplify the sentences in the given text and {", ".join(personalisation)}
-            :return: A list of simplified sentences divided by a '|' sign
-            ///
-            {sentence}
-            """
-        else:
-            prompt = f"""
-            Explain this in own Dutch words and {", ".join(personalisation)}
-            ///
-            {sentence}
-            """
+        prompt = f"""Geef een vereenvoudigde versie van deze tekst in de vorm van een {" ".join(personalisation)}.Schrijf dit in HTML-code. /// Tekst: {sentence}"""
 
-            result = openai.Completion.create(
-                prompt=prompt,
-                temperature=0,
-                max_tokens=len(prompt),
-                model=COMPLETIONS_MODEL,
-                top_p=0.9,
-                stream=False,
-            )["choices"][0]["text"].strip(" \n")
+        result = openai.Completion.create(
+            prompt=prompt,
+            temperature=0,
+            max_tokens=len(prompt),
+            model=COMPLETIONS_MODEL,
+            top_p=0.9,
+            stream=False,
+        )["choices"][0]["text"].strip(" \n")
 
-            if "summary" in personalisation:
-                result = result.split("|")
-            else:
-                result = [result]
+        return result, prompt
 
-            return result, prompt
+    def generieke_vereenvoudiging(self, sentence):
+        prompt = f"""Vereenvoudig deze tekst /// {sentence}"""
+
+        result = openai.Completion.create(
+            prompt=prompt,
+            temperature=0,
+            max_tokens=len(prompt),
+            model=COMPLETIONS_MODEL,
+            top_p=0.9,
+            stream=False,
+        )["choices"][0]["text"].strip(" \n")
+
+        return result, prompt
 
     def personalised_simplify_w_prompt(self, sentences, personalisation):
         result = openai.Completion.create(

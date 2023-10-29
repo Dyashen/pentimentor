@@ -100,7 +100,6 @@ window.onload = function () {
       const key = String(event.target.innerHTML).toLowerCase();
       const definition = await getDefinition(event);
       addToLocalstorage(event, definition);
-      alert(key + "werd zonet toegevoegd aan de woordenlijst. Dit woord betekent: " + definition);
       event.target.className = 'markedWord';
     }
   }
@@ -143,7 +142,7 @@ window.onload = function () {
     } else {
       const rightArticle = document.querySelector('.article-right');
       var childElements = rightArticle.querySelectorAll('.' + startRange.className);
-      childElements[0].innerText = result.simplified;
+      childElements[0].innerHTML = result.simplified;
     }
   }
 
