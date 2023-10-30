@@ -17,6 +17,9 @@ ZIP_FILE_LOCATION = "saved_files/simplified_docs.zip"
 if not os.path.exists("saved_files"):
     os.makedirs("saved_files")
 
+if not os.path.exists("afbeeldingen"):
+    os.makedirs("afbeeldingen")
+
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "uploads/"
 app.secret_key = "any random string"
