@@ -8,7 +8,10 @@ Voor mijn afstudeerjaar schreef ik een bachelorproef binnen een zelfgekozen them
 
 ## Opmerkingen
 
-Dit prototype vereist echter enkele technische kennis, maar is zodanig opgebouwd om toch in de handen van onderzoekers terecht te raken. Indien u nog niet met Docker Desktop heeft gewerkt, dan raad ik u aan om met mij contact op te nemen via het volgende mail-adres: [dylan.cluyse@outlook.com](mailto:dylan.cluyse@outlook.com). Omwille door wijzigingen in de gebruikte software en api is het prototype voorlopig niet beschikbaar. Indien u verdere toelichting wil, kan u verder contact op nemen via het onderstaande email-adres: [dylan.cluyse@outlook.com](mailto:dylan.cluyse@outlook.com). 
+De opzet om dit prototype lokaal te kunnen draaien vereist echter enkele technische kennis, maar de opzet is zodanig opgebouwd om toch in de handen van onderzoekers terecht te raken. 
+
+Indien u nog niet met Docker Desktop heeft gewerkt, dan raad ik u aan om met mij contact op te nemen via het volgende mail-adres: [dylan.cluyse@outlook.com](mailto:dylan.cluyse@outlook.com). 
+Omwille door wijzigingen in de gebruikte software en api is het prototype voorlopig niet beschikbaar. Indien u verdere toelichting over de installatie wil, kan u verder contact op nemen via het onderstaande email-adres: [dylan.cluyse@outlook.com](mailto:dylan.cluyse@outlook.com).
 
 ## Stappenplan
 
