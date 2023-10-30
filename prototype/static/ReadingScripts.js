@@ -278,6 +278,6 @@ async function sendHTMLPageToBackend() {
     tempLink.setAttribute('download', 'file.zip');
     tempLink.click();
   } else {
-    alert('Server responded with ' + String(response.status))
+    alert('Server responded with ' + String(response.error))
   }
 }

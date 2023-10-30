@@ -21,7 +21,8 @@
         <fieldset id="instellingen">
             <form action="/instellingen-aanpassen" method="POST">
 
-                <label for="">Marge in centimeter</label><input required type="number" name="margin" value="2"><br>
+                <label for="">Marge in centimeter</label><input required type="number" name="margin" value="2" max="3"
+                    step="0.1"><br>
 
                 <label for="">Lettertype voor doorlopende tekst in punt</label>
                 <select name="main-font">
@@ -38,11 +39,12 @@
                 </select><br>
 
                 <label for="">Woordspatiëring in centimeter</label>
-                <input required type="number" name="word-spacing"><br>
+                <input required type="number" name="word-spacing" max="3" step="0.1"><br>
 
                 <label for="">Regelafstand (kies één van de drie)</label>
                 <select name="type-spacing" id="">
                     <option value="onehalfspacing">Enkele</option>
+                    <option value="doublespacing">Dubbele</option>
                 </select><br>
 
                 <button type="submit">

@@ -14,6 +14,9 @@ from werkzeug.utils import secure_filename
 img_folder = "afbeeldingen/"
 ZIP_FILE_LOCATION = "saved_files/simplified_docs.zip"
 
+if not os.path.exists("saved_files"):
+    os.makedirs("saved_files")
+
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "uploads/"
 app.secret_key = "any random string"
